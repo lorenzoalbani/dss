@@ -1,0 +1,29 @@
+<AnalysisServicesUserConfiguration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Configurations>
+    <Configuration>
+      <Name>Development</Name>
+      <Options>
+        <UserIDs>
+          <ConfigurationSetting>
+            <Id>Group ID 24 DB</Id>
+            <Name>Group ID 24 DB</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQsQItrqEOESIOuJ3DL3Q+AAAAAAeAAAARwByAG8AdQBwACAASQBEACAAMgA0ACAARABCAAAAEGYAAAABAAAgAAAAKC4oOF/4T/A9lgCLMsLrTVbkuHUL9/kzEkrLePt5OkEAAAAADoAAAAACAAAgAAAA2fGVfLiXd+3gk57ldlcUKcIi+jxyi7/msaQA5+ETfKogAAAAqbbsiwk3jr/WLEB+Gq9rsSp6myb7NGHi+L2bmM49BNxAAAAAjEx9byLuKlDxaQmNBpLd8XcpOAezxg+s442cRhB8NIdr23ZmoRLwAIMPuaDaER8IdX6f6zCkdGkX4XRUXiyikQ==</Value>
+          </ConfigurationSetting>
+        </UserIDs>
+        <UserPasswords>
+          <ConfigurationSetting>
+            <Id>Group ID 24 DB</Id>
+            <Name>Group ID 24 DB</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQsQItrqEOESIOuJ3DL3Q+AAAAAAeAAAARwByAG8AdQBwACAASQBEACAAMgA0ACAARABCAAAAEGYAAAABAAAgAAAAvgWuF6y9aZy4P+YwNagd8kbRK6NTZ1l9dGl0c6Uqn0cAAAAADoAAAAACAAAgAAAA8s+HRRp5dNp1HLNCt/n2/cVHJUB9HfdykTELy4yueCIgAAAAJ1fEMnPrm6cdYYYIPfG1kPAIiEb0ZntV2ZBM4fyKSLNAAAAA7vnEhnWbhMTXf10Jt/rEvpbQ0eJxpq1ZtA3WBE0M0yUVWtK8HG63Bkzm6AP1ppToiKVwE0mF9lNEvf+y05NNBA==</Value>
+          </ConfigurationSetting>
+        </UserPasswords>
+        <TargetServer>http://turini-franco.di.unipi.it//olap/msmdpump.dll</TargetServer>
+        <TargetDatabase>Group_ID_24_Cube</TargetDatabase>
+        <StartObject>
+          <ObjectId></ObjectId>
+          <ObjectType>Current</ObjectType>
+        </StartObject>
+      </Options>
+    </Configuration>
+  </Configurations>
+</AnalysisServicesUserConfiguration>

@@ -1,0 +1,202 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="4a33fea2-cf1b-4a75-8e13-2c47b3d7fed6" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>CAUSE</ID>
+  <Name>CAUSE</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="9c32433e-46a3-4ead-939a-644057004d48">
+    <DataSourceViewID>Group ID 24 DB view</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="4980a905-7477-4984-8c5d-29dd2bf88dc3">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="07e3a9e4-650f-41b7-b66c-f00165d8846a">
+      <ID>CAUSE PK</ID>
+      <Name>CAUSE PK</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2b6dd96e-761a-4def-ae31-d501896d9ada">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="df2ea917-e987-425d-8f91-380bb66da0d0">
+            <TableID>Group_ID_24_CAUSE</TableID>
+            <ColumnID>CAUSE_PK</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="0c71752f-7ede-4483-bb13-a053be269732">
+          <AttributeID>PRIM CONTRIBUTORY CAUSE</AttributeID>
+          <Name>PRIM CONTRIBUTORY CAUSE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="988078a0-edab-45d9-a550-df6e194425bb">
+          <AttributeID>SEC CONTRIBUTORY CAUSE</AttributeID>
+          <Name>SEC CONTRIBUTORY CAUSE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="682ee890-0b58-4a95-a560-02ab4e31f3bf">
+          <AttributeID>DRIVER VISION</AttributeID>
+          <Name>DRIVER VISION</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="5caf0614-c2bb-4b10-8c93-0109f36a1666">
+          <AttributeID>DRIVER ACTION</AttributeID>
+          <Name>DRIVER ACTION</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c0cb1d4f-a88f-4d70-bd58-088d3110b49c">
+          <AttributeID>PHYSICAL CONDITION</AttributeID>
+          <Name>PHYSICAL CONDITION</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8df7a0ad-99ea-47c5-a9e7-358e91c0891f">
+          <AttributeID>BAC RESULT</AttributeID>
+          <Name>BAC RESULT</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="1e25652d-b8a0-4271-a49a-4c7dbeb40589">
+      <ID>PRIM CONTRIBUTORY CAUSE</ID>
+      <Name>PRIM CONTRIBUTORY CAUSE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="15eb7803-13f7-434c-adaa-1b33e93f2449">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="71e30e47-bd08-44b6-9904-3d4d5d2aefb4">
+            <TableID>Group_ID_24_CAUSE</TableID>
+            <ColumnID>PRIM_CONTRIBUTORY_CAUSE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0d2b7b9f-d7c8-4e6f-9c4a-e6ea82c582bc">
+      <ID>SEC CONTRIBUTORY CAUSE</ID>
+      <Name>SEC CONTRIBUTORY CAUSE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cb59fb98-52f3-4adf-8cb0-5c373f8a1a35">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="41859f13-fb6d-4d10-9bcd-9ed0b694a025">
+            <TableID>Group_ID_24_CAUSE</TableID>
+            <ColumnID>SEC_CONTRIBUTORY_CAUSE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3b2515e2-9ac3-4e76-9374-d71835d4724f">
+      <ID>DRIVER VISION</ID>
+      <Name>DRIVER VISION</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d37855f5-683e-4a06-ab91-9a7891fb762a">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="de1bd63b-df84-4439-a038-dcf188642bcf">
+            <TableID>Group_ID_24_CAUSE</TableID>
+            <ColumnID>DRIVER_VISION</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c777ff9a-500c-4fe8-bd50-22f6faa191fa">
+      <ID>DRIVER ACTION</ID>
+      <Name>DRIVER ACTION</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e18a1cab-8a45-4cd1-aeec-1241f1b74452">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="261a7059-cf51-4cbb-b482-035128ced01e">
+            <TableID>Group_ID_24_CAUSE</TableID>
+            <ColumnID>DRIVER_ACTION</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0dd6bf2a-810b-4f80-88c6-fc305c8da2b2">
+      <ID>PHYSICAL CONDITION</ID>
+      <Name>PHYSICAL CONDITION</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="92d578f0-52b8-4b30-a63c-f8b4229b6a90">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a5ddb76e-8e8c-4f17-a6ba-58cb63a680a1">
+            <TableID>Group_ID_24_CAUSE</TableID>
+            <ColumnID>PHYSICAL_CONDITION</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="11249668-1ca0-41f1-8efe-cd8788decf34">
+      <ID>BAC RESULT</ID>
+      <Name>BAC RESULT</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="545d18b7-4401-4ac3-8fe0-bf116a16fb05">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3b6578bc-e00e-4033-8432-94d422e7187d">
+            <TableID>Group_ID_24_CAUSE</TableID>
+            <ColumnID>BAC_RESULT</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

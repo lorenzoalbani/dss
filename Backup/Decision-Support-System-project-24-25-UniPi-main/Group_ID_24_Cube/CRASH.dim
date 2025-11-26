@@ -1,0 +1,428 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="392d51f4-eb83-411d-a536-f87523ceaa95" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>CRASH</ID>
+  <Name>CRASH</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="cda9bde8-fa52-4a9f-afb7-fcde9f7b0551">
+    <DataSourceViewID>Group ID 24 DB view</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="366b134f-ea97-4cc6-9e6d-e4800e856440">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="e89a18dd-77a5-444d-8900-2d3845eb3e2c">
+      <ID>CRASH PK</ID>
+      <Name>CRASH PK</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="12b65c08-f470-485b-bd1a-62f60594f204">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7ada83c2-e251-49de-9e7e-efefd327e541">
+            <TableID>Group_ID_24_CRASH</TableID>
+            <ColumnID>CRASH_PK</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="1d1d8467-2d59-4fdf-a182-01a94e30357c">
+          <AttributeID>RD NO</AttributeID>
+          <Name>RD NO</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0de47e1b-27e9-47b0-9a4c-aae7bd1bd4cd">
+          <AttributeID>FIRST CONTACT POINT</AttributeID>
+          <Name>FIRST CONTACT POINT</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0f8f85c7-b393-4a96-9b8e-635d04a1af1a">
+          <AttributeID>FIRST CRASH TYPE</AttributeID>
+          <Name>FIRST CRASH TYPE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="58fe067c-c1cb-4bec-a061-05be8650568f">
+          <AttributeID>REPORT TYPE</AttributeID>
+          <Name>REPORT TYPE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="417f1da6-fb8d-43a4-bd56-4faea45cd520">
+          <AttributeID>CRASH TYPE</AttributeID>
+          <Name>CRASH TYPE</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="65540080-02eb-404d-85fb-a89fc99277da">
+          <AttributeID>AIRBAG DEPLOYED</AttributeID>
+          <Name>AIRBAG DEPLOYED</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7022186e-a719-4c97-aef1-f7b35de76beb">
+          <AttributeID>MANEUVER</AttributeID>
+          <Name>MANEUVER</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="211be54f-0e07-46b4-ab5f-a36671768a16">
+          <AttributeID>TRAVEL DIRECTION</AttributeID>
+          <Name>TRAVEL DIRECTION</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="374ba2d2-7117-4f2d-a30b-6ecbd2a4a5ca">
+          <AttributeID>EJECTION</AttributeID>
+          <Name>EJECTION</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ef5d95a1-2d76-457c-b554-4161526db067">
+          <AttributeID>INJURIES TOTAL</AttributeID>
+          <Name>INJURIES TOTAL</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a24d527c-d0f1-463c-981b-7216a77af86f">
+          <AttributeID>INJURIES INCAPACITATING</AttributeID>
+          <Name>INJURIES INCAPACITATING</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1ed4a10d-cbb2-4df7-a8d9-fc9f30240eff">
+          <AttributeID>INJURIES NON INCAPACITATING</AttributeID>
+          <Name>INJURIES NON INCAPACITATING</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="55f873c2-2c2a-4953-89d4-c4a0c6eb5784">
+          <AttributeID>INJURIES REPORTED NOT EVIDENT</AttributeID>
+          <Name>INJURIES REPORTED NOT EVIDENT</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f6cdfbea-797e-486b-beb5-799c34d7f87e">
+          <AttributeID>INJURIES NON INDICATION</AttributeID>
+          <Name>INJURIES NON INDICATION</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e58417ce-e430-4508-8f1a-f2f262d681a0">
+          <AttributeID>INJURIES UNKNOWN</AttributeID>
+          <Name>INJURIES UNKNOWN</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="561cd564-e181-4f09-9afc-2c358d4d4ae8">
+          <AttributeID>MOST SEVERE INJURIES</AttributeID>
+          <Name>MOST SEVERE INJURIES</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="96434e9f-7cdf-47bf-be5b-3c359b597dbd">
+          <AttributeID>INJURIES FATAL</AttributeID>
+          <Name>INJURIES FATAL</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5654a98d-8980-443b-bf6c-1677a9c3fc83">
+      <ID>RD NO</ID>
+      <Name>RD NO</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5f309bd0-d7a3-4ead-a95d-58f79dc9dd8f">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a8ce85b1-8abd-4ab9-b264-053a1d8b9758">
+            <TableID>Group_ID_24_CRASH</TableID>
+            <ColumnID>RD_NO</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="dc56df41-04f1-4ddb-8c8e-5cc465c4d70e">
+      <ID>FIRST CONTACT POINT</ID>
+      <Name>FIRST CONTACT POINT</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7596d727-2d6a-484d-8849-d539fab0d08f">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1eca473b-d474-4b65-b999-3528fd7b1237">
+            <TableID>Group_ID_24_CRASH</TableID>
+            <ColumnID>FIRST_CONTACT_POINT</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d1611a7d-4cdf-43bf-9073-e318b1c54837">
+      <ID>FIRST CRASH TYPE</ID>
+      <Name>FIRST CRASH TYPE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a540447b-59bb-41bc-b246-03506989d152">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ffe574b3-4b34-4ac9-aa25-5f470677c613">
+            <TableID>Group_ID_24_CRASH</TableID>
+            <ColumnID>FIRST_CRASH_TYPE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="89e4752a-62eb-4300-b6d2-446de98b1cb0">
+      <ID>REPORT TYPE</ID>
+      <Name>REPORT TYPE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e53eaca0-c12b-41cb-8a78-81e50efe4e37">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5cab5ee2-0046-4061-bc7a-f9878621fa8b">
+            <TableID>Group_ID_24_CRASH</TableID>
+            <ColumnID>REPORT_TYPE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9e3391ff-f497-48ac-a2ef-225ba19a7b27">
+      <ID>CRASH TYPE</ID>
+      <Name>CRASH TYPE</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="325448e7-64a2-41a4-af05-de5d89477101">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f768037e-ac27-4f1d-8955-6702b536c89a">
+            <TableID>Group_ID_24_CRASH</TableID>
+            <ColumnID>CRASH_TYPE</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="251a5afd-9aba-4175-b933-c06c517133e6">
+      <ID>AIRBAG DEPLOYED</ID>
+      <Name>AIRBAG DEPLOYED</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e9df2a75-4f0f-4829-9a5f-bca7df249c0b">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d3c3a5d8-0476-4105-8fb8-5b6d0c0888e6">
+            <TableID>Group_ID_24_CRASH</TableID>
+            <ColumnID>AIRBAG_DEPLOYED</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="fa8d5af8-5ae3-4144-82d0-d8c1f049e049">
+      <ID>MANEUVER</ID>
+      <Name>MANEUVER</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="64b72280-6553-41a2-b20c-070edef7e999">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8228dbf7-e821-4874-aa41-2fc06c57d8a9">
+            <TableID>Group_ID_24_CRASH</TableID>
+            <ColumnID>MANEUVER</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3f5313aa-6841-4f6b-935f-91f2460f422c">
+      <ID>TRAVEL DIRECTION</ID>
+      <Name>TRAVEL DIRECTION</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="af587c1c-fdaf-4316-980b-c9c955632a0d">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e4c3e19d-a934-4a0c-9cb2-9348dd6e6eb2">
+            <TableID>Group_ID_24_CRASH</TableID>
+            <ColumnID>TRAVEL_DIRECTION</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="72db142a-1a1c-4127-bc34-3b2c7f38cb82">
+      <ID>EJECTION</ID>
+      <Name>EJECTION</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f98cafa6-3ebd-4227-a6e6-012e615fb8a0">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c05588d1-653f-411d-b5fc-fcbfef8531bd">
+            <TableID>Group_ID_24_CRASH</TableID>
+            <ColumnID>EJECTION</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="10ec3b65-1816-46dc-a24d-c972955e6fbc">
+      <ID>INJURIES TOTAL</ID>
+      <Name>INJURIES TOTAL</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="66ffea01-e353-44a6-8e47-a35ae1d3c6c6">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="997ede91-2d3e-43f9-94b6-57a515af1e2b">
+            <TableID>Group_ID_24_CRASH</TableID>
+            <ColumnID>INJURIES_TOTAL</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="31af8e55-5f48-4c0b-a990-803144818ff7">
+      <ID>INJURIES INCAPACITATING</ID>
+      <Name>INJURIES INCAPACITATING</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5b1ae8f2-1de7-4d3e-9ed3-f1245b7d555b">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3986ea5f-264c-4a60-a4a8-9fb483b48eb6">
+            <TableID>Group_ID_24_CRASH</TableID>
+            <ColumnID>INJURIES_INCAPACITATING</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="aa2deae0-4131-46d4-98b6-dc1eb321409a">
+      <ID>INJURIES NON INCAPACITATING</ID>
+      <Name>INJURIES NON INCAPACITATING</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f2d7fcf4-b159-4315-8906-12727dfc0d8f">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b70eef49-edc2-4363-89e2-654a77dc0e16">
+            <TableID>Group_ID_24_CRASH</TableID>
+            <ColumnID>INJURIES_NON_INCAPACITATING</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b0030107-f7fb-47b1-b448-5dd695b66327">
+      <ID>INJURIES REPORTED NOT EVIDENT</ID>
+      <Name>INJURIES REPORTED NOT EVIDENT</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9b6234b8-9d93-4395-a533-b429aba4c337">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bae82efa-1a41-4818-8bab-7051e5af5ca8">
+            <TableID>Group_ID_24_CRASH</TableID>
+            <ColumnID>INJURIES_REPORTED_NOT_EVIDENT</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="cf465497-dcbc-4b96-ac88-789fe1609b12">
+      <ID>INJURIES NON INDICATION</ID>
+      <Name>INJURIES NON INDICATION</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="da1acdf5-fabd-4cc2-bef6-def75ebe266d">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7a631d5a-a2c3-417a-9c8b-204eab89e173">
+            <TableID>Group_ID_24_CRASH</TableID>
+            <ColumnID>INJURIES_NON_INDICATION</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6689afda-e2ff-4345-aa83-89ec03bb6389">
+      <ID>INJURIES UNKNOWN</ID>
+      <Name>INJURIES UNKNOWN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9ad2b7cf-18fc-49df-a61e-0adcd4aa06cd">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c12e8d19-9e47-4d70-abea-9e3a821a0887">
+            <TableID>Group_ID_24_CRASH</TableID>
+            <ColumnID>INJURIES_UNKNOWN</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="cc0b3914-5e24-47fb-a5b9-574c098e18f6">
+      <ID>MOST SEVERE INJURIES</ID>
+      <Name>MOST SEVERE INJURIES</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="014ba716-cb69-43ae-9a34-15a6b82e11d7">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="46331821-b1b2-49de-a14c-70c44f07be72">
+            <TableID>Group_ID_24_CRASH</TableID>
+            <ColumnID>MOST_SEVERE_INJURIES</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="bee1f4aa-35cb-4b54-ac27-ef2d03fe2db1">
+      <ID>INJURIES FATAL</ID>
+      <Name>INJURIES FATAL</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9e3599b8-3bba-45db-a171-ee1ce45ccd44">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="caceedde-1448-4305-bec4-9f302c0ec7f6">
+            <TableID>Group_ID_24_CRASH</TableID>
+            <ColumnID>INJURIES_FATAL</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

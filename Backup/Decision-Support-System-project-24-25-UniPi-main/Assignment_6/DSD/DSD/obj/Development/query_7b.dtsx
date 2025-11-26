@@ -1,0 +1,2920 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/4/2024 6:02:57 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ALESSIA-HW"
+  DTS:CreatorName="ALESSIA-HW\Alessia"
+  DTS:DTSID="{9312321D-7C46-4F0C-A0EC-32F92A4B7A39}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5467.0"
+  DTS:LocaleID="1040"
+  DTS:ObjectName="query_7b"
+  DTS:PackageType="5"
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{95915B5B-68F2-4EE4-AA94-54B5185F7477}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[lds.di.unipi.it.Group_ID_24]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{A5977247-3D8A-4E7B-87E8-68D4774711D8}"
+      DTS:ObjectName="lds.di.unipi.it.Group_ID_24">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=lds.di.unipi.it;User ID=Group_ID_24;Provider=MSOLEDBSQL.1;Application Name=SSIS-Package1-{A5977247-3D8A-4E7B-87E8-68D4774711D8}lds.di.unipi.it.Group_ID_24;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnps1yzKbj0mn5GIXscAlVwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABVEB+KG4SLs74XUT0tZeZxz9YmAKR8U+CuvJZlkU/fxgAAAAAOgAAAAAIAACAAAACm28NixBB3N5onlFuOBie1KLUsqXSX6NE4ffwSOPbmbSAAAAChwV3xib+CYZb5M0o8vHerDAEvjeMvljavnp9uPgQz3UAAAAAC2EcPkOgoa33APOsB6wJMn5KuahIxtZlBqIk5W9KXPzQLF4tb6AWKX5N5fHfpWwocriLx3SvceYDzrksMX5lM</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\QUERY_2"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Attività Flusso di dati"
+      DTS:DTSID="{131FBB06-F666-410A-9F88-4417ABFC1C76}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="QUERY_2"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\QUERY_2\Aggregazione"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregazione;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;3"
+              description="Aggrega i dati con funzioni quali Media, Somma, Conta numeri, Max e Min. Ad esempio, raggruppare i dati per calcolare la somma delle vendite per prodotto o la media giornaliera delle visite."
+              name="Aggregazione"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Se si specifica un valore CountDistinctScale, il valore in CountDistinctKeys ha la precedenza."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale di estensione della memoria consentita durante l'aggregazione. I valori validi sono compresi tra 1 e 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\QUERY_2\Aggregazione.Inputs[Input aggregazione 1]"
+                  name="Input aggregazione 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\QUERY_2\Aggregazione.Inputs[Input aggregazione 1].Columns[DAMAGE]"
+                      cachedDataType="r8"
+                      cachedName="DAMAGE"
+                      lineageId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].Columns[DAMAGE]" />
+                    <inputColumn
+                      refId="Package\QUERY_2\Aggregazione.Inputs[Input aggregazione 1].Columns[YEAR]"
+                      cachedDataType="i4"
+                      cachedName="YEAR"
+                      lineageId="Package\QUERY_2\Ricerca.Outputs[Output corrispondenza ricerca].Columns[YEAR]" />
+                    <inputColumn
+                      refId="Package\QUERY_2\Aggregazione.Inputs[Input aggregazione 1].Columns[MONTH]"
+                      cachedDataType="i4"
+                      cachedName="MONTH"
+                      lineageId="Package\QUERY_2\Ricerca.Outputs[Output corrispondenza ricerca].Columns[MONTH]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\QUERY_2\Aggregazione.Outputs[Output aggregazione 1]"
+                  name="Output aggregazione 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\QUERY_2\Aggregazione.Outputs[Output aggregazione 1].Columns[YEAR]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Aggregazione.Outputs[Output aggregazione 1].Columns[YEAR]"
+                      name="YEAR">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\QUERY_2\Ricerca.Outputs[Output corrispondenza ricerca].Columns[YEAR]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\QUERY_2\Aggregazione.Outputs[Output aggregazione 1].Columns[MONTH]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Aggregazione.Outputs[Output aggregazione 1].Columns[MONTH]"
+                      name="MONTH">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\QUERY_2\Ricerca.Outputs[Output corrispondenza ricerca].Columns[MONTH]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\QUERY_2\Aggregazione.Outputs[Output aggregazione 1].Columns[DAMAGE_month_night]"
+                      dataType="r8"
+                      lineageId="Package\QUERY_2\Aggregazione.Outputs[Output aggregazione 1].Columns[DAMAGE_month_night]"
+                      name="DAMAGE_month_night">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].Columns[DAMAGE]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\QUERY_2\Aggregazione 1"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregazione;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;3"
+              description="Aggrega i dati con funzioni quali Media, Somma, Conta numeri, Max e Min. Ad esempio, raggruppare i dati per calcolare la somma delle vendite per prodotto o la media giornaliera delle visite."
+              name="Aggregazione 1"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Se si specifica un valore CountDistinctScale, il valore in CountDistinctKeys ha la precedenza."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale di estensione della memoria consentita durante l'aggregazione. I valori validi sono compresi tra 1 e 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\QUERY_2\Aggregazione 1.Inputs[Input aggregazione 1]"
+                  name="Input aggregazione 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\QUERY_2\Aggregazione 1.Inputs[Input aggregazione 1].Columns[DAMAGE]"
+                      cachedDataType="r8"
+                      cachedName="DAMAGE"
+                      lineageId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].Columns[DAMAGE]" />
+                    <inputColumn
+                      refId="Package\QUERY_2\Aggregazione 1.Inputs[Input aggregazione 1].Columns[YEAR]"
+                      cachedDataType="i4"
+                      cachedName="YEAR"
+                      lineageId="Package\QUERY_2\Ricerca.Outputs[Output corrispondenza ricerca].Columns[YEAR]" />
+                    <inputColumn
+                      refId="Package\QUERY_2\Aggregazione 1.Inputs[Input aggregazione 1].Columns[MONTH]"
+                      cachedDataType="i4"
+                      cachedName="MONTH"
+                      lineageId="Package\QUERY_2\Ricerca.Outputs[Output corrispondenza ricerca].Columns[MONTH]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\QUERY_2\Aggregazione 1.Outputs[Output aggregazione 1]"
+                  name="Output aggregazione 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\QUERY_2\Aggregazione 1.Outputs[Output aggregazione 1].Columns[YEAR]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Aggregazione 1.Outputs[Output aggregazione 1].Columns[YEAR]"
+                      name="YEAR">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\QUERY_2\Ricerca.Outputs[Output corrispondenza ricerca].Columns[YEAR]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\QUERY_2\Aggregazione 1.Outputs[Output aggregazione 1].Columns[MONTH]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Aggregazione 1.Outputs[Output aggregazione 1].Columns[MONTH]"
+                      name="MONTH">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\QUERY_2\Ricerca.Outputs[Output corrispondenza ricerca].Columns[MONTH]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\QUERY_2\Aggregazione 1.Outputs[Output aggregazione 1].Columns[DAMAGE_month_day]"
+                      dataType="r8"
+                      lineageId="Package\QUERY_2\Aggregazione 1.Outputs[Output aggregazione 1].Columns[DAMAGE_month_day]"
+                      name="DAMAGE_month_day">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].Columns[DAMAGE]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\QUERY_2\Aggregazione 2"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregazione;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;3"
+              description="Aggrega i dati con funzioni quali Media, Somma, Conta numeri, Max e Min. Ad esempio, raggruppare i dati per calcolare la somma delle vendite per prodotto o la media giornaliera delle visite."
+              name="Aggregazione 2"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore CountDistinctScale."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifica il numero approssimativo di valori Distinct in una colonna a cui viene applicata la funzione di aggregazione Count Distinct. Se si specifica un valore CountDistinctScale, il valore in CountDistinctKeys ha la precedenza."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale di estensione della memoria consentita durante l'aggregazione. I valori validi sono compresi tra 1 e 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\QUERY_2\Aggregazione 2.Inputs[Input aggregazione 1]"
+                  name="Input aggregazione 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\QUERY_2\Aggregazione 2.Inputs[Input aggregazione 1].Columns[YEAR]"
+                      cachedDataType="i4"
+                      cachedName="YEAR"
+                      lineageId="Package\QUERY_2\Ricerca.Outputs[Output corrispondenza ricerca].Columns[YEAR]" />
+                    <inputColumn
+                      refId="Package\QUERY_2\Aggregazione 2.Inputs[Input aggregazione 1].Columns[DAMAGE]"
+                      cachedDataType="r8"
+                      cachedName="DAMAGE"
+                      lineageId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].Columns[DAMAGE]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\QUERY_2\Aggregazione 2.Outputs[Output aggregazione 1]"
+                  name="Output aggregazione 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica il numero approssimativo di chiavi Group By generate dall'aggregazione. Basso indica 500.000 valori di chiave, Medio indica 5 milioni di valori di chiave e Alto indica più di 25 milioni di valori di chiave. Non specificato indica che non viene utilizzato alcun valore KeyScale."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifica il numero esatto di chiavi Group By generate dall'aggregazione. Se si specifica un valore KeyScale, il valore di Keys ha la precedenza."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\QUERY_2\Aggregazione 2.Outputs[Output aggregazione 1].Columns[YEAR]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Aggregazione 2.Outputs[Output aggregazione 1].Columns[YEAR]"
+                      name="YEAR">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\QUERY_2\Ricerca.Outputs[Output corrispondenza ricerca].Columns[YEAR]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\QUERY_2\Aggregazione 2.Outputs[Output aggregazione 1].Columns[DAMAGE_avg_year]"
+                      dataType="r8"
+                      lineageId="Package\QUERY_2\Aggregazione 2.Outputs[Output aggregazione 1].Columns[DAMAGE_avg_year]"
+                      name="DAMAGE_avg_year">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
+                          name="AggregationColumnId">#{Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].Columns[DAMAGE]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di aggregazione."
+                          name="AggregationType"
+                          typeConverter="AggregationType">5</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni per il confronto di stringhe."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\QUERY_2\Colonna derivata"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonna derivata;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;0"
+              description="Crea nuovi valori di colonna applicando espressioni alle colonne di input della trasformazione. Creare nuove colonne oppure sovrascrivere quelle esistenti. Ad esempio, concatenare i valori delle colonne 'first name' e 'last name' per creare una colonna 'full name'."
+              name="Colonna derivata"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\QUERY_2\Colonna derivata.Inputs[Input colonna derivata]"
+                  description="Input della trasformazione Colonna derivata"
+                  name="Input colonna derivata">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\QUERY_2\Colonna derivata.Inputs[Input colonna derivata].Columns[CRASH_HOUR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CRASH_HOUR"
+                      lineageId="Package\QUERY_2\Ricerca.Outputs[Output corrispondenza ricerca].Columns[CRASH_HOUR]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\QUERY_2\Colonna derivata.Outputs[Output colonna derivata]"
+                  description="Output predefinito della trasformazione Colonna derivata"
+                  exclusionGroup="1"
+                  name="Output colonna derivata"
+                  synchronousInputId="Package\QUERY_2\Colonna derivata.Inputs[Input colonna derivata]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\QUERY_2\Colonna derivata.Outputs[Output colonna derivata].Columns[CRASH_HOUR_INT]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Calcolo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\QUERY_2\Colonna derivata.Outputs[Output colonna derivata].Columns[CRASH_HOUR_INT]"
+                      name="CRASH_HOUR_INT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Espressione colonna derivata"
+                          name="Expression">(DT_I4)[SUBSTRING](#{Package\QUERY_2\Ricerca.Outputs[Output corrispondenza ricerca].Columns[CRASH_HOUR]},1,2)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Espressione descrittiva colonna derivata"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)SUBSTRING(CRASH_HOUR,1,2)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\QUERY_2\Colonna derivata.Outputs[Output errori colonna derivata]"
+                  description="Output degli errori della trasformazione Colonna derivata"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori colonna derivata"
+                  synchronousInputId="Package\QUERY_2\Colonna derivata.Inputs[Input colonna derivata]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\QUERY_2\Colonna derivata.Outputs[Output errori colonna derivata].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Colonna derivata.Outputs[Output errori colonna derivata].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\QUERY_2\Colonna derivata.Outputs[Output errori colonna derivata].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Colonna derivata.Outputs[Output errori colonna derivata].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\QUERY_2\Colonna derivata 1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Colonna derivata;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;0"
+              description="Crea nuovi valori di colonna applicando espressioni alle colonne di input della trasformazione. Creare nuove colonne oppure sovrascrivere quelle esistenti. Ad esempio, concatenare i valori delle colonne 'first name' e 'last name' per creare una colonna 'full name'."
+              name="Colonna derivata 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\QUERY_2\Colonna derivata 1.Inputs[Input colonna derivata]"
+                  description="Input della trasformazione Colonna derivata"
+                  name="Input colonna derivata">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\QUERY_2\Colonna derivata 1.Inputs[Input colonna derivata].Columns[DAMAGE_avg_year]"
+                      cachedDataType="r8"
+                      cachedName="DAMAGE_avg_year"
+                      lineageId="Package\QUERY_2\Unione.Outputs[Unione Output 1].Columns[DAMAGE_avg_year]" />
+                    <inputColumn
+                      refId="Package\QUERY_2\Colonna derivata 1.Inputs[Input colonna derivata].Columns[DAMAGE_month_night]"
+                      cachedDataType="r8"
+                      cachedName="DAMAGE_month_night"
+                      lineageId="Package\QUERY_2\Unione.Outputs[Unione Output 1].Columns[DAMAGE_month_night]" />
+                    <inputColumn
+                      refId="Package\QUERY_2\Colonna derivata 1.Inputs[Input colonna derivata].Columns[DAMAGE_month_day]"
+                      cachedDataType="r8"
+                      cachedName="DAMAGE_month_day"
+                      lineageId="Package\QUERY_2\Unione.Outputs[Unione Output 1].Columns[DAMAGE_month_day]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\QUERY_2\Colonna derivata 1.Outputs[Output colonna derivata]"
+                  description="Output predefinito della trasformazione Colonna derivata"
+                  exclusionGroup="1"
+                  name="Output colonna derivata"
+                  synchronousInputId="Package\QUERY_2\Colonna derivata 1.Inputs[Input colonna derivata]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\QUERY_2\Colonna derivata 1.Outputs[Output colonna derivata].Columns[percentage_night]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Calcolo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\QUERY_2\Colonna derivata 1.Outputs[Output colonna derivata].Columns[percentage_night]"
+                      name="percentage_night"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Espressione colonna derivata"
+                          name="Expression">(#{Package\QUERY_2\Unione.Outputs[Unione Output 1].Columns[DAMAGE_month_night]} * 100) / #{Package\QUERY_2\Unione.Outputs[Unione Output 1].Columns[DAMAGE_avg_year]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Espressione descrittiva colonna derivata"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DAMAGE_month_night * 100) / DAMAGE_avg_year</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\QUERY_2\Colonna derivata 1.Outputs[Output colonna derivata].Columns[percentage_day]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Calcolo"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\QUERY_2\Colonna derivata 1.Outputs[Output colonna derivata].Columns[percentage_day]"
+                      name="percentage_day"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Espressione colonna derivata"
+                          name="Expression">(#{Package\QUERY_2\Unione.Outputs[Unione Output 1].Columns[DAMAGE_month_day]} * 100) / #{Package\QUERY_2\Unione.Outputs[Unione Output 1].Columns[DAMAGE_avg_year]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Espressione descrittiva colonna derivata"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DAMAGE_month_day * 100) / DAMAGE_avg_year</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\QUERY_2\Colonna derivata 1.Outputs[Output errori colonna derivata]"
+                  description="Output degli errori della trasformazione Colonna derivata"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori colonna derivata"
+                  synchronousInputId="Package\QUERY_2\Colonna derivata 1.Inputs[Input colonna derivata]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\QUERY_2\Colonna derivata 1.Outputs[Output errori colonna derivata].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Colonna derivata 1.Outputs[Output errori colonna derivata].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\QUERY_2\Colonna derivata 1.Outputs[Output errori colonna derivata].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Colonna derivata 1.Outputs[Output errori colonna derivata].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\QUERY_2\Merge join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Combina due flussi di dati ordinati in uno solo tramite join di tipo FULL, LEFT o INNER. Questa trasformazione è consigliata quando i flussi di dati possono essere ordinati alle relative origini."
+              name="Merge join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di join da eseguire."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero di colonne nella chiave di ordinamento."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se i valori Null vengono considerati come valori uguali."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indica il numero massimo di buffer richiesti per input prima dell'attivazione del blocco."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\QUERY_2\Merge join.Inputs[Input merge join sinistro]"
+                  hasSideEffects="true"
+                  name="Input merge join sinistro">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\QUERY_2\Merge join.Inputs[Input merge join sinistro].Columns[YEAR]"
+                      cachedDataType="i4"
+                      cachedName="YEAR"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\QUERY_2\Ordinamento.Outputs[Output ordinamento].Columns[YEAR]" />
+                    <inputColumn
+                      refId="Package\QUERY_2\Merge join.Inputs[Input merge join sinistro].Columns[DAMAGE_avg_year]"
+                      cachedDataType="r8"
+                      cachedName="DAMAGE_avg_year"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\QUERY_2\Ordinamento.Outputs[Output ordinamento].Columns[DAMAGE_avg_year]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\QUERY_2\Merge join.Inputs[Input merge join destro]"
+                  hasSideEffects="true"
+                  name="Input merge join destro">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\QUERY_2\Merge join.Inputs[Input merge join destro].Columns[YEAR]"
+                      cachedDataType="i4"
+                      cachedName="YEAR"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\QUERY_2\Ordinamento 1.Outputs[Output ordinamento].Columns[YEAR]" />
+                    <inputColumn
+                      refId="Package\QUERY_2\Merge join.Inputs[Input merge join destro].Columns[MONTH]"
+                      cachedDataType="i4"
+                      cachedName="MONTH"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\QUERY_2\Ordinamento 1.Outputs[Output ordinamento].Columns[MONTH]" />
+                    <inputColumn
+                      refId="Package\QUERY_2\Merge join.Inputs[Input merge join destro].Columns[DAMAGE_month_day]"
+                      cachedDataType="r8"
+                      cachedName="DAMAGE_month_day"
+                      cachedSortKeyPosition="3"
+                      lineageId="Package\QUERY_2\Ordinamento 1.Outputs[Output ordinamento].Columns[DAMAGE_month_day]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\QUERY_2\Merge join.Outputs[Output merge join]"
+                  isSorted="true"
+                  name="Output merge join">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\QUERY_2\Merge join.Outputs[Output merge join].Columns[YEAR]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Merge join.Outputs[Output merge join].Columns[YEAR]"
+                      name="YEAR"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\QUERY_2\Merge join.Inputs[Input merge join sinistro].Columns[YEAR]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\QUERY_2\Merge join.Outputs[Output merge join].Columns[DAMAGE_avg_year]"
+                      dataType="r8"
+                      lineageId="Package\QUERY_2\Merge join.Outputs[Output merge join].Columns[DAMAGE_avg_year]"
+                      name="DAMAGE_avg_year">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\QUERY_2\Merge join.Inputs[Input merge join sinistro].Columns[DAMAGE_avg_year]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\QUERY_2\Merge join.Outputs[Output merge join].Columns[MONTH]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Merge join.Outputs[Output merge join].Columns[MONTH]"
+                      name="MONTH">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\QUERY_2\Merge join.Inputs[Input merge join destro].Columns[MONTH]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\QUERY_2\Merge join.Outputs[Output merge join].Columns[DAMAGE_month_day]"
+                      dataType="r8"
+                      lineageId="Package\QUERY_2\Merge join.Outputs[Output merge join].Columns[DAMAGE_month_day]"
+                      name="DAMAGE_month_day">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\QUERY_2\Merge join.Inputs[Input merge join destro].Columns[DAMAGE_month_day]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\QUERY_2\Merge join 1"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Combina due flussi di dati ordinati in uno solo tramite join di tipo FULL, LEFT o INNER. Questa trasformazione è consigliata quando i flussi di dati possono essere ordinati alle relative origini."
+              name="Merge join 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di join da eseguire."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero di colonne nella chiave di ordinamento."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se i valori Null vengono considerati come valori uguali."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indica il numero massimo di buffer richiesti per input prima dell'attivazione del blocco."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\QUERY_2\Merge join 1.Inputs[Input merge join sinistro]"
+                  hasSideEffects="true"
+                  name="Input merge join sinistro">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\QUERY_2\Merge join 1.Inputs[Input merge join sinistro].Columns[YEAR]"
+                      cachedDataType="i4"
+                      cachedName="YEAR"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\QUERY_2\Ordinamento.Outputs[Output ordinamento].Columns[YEAR]" />
+                    <inputColumn
+                      refId="Package\QUERY_2\Merge join 1.Inputs[Input merge join sinistro].Columns[DAMAGE_avg_year]"
+                      cachedDataType="r8"
+                      cachedName="DAMAGE_avg_year"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\QUERY_2\Ordinamento.Outputs[Output ordinamento].Columns[DAMAGE_avg_year]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\QUERY_2\Merge join 1.Inputs[Input merge join destro]"
+                  hasSideEffects="true"
+                  name="Input merge join destro">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\QUERY_2\Merge join 1.Inputs[Input merge join destro].Columns[YEAR]"
+                      cachedDataType="i4"
+                      cachedName="YEAR"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\QUERY_2\Ordinamento 2.Outputs[Output ordinamento].Columns[YEAR]" />
+                    <inputColumn
+                      refId="Package\QUERY_2\Merge join 1.Inputs[Input merge join destro].Columns[MONTH]"
+                      cachedDataType="i4"
+                      cachedName="MONTH"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\QUERY_2\Ordinamento 2.Outputs[Output ordinamento].Columns[MONTH]" />
+                    <inputColumn
+                      refId="Package\QUERY_2\Merge join 1.Inputs[Input merge join destro].Columns[DAMAGE_month_night]"
+                      cachedDataType="r8"
+                      cachedName="DAMAGE_month_night"
+                      cachedSortKeyPosition="3"
+                      lineageId="Package\QUERY_2\Ordinamento 2.Outputs[Output ordinamento].Columns[DAMAGE_month_night]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\QUERY_2\Merge join 1.Outputs[Output merge join]"
+                  isSorted="true"
+                  name="Output merge join">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\QUERY_2\Merge join 1.Outputs[Output merge join].Columns[YEAR]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Merge join 1.Outputs[Output merge join].Columns[YEAR]"
+                      name="YEAR"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\QUERY_2\Merge join 1.Inputs[Input merge join sinistro].Columns[YEAR]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\QUERY_2\Merge join 1.Outputs[Output merge join].Columns[DAMAGE_avg_year]"
+                      dataType="r8"
+                      lineageId="Package\QUERY_2\Merge join 1.Outputs[Output merge join].Columns[DAMAGE_avg_year]"
+                      name="DAMAGE_avg_year">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\QUERY_2\Merge join 1.Inputs[Input merge join sinistro].Columns[DAMAGE_avg_year]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\QUERY_2\Merge join 1.Outputs[Output merge join].Columns[MONTH]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Merge join 1.Outputs[Output merge join].Columns[MONTH]"
+                      name="MONTH">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\QUERY_2\Merge join 1.Inputs[Input merge join destro].Columns[MONTH]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\QUERY_2\Merge join 1.Outputs[Output merge join].Columns[DAMAGE_month_night]"
+                      dataType="r8"
+                      lineageId="Package\QUERY_2\Merge join 1.Outputs[Output merge join].Columns[DAMAGE_month_night]"
+                      name="DAMAGE_month_night">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Colonna di input associata a questa colonna di output"
+                          name="InputColumnID">#{Package\QUERY_2\Merge join 1.Inputs[Input merge join destro].Columns[DAMAGE_month_night]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\QUERY_2\Multicast"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;0"
+              description="Distribuisce ogni riga di input a ogni riga di uno o più output. Ad esempio, creare un nuovo ramo del flusso di dati per creare una copia dei dati in modo che sia possibile mascherare alcuni valori prima di condividerli con partner esterni."
+              name="Multicast">
+              <inputs>
+                <input
+                  refId="Package\QUERY_2\Multicast.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\QUERY_2\Multicast.Outputs[Multicast Output 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\QUERY_2\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\QUERY_2\Multicast.Outputs[Output multicast 2]"
+                  deleteOutputOnPathDetached="true"
+                  name="Output multicast 2"
+                  synchronousInputId="Package\QUERY_2\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\QUERY_2\Multicast.Outputs[Output multicast 1]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Output multicast 1"
+                  synchronousInputId="Package\QUERY_2\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\QUERY_2\Multicast 1"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;0"
+              description="Distribuisce ogni riga di input a ogni riga di uno o più output. Ad esempio, creare un nuovo ramo del flusso di dati per creare una copia dei dati in modo che sia possibile mascherare alcuni valori prima di condividerli con partner esterni."
+              name="Multicast 1">
+              <inputs>
+                <input
+                  refId="Package\QUERY_2\Multicast 1.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\QUERY_2\Multicast 1.Outputs[Multicast Output 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\QUERY_2\Multicast 1.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\QUERY_2\Multicast 1.Outputs[Output multicast 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Output multicast 1"
+                  synchronousInputId="Package\QUERY_2\Multicast 1.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\QUERY_2\Multicast 1.Outputs[Output multicast 2]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Output multicast 2"
+                  synchronousInputId="Package\QUERY_2\Multicast 1.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\QUERY_2\Ordinamento"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordinamento;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Ordina i dati di input in ordine crescente o decrescente quando non possono essere ordinati come la relativa origine. Ad esempio, ordinare i dati delle vendite per 'customer id' prima che vengano scritti in un file flat e recapitati a un altro reparto. Nota: questa trasformazione non è consigliata per i flussi di dati di grandi dimensioni."
+              name="Ordinamento"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se la trasformazione Ordinamento rimuove le righe con valori di ordinamento duplicati."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero massimo di thread da utilizzare per l'ordinamento."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\QUERY_2\Ordinamento.Inputs[Input ordinamento]"
+                  name="Input ordinamento">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\QUERY_2\Ordinamento.Inputs[Input ordinamento].Columns[YEAR]"
+                      cachedDataType="i4"
+                      cachedName="YEAR"
+                      lineageId="Package\QUERY_2\Aggregazione 2.Outputs[Output aggregazione 1].Columns[YEAR]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\QUERY_2\Ordinamento.Inputs[Input ordinamento].Columns[DAMAGE_avg_year]"
+                      cachedDataType="r8"
+                      cachedName="DAMAGE_avg_year"
+                      lineageId="Package\QUERY_2\Aggregazione 2.Outputs[Output aggregazione 1].Columns[DAMAGE_avg_year]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\QUERY_2\Ordinamento.Outputs[Output ordinamento]"
+                  isSorted="true"
+                  name="Output ordinamento">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\QUERY_2\Ordinamento.Outputs[Output ordinamento].Columns[YEAR]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Ordinamento.Outputs[Output ordinamento].Columns[YEAR]"
+                      name="YEAR"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\QUERY_2\Aggregazione 2.Outputs[Output aggregazione 1].Columns[YEAR]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\QUERY_2\Ordinamento.Outputs[Output ordinamento].Columns[DAMAGE_avg_year]"
+                      dataType="r8"
+                      lineageId="Package\QUERY_2\Ordinamento.Outputs[Output ordinamento].Columns[DAMAGE_avg_year]"
+                      name="DAMAGE_avg_year"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\QUERY_2\Aggregazione 2.Outputs[Output aggregazione 1].Columns[DAMAGE_avg_year]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\QUERY_2\Ordinamento 1"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordinamento;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Ordina i dati di input in ordine crescente o decrescente quando non possono essere ordinati come la relativa origine. Ad esempio, ordinare i dati delle vendite per 'customer id' prima che vengano scritti in un file flat e recapitati a un altro reparto. Nota: questa trasformazione non è consigliata per i flussi di dati di grandi dimensioni."
+              name="Ordinamento 1"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se la trasformazione Ordinamento rimuove le righe con valori di ordinamento duplicati."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero massimo di thread da utilizzare per l'ordinamento."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\QUERY_2\Ordinamento 1.Inputs[Input ordinamento]"
+                  name="Input ordinamento">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\QUERY_2\Ordinamento 1.Inputs[Input ordinamento].Columns[YEAR]"
+                      cachedDataType="i4"
+                      cachedName="YEAR"
+                      lineageId="Package\QUERY_2\Aggregazione 1.Outputs[Output aggregazione 1].Columns[YEAR]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\QUERY_2\Ordinamento 1.Inputs[Input ordinamento].Columns[MONTH]"
+                      cachedDataType="i4"
+                      cachedName="MONTH"
+                      lineageId="Package\QUERY_2\Aggregazione 1.Outputs[Output aggregazione 1].Columns[MONTH]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\QUERY_2\Ordinamento 1.Inputs[Input ordinamento].Columns[DAMAGE_month_day]"
+                      cachedDataType="r8"
+                      cachedName="DAMAGE_month_day"
+                      lineageId="Package\QUERY_2\Aggregazione 1.Outputs[Output aggregazione 1].Columns[DAMAGE_month_day]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">3</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\QUERY_2\Ordinamento 1.Outputs[Output ordinamento]"
+                  isSorted="true"
+                  name="Output ordinamento">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\QUERY_2\Ordinamento 1.Outputs[Output ordinamento].Columns[YEAR]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Ordinamento 1.Outputs[Output ordinamento].Columns[YEAR]"
+                      name="YEAR"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\QUERY_2\Aggregazione 1.Outputs[Output aggregazione 1].Columns[YEAR]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\QUERY_2\Ordinamento 1.Outputs[Output ordinamento].Columns[MONTH]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Ordinamento 1.Outputs[Output ordinamento].Columns[MONTH]"
+                      name="MONTH"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\QUERY_2\Aggregazione 1.Outputs[Output aggregazione 1].Columns[MONTH]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\QUERY_2\Ordinamento 1.Outputs[Output ordinamento].Columns[DAMAGE_month_day]"
+                      dataType="r8"
+                      lineageId="Package\QUERY_2\Ordinamento 1.Outputs[Output ordinamento].Columns[DAMAGE_month_day]"
+                      name="DAMAGE_month_day"
+                      sortKeyPosition="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\QUERY_2\Aggregazione 1.Outputs[Output aggregazione 1].Columns[DAMAGE_month_day]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\QUERY_2\Ordinamento 2"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Ordinamento;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Ordina i dati di input in ordine crescente o decrescente quando non possono essere ordinati come la relativa origine. Ad esempio, ordinare i dati delle vendite per 'customer id' prima che vengano scritti in un file flat e recapitati a un altro reparto. Nota: questa trasformazione non è consigliata per i flussi di dati di grandi dimensioni."
+              name="Ordinamento 2"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica se la trasformazione Ordinamento rimuove le righe con valori di ordinamento duplicati."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il numero massimo di thread da utilizzare per l'ordinamento."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\QUERY_2\Ordinamento 2.Inputs[Input ordinamento]"
+                  name="Input ordinamento">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\QUERY_2\Ordinamento 2.Inputs[Input ordinamento].Columns[YEAR]"
+                      cachedDataType="i4"
+                      cachedName="YEAR"
+                      lineageId="Package\QUERY_2\Aggregazione.Outputs[Output aggregazione 1].Columns[YEAR]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\QUERY_2\Ordinamento 2.Inputs[Input ordinamento].Columns[MONTH]"
+                      cachedDataType="i4"
+                      cachedName="MONTH"
+                      lineageId="Package\QUERY_2\Aggregazione.Outputs[Output aggregazione 1].Columns[MONTH]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\QUERY_2\Ordinamento 2.Inputs[Input ordinamento].Columns[DAMAGE_month_night]"
+                      cachedDataType="r8"
+                      cachedName="DAMAGE_month_night"
+                      lineageId="Package\QUERY_2\Aggregazione.Outputs[Output aggregazione 1].Columns[DAMAGE_month_night]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifica il tipo di ordinamento della colonna."
+                          name="NewSortKeyPosition">3</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\QUERY_2\Ordinamento 2.Outputs[Output ordinamento]"
+                  isSorted="true"
+                  name="Output ordinamento">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\QUERY_2\Ordinamento 2.Outputs[Output ordinamento].Columns[YEAR]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Ordinamento 2.Outputs[Output ordinamento].Columns[YEAR]"
+                      name="YEAR"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\QUERY_2\Aggregazione.Outputs[Output aggregazione 1].Columns[YEAR]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\QUERY_2\Ordinamento 2.Outputs[Output ordinamento].Columns[MONTH]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Ordinamento 2.Outputs[Output ordinamento].Columns[MONTH]"
+                      name="MONTH"
+                      sortKeyPosition="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\QUERY_2\Aggregazione.Outputs[Output aggregazione 1].Columns[MONTH]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\QUERY_2\Ordinamento 2.Outputs[Output ordinamento].Columns[DAMAGE_month_night]"
+                      dataType="r8"
+                      lineageId="Package\QUERY_2\Ordinamento 2.Outputs[Output ordinamento].Columns[DAMAGE_month_night]"
+                      name="DAMAGE_month_night"
+                      sortKeyPosition="3">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
+                          name="SortColumnId">#{Package\QUERY_2\Aggregazione.Outputs[Output aggregazione 1].Columns[DAMAGE_month_night]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\QUERY_2\Origine OLE DB"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origine OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;7"
+              description="Origine OLE DB"
+              name="Origine OLE DB"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Numero di secondi prima del timeout di un comando. Il valore 0 indica nessun timeout."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                  name="OpenRowset">[Group_ID_24].[FACT_DAMAGE]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL da eseguire."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variabile che contiene il comando SQL da eseguire."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forza l'utilizzo del valore della proprietà DefaultCodePage per la descrizione di dati di tipo carattere."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la modalità utilizzata per accedere al database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Mapping tra i parametri nel comando SQL e le variabili."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\QUERY_2\Origine OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[lds.di.unipi.it.Group_ID_24]"
+                  connectionManagerRefId="Package.ConnectionManagers[lds.di.unipi.it.Group_ID_24]"
+                  description="Connessione di run-time OLE DB utilizzata per accedere al database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB]"
+                  name="Output origine OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].Columns[DAMAGE]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[DAMAGE]"
+                      lineageId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].Columns[DAMAGE]"
+                      name="DAMAGE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].Columns[NUM_UNITS]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[NUM_UNITS]"
+                      lineageId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].Columns[NUM_UNITS]"
+                      name="NUM_UNITS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].Columns[PERSON_ID_FK]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[PERSON_ID_FK]"
+                      length="50"
+                      lineageId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].Columns[PERSON_ID_FK]"
+                      name="PERSON_ID_FK"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].Columns[CRASH_UNIT_ID_FK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[CRASH_UNIT_ID_FK]"
+                      lineageId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].Columns[CRASH_UNIT_ID_FK]"
+                      name="CRASH_UNIT_ID_FK"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].Columns[ROAD_CONDITION_PK_FK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[ROAD_CONDITION_PK_FK]"
+                      lineageId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].Columns[ROAD_CONDITION_PK_FK]"
+                      name="ROAD_CONDITION_PK_FK"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].Columns[GEOGRAPHY_PK_FK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[GEOGRAPHY_PK_FK]"
+                      lineageId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].Columns[GEOGRAPHY_PK_FK]"
+                      name="GEOGRAPHY_PK_FK"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].Columns[DATE_PK_FK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[DATE_PK_FK]"
+                      lineageId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].Columns[DATE_PK_FK]"
+                      name="DATE_PK_FK"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].Columns[CAUSE_PK_FK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[CAUSE_PK_FK]"
+                      lineageId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].Columns[CAUSE_PK_FK]"
+                      name="CAUSE_PK_FK"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].Columns[CRASH_FK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[CRASH_FK]"
+                      lineageId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].Columns[CRASH_FK]"
+                      name="CRASH_FK"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[DAMAGE]"
+                      dataType="r8"
+                      name="DAMAGE" />
+                    <externalMetadataColumn
+                      refId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[NUM_UNITS]"
+                      dataType="r8"
+                      name="NUM_UNITS" />
+                    <externalMetadataColumn
+                      refId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[PERSON_ID_FK]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PERSON_ID_FK" />
+                    <externalMetadataColumn
+                      refId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[CRASH_UNIT_ID_FK]"
+                      dataType="i4"
+                      name="CRASH_UNIT_ID_FK" />
+                    <externalMetadataColumn
+                      refId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[ROAD_CONDITION_PK_FK]"
+                      dataType="i4"
+                      name="ROAD_CONDITION_PK_FK" />
+                    <externalMetadataColumn
+                      refId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[GEOGRAPHY_PK_FK]"
+                      dataType="i4"
+                      name="GEOGRAPHY_PK_FK" />
+                    <externalMetadataColumn
+                      refId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[DATE_PK_FK]"
+                      dataType="i4"
+                      name="DATE_PK_FK" />
+                    <externalMetadataColumn
+                      refId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[CAUSE_PK_FK]"
+                      dataType="i4"
+                      name="CAUSE_PK_FK" />
+                    <externalMetadataColumn
+                      refId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[CRASH_FK]"
+                      dataType="i4"
+                      name="CRASH_FK" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\QUERY_2\Origine OLE DB.Outputs[Output errori origine OLE DB]"
+                  isErrorOut="true"
+                  name="Output errori origine OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\QUERY_2\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[DAMAGE]"
+                      dataType="r8"
+                      lineageId="Package\QUERY_2\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[DAMAGE]"
+                      name="DAMAGE" />
+                    <outputColumn
+                      refId="Package\QUERY_2\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[NUM_UNITS]"
+                      dataType="r8"
+                      lineageId="Package\QUERY_2\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[NUM_UNITS]"
+                      name="NUM_UNITS" />
+                    <outputColumn
+                      refId="Package\QUERY_2\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[PERSON_ID_FK]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\QUERY_2\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[PERSON_ID_FK]"
+                      name="PERSON_ID_FK" />
+                    <outputColumn
+                      refId="Package\QUERY_2\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[CRASH_UNIT_ID_FK]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[CRASH_UNIT_ID_FK]"
+                      name="CRASH_UNIT_ID_FK" />
+                    <outputColumn
+                      refId="Package\QUERY_2\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[ROAD_CONDITION_PK_FK]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[ROAD_CONDITION_PK_FK]"
+                      name="ROAD_CONDITION_PK_FK" />
+                    <outputColumn
+                      refId="Package\QUERY_2\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[GEOGRAPHY_PK_FK]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[GEOGRAPHY_PK_FK]"
+                      name="GEOGRAPHY_PK_FK" />
+                    <outputColumn
+                      refId="Package\QUERY_2\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[DATE_PK_FK]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[DATE_PK_FK]"
+                      name="DATE_PK_FK" />
+                    <outputColumn
+                      refId="Package\QUERY_2\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[CAUSE_PK_FK]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[CAUSE_PK_FK]"
+                      name="CAUSE_PK_FK" />
+                    <outputColumn
+                      refId="Package\QUERY_2\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[CRASH_FK]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[CRASH_FK]"
+                      name="CRASH_FK" />
+                    <outputColumn
+                      refId="Package\QUERY_2\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\QUERY_2\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\QUERY_2\Ricerca"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Ricerca;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;6"
+              description="Crea un join delle colonne aggiuntive al flusso di dati cercando valori in una tabella. Ad esempio, creare un join della colonna 'employee id' alla tabella dei dipendenti per ottenere data di assunzione e nome del dipendente. Questa trasformazione è consigliata quando la memoria disponibile è sufficiente per la tabella di ricerca."
+              name="Ricerca"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifica l'istruzione SQL che genera la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [Group_ID_24].[CRASH_DATE]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica un'istruzione SQL che utilizza parametri per generare la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [Group_ID_24].[CRASH_DATE]) [refTable]
+where [refTable].[DATE_PK] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di connessione utilizzata per accedere al set di dati di riferimento."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di cache della tabella di ricerca."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il modo in cui la trasformazione Ricerca gestisce le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale della cache allocata per le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 32 bit."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 64 bit."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica se fare riferimento ai metadati in un formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CRASH_DATE" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CRASH_HOUR" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="DATE_POLICE_NOTIFIED" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DAY" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MONTH" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="YEAR" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DAY_OF_WEEK" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="QUARTER" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DATE_PK" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifica l'elenco di identificatori di derivazione corrispondenti ai parametri utilizzati dall'istruzione SQL nella proprietà SQLCommand. Le voci nell'elenco sono separate da punti e virgola."
+                  name="ParameterMap">#{Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].Columns[DATE_PK_FK]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina se le chiavi duplicate nei dati di riferimento devono essere considerate come errori in caso di utilizzo della modalità di Full cache."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\QUERY_2\Ricerca.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[lds.di.unipi.it.Group_ID_24]"
+                  connectionManagerRefId="Package.ConnectionManagers[lds.di.unipi.it.Group_ID_24]"
+                  description="Gestione connessione utilizzata per accedere ai dati di ricerca."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\QUERY_2\Ricerca.Inputs[Input ricerca]"
+                  name="Input ricerca">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\QUERY_2\Ricerca.Inputs[Input ricerca].Columns[DATE_PK_FK]"
+                      cachedDataType="i4"
+                      cachedName="DATE_PK_FK"
+                      lineageId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB].Columns[DATE_PK_FK]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento a cui viene unita in join una colonna."
+                          name="JoinToReferenceColumn">DATE_PK</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\QUERY_2\Ricerca.Outputs[Output corrispondenza ricerca]"
+                  errorOrTruncationOperation="Ricerca"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Output corrispondenza ricerca"
+                  synchronousInputId="Package\QUERY_2\Ricerca.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\QUERY_2\Ricerca.Outputs[Output corrispondenza ricerca].Columns[CRASH_HOUR]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copia colonna"
+                      length="50"
+                      lineageId="Package\QUERY_2\Ricerca.Outputs[Output corrispondenza ricerca].Columns[CRASH_HOUR]"
+                      name="CRASH_HOUR"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn">CRASH_HOUR</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\QUERY_2\Ricerca.Outputs[Output corrispondenza ricerca].Columns[DATE_PK]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copia colonna"
+                      lineageId="Package\QUERY_2\Ricerca.Outputs[Output corrispondenza ricerca].Columns[DATE_PK]"
+                      name="DATE_PK"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn">DATE_PK</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\QUERY_2\Ricerca.Outputs[Output corrispondenza ricerca].Columns[MONTH]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copia colonna"
+                      lineageId="Package\QUERY_2\Ricerca.Outputs[Output corrispondenza ricerca].Columns[MONTH]"
+                      name="MONTH"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn">MONTH</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\QUERY_2\Ricerca.Outputs[Output corrispondenza ricerca].Columns[YEAR]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copia colonna"
+                      lineageId="Package\QUERY_2\Ricerca.Outputs[Output corrispondenza ricerca].Columns[YEAR]"
+                      name="YEAR"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn">YEAR</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\QUERY_2\Ricerca.Outputs[Output nessuna corrispondenza ricerca]"
+                  description="Output ricerca che gestisce le righe senza voci corrispondenti nel set di dati di riferimento. Usare questo output quando la proprietà NoMatchBehavior è impostata su &quot;Invia le righe senza voci corrispondenti all'output nessuna corrispondenza&quot;."
+                  exclusionGroup="1"
+                  name="Output nessuna corrispondenza ricerca"
+                  synchronousInputId="Package\QUERY_2\Ricerca.Inputs[Input ricerca]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\QUERY_2\Ricerca.Outputs[Output errori ricerca]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori ricerca"
+                  synchronousInputId="Package\QUERY_2\Ricerca.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\QUERY_2\Ricerca.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Ricerca.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\QUERY_2\Ricerca.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Ricerca.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\QUERY_2\Suddivisione condizionale"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Suddivisione condizionale;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;0"
+              description="Indirizza righe di dati a output diversi a seconda del contenuto dei dati. Usare le condizioni (espressioni SSIS) per specificare le righe da indirizzare. Ad esempio, separare i record da eliminare da quelli pronti per essere caricati oppure indirizzare unicamente un subset di record."
+              name="Suddivisione condizionale"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\QUERY_2\Suddivisione condizionale.Inputs[Input suddivisione condizionale]"
+                  description="Input della trasformazione Suddivisione condizionale"
+                  name="Input suddivisione condizionale">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\QUERY_2\Suddivisione condizionale.Inputs[Input suddivisione condizionale].Columns[CRASH_HOUR_INT]"
+                      cachedDataType="i4"
+                      cachedName="CRASH_HOUR_INT"
+                      lineageId="Package\QUERY_2\Colonna derivata.Outputs[Output colonna derivata].Columns[CRASH_HOUR_INT]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\QUERY_2\Suddivisione condizionale.Outputs[night_damage]"
+                  description="Output 1 della trasformazione Suddivisione condizionale"
+                  errorOrTruncationOperation="Calcolo"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="night_damage"
+                  synchronousInputId="Package\QUERY_2\Suddivisione condizionale.Inputs[Input suddivisione condizionale]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifica l'espressione. Questa versione dell'espressione utilizza gli identificatori di derivazione anziché i nomi di colonna."
+                      name="Expression">#{Package\QUERY_2\Colonna derivata.Outputs[Output colonna derivata].Columns[CRASH_HOUR_INT]} &gt; 21 &amp;&amp; #{Package\QUERY_2\Colonna derivata.Outputs[Output colonna derivata].Columns[CRASH_HOUR_INT]} &lt;= 8</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifica la versione descrittiva dell'espressione. Questa versione dell'espressione utilizza i nomi di colonna."
+                      expressionType="Notify"
+                      name="FriendlyExpression">CRASH_HOUR_INT &gt; 21 &amp;&amp; CRASH_HOUR_INT &lt;= 8</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica la posizione della condizione nell'elenco delle condizioni valutate dalla trasformazione. L'ordine di valutazione è crescente, dal valore più basso al più alto."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\QUERY_2\Suddivisione condizionale.Outputs[day_damage]"
+                  description="Output 2 della trasformazione Suddivisione condizionale"
+                  errorOrTruncationOperation="Calcolo"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="day_damage"
+                  synchronousInputId="Package\QUERY_2\Suddivisione condizionale.Inputs[Input suddivisione condizionale]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifica l'espressione. Questa versione dell'espressione utilizza gli identificatori di derivazione anziché i nomi di colonna."
+                      name="Expression">#{Package\QUERY_2\Colonna derivata.Outputs[Output colonna derivata].Columns[CRASH_HOUR_INT]} &lt;= 21 &amp;&amp; #{Package\QUERY_2\Colonna derivata.Outputs[Output colonna derivata].Columns[CRASH_HOUR_INT]} &gt; 8</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifica la versione descrittiva dell'espressione. Questa versione dell'espressione utilizza i nomi di colonna."
+                      expressionType="Notify"
+                      name="FriendlyExpression">CRASH_HOUR_INT &lt;= 21 &amp;&amp; CRASH_HOUR_INT &gt; 8</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifica la posizione della condizione nell'elenco delle condizioni valutate dalla trasformazione. L'ordine di valutazione è crescente, dal valore più basso al più alto."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\QUERY_2\Suddivisione condizionale.Outputs[Output predefinito suddivisione condizionale]"
+                  description="Output predefinito per la trasformazione Suddivisione condizionale"
+                  exclusionGroup="1"
+                  name="Output predefinito suddivisione condizionale"
+                  synchronousInputId="Package\QUERY_2\Suddivisione condizionale.Inputs[Input suddivisione condizionale]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\QUERY_2\Suddivisione condizionale.Outputs[Output errori suddivisione condizionale]"
+                  description="Output degli errori per la trasformazione Suddivisione condizionale"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori suddivisione condizionale"
+                  synchronousInputId="Package\QUERY_2\Suddivisione condizionale.Inputs[Input suddivisione condizionale]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\QUERY_2\Suddivisione condizionale.Outputs[Output errori suddivisione condizionale].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Suddivisione condizionale.Outputs[Output errori suddivisione condizionale].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\QUERY_2\Suddivisione condizionale.Outputs[Output errori suddivisione condizionale].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Suddivisione condizionale.Outputs[Output errori suddivisione condizionale].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\QUERY_2\Unione"
+              componentClassID="Microsoft.Merge"
+              contactInfo="Unione;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
+              description="Combina righe di più flussi di dati ordinati in un unico flusso di dati ordinati. A differenza del join di tipo Merge, tutte le righe passano nell'output. Ad esempio, combinare due elenchi ordinati di clienti in un unico elenco ordinato. Se l'ordinamento non è importante, utilizzare la trasformazione Unione input multipli. "
+              name="Unione"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\QUERY_2\Unione.Inputs[Unione Input 1]"
+                  name="Unione Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\QUERY_2\Unione.Inputs[Unione Input 1].Columns[YEAR]"
+                      cachedDataType="i4"
+                      cachedName="YEAR"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\QUERY_2\Merge join 1.Outputs[Output merge join].Columns[YEAR]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID derivazione colonna output"
+                          name="OutputColumnLineageID">#{Package\QUERY_2\Unione.Outputs[Unione Output 1].Columns[YEAR]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\QUERY_2\Unione.Inputs[Unione Input 1].Columns[DAMAGE_avg_year]"
+                      cachedDataType="r8"
+                      cachedName="DAMAGE_avg_year"
+                      lineageId="Package\QUERY_2\Merge join 1.Outputs[Output merge join].Columns[DAMAGE_avg_year]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID derivazione colonna output"
+                          name="OutputColumnLineageID">#{Package\QUERY_2\Unione.Outputs[Unione Output 1].Columns[DAMAGE_avg_year]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\QUERY_2\Unione.Inputs[Unione Input 1].Columns[MONTH]"
+                      cachedDataType="i4"
+                      cachedName="MONTH"
+                      lineageId="Package\QUERY_2\Merge join 1.Outputs[Output merge join].Columns[MONTH]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID derivazione colonna output"
+                          name="OutputColumnLineageID">#{Package\QUERY_2\Unione.Outputs[Unione Output 1].Columns[MONTH]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\QUERY_2\Unione.Inputs[Unione Input 1].Columns[DAMAGE_month_night]"
+                      cachedDataType="r8"
+                      cachedName="DAMAGE_month_night"
+                      lineageId="Package\QUERY_2\Merge join 1.Outputs[Output merge join].Columns[DAMAGE_month_night]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID derivazione colonna output"
+                          name="OutputColumnLineageID">#{Package\QUERY_2\Unione.Outputs[Unione Output 1].Columns[DAMAGE_month_night]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\QUERY_2\Unione.Inputs[Unione Input 2]"
+                  name="Unione Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\QUERY_2\Unione.Inputs[Unione Input 2].Columns[YEAR]"
+                      cachedDataType="i4"
+                      cachedName="YEAR"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\QUERY_2\Merge join.Outputs[Output merge join].Columns[YEAR]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID derivazione colonna output"
+                          name="OutputColumnLineageID">#{Package\QUERY_2\Unione.Outputs[Unione Output 1].Columns[YEAR]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\QUERY_2\Unione.Inputs[Unione Input 2].Columns[DAMAGE_avg_year]"
+                      cachedDataType="r8"
+                      cachedName="DAMAGE_avg_year"
+                      lineageId="Package\QUERY_2\Merge join.Outputs[Output merge join].Columns[DAMAGE_avg_year]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID derivazione colonna output"
+                          name="OutputColumnLineageID">#{Package\QUERY_2\Unione.Outputs[Unione Output 1].Columns[DAMAGE_avg_year]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\QUERY_2\Unione.Inputs[Unione Input 2].Columns[MONTH]"
+                      cachedDataType="i4"
+                      cachedName="MONTH"
+                      lineageId="Package\QUERY_2\Merge join.Outputs[Output merge join].Columns[MONTH]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID derivazione colonna output"
+                          name="OutputColumnLineageID">#{Package\QUERY_2\Unione.Outputs[Unione Output 1].Columns[MONTH]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\QUERY_2\Unione.Inputs[Unione Input 2].Columns[DAMAGE_month_day]"
+                      cachedDataType="r8"
+                      cachedName="DAMAGE_month_day"
+                      lineageId="Package\QUERY_2\Merge join.Outputs[Output merge join].Columns[DAMAGE_month_day]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="ID derivazione colonna output"
+                          name="OutputColumnLineageID">#{Package\QUERY_2\Unione.Outputs[Unione Output 1].Columns[DAMAGE_month_day]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\QUERY_2\Unione.Outputs[Unione Output 1]"
+                  isSorted="true"
+                  name="Unione Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\QUERY_2\Unione.Outputs[Unione Output 1].Columns[YEAR]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Unione.Outputs[Unione Output 1].Columns[YEAR]"
+                      name="YEAR"
+                      sortKeyPosition="1" />
+                    <outputColumn
+                      refId="Package\QUERY_2\Unione.Outputs[Unione Output 1].Columns[DAMAGE_avg_year]"
+                      dataType="r8"
+                      lineageId="Package\QUERY_2\Unione.Outputs[Unione Output 1].Columns[DAMAGE_avg_year]"
+                      name="DAMAGE_avg_year" />
+                    <outputColumn
+                      refId="Package\QUERY_2\Unione.Outputs[Unione Output 1].Columns[MONTH]"
+                      dataType="i4"
+                      lineageId="Package\QUERY_2\Unione.Outputs[Unione Output 1].Columns[MONTH]"
+                      name="MONTH" />
+                    <outputColumn
+                      refId="Package\QUERY_2\Unione.Outputs[Unione Output 1].Columns[DAMAGE_month_night]"
+                      dataType="r8"
+                      lineageId="Package\QUERY_2\Unione.Outputs[Unione Output 1].Columns[DAMAGE_month_night]"
+                      name="DAMAGE_month_night" />
+                    <outputColumn
+                      refId="Package\QUERY_2\Unione.Outputs[Unione Output 1].Columns[DAMAGE_month_day]"
+                      dataType="r8"
+                      lineageId="Package\QUERY_2\Unione.Outputs[Unione Output 1].Columns[DAMAGE_month_day]"
+                      name="DAMAGE_month_day" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\QUERY_2.Paths[Multicast Output 1]"
+              endId="Package\QUERY_2\Merge join.Inputs[Input merge join sinistro]"
+              name="Multicast Output 1"
+              startId="Package\QUERY_2\Multicast 1.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\QUERY_2.Paths[Multicast Output 11]"
+              endId="Package\QUERY_2\Suddivisione condizionale.Inputs[Input suddivisione condizionale]"
+              name="Multicast Output 1"
+              startId="Package\QUERY_2\Multicast.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\QUERY_2.Paths[night_damage]"
+              endId="Package\QUERY_2\Aggregazione.Inputs[Input aggregazione 1]"
+              name="night_damage"
+              startId="Package\QUERY_2\Suddivisione condizionale.Outputs[night_damage]" />
+            <path
+              refId="Package\QUERY_2.Paths[Output aggregazione 1]"
+              endId="Package\QUERY_2\Ordinamento 2.Inputs[Input ordinamento]"
+              name="Output aggregazione 1"
+              startId="Package\QUERY_2\Aggregazione.Outputs[Output aggregazione 1]" />
+            <path
+              refId="Package\QUERY_2.Paths[Output aggregazione 11]"
+              endId="Package\QUERY_2\Ordinamento 1.Inputs[Input ordinamento]"
+              name="Output aggregazione 1"
+              startId="Package\QUERY_2\Aggregazione 1.Outputs[Output aggregazione 1]" />
+            <path
+              refId="Package\QUERY_2.Paths[Output aggregazione 12]"
+              endId="Package\QUERY_2\Ordinamento.Inputs[Input ordinamento]"
+              name="Output aggregazione 1"
+              startId="Package\QUERY_2\Aggregazione 2.Outputs[Output aggregazione 1]" />
+            <path
+              refId="Package\QUERY_2.Paths[Output colonna derivata]"
+              endId="Package\QUERY_2\Multicast.Inputs[Multicast Input 1]"
+              name="Output colonna derivata"
+              startId="Package\QUERY_2\Colonna derivata.Outputs[Output colonna derivata]" />
+            <path
+              refId="Package\QUERY_2.Paths[Output corrispondenza ricerca]"
+              endId="Package\QUERY_2\Colonna derivata.Inputs[Input colonna derivata]"
+              name="Output corrispondenza ricerca"
+              startId="Package\QUERY_2\Ricerca.Outputs[Output corrispondenza ricerca]" />
+            <path
+              refId="Package\QUERY_2.Paths[Output merge join1]"
+              endId="Package\QUERY_2\Unione.Inputs[Unione Input 1]"
+              name="Output merge join"
+              startId="Package\QUERY_2\Merge join 1.Outputs[Output merge join]" />
+            <path
+              refId="Package\QUERY_2.Paths[Output merge join]"
+              endId="Package\QUERY_2\Unione.Inputs[Unione Input 2]"
+              name="Output merge join"
+              startId="Package\QUERY_2\Merge join.Outputs[Output merge join]" />
+            <path
+              refId="Package\QUERY_2.Paths[Output multicast 1]"
+              endId="Package\QUERY_2\Merge join 1.Inputs[Input merge join sinistro]"
+              name="Output multicast 1"
+              startId="Package\QUERY_2\Multicast 1.Outputs[Output multicast 1]" />
+            <path
+              refId="Package\QUERY_2.Paths[Output multicast 2]"
+              endId="Package\QUERY_2\Aggregazione 2.Inputs[Input aggregazione 1]"
+              name="Output multicast 2"
+              startId="Package\QUERY_2\Multicast.Outputs[Output multicast 2]" />
+            <path
+              refId="Package\QUERY_2.Paths[Output ordinamento]"
+              endId="Package\QUERY_2\Merge join.Inputs[Input merge join destro]"
+              name="Output ordinamento"
+              startId="Package\QUERY_2\Ordinamento 1.Outputs[Output ordinamento]" />
+            <path
+              refId="Package\QUERY_2.Paths[Output ordinamento1]"
+              endId="Package\QUERY_2\Multicast 1.Inputs[Multicast Input 1]"
+              name="Output ordinamento"
+              startId="Package\QUERY_2\Ordinamento.Outputs[Output ordinamento]" />
+            <path
+              refId="Package\QUERY_2.Paths[Output ordinamento2]"
+              endId="Package\QUERY_2\Merge join 1.Inputs[Input merge join destro]"
+              name="Output ordinamento"
+              startId="Package\QUERY_2\Ordinamento 2.Outputs[Output ordinamento]" />
+            <path
+              refId="Package\QUERY_2.Paths[Output origine OLE DB]"
+              endId="Package\QUERY_2\Ricerca.Inputs[Input ricerca]"
+              name="Output origine OLE DB"
+              startId="Package\QUERY_2\Origine OLE DB.Outputs[Output origine OLE DB]" />
+            <path
+              refId="Package\QUERY_2.Paths[Output predefinito suddivisione condizionale]"
+              endId="Package\QUERY_2\Aggregazione 1.Inputs[Input aggregazione 1]"
+              name="Output predefinito suddivisione condizionale"
+              startId="Package\QUERY_2\Suddivisione condizionale.Outputs[Output predefinito suddivisione condizionale]" />
+            <path
+              refId="Package\QUERY_2.Paths[Unione Output 1]"
+              endId="Package\QUERY_2\Colonna derivata 1.Inputs[Input colonna derivata]"
+              name="Unione Output 1"
+              startId="Package\QUERY_2\Unione.Outputs[Unione Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Questa sezione CDATA contiene le informazioni sul layout del pacchetto e include informazioni quali coordinate (x,y), larghezza e altezza.-->
+<!--Se si modifica manualmente la sezione e si commette un errore, è possibile eliminarla. -->
+<!--Sarà comunque possibile caricare manualmente il pacchetto, ma le informazioni precedenti sul layout verranno perse e gli elementi verranno nuovamente disposti nell'area di progettazione all'interno dell'apposita finestra.-->
+<Objects
+  Version="8">
+  <!--Ogni nodo seguente conterrà proprietà che non influiscono sul comportamento di runtime.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="127.2,41.6"
+          Id="Package\QUERY_2"
+          TopLeft="300.499988277754,107.766667479409" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\QUERY_2">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="119.2,41.6"
+          Id="Package\QUERY_2\Multicast"
+          TopLeft="473,202.8" />
+        <NodeLayout
+          Size="113.6,41.6"
+          Id="Package\QUERY_2\Ricerca"
+          TopLeft="201,118" />
+        <NodeLayout
+          Size="127.2,41.6"
+          Id="Package\QUERY_2\Merge join"
+          TopLeft="633,568.2" />
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\QUERY_2\Aggregazione 1"
+          TopLeft="663,374" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\QUERY_2\Origine OLE DB"
+          TopLeft="112,35" />
+        <NodeLayout
+          Size="198.4,41.6"
+          Id="Package\QUERY_2\Suddivisione condizionale"
+          TopLeft="726,262" />
+        <NodeLayout
+          Size="147.2,41.6"
+          Id="Package\QUERY_2\Ordinamento 1"
+          TopLeft="649,459.2" />
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\QUERY_2\Aggregazione 2"
+          TopLeft="360,291.4" />
+        <NodeLayout
+          Size="165.6,41.6"
+          Id="Package\QUERY_2\Colonna derivata 1"
+          TopLeft="741,826.8" />
+        <NodeLayout
+          Size="135.2,41.6"
+          Id="Package\QUERY_2\Merge join 1"
+          TopLeft="383,706.4" />
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\QUERY_2\Ordinamento"
+          TopLeft="367,379.2" />
+        <NodeLayout
+          Size="147.2,41.6"
+          Id="Package\QUERY_2\Ordinamento 2"
+          TopLeft="886,460.6" />
+        <NodeLayout
+          Size="156.8,41.6"
+          Id="Package\QUERY_2\Colonna derivata"
+          TopLeft="391,136.8" />
+        <NodeLayout
+          Size="111.2,41.6"
+          Id="Package\QUERY_2\Unione"
+          TopLeft="684,749.6" />
+        <NodeLayout
+          Size="128,41.6"
+          Id="Package\QUERY_2\Multicast 1"
+          TopLeft="372,456" />
+        <NodeLayout
+          Size="142.4,41.6"
+          Id="Package\QUERY_2\Aggregazione"
+          TopLeft="891,384" />
+        <EdgeLayout
+          Id="Package\QUERY_2.Paths[Output aggregazione 12]"
+          TopLeft="435.9,333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46.2"
+              Start="0,0"
+              End="0,38.7">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.7" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\QUERY_2.Paths[Output aggregazione 11]"
+          TopLeft="738.6,415.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-16.0000000000001,43.6"
+              Start="0,0"
+              End="-16.0000000000001,36.1">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.8" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.8"
+                    Point2="0,21.8"
+                    Point3="-4,21.8" />
+                  <mssgle:LineSegment
+                    End="-12.0000000000001,21.8" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-12.0000000000001,21.8"
+                    Point2="-16.0000000000001,21.8"
+                    Point3="-16.0000000000001,25.8" />
+                  <mssgle:LineSegment
+                    End="-16.0000000000001,36.1" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\QUERY_2.Paths[Output aggregazione 1]"
+          TopLeft="960.9,425.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35.0000000000001"
+              Start="0,0"
+              End="0,27.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\QUERY_2.Paths[night_damage]"
+          TopLeft="856.933333333333,303.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="105.266666666667,80.4"
+              Start="0,0"
+              End="105.266666666667,72.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.54592" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.54592"
+                    Point2="0,32.54592"
+                    Point3="4,32.54592" />
+                  <mssgle:LineSegment
+                    End="101.266666666667,32.54592" />
+                  <mssgle:CubicBezierSegment
+                    Point1="101.266666666667,32.54592"
+                    Point2="105.266666666667,32.54592"
+                    Point3="105.266666666667,36.54592" />
+                  <mssgle:LineSegment
+                    End="105.266666666667,72.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="20.5953645833333,37.54592,64.0759375,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\QUERY_2.Paths[Multicast Output 11]"
+          TopLeft="592.2,223.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="133.8,59.2"
+              Start="0,0"
+              End="126.3,59.2">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="62.9,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="62.9,0"
+                    Point2="66.9,0"
+                    Point3="66.9,4" />
+                  <mssgle:LineSegment
+                    End="66.9,55.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="66.9,55.2"
+                    Point2="66.9,59.2"
+                    Point3="70.9,59.2" />
+                  <mssgle:LineSegment
+                    End="126.3,59.2" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\QUERY_2.Paths[Multicast Output 1]"
+          TopLeft="456,497.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="220.733333333333,70.6"
+              Start="0,0"
+              End="220.733333333333,63.1">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.2966364935684" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.2966364935684"
+                    Point2="0,35.2966364935684"
+                    Point3="4,35.2966364935684" />
+                  <mssgle:LineSegment
+                    End="216.733333333333,35.2966364935684" />
+                  <mssgle:CubicBezierSegment
+                    Point1="216.733333333333,35.2966364935684"
+                    Point2="220.733333333333,35.2966364935684"
+                    Point3="220.733333333333,39.2966364935684" />
+                  <mssgle:LineSegment
+                    End="220.733333333333,63.1" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\QUERY_2.Paths[Unione Output 1]"
+          TopLeft="739.6,791.2">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="84.2,35.6"
+              Start="0,0"
+              End="84.2,28.1">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.8" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.8"
+                    Point2="0,17.8"
+                    Point3="4,17.8" />
+                  <mssgle:LineSegment
+                    End="80.2,17.8" />
+                  <mssgle:CubicBezierSegment
+                    Point1="80.2,17.8"
+                    Point2="84.2,17.8"
+                    Point3="84.2,21.8" />
+                  <mssgle:LineSegment
+                    End="84.2,28.1" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\QUERY_2.Paths[Output origine OLE DB]"
+          TopLeft="188.4,76.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="69.4,41.4"
+              Start="0,0"
+              End="69.4,33.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.7"
+                    Point2="0,20.7"
+                    Point3="4,20.7" />
+                  <mssgle:LineSegment
+                    End="65.4,20.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="65.4,20.7"
+                    Point2="69.4,20.7"
+                    Point3="69.4,24.7" />
+                  <mssgle:LineSegment
+                    End="69.4,33.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\QUERY_2.Paths[Output ordinamento2]"
+          TopLeft="959.6,502.2">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-487.8,204.2"
+              Start="0,0"
+              End="-487.8,196.7">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,117.08701754386" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,117.08701754386"
+                    Point2="0,121.08701754386"
+                    Point3="-4,121.08701754386" />
+                  <mssgle:LineSegment
+                    End="-483.8,121.08701754386" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-483.8,121.08701754386"
+                    Point2="-487.8,121.08701754386"
+                    Point3="-487.8,125.08701754386" />
+                  <mssgle:LineSegment
+                    End="-487.8,196.7" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\QUERY_2.Paths[Output ordinamento1]"
+          TopLeft="436.1,420.8">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35.1999999999999"
+              Start="0,0"
+              End="0,27.6999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.6999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\QUERY_2.Paths[Output ordinamento]"
+          TopLeft="719.533333333333,500.8">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,67.4"
+              Start="0,0"
+              End="0,59.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,59.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\QUERY_2.Paths[Output multicast 2]"
+          TopLeft="532.6,244.4">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-97.0000000000001,47"
+              Start="0,0"
+              End="-97.0000000000001,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.5"
+                    Point2="0,23.5"
+                    Point3="-4,23.5" />
+                  <mssgle:LineSegment
+                    End="-93.0000000000001,23.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-93.0000000000001,23.5"
+                    Point2="-97.0000000000001,23.5"
+                    Point3="-97.0000000000001,27.5" />
+                  <mssgle:LineSegment
+                    End="-97.0000000000001,39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\QUERY_2.Paths[Output multicast 1]"
+          TopLeft="416,497.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="13.4,208.8"
+              Start="0,0"
+              End="13.4,201.3">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,100.484306864065" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,100.484306864065"
+                    Point2="0,104.484306864065"
+                    Point3="4,104.484306864065" />
+                  <mssgle:LineSegment
+                    End="9.40000000000003,104.484306864065" />
+                  <mssgle:CubicBezierSegment
+                    Point1="9.40000000000003,104.484306864065"
+                    Point2="13.4,104.484306864065"
+                    Point3="13.4,108.484306864065" />
+                  <mssgle:LineSegment
+                    End="13.4,201.3" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\QUERY_2.Paths[Output merge join]"
+          TopLeft="696.6,609.8">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="42.9999999999999,139.8"
+              Start="0,0"
+              End="42.9999999999999,132.3">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,65.9" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,65.9"
+                    Point2="0,69.9"
+                    Point3="4,69.9" />
+                  <mssgle:LineSegment
+                    End="38.9999999999999,69.9" />
+                  <mssgle:CubicBezierSegment
+                    Point1="38.9999999999999,69.9"
+                    Point2="42.9999999999999,69.9"
+                    Point3="42.9999999999999,73.9" />
+                  <mssgle:LineSegment
+                    End="42.9999999999999,132.3" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\QUERY_2.Paths[Output merge join1]"
+          TopLeft="518.2,727.2">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="165.8,43.2"
+              Start="0,0"
+              End="158.3,43.2">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="78.9,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="78.9,0"
+                    Point2="82.9,0"
+                    Point3="82.9,4" />
+                  <mssgle:LineSegment
+                    End="82.9,39.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="82.9,39.2"
+                    Point2="82.9,43.2"
+                    Point3="86.9,43.2" />
+                  <mssgle:LineSegment
+                    End="158.3,43.2" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\QUERY_2.Paths[Output corrispondenza ricerca]"
+          TopLeft="314.6,138.8">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="76.4000000000002,18.8"
+              Start="0,0"
+              End="68.9000000000002,18.8">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="34.2000000000001,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="34.2000000000001,0"
+                    Point2="38.2000000000001,0"
+                    Point3="38.2000000000001,4" />
+                  <mssgle:LineSegment
+                    End="38.2000000000001,14.8" />
+                  <mssgle:CubicBezierSegment
+                    Point1="38.2000000000001,14.8"
+                    Point2="38.2000000000001,18.8"
+                    Point3="42.2000000000001,18.8" />
+                  <mssgle:LineSegment
+                    End="68.9000000000002,18.8" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-28.5858789062499,-17.609375,133.5717578125,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\QUERY_2.Paths[Output colonna derivata]"
+          TopLeft="469.4,178.4">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="63.1999999999999,24.4"
+              Start="0,0"
+              End="63.1999999999999,16.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.20000000000002" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.20000000000002"
+                    Point2="0,12.2"
+                    Point3="4,12.2" />
+                  <mssgle:LineSegment
+                    End="59.1999999999999,12.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="59.1999999999999,12.2"
+                    Point2="63.1999999999999,12.2"
+                    Point3="63.1999999999999,16.2" />
+                  <mssgle:LineSegment
+                    End="63.1999999999999,16.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\QUERY_2.Paths[Output predefinito suddivisione condizionale]"
+          TopLeft="793.466666666667,303.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-54.8666666666667,70.4"
+              Start="0,0"
+              End="-54.8666666666667,62.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.49792" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.49792"
+                    Point2="0,28.49792"
+                    Point3="-4,28.49792" />
+                  <mssgle:LineSegment
+                    End="-50.8666666666667,28.49792" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-50.8666666666667,28.49792"
+                    Point2="-54.8666666666667,28.49792"
+                    Point3="-54.8666666666667,32.49792" />
+                  <mssgle:LineSegment
+                    End="-54.8666666666667,62.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-125.537200520833,33.49792,196.207734375,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\QUERY_2\Ricerca">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[Group_ID_24].[CRASH_DATE]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\QUERY_2\Origine OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

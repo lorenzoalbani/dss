@@ -1,0 +1,13 @@
+
+-- 2: For each month, show the total damage cost for each location and the grand total
+-- with respect to the location
+
+
+with member [Measures].[Total_damage] as 
+SUM(   
+		[Date_info].[year_month_day].[MONTH], [Measures].[DAMAGE]
+	)
+
+select {[Measures].[DAMAGE], [Measures].[Total_damage]} on columns,
+(nonempty(([Date_info].[YEAR].[YEAR], [Date_info].[year_month_day].[MONTH],[GEOGRAPHY].[LOCATION].[LOCATION]),[Measures].[DAMAGE])) on rows
+from [Group_ID_24_Cube]
