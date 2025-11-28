@@ -1,0 +1,13 @@
+-- For each location, show the damage costs increase or decrease, in percentage,
+-- with respect to the previous year.
+
+
+with member [Measures].[Change] as
+    ([Measures].[DAMAGE] -
+    ([Date_info].[year_month_day].prevmember, [Measures].[DAMAGE]) )/ 
+    ([Date_info].[year_month_day].prevmember, [Measures].[DAMAGE]),
+format_string = "Percent"
+
+SELECT {[Measures].[DAMAGE], [Measures].[Change]} ON COLUMNS,
+([Date_info].[year_month_day].[YEAR],[GEOGRAPHY].[LOCATION].[LOCATION])  ON ROWS
+FROM [Group_ID_24_Cube]

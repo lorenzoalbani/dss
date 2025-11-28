@@ -1,0 +1,506 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="906c882b-9449-4c40-a9bc-5043874f6aac" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Group_ID_24_Cube</ID>
+  <Name>Group_ID_24_Cube</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="17bef989-2be2-4739-9d27-9d678ffcbd13">
+      <ID>CRASH</ID>
+      <Name>CRASH</Name>
+      <DimensionID>CRASH</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="9b004be1-5447-43e8-bb98-4a41a6b02dd6">
+          <AttributeID>CRASH PK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4f0ad838-2f34-4ea9-bc77-800cc044a945">
+          <AttributeID>RD NO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e68fab64-5f68-4393-bc12-20a0f899d192">
+          <AttributeID>FIRST CONTACT POINT</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bd2bdcbc-0c52-415c-8302-95a206c4d39c">
+          <AttributeID>FIRST CRASH TYPE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3e1e129e-e2ae-46ed-9388-b2b156ad3b53">
+          <AttributeID>REPORT TYPE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cd38638c-3866-4166-a04f-e2279316f61f">
+          <AttributeID>CRASH TYPE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7dff3ed3-b454-4012-8efc-2107d3c9e2b5">
+          <AttributeID>AIRBAG DEPLOYED</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4baa0eaf-c8f7-47a4-9f12-b2ab767b18e8">
+          <AttributeID>MANEUVER</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cc008534-1024-4c48-b36f-71502ca1e716">
+          <AttributeID>TRAVEL DIRECTION</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3b0e62ca-70c9-4367-80fc-acea51e5cbc1">
+          <AttributeID>EJECTION</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bce81eb3-b2c8-42ec-8623-6376d44d9e58">
+          <AttributeID>INJURIES TOTAL</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b9107771-121b-4d5b-8b3b-c449915e85eb">
+          <AttributeID>INJURIES INCAPACITATING</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9ad49ac7-df30-4d97-aa2e-22ae822e41fc">
+          <AttributeID>INJURIES NON INCAPACITATING</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6a80a236-6ba7-4a27-acd0-952a5c05c694">
+          <AttributeID>INJURIES REPORTED NOT EVIDENT</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="15a2ddbc-7c5e-4011-9452-f5c79bc451dd">
+          <AttributeID>INJURIES NON INDICATION</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="22f04151-1be9-425d-abd3-90cc86a95af9">
+          <AttributeID>INJURIES UNKNOWN</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1e7a53ae-d352-4e99-b4c6-35924ddc7350">
+          <AttributeID>MOST SEVERE INJURIES</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="903e32eb-f62d-4b90-805b-db13a1b8c022">
+          <AttributeID>INJURIES FATAL</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="b94c2684-73f2-4239-ab58-308729a958ae">
+      <ID>PERSON</ID>
+      <Name>PERSON</Name>
+      <DimensionID>PERSON</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="1c0f67fe-51e7-4716-b132-23f986b7e6e9">
+          <AttributeID>PERSON ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9b03536c-a67c-4d7d-85dd-b3e2ddf41e48">
+          <AttributeID>PERSON TYPE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d6e783b4-a127-48a6-8bc3-609a1ac8bec0">
+          <AttributeID>SEX</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d3b055a9-4a12-4f51-bca5-3d7dcc6bface">
+          <AttributeID>AGE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="753d6e33-0dc5-458b-9c41-e14d7ed0489f">
+          <AttributeID>SAFETY EQUIPMENT</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="272bbb56-b373-4ec9-861d-33ef44a9dfe6">
+          <AttributeID>INJURY CLASSIFICATION</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6a8482e4-e6bd-4ec3-847f-743120991e91">
+          <AttributeID>CITY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2f901f96-895d-41c7-bb8a-6622c066444a">
+          <AttributeID>DAMAGE CATEGORY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c5f463a0-3706-4dbc-88c4-d1f6605f0344">
+          <AttributeID>STATE</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="276d5213-ae0d-4ca8-90df-d52f395553c3">
+      <ID>GEOGRAPHY</ID>
+      <Name>GEOGRAPHY</Name>
+      <DimensionID>GEOGRAPHY</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="1568b191-5f14-4fb2-aed7-2f107ecacf29">
+          <AttributeID>GEOGRAPHY PK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b746d8d6-91ee-4ce5-b897-e25d563cd8c4">
+          <AttributeID>STREET NO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="058b165b-4e12-46e1-b8ed-8cb94074199e">
+          <AttributeID>STREET DIRECTION</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="79b096db-d4f6-465a-a7b6-fbd319c58fd0">
+          <AttributeID>STREET NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ce5f4159-5878-4c2c-9bc1-cf51488c4879">
+          <AttributeID>LATITUDE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="25ef5b7c-cc42-465e-847e-1bfe6e7127fc">
+          <AttributeID>LONGITUDE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d31f70a8-d785-45ce-8883-e6e1f569639c">
+          <AttributeID>LOCATION</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ef3d4293-6660-45c1-963c-e506501e38e9">
+          <AttributeID>BEAT OF OCCURRENCE</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="c3f0d069-a104-4eb3-bf5b-927fa20b404e">
+      <ID>ROAD CONDITION</ID>
+      <Name>ROAD CONDITION</Name>
+      <DimensionID>ROAD CONDITION</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="aeca0e04-8a26-4d21-804d-52769086e632">
+          <AttributeID>ROAD CONDITION PK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="22eedc81-7e9c-42de-a3b7-a2697741ef36">
+          <AttributeID>TRAFFIC CONTROL DEVICE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1f93b312-f92f-4a22-ba87-f5e5cfbc24f5">
+          <AttributeID>DEVICE CONDITION</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="da9ab9d8-8857-4ca2-9f41-465d7d5e2554">
+          <AttributeID>ROADWAY SURFACE COND</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3f73cf47-be5c-4099-a888-34cbc6ba8878">
+          <AttributeID>ROAD DEFECT</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f132705e-ca2e-40a3-914f-7ac2287c98a9">
+          <AttributeID>TRAFFICWAY TYPE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2309d1e7-3b42-4a8a-9057-b1ad37e69e56">
+          <AttributeID>ALIGNMENT</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="92ad28e2-e875-4771-9a17-5ebde0a4aa1d">
+          <AttributeID>POSTED SPEED LIMIT</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9592cbc0-8274-4fdb-8250-fa5832efe25c">
+          <AttributeID>WEATHER CONDITION</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="425a4426-1bce-49bc-872b-5e26b9ba2c46">
+          <AttributeID>LIGHTING CONDITION</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="26a9f6ae-4384-4011-9e32-6b137a5a8be2">
+      <ID>Date_info</ID>
+      <Name>Date_info</Name>
+      <DimensionID>Date_info</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="a1ad5602-a94d-4a4a-b1e9-0da7e3b599c6">
+          <AttributeID>DATE PK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4bdf86ce-b1b8-4796-8caa-c7be2c48a4f7">
+          <AttributeID>CRASH DATE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="38f071e9-d7ed-4031-a159-11d81b3a3cdf">
+          <AttributeID>CRASH HOUR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a1a34c14-11f0-4661-ac52-d7485ce8a7cd">
+          <AttributeID>DATE POLICE NOTIFIED</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8c5333e8-2f20-459e-9faa-61fedd7571f5">
+          <AttributeID>DAY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d272cae6-1dd5-4057-83e3-a5ddb0018456">
+          <AttributeID>MONTH</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d2177f31-35c7-46b7-ba95-eade2528039f">
+          <AttributeID>YEAR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="82629e26-9de1-4416-a272-5e8f8a02707a">
+          <AttributeID>DAY OF WEEK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c7e47b72-a2e7-4686-b993-614be9f47314">
+          <AttributeID>QUARTER</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f225b757-3d8b-41a0-9a3c-869978eda0a5">
+          <AttributeID>Order Month</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="0b3d7203-eb6a-4f69-b561-96800ae01087">
+          <HierarchyID>Gerarchia</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="026efb50-2bf1-41c3-a700-1be32d1cc942">
+      <ID>VEHICLE</ID>
+      <Name>VEHICLE</Name>
+      <DimensionID>VEHICLE</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="eb705aa2-0dac-4a54-920d-4b276817ddc4">
+          <AttributeID>CRASH UNIT ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d5f79e6e-2878-48bf-b037-e91718f25896">
+          <AttributeID>VEHICLE ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="58057a53-7ba6-4c53-a7da-b0b9f813c69f">
+          <AttributeID>UNIT TYPE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="12887306-60bd-48c5-b278-853004242145">
+          <AttributeID>UNIT NO</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="52778e24-a849-437a-ada7-05d16a8bc6d9">
+          <AttributeID>MAKE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fed1f3c0-9bd0-47f9-9f3c-ca7816903e5b">
+          <AttributeID>MODEL</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="27d61037-876c-47d3-9db1-dff72f2bfe51">
+          <AttributeID>VEHICLE YEAR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a857473c-f472-442d-b006-320a391ce00d">
+          <AttributeID>VEHICLE DEFECT</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6ba6950d-5201-48e0-a3fa-e609d14c824f">
+          <AttributeID>VEHICLE USE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7c3007ee-4e1f-47a7-ab84-46e399b39b8c">
+          <AttributeID>OCCUPANT CNT</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8ef35ea8-f953-4685-b006-f22e186431ec">
+          <AttributeID>LIC PLATE STATE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2bf9f78a-e8f3-4f09-a909-ebe28d6ab410">
+          <AttributeID>VEHICLE TYPE</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="f0ffa9c7-0059-4297-99a1-9aff81f7ad15">
+      <ID>CAUSE</ID>
+      <Name>CAUSE</Name>
+      <DimensionID>CAUSE</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="c7b5be3b-3375-4f4d-90ba-f6a6133184e2">
+          <AttributeID>CAUSE PK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ade2c1a1-f478-4e00-b5ab-f8c092fdaecb">
+          <AttributeID>PRIM CONTRIBUTORY CAUSE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="40f6e0c9-4668-468a-b7a9-c3c25822555b">
+          <AttributeID>SEC CONTRIBUTORY CAUSE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="417122f1-3376-4d22-808d-5aa0718626dc">
+          <AttributeID>DRIVER VISION</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bdf8d76a-5c0e-4e75-82d2-c25125f50f69">
+          <AttributeID>DRIVER ACTION</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4bc98dfb-6455-4192-b79e-4f8af1d698e0">
+          <AttributeID>PHYSICAL CONDITION</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="52579329-3dcc-44d5-9beb-521e1b41f506">
+          <AttributeID>BAC RESULT</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="389030ad-4ef8-44ac-92b3-8ec19bab4081">
+      <ID>FACT DAMAGE</ID>
+      <Name>FACT DAMAGE</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="824cc61c-82f2-4936-8ed0-a03c52a4a52f">
+          <ID>DAMAGE</ID>
+          <Name>DAMAGE</Name>
+          <Source dwd:design-time-name="ba21fca8-3124-42a2-8556-12783a7ea8a7">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="eda7df18-bc37-422d-addd-efbb7b9bc44b">
+              <TableID>Group_ID_24_FACT_DAMAGE</TableID>
+              <ColumnID>DAMAGE</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="4b5f482f-baf0-43b5-b4cc-8a2469715266">
+          <ID>NUM UNITS</ID>
+          <Name>NUM UNITS</Name>
+          <Source dwd:design-time-name="c2e360a4-df15-4749-bdb3-2d84646917b0">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="cfb0fa06-771c-4bb1-9a11-9aaa7879d36b">
+              <TableID>Group_ID_24_FACT_DAMAGE</TableID>
+              <ColumnID>NUM_UNITS</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="45b49475-becd-40b2-b969-4e5a4339c4d0">
+          <ID>Conteggio di FACT DAMAGE</ID>
+          <Name>Conteggio di FACT DAMAGE</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="71407557-2102-48a8-9c56-f44228f6fae4">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="9d442f7e-fec9-42ec-bfca-9a31809158ec">
+              <TableID>Group_ID_24_FACT_DAMAGE</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="2b00e373-a4cb-4a2e-98e4-5797c6242166">
+          <CubeDimensionID>PERSON</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="399a8814-0287-42c4-ad3a-df7893399ee8">
+              <AttributeID>PERSON ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ccea02b2-2e90-4c26-b0be-0cbdf09f91bd">
+                  <DataType>WChar</DataType>
+                  <DataSize>50</DataSize>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="77906bb7-7eeb-4c76-bdb3-fdcb1ae1d594">
+                    <TableID>Group_ID_24_FACT_DAMAGE</TableID>
+                    <ColumnID>PERSON_ID_FK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="db5ba8b7-c528-4006-89e4-e1c810c21c30">
+          <CubeDimensionID>GEOGRAPHY</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="cf36c36a-7305-4eba-8822-2c7864646519">
+              <AttributeID>GEOGRAPHY PK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ee4301cf-f098-4ca1-bb12-0f33828b99bb">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="70cebe8b-f5b4-4bfc-8c96-93c84431d9a0">
+                    <TableID>Group_ID_24_FACT_DAMAGE</TableID>
+                    <ColumnID>GEOGRAPHY_PK_FK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d064755a-0471-4de2-979d-9679f3d8595a">
+          <CubeDimensionID>ROAD CONDITION</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b17e9730-d385-4750-a991-6424cd332653">
+              <AttributeID>ROAD CONDITION PK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="66f94a46-a160-4efe-ba55-5f40595bb340">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b90efbcd-0a0d-4101-bc97-5b1fb8ceac5b">
+                    <TableID>Group_ID_24_FACT_DAMAGE</TableID>
+                    <ColumnID>ROAD_CONDITION_PK_FK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="4b24005a-c40d-4c89-9f50-096940dbebd1">
+          <CubeDimensionID>CRASH</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="a0936a37-5fec-40df-8631-669568245fc2">
+              <AttributeID>CRASH PK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2a64d20a-6cdf-4adb-96ed-6e6580b097a4">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="dfa05d2a-10d7-4c00-a7a9-feff18a8d4f5">
+                    <TableID>Group_ID_24_FACT_DAMAGE</TableID>
+                    <ColumnID>CRASH_FK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d0e75f92-9859-4f64-a513-bd2d4a51da20">
+          <CubeDimensionID>Date_info</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b0c8ecd2-584d-4ed3-9ee9-e45d660fe375">
+              <AttributeID>DATE PK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f921d868-8852-4c0d-addb-48d138eef0ea">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a166f441-324a-4c87-b46a-26eff5252af9">
+                    <TableID>Group_ID_24_FACT_DAMAGE</TableID>
+                    <ColumnID>DATE_PK_FK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6f085610-516a-41d8-aa18-8657583f1bf2">
+          <CubeDimensionID>VEHICLE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c4020528-0aab-41b7-996d-457a97dcdd17">
+              <AttributeID>CRASH UNIT ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2ca36294-1d02-4a02-befc-e5f8aef3f51e">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2a07188a-d93b-4062-98db-2759801c2329">
+                    <TableID>Group_ID_24_FACT_DAMAGE</TableID>
+                    <ColumnID>CRASH_UNIT_ID_FK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c5b0764d-622a-4fb8-93d9-95e9658ffe16">
+          <CubeDimensionID>CAUSE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="42af4d94-4539-41fc-85fa-058a39a8c31d">
+              <AttributeID>CAUSE PK</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="4f121ad0-a543-4d17-88d9-bc1e7daa32e8">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="7b73b6f8-034d-4589-8d43-40ae6952cdb2">
+                    <TableID>Group_ID_24_FACT_DAMAGE</TableID>
+                    <ColumnID>CAUSE_PK_FK</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="a3ed654a-e963-4fe6-aa6a-d5a9691f5b3b">
+    <DataSourceViewID>Group ID 24 DB view</DataSourceViewID>
+  </Source>
+</Cube>
