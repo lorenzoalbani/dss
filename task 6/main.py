@@ -2,6 +2,8 @@
 from db_utils import get_connection
 from db_loader import load_table_bulk
 
+BATCH_SIZE = 1  # Metti 1 solo per debugging
+
 def main():
     print("=== DATA WAREHOUSE LOADER (Group 03) ===")
     print("Tentativo di connessione al Server Azure...")
@@ -20,7 +22,7 @@ def main():
         ('dim_time.csv', 'Dim_Time'),
         ('dim_artist.csv', 'Dim_Artist'),
         ('dim_album.csv', 'Dim_Album'),
-        ('dim_sound.csv', 'Dim_Sound'), # Assicurati: NO IDENTITY(1,1) in SQL
+        ('dim_sound.csv', 'Dim_Sound'),
         
         # 2. Dimensioni Dipendenti
         ('dim_track.csv', 'Dim_Track'), 
