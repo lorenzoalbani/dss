@@ -1,6 +1,5 @@
 # db_utils.py
 import pyodbc
-import re
 from config import DB_CONFIG
 
 def get_connection():
@@ -19,30 +18,19 @@ def get_connection():
 
 def clean_row_for_sql(row):
     """
-    Pulisce i dati e CORREGGE LE DATE INVALIDI (Es: 2021-00-01)
+    Pulisce i dati grezzi del CSV:
+    - Rimuove spazi extra.
+    - Converte stringhe vuote o 'None' in NULL (None in Python).
     """
     cleaned = []
     
-    # Regex per trovare date nel formato YYYY-MM-DD
-    # Cerca stringhe che sembrano date (4 cifre - 2 cifre - 2 cifre)
-    date_pattern = re.compile(r'^\d{4}-\d{2}-\d{2}$')
-
     for val in row:
+        # Toglie spazi ai lati se è stringa
         val = val.strip() if isinstance(val, str) else val
         
+        # Gestione NULL
         if val == '' or val == 'None':
             cleaned.append(None)
-        
-        elif isinstance(val, str) and date_pattern.match(val):
-            # --- FIX DATE CORROTTE ---
-            # Se troviamo pezzi con "-00", li sostituiamo con "-01"
-            # Es: "2021-00-05" diventa "2021-01-05"
-            # Es: "2021-11-00" diventa "2021-11-01"
-            if '-00' in val:
-                fixed_date = val.replace('-00', '-01')
-                cleaned.append(fixed_date)
-            else:
-                cleaned.append(val)
         else:
             cleaned.append(val)
             

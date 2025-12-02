@@ -11,6 +11,6 @@ DB_CONFIG = {
 }
 
 # Percorso CSV (con la r davanti per Windows)
-CSV_DIR = r"C:\Users\Admin\OneDrive - University of Pisa\Desktop\uni\magistrale\LDS\exam\project\task 5\csv_db"
+CSV_DIR = "csv_db"
 
 BATCH_SIZE = 5000
