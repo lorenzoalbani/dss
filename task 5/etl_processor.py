@@ -5,10 +5,39 @@ import xml.etree.ElementTree as ET
 from utils import safe_int, safe_float, clean_text, get_season, get_quarter
 import os
 
+def clean_date(date_str):
+    """
+    Pulisce e normalizza le date per SQL Server.
+    Input supportati: 'YYYY-MM-DD', 'YYYY', 'YYYY-00-00', None, ''
+    Output: 'YYYY-MM-DD' valido oppure None
+    """
+    if not date_str:
+        return None
+    
+    d = str(date_str).strip()
+    
+    if not d:
+        return None
+
+    # Caso 1: Solo anno (es: "1985") -> "1985-01-01"
+    if len(d) == 4 and d.isdigit():
+        return f"{d}-01-01"
+
+    # Caso 2: Date con zeri (es: "1985-00-01" o "1985-05-00")
+    if "-00" in d:
+        d = d.replace("-00", "-01")
+
+    # Caso 3: Controllo lunghezza minima (YYYY-M-D sono almeno 8 char)
+    # Se è spazzatura troppo corta che non è un anno, restituiamo None per evitare crash
+    if len(d) < 8:
+        return None
+        
+    return d
+
 def generate_dw_files(json_path, xml_path):
     print("1. Inizializzazione e creazione cartelle...")
     
-    output_dir = 'csv_db'
+    output_dir = 'task 5/csv_db'
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
 
@@ -16,7 +45,6 @@ def generate_dw_files(json_path, xml_path):
     print("2. Caricamento Artisti da XML in memoria...")
     
     # Struttura dati: Dizionario per ID -> Dati Artista
-    # Esempio: artists_db['ART123'] = {'name': 'Ernia', 'gender': 'M', ...}
     artists_db = {}
     
     tree = ET.parse(xml_path)
@@ -30,11 +58,12 @@ def generate_dw_files(json_path, xml_path):
         a_id = get_xml_text(row, 'id_author')
         if not a_id: continue
         
+        # APPLICHIAMO clean_date QUI
         artists_db[a_id] = {
             'id': a_id,
             'name': get_xml_text(row, 'name'),
             'gender': get_xml_text(row, 'gender'),
-            'birth_date': get_xml_text(row, 'birth_date'),
+            'birth_date': clean_date(get_xml_text(row, 'birth_date')),      # <--- FIX
             'birth_place': get_xml_text(row, 'birth_place'),
             'nationality': get_xml_text(row, 'nationality'),
             'description': clean_text(get_xml_text(row, 'description')),
@@ -43,8 +72,8 @@ def generate_dw_files(json_path, xml_path):
             'province': get_xml_text(row, 'province'),
             'latitude': safe_float(get_xml_text(row, 'latitude')),
             'longitude': safe_float(get_xml_text(row, 'longitude')),
-            'active_start': get_xml_text(row, 'active_start'),
-            'active_end': get_xml_text(row, 'active_end')
+            'active_start': clean_date(get_xml_text(row, 'active_start')),  # <--- FIX
+            'active_end': clean_date(get_xml_text(row, 'active_end'))      # <--- FIX
         }
 
     # Carichiamo il JSON
@@ -52,7 +81,7 @@ def generate_dw_files(json_path, xml_path):
     with open(json_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
 
-    # --- FASE 2: Aggiornamento Nomi Primary Artist (La tua richiesta) ---
+    # --- FASE 2: Aggiornamento Nomi Primary Artist ---
     print("4. Normalizzazione nomi Primary Artist...")
     
     for row in data:
@@ -65,7 +94,6 @@ def generate_dw_files(json_path, xml_path):
                 artists_db[p_id]['name'] = p_name
             else:
                 # Caso limite: L'ID del primary artist è nel JSON ma NON nell'XML
-                # Lo creiamo ora per evitare errori di Foreign Key dopo
                 artists_db[p_id] = {
                     'id': p_id,
                     'name': p_name,
@@ -77,14 +105,12 @@ def generate_dw_files(json_path, xml_path):
                 }
 
     # --- Creazione mappa inversa NOME -> ID aggiornata ---
-    # Serve per trovare velocemente i featured artist
     name_to_id_map = {}
     for aid, data_dict in artists_db.items():
         if data_dict['name']:
-            # Usiamo lower() per match case-insensitive
             name_to_id_map[data_dict['name'].strip().lower()] = aid
 
-    # --- FASE 3: ETL e Scrittura File (Tranne Dim_Artist che scriviamo alla fine) ---
+    # --- FASE 3: ETL e Scrittura File ---
     print("5. Generazione Tabelle Fact e Dimensioni...")
 
     # Apertura file
@@ -106,7 +132,7 @@ def generate_dw_files(json_path, xml_path):
         files[key] = f
         writers[key] = csv.writer(f)
 
-    # Scrittura Headers (Identici a prima)
+    # Scrittura Headers
     writers['dim_time'].writerow(['date_id', 'full_date', 'year', 'month', 'day', 'quarter', 'season'])
     writers['dim_album'].writerow(['album_id', 'title', 'release_date', 'album_type'])
     writers['dim_sound'].writerow(['sound_id', 'bpm', 'rolloff', 'flux', 'rms', 'flatness', 'spectral_complexity', 'pitch', 'loudness', 'mood'])
@@ -114,7 +140,6 @@ def generate_dw_files(json_path, xml_path):
     writers['bridge'].writerow(['track_id', 'artist_id', 'role'])
     writers['fact'].writerow(['track_id', 'album_id', 'date_id', 'sound_id', 'main_artist_id', 'streams_1month', 'popularity'])
 
-    # Variabili di supporto
     seen_time = set()
     seen_albums = set()
     sound_counter = 1
@@ -140,21 +165,18 @@ def generate_dw_files(json_path, xml_path):
                 
                 f_key = f_name.lower()
                 
-                # Cerchiamo nella mappa aggiornata
                 if f_key in name_to_id_map:
                     final_id = name_to_id_map[f_key]
                 else:
-                    # NUOVO ARTISTA FEATURED TROVATO
+                    # NUOVO ARTISTA FEATURED
                     final_id = f"ART_NEW_{new_artist_counter:04d}"
                     new_artist_counter += 1
                     
-                    # 1. Aggiorniamo la mappa
                     name_to_id_map[f_key] = final_id
                     
-                    # 2. Aggiungiamo al DB in memoria (verrà scritto alla fine nel CSV)
                     artists_db[final_id] = {
                         'id': final_id,
-                        'name': f_name, # Usiamo il nome originale (col casing corretto)
+                        'name': f_name,
                         'gender': 'Unknown', 'birth_date': None, 'birth_place': None,
                         'nationality': None, 'description': 'Auto-generated from featured',
                         'country': None, 'region': None, 'province': None,
@@ -164,19 +186,25 @@ def generate_dw_files(json_path, xml_path):
                 
                 writers['bridge'].writerow([track_id, final_id, 'Featured'])
 
-        # --- ALTRE TABELLE (Codice Standard) ---
+        # --- ALTRE TABELLE ---
         # Dim Time
         y, m, d = safe_int(row.get('year')), safe_int(row.get('month')), safe_int(row.get('day'))
         date_id = y * 10000 + m * 100 + d
         if date_id not in seen_time and date_id != 0:
-            full_date = f"{y}-{m:02d}-{d:02d}"
+            # FIX DATA ANCHE QUI: Gestiamo il caso mese=0
+            safe_m = m if m > 0 else 1
+            safe_d = d if d > 0 else 1
+            full_date = f"{y}-{safe_m:02d}-{safe_d:02d}"
+            
             writers['dim_time'].writerow([date_id, full_date, y, m, d, get_quarter(m), get_season(m)])
             seen_time.add(date_id)
 
         # Dim Album
         alb_id = row.get('id_album')
         if alb_id and alb_id not in seen_albums:
-            writers['dim_album'].writerow([alb_id, row.get('album_name'), row.get('album_release_date'), row.get('album_type')])
+            # FIX DATA ALBUM (Clean date anche qui)
+            clean_rel_date = clean_date(row.get('album_release_date'))
+            writers['dim_album'].writerow([alb_id, row.get('album_name'), clean_rel_date, row.get('album_type')])
             seen_albums.add(alb_id)
 
         # Dim Sound
@@ -207,7 +235,6 @@ def generate_dw_files(json_path, xml_path):
             safe_int(row.get('streams@1month')), safe_float(row.get('popularity'))
         ])
 
-    # Chiudiamo i file Fact/Dim secondarie
     for f in files.values():
         f.close()
 
@@ -223,13 +250,15 @@ def generate_dw_files(json_path, xml_path):
                         'nationality', 'description', 'country', 'region', 
                         'province', 'latitude', 'longitude', 'active_start', 'active_end'])
         
-        # Scriviamo tutti gli artisti dal dizionario (che ora include XML + Aggiornamenti JSON + Nuovi Featured)
         for aid, data in artists_db.items():
             w_art.writerow([
-                data['id'], data['name'], data['gender'], data['birth_date'], 
+                data['id'], data['name'], data['gender'], 
+                data['birth_date'], # Questo ora è già pulito dalla clean_date
                 data['birth_place'], data['nationality'], data['description'], 
                 data['country'], data['region'], data['province'], 
-                data['latitude'], data['longitude'], data['active_start'], data['active_end']
+                data['latitude'], data['longitude'], 
+                data['active_start'], # Pulito
+                data['active_end']    # Pulito
             ])
 
     print(f"Generazione Completata. File salvati in: {output_dir}/")
