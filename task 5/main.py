@@ -4,7 +4,7 @@ import os
 
 # Configurazione Percorsi
 INPUT_JSON = 'track_mood_noduplicati_refactoringids.json'
-INPUT_XML = 'artists.xml'
+INPUT_XML = 'artists_normalized.xml'
 
 # Controllo esistenza file
 if not os.path.exists(INPUT_JSON):
