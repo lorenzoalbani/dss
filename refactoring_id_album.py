@@ -7,7 +7,7 @@ album_to_id = {}
 next_id = 1
 
 for item in data:
-    album = item['album_name']
+    album = item['album']
     if album not in album_to_id:
         album_to_id[album] = f'AL{str(next_id).zfill(6)}'
         next_id += 1
