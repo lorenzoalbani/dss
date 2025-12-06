@@ -7,7 +7,7 @@ import unicodedata
 def load_json(filepath):
     try:
         with open(filepath, 'r', encoding='utf-8') as f:
-            return json.load(f)
+            return json.load(f) 
     except FileNotFoundError:
         print(f"Errore: File {filepath} non trovato.")
         return []
