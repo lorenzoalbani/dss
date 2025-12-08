@@ -2,7 +2,7 @@ import json
 import csv
 import xml.etree.ElementTree as ET
 import os
-
+from utils import clean_text, safe_int, safe_float, get_season, get_quarter
 
 # --- FUNZIONI DI UTILITÀ INTEGRATE (Per evitare problemi di import) ---
 def clean_date(date_str):
