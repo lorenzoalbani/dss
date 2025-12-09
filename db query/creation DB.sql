@@ -16,7 +16,7 @@ CREATE TABLE Dim_Time (
 -- (La tua versione con correzione typo 'latidute' e description allargata)
 ---------------------------------------------------------
 CREATE TABLE Dim_Artist (
-    artist_id VARCHAR(50) PRIMARY KEY,
+    artist_id INT PRIMARY KEY,
     name NVARCHAR(255),
     gender VARCHAR(10),
     birth_date DATE,
@@ -99,7 +99,7 @@ CREATE TABLE Dim_Track (
 ---------------------------------------------------------
 CREATE TABLE Bridge_Track_Artist (
     track_id VARCHAR(50),
-    artist_id VARCHAR(50),
+    artist_id INT,
     role VARCHAR(20), -- 'Main' o 'Featured'
     PRIMARY KEY (track_id, artist_id),
     FOREIGN KEY (track_id) REFERENCES Dim_Track(track_id),
@@ -120,7 +120,7 @@ CREATE TABLE Fact_Streams (
     album_id VARCHAR(50),
     date_id INT,
     sound_id INT,               
-    main_artist_id VARCHAR(50), 
+    main_artist_id INT, 
     
     -- Metriche
     streams_1month BIGINT,      
