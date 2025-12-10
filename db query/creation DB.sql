@@ -1,6 +1,15 @@
----------------------------------------------------------
--- 1. Dimensione Tempo
----------------------------------------------------------
+--Drop tables if they exist, reverse dependency order to avoid Foreign Key errors.
+DROP TABLE IF EXISTS Fact_Streams;
+DROP TABLE IF EXISTS Bridge_Track_Artist;
+DROP TABLE IF EXISTS Dim_Track;
+DROP TABLE IF EXISTS Dim_Sound;
+DROP TABLE IF EXISTS Dim_Album;
+DROP TABLE IF EXISTS Dim_Artist;
+DROP TABLE IF EXISTS Dim_Time;
+
+-- CREATION
+
+-- Dim. Time
 CREATE TABLE Dim_Time (
     date_id INT PRIMARY KEY,
     full_date DATE,
@@ -11,10 +20,7 @@ CREATE TABLE Dim_Time (
     season VARCHAR(20)
 );
 
----------------------------------------------------------
--- 2. Dimensione Artista
--- (La tua versione con correzione typo 'latidute' e description allargata)
----------------------------------------------------------
+-- Dim. Artist
 CREATE TABLE Dim_Artist (
     artist_id INT PRIMARY KEY,
     name NVARCHAR(255),
@@ -22,19 +28,17 @@ CREATE TABLE Dim_Artist (
     birth_date DATE,
     birth_place NVARCHAR(100),
     nationality VARCHAR(100),
-    description NVARCHAR(MAX), -- Ho messo MAX, 100 era troppo poco
+    description NVARCHAR(MAX),
     country NVARCHAR(100),
     region NVARCHAR(100),
     province NVARCHAR(100),
-    latitude FLOAT,            -- Corretto da 'latidute'
+    latitude FLOAT,
     longitude FLOAT,
     active_start DATE,
     active_end DATE
 );
 
----------------------------------------------------------
--- 3. Dimensione Album
----------------------------------------------------------
+--Dim Album
 CREATE TABLE Dim_Album (
     album_id VARCHAR(50) PRIMARY KEY,
     title NVARCHAR(255),
@@ -42,14 +46,9 @@ CREATE TABLE Dim_Album (
     album_type VARCHAR(50)
 );
 
----------------------------------------------------------
--- 4. Dimensione Sound (AGGIORNATA)
--- Contiene metriche audio + MOOD (richiesto da te)
----------------------------------------------------------
+-- Dim. Sound
 CREATE TABLE Dim_Sound (
     sound_id INT PRIMARY KEY,
-    
-    -- Metriche tecniche dal JSON
     bpm FLOAT,
     rolloff FLOAT,
     flux FLOAT,
@@ -58,75 +57,50 @@ CREATE TABLE Dim_Sound (
     spectral_complexity FLOAT,
     pitch FLOAT,
     loudness FLOAT,
-    
-    -- Campo richiesto specifico
     mood VARCHAR(50) 
 );
 
----------------------------------------------------------
--- 5. Dimensione Brano (AGGIORNATA COMPLETA)
--- Contiene info descrittive, metriche linguistiche e testi
----------------------------------------------------------
+--Dim. Tracks
 CREATE TABLE Dim_Track (
     track_id VARCHAR(50) PRIMARY KEY,
     title NVARCHAR(MAX),
     language VARCHAR(10),
     explicit BIT,
-    
-    -- Info posizionali nell'album
     disc_number INT,
     track_number INT,
-
-    -- Metriche di durata e conteggi (dal tuo elenco)
     duration_ms FLOAT,
     swear_it INT,
     swear_en INT,
-
-    -- Metriche Linguistiche (dal tuo elenco)
     n_sentences FLOAT,
     n_tokens FLOAT,
     char_per_tok FLOAT,
     avg_token_per_clause FLOAT,
-
-    -- Contenuti testuali lunghi (dal tuo elenco)
-    swear_it_words NVARCHAR(MAX), -- Lista parole parolacce IT
-    swear_en_words NVARCHAR(MAX), -- Lista parole parolacce EN
-    lyrics NVARCHAR(MAX)          -- Testo della canzone
+    swear_it_words NVARCHAR(MAX),
+    swear_en_words NVARCHAR(MAX),
+    lyrics NVARCHAR(MAX)
 );
 
----------------------------------------------------------
--- 6. Bridge Table (Partecipazioni Artisti)
----------------------------------------------------------
+-- Bride Table Track-Artists
 CREATE TABLE Bridge_Track_Artist (
     track_id VARCHAR(50),
     artist_id INT,
-    role VARCHAR(20), -- 'Main' o 'Featured'
+    role VARCHAR(20),
     PRIMARY KEY (track_id, artist_id),
     FOREIGN KEY (track_id) REFERENCES Dim_Track(track_id),
     FOREIGN KEY (artist_id) REFERENCES Dim_Artist(artist_id)
 );
 
----------------------------------------------------------
--- 7. Fact Table (Streams)
----------------------------------------------------------
-
+--Fact table
 CREATE TABLE Fact_Streams (
-    -- NUOVA COLONNA: Chiave surrogata autoincrementale
     fact_id INT IDENTITY(1,1) PRIMARY KEY, 
-    
-    track_id VARCHAR(50), -- Non è più PK, ma resta Foreign Key
-    
-    -- Chiavi Esterne
+    track_id VARCHAR(50),
     album_id VARCHAR(50),
     date_id INT,
     sound_id INT,               
     main_artist_id INT, 
-    
-    -- Metriche
     streams_1month BIGINT,      
     popularity FLOAT,
     
-    -- Vincoli (Foreign Keys)
     FOREIGN KEY (track_id) REFERENCES Dim_Track(track_id),
     FOREIGN KEY (album_id) REFERENCES Dim_Album(album_id),
     FOREIGN KEY (date_id) REFERENCES Dim_Time(date_id),
