@@ -18,17 +18,13 @@ def main():
 
     # --- LISTA ORDINATA TABELLE ---
     tables_to_load = [
-        # 1. Dimensioni Indipendenti
         ('dim_time.csv', 'Dim_Time'),
         ('dim_artist.csv', 'Dim_Artist'),
         ('dim_album.csv', 'Dim_Album'),
         ('dim_sound.csv', 'Dim_Sound'),
-        
-        # 2. Dimensioni Dipendenti
         ('dim_track.csv', 'Dim_Track'), 
-        
-        # 3. Bridge
         ('bridge_track_artist.csv', 'Bridge_Track_Artist'),
+        ('dim_youtube.csv', 'Dim_Youtube'),
         
         # 4. Fact Table
         ('fact_streams.csv', 'Fact_Streams')

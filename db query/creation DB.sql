@@ -90,12 +90,19 @@ CREATE TABLE Bridge_Track_Artist (
     FOREIGN KEY (artist_id) REFERENCES Dim_Artist(artist_id)
 );
 
+--Dim Youtube
+CREATE TABLE Dim_Youtube (
+    virality_id INT PRIMARY KEY,
+    virality_tier VARCHAR(50)
+);
+
 --Fact table
 CREATE TABLE Fact_Streams (
     fact_id INT IDENTITY(1,1) PRIMARY KEY, 
     track_id VARCHAR(50),
     album_id VARCHAR(50),
     date_id INT,
+    youtube_id INT,
     sound_id INT,               
     main_artist_id INT, 
     streams_1month BIGINT,      
@@ -105,5 +112,6 @@ CREATE TABLE Fact_Streams (
     FOREIGN KEY (album_id) REFERENCES Dim_Album(album_id),
     FOREIGN KEY (date_id) REFERENCES Dim_Time(date_id),
     FOREIGN KEY (sound_id) REFERENCES Dim_Sound(sound_id),
-    FOREIGN KEY (main_artist_id) REFERENCES Dim_Artist(artist_id)
+    FOREIGN KEY (main_artist_id) REFERENCES Dim_Artist(artist_id),
+    FOREIGN KEY (youtube_id) REFERENCES Dim_Youtube(virality_id)
 );
