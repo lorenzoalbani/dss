@@ -1,5 +1,6 @@
 import json
 import csv
+from youtube_utils import get_virality_tier
 
 # CONFIGURAZIONE FILE
 file_json_tracks = 'tracks.json'  # Il tuo file JSON delle tracce
@@ -40,15 +41,19 @@ for idx, (track, yt_row) in enumerate(zip(tracks_list, youtube_list), start=1):
     # A. Crea l'oggetto unito (copia i dati della traccia)
     merged_item = track.copy()
     
+    # Recupero i valori grezzi
+    raw_views = yt_row.get('yt_view_count')
+
     # colonne di interesse
-    merged_item['yt_views']      = yt_row.get('yt_view_count')
-    merged_item['yt_likes']      = yt_row.get('yt_like_count')
-    merged_item['yt_comment']   = yt_row.get('yt_comment_count')
+    # merged_item['yt_views']      = raw_views
+    # merged_item['yt_likes']      = yt_row.get('yt_like_count')
+    # merged_item['yt_comment']   = yt_row.get('yt_comment_count')
     
-    # SOLUZIONE DUPLICATI: Crea un NUOVO ID univoco pulito
+    merged_item['yt_virality'] = get_virality_tier(raw_views)
+
+    # SOLUZIONE DUPLICATI
     new_unique_id = f"TR{str(idx).zfill(6)}"
     
-    # Salviamo il vecchio ID come debug, ma usiamo quello nuovo come chiave
     merged_item['original_id_bugged'] = track.get('id')
     merged_item['id'] = new_unique_id
 
