@@ -103,7 +103,7 @@ CREATE TABLE Fact_Streams (
     track_id VARCHAR(50),
     album_id VARCHAR(50),
     date_id INT,
-    youtube_id INT,
+    virality_id INT,
     sound_id INT,               
     main_artist_id INT, 
     streams_1month BIGINT,      
@@ -114,5 +114,5 @@ CREATE TABLE Fact_Streams (
     FOREIGN KEY (date_id) REFERENCES Dim_Time(date_id),
     FOREIGN KEY (sound_id) REFERENCES Dim_Sound(sound_id),
     FOREIGN KEY (main_artist_id) REFERENCES Dim_Artist(artist_id),
-    FOREIGN KEY (youtube_id) REFERENCES Dim_Youtube(virality_id)
+    FOREIGN KEY (virality_id) REFERENCES Dim_Youtube(virality_id)
 );
