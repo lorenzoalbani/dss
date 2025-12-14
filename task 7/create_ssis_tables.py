@@ -16,6 +16,7 @@ def duplicate_tables_for_ssis(conn):
         'Dim_Album',
         'Dim_Sound',
         'Dim_Track',
+        'Dim_Youtube',
         'Bridge_Track_Artist',
         'Fact_Streams'
     ]
@@ -43,7 +44,7 @@ def duplicate_tables_for_ssis(conn):
             sql = f"SELECT * INTO {new_table} FROM {table} WHERE 1 = 0"
             cursor.execute(sql)
             
-            print(f"   ✅ Creata {new_table}")
+            print(f"Creata {new_table}")
 
         conn.commit()
 

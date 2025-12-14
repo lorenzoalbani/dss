@@ -2,7 +2,7 @@
 from db_utils import get_connection
 from db_loader import load_table_bulk
 
-BATCH_SIZE = 1  # Metti 1 solo per debugging
+BATCH_SIZE = 5000  # Metti 1 solo per debugging
 
 def main():
     print("=== DATA WAREHOUSE LOADER (Group 03) ===")
