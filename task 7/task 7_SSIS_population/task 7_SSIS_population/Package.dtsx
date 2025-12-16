@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="52"
-  DTS:VersionGUID="{FCE038CD-EF2D-477F-B88F-AA0B4C2F036A}">
+  DTS:VersionBuild="53"
+  DTS:VersionGUID="{E9923359-EE02-4636-8969-BEE94927D59C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9ACMV0ANHkmmRZ0538ebNwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAACun4ubBVKFsyi+VzH5nV1j4bcKwhHg2K8DRXbjKoPJAAAAAAOgAAAAAIAACAAAADqURn//7L5SJzkPxw8ZZ5PcUR7L+wuG5d0ldxICBpTTSAAAAC3nVbTvP0E+95nt6XfLazipKt7aSAlwpFKMgrOenysA0AAAADzqTK7GYBJyAK3IQsZqh+SAppYYC+3S+POcd9JbOuWJoLStSOha4OTl6TlkQHWVytzHTF1bYuOCx2SDMD7ejD/</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9ACMV0ANHkmmRZ0538ebNwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAn9A2V2L89H8Zo/3RaatFEAiZJkUH+dDIJkGih4y2sugAAAAAOgAAAAAIAACAAAADhqEHhk0YbfPnCsk8KK6O2qOGz/x5W3Qj86eZRL8frKCAAAABHll/dXC8z7PYtCt87bR3zsOucVp2KWNdQDE3uEksrwUAAAACIQKmjLkjp8eVJR2AKFF+YgGjxIS9oX7Xpe1IF8I95bZ6wSdPOgzuWCd2KX0oZaWQDZg81ocpbJQJ2izH6yoq6</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -739,7 +739,7 @@ where [refTable].[track_id] = ?</property>
                     <inputColumn
                       refId="Package\Dim_Album\Destinazione OLE DB.Inputs[Input destinazione OLE DB].Columns[title]"
                       cachedDataType="wstr"
-                      cachedLength="4000"
+                      cachedLength="255"
                       cachedName="title"
                       externalMetadataColumnId="Package\Dim_Album\Destinazione OLE DB.Inputs[Input destinazione OLE DB].ExternalColumns[title]"
                       lineageId="Package\Dim_Album\Origine OLE DB.Outputs[Output origine OLE DB].Columns[title]" />
@@ -889,7 +889,7 @@ where [refTable].[track_id] = ?</property>
                       errorOrTruncationOperation="Conversione"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Dim_Album\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[title]"
-                      length="4000"
+                      length="255"
                       lineageId="Package\Dim_Album\Origine OLE DB.Outputs[Output origine OLE DB].Columns[title]"
                       name="title"
                       truncationRowDisposition="FailComponent" />
@@ -926,7 +926,7 @@ where [refTable].[track_id] = ?</property>
                     <externalMetadataColumn
                       refId="Package\Dim_Album\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[title]"
                       dataType="wstr"
-                      length="4000"
+                      length="255"
                       name="title" />
                     <externalMetadataColumn
                       refId="Package\Dim_Album\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[release_date]"
@@ -956,7 +956,7 @@ where [refTable].[track_id] = ?</property>
                     <outputColumn
                       refId="Package\Dim_Album\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[title]"
                       dataType="wstr"
-                      length="4000"
+                      length="255"
                       lineageId="Package\Dim_Album\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[title]"
                       name="title" />
                     <outputColumn
@@ -4223,6 +4223,15 @@ where [refTable].[track_id] = ?</property>
                       lineageId="Package\Fact_Streams\Fact_Streams.Outputs[Output origine OLE DB].Columns[popularity]"
                       name="popularity"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Fact_Streams\Fact_Streams.Outputs[Output origine OLE DB].Columns[virality_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Fact_Streams\Fact_Streams.Outputs[Output origine OLE DB].ExternalColumns[virality_id]"
+                      lineageId="Package\Fact_Streams\Fact_Streams.Outputs[Output origine OLE DB].Columns[virality_id]"
+                      name="virality_id"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -4262,6 +4271,10 @@ where [refTable].[track_id] = ?</property>
                       refId="Package\Fact_Streams\Fact_Streams.Outputs[Output origine OLE DB].ExternalColumns[popularity]"
                       dataType="r8"
                       name="popularity" />
+                    <externalMetadataColumn
+                      refId="Package\Fact_Streams\Fact_Streams.Outputs[Output origine OLE DB].ExternalColumns[virality_id]"
+                      dataType="i4"
+                      name="virality_id" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -4293,6 +4306,11 @@ where [refTable].[track_id] = ?</property>
                       dataType="i4"
                       lineageId="Package\Fact_Streams\Fact_Streams.Outputs[Output errori origine OLE DB].Columns[date_id]"
                       name="date_id" />
+                    <outputColumn
+                      refId="Package\Fact_Streams\Fact_Streams.Outputs[Output errori origine OLE DB].Columns[virality_id]"
+                      dataType="i4"
+                      lineageId="Package\Fact_Streams\Fact_Streams.Outputs[Output errori origine OLE DB].Columns[virality_id]"
+                      name="virality_id" />
                     <outputColumn
                       refId="Package\Fact_Streams\Fact_Streams.Outputs[Output errori origine OLE DB].Columns[sound_id]"
                       dataType="i4"
@@ -4631,6 +4649,40 @@ where [refTable].[track_id] = ?</property>
           Id="Package\Fact_Streams"
           TopLeft="208.083333333333,126.5" />
         <EdgeLayout
+          Id="Package.PrecedenceConstraints[Vincolo]"
+          TopLeft="279.583333333333,126.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-162.083333333333,-49.5"
+              Start="0,0"
+              End="-162.083333333333,-42">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-25.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-25.3333333333333"
+                    Point2="0,-29.3333333333333"
+                    Point3="-4,-29.3333333333333" />
+                  <mssgle:LineSegment
+                    End="-158.083333333333,-29.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-158.083333333333,-29.3333333333333"
+                    Point2="-162.083333333333,-29.3333333333333"
+                    Point3="-162.083333333333,-33.3333333333333" />
+                  <mssgle:LineSegment
+                    End="-162.083333333333,-42" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package.PrecedenceConstraints[Vincolo 1]"
           TopLeft="77.5,77">
           <EdgeLayout.Curve>
@@ -4690,40 +4742,6 @@ where [refTable].[track_id] = ?</property>
                     Point3="25,-18.0526315789474" />
                   <mssgle:LineSegment
                     End="25,-27" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Vincolo]"
-          TopLeft="279.583333333333,126.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-162.083333333333,-49.5"
-              Start="0,0"
-              End="-162.083333333333,-42">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-25.3333333333333" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-25.3333333333333"
-                    Point2="0,-29.3333333333333"
-                    Point3="-4,-29.3333333333333" />
-                  <mssgle:LineSegment
-                    End="-158.083333333333,-29.3333333333333" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-158.083333333333,-29.3333333333333"
-                    Point2="-162.083333333333,-29.3333333333333"
-                    Point3="-162.083333333333,-33.3333333333333" />
-                  <mssgle:LineSegment
-                    End="-162.083333333333,-42" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5064,6 +5082,10 @@ where [refTable].[track_id] = ?</property>
           Size="113,42"
           Id="Package\Dim_Album\Ricerca"
           TopLeft="170,106" />
+        <NodeLayout
+          Size="177.5,42"
+          Id="Package\Dim_Album\Destinazione OLE DB"
+          TopLeft="151,196.5" />
         <EdgeLayout
           Id="Package\Dim_Album.Paths[Output origine OLE DB]"
           TopLeft="229.625,75.5">
@@ -5086,10 +5108,6 @@ where [refTable].[track_id] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="177.5,42"
-          Id="Package\Dim_Album\Destinazione OLE DB"
-          TopLeft="151,196.5" />
         <EdgeLayout
           Id="Package\Dim_Album.Paths[Output corrispondenza ricerca]"
           TopLeft="226.5,148">
@@ -5129,6 +5147,55 @@ where [refTable].[track_id] = ?</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Dim_Album\Origine OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Dim_Album\Ricerca">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[Group_ID_3].[Fact_Streams_SSIS]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Dim_Album\Destinazione OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Dim_Artist">
     <LayoutInfo>
@@ -5734,55 +5801,6 @@ where [refTable].[track_id] = ?</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Fact_Streams\Fact_Streams_SSIS">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Dim_Album\Origine OLE DB">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Dim_Album\Ricerca">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[Group_ID_3].[Fact_Streams_SSIS]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Dim_Album\Destinazione OLE DB">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

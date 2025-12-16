@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="26"
-  DTS:VersionGUID="{C9386DC1-5543-4EF9-897B-2793A1D655FB}">
+  DTS:VersionBuild="27"
+  DTS:VersionGUID="{C5F1F731-0139-4F3A-927A-2BDE1945679F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9ACMV0ANHkmmRZ0538ebNwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB42jlReV+KAL9+wwx+jaanKkCckiUMhE8d9pBsDnuWcQAAAAAOgAAAAAIAACAAAACH3A/UMEJiSmjMhIZvTsec3W3s9r5sbyHE4IbOaPh2kyAAAADd4dNJAyuEX6MjcrPCChMjmyMkxOukSbgmeVBQ3XvE40AAAABMJpFHOr9iMLLRzwBwkFOUmhzX1TNDk/Ny3Ffz7r/FMLyJ4K+4SWVz1j5PYzEFyOsVhY9RcOV6XBj1BqbxCNPq</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9ACMV0ANHkmmRZ0538ebNwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAlZtEsK5undb5NIyPtJgG1fU+yDlnFx6pdWP6Q3wNVZwAAAAAOgAAAAAIAACAAAAB4hSdtCL33ATIV1aRA+q3oYR6Nf6iZbpkBR6Mcb/1nGiAAAADWRXjEHVj4DzxHb9LkGj44amXXRxSEqEjd8bHSrbyoAkAAAADB8HW2pyZq2KWzGMWcgyHundksoC1h024HrjWXSK5LWyFM/JLW+CSBCudQZI6JTP6xPuE3gE/Q/0Ht0E3IclrW</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1306,6 +1306,15 @@ where [refTable].[sound_id] = ?</property>
                       lineageId="Package\Attività Flusso di dati\Origine OLE DB.Outputs[Output origine OLE DB].Columns[sound_id]"
                       name="sound_id"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Origine OLE DB.Outputs[Output origine OLE DB].Columns[virality_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[virality_id]"
+                      lineageId="Package\Attività Flusso di dati\Origine OLE DB.Outputs[Output origine OLE DB].Columns[virality_id]"
+                      name="virality_id"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1345,6 +1354,10 @@ where [refTable].[sound_id] = ?</property>
                       refId="Package\Attività Flusso di dati\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[popularity]"
                       dataType="r8"
                       name="popularity" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Origine OLE DB.Outputs[Output origine OLE DB].ExternalColumns[virality_id]"
+                      dataType="i4"
+                      name="virality_id" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1374,6 +1387,11 @@ where [refTable].[sound_id] = ?</property>
                       lineageId="Package\Attività Flusso di dati\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[virality_id]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[virality_id]"
+                      name="virality_id" />
                     <outputColumn
                       refId="Package\Attività Flusso di dati\Origine OLE DB.Outputs[Output errori origine OLE DB].Columns[sound_id]"
                       dataType="i4"
@@ -1804,6 +1822,34 @@ where [refTable].[artist_id] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="146.5,42"
+          Id="Package\Attività Flusso di dati\streams_other"
+          TopLeft="169.5,515.5" />
+        <NodeLayout
+          Size="128.5,42"
+          Id="Package\Attività Flusso di dati\Merge join"
+          TopLeft="188,440.5" />
+        <NodeLayout
+          Size="149.5,57.5"
+          Id="Package\Attività Flusso di dati\Ordinamento 1"
+          TopLeft="351,364.5" />
+        <NodeLayout
+          Size="105.5,42"
+          Id="Package\Attività Flusso di dati\mood"
+          TopLeft="196,169" />
+        <NodeLayout
+          Size="174,42"
+          Id="Package\Attività Flusso di dati\Destinazione file flat"
+          TopLeft="164.5,669" />
+        <NodeLayout
+          Size="108.5,42"
+          Id="Package\Attività Flusso di dati\region"
+          TopLeft="197.5,94.5" />
+        <NodeLayout
+          Size="140,42"
+          Id="Package\Attività Flusso di dati\Ordinamento"
+          TopLeft="33,369" />
+        <NodeLayout
           Size="151.5,42"
           Id="Package\Attività Flusso di dati\Origine OLE DB"
           TopLeft="191.5,12.5" />
@@ -1812,55 +1858,17 @@ where [refTable].[artist_id] = ?</property>
           Id="Package\Attività Flusso di dati\Multicast"
           TopLeft="197.5,253.5" />
         <NodeLayout
-          Size="146.5,42"
-          Id="Package\Attività Flusso di dati\streams_other"
-          TopLeft="169.5,515.5" />
+          Size="100,42"
+          Id="Package\Attività Flusso di dati\ratio"
+          TopLeft="185,593" />
         <NodeLayout
           Size="142.5,42"
           Id="Package\Attività Flusso di dati\Aggregazione"
           TopLeft="28,304.5" />
-        <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Multicast Output 1]"
-          TopLeft="197.5,274.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-27,51"
-              Start="0,0"
-              End="-19.5,51">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-9.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-9.5,0"
-                    Point2="-13.5,0"
-                    Point3="-13.5,4" />
-                  <mssgle:LineSegment
-                    End="-13.5,47" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-13.5,47"
-                    Point2="-13.5,51"
-                    Point3="-17.5,51" />
-                  <mssgle:LineSegment
-                    End="-19.5,51" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
-          Size="105.5,42"
-          Id="Package\Attività Flusso di dati\mood"
-          TopLeft="196,169" />
-        <NodeLayout
-          Size="108.5,42"
-          Id="Package\Attività Flusso di dati\region"
-          TopLeft="197.5,94.5" />
+          Size="152,42"
+          Id="Package\Attività Flusso di dati\Aggregazione 1"
+          TopLeft="351,306" />
         <EdgeLayout
           Id="Package\Attività Flusso di dati.Paths[Output origine OLE DB]"
           TopLeft="267.25,54.5">
@@ -1887,218 +1895,6 @@ where [refTable].[artist_id] = ?</property>
                     Point3="-15.5,24" />
                   <mssgle:LineSegment
                     End="-15.5,32.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Output corrispondenza ricerca]"
-          TopLeft="250.25,136.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,32.5"
-              Start="0,0"
-              End="0,25">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-66.78587890625,6.6953125,133.5717578125,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Output corrispondenza ricerca1]"
-          TopLeft="248.75,211">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="9,42.5"
-              Start="0,0"
-              End="9,35">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.25"
-                    Point2="0,21.25"
-                    Point3="4,21.25" />
-                  <mssgle:LineSegment
-                    End="5,21.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="5,21.25"
-                    Point2="9,21.25"
-                    Point3="9,25.25" />
-                  <mssgle:LineSegment
-                    End="9,35" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-62.28587890625,26.25,133.5717578125,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="140,42"
-          Id="Package\Attività Flusso di dati\Ordinamento"
-          TopLeft="33,369" />
-        <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Output aggregazione 1]"
-          TopLeft="28,325.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="5,64.5"
-              Start="0,0"
-              End="-2.5,64.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-18.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-18.5,0"
-                    Point2="-22.5,0"
-                    Point3="-22.5,4" />
-                  <mssgle:LineSegment
-                    End="-22.5,60.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-22.5,60.5"
-                    Point2="-22.5,64.5"
-                    Point3="-18.5,64.5" />
-                  <mssgle:LineSegment
-                    End="-2.5,64.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="152,42"
-          Id="Package\Attività Flusso di dati\Aggregazione 1"
-          TopLeft="351,306" />
-        <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Output multicast 1]"
-          TopLeft="318,274.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="33,52.5"
-              Start="0,0"
-              End="25.5,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="12.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="12.5,0"
-                    Point2="16.5,0"
-                    Point3="16.5,4" />
-                  <mssgle:LineSegment
-                    End="16.5,48.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="16.5,48.5"
-                    Point2="16.5,52.5"
-                    Point3="20.5,52.5" />
-                  <mssgle:LineSegment
-                    End="25.5,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="149.5,57.5"
-          Id="Package\Attività Flusso di dati\Ordinamento 1"
-          TopLeft="351,364.5" />
-        <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Output aggregazione 11]"
-          TopLeft="503,327">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-2.5,66.25"
-              Start="0,0"
-              End="5,66.25">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="18.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="18.5,0"
-                    Point2="22.5,0"
-                    Point3="22.5,4" />
-                  <mssgle:LineSegment
-                    End="22.5,62.25" />
-                  <mssgle:CubicBezierSegment
-                    Point1="22.5,62.25"
-                    Point2="22.5,66.25"
-                    Point3="18.5,66.25" />
-                  <mssgle:LineSegment
-                    End="5,66.25" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="128.5,42"
-          Id="Package\Attività Flusso di dati\Merge join"
-          TopLeft="188,440.5" />
-        <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Output ordinamento]"
-          TopLeft="103,411">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="149.25,29.5"
-              Start="0,0"
-              End="149.25,22">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,10.75" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,10.75"
-                    Point2="0,14.75"
-                    Point3="4,14.75" />
-                  <mssgle:LineSegment
-                    End="145.25,14.75" />
-                  <mssgle:CubicBezierSegment
-                    Point1="145.25,14.75"
-                    Point2="149.25,14.75"
-                    Point3="149.25,18.75" />
-                  <mssgle:LineSegment
-                    End="149.25,22" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2141,24 +1937,32 @@ where [refTable].[artist_id] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="100,42"
-          Id="Package\Attività Flusso di dati\ratio"
-          TopLeft="185,593" />
         <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Output colonna derivata]"
-          TopLeft="238.875,557.5">
+          Id="Package\Attività Flusso di dati.Paths[Output ordinamento]"
+          TopLeft="103,411">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,35.5"
+              EndConnector="149.25,29.5"
               Start="0,0"
-              End="0,28">
+              End="149.25,22">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28" />
+                    End="0,10.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.75"
+                    Point2="0,14.75"
+                    Point3="4,14.75" />
+                  <mssgle:LineSegment
+                    End="145.25,14.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="145.25,14.75"
+                    Point2="149.25,14.75"
+                    Point3="149.25,18.75" />
+                  <mssgle:LineSegment
+                    End="149.25,22" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2167,10 +1971,40 @@ where [refTable].[artist_id] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="174,42"
-          Id="Package\Attività Flusso di dati\Destinazione file flat"
-          TopLeft="164.5,669" />
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output multicast 1]"
+          TopLeft="318,274.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="33,52.5"
+              Start="0,0"
+              End="25.5,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="12.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="12.5,0"
+                    Point2="16.5,0"
+                    Point3="16.5,4" />
+                  <mssgle:LineSegment
+                    End="16.5,48.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16.5,48.5"
+                    Point2="16.5,52.5"
+                    Point3="20.5,52.5" />
+                  <mssgle:LineSegment
+                    End="25.5,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Attività Flusso di dati.Paths[Output merge join]"
           TopLeft="252.25,482.5">
@@ -2203,6 +2037,66 @@ where [refTable].[artist_id] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output corrispondenza ricerca1]"
+          TopLeft="248.75,211">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="9,42.5"
+              Start="0,0"
+              End="9,35">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17.25"
+                    Point2="0,21.25"
+                    Point3="4,21.25" />
+                  <mssgle:LineSegment
+                    End="5,21.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5,21.25"
+                    Point2="9,21.25"
+                    Point3="9,25.25" />
+                  <mssgle:LineSegment
+                    End="9,35" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-62.28587890625,26.25,133.5717578125,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output corrispondenza ricerca]"
+          TopLeft="250.25,136.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32.5"
+              Start="0,0"
+              End="0,25">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-66.78587890625,6.6953125,133.5717578125,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2239,9 +2133,179 @@ where [refTable].[artist_id] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output colonna derivata]"
+          TopLeft="238.875,557.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35.5"
+              Start="0,0"
+              End="0,28">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output aggregazione 11]"
+          TopLeft="503,327">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-2.5,66.25"
+              Start="0,0"
+              End="5,66.25">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.5,0"
+                    Point2="22.5,0"
+                    Point3="22.5,4" />
+                  <mssgle:LineSegment
+                    End="22.5,62.25" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.5,62.25"
+                    Point2="22.5,66.25"
+                    Point3="18.5,66.25" />
+                  <mssgle:LineSegment
+                    End="5,66.25" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output aggregazione 1]"
+          TopLeft="28,325.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="5,64.5"
+              Start="0,0"
+              End="-2.5,64.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-18.5,0"
+                    Point2="-22.5,0"
+                    Point3="-22.5,4" />
+                  <mssgle:LineSegment
+                    End="-22.5,60.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-22.5,60.5"
+                    Point2="-22.5,64.5"
+                    Point3="-18.5,64.5" />
+                  <mssgle:LineSegment
+                    End="-2.5,64.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Multicast Output 1]"
+          TopLeft="197.5,274.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-27,51"
+              Start="0,0"
+              End="-19.5,51">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-9.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-9.5,0"
+                    Point2="-13.5,0"
+                    Point3="-13.5,4" />
+                  <mssgle:LineSegment
+                    End="-13.5,47" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-13.5,47"
+                    Point2="-13.5,51"
+                    Point3="-17.5,51" />
+                  <mssgle:LineSegment
+                    End="-19.5,51" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Attività Flusso di dati\region">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[Group_ID_3].[Dim_Artist]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Attività Flusso di dati\mood">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[Group_ID_3].[Dim_Sound]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Attività Flusso di dati\Origine OLE DB">
     <Properties>
@@ -2252,52 +2316,6 @@ where [refTable].[artist_id] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Attività Flusso di dati\mood">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[Group_ID_3].[Dim_Sound]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Attività Flusso di dati\region">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[Group_ID_3].[Dim_Artist]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
