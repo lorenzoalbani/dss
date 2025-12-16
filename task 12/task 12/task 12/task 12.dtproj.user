@@ -12,7 +12,13 @@
         <UserPasswords />
         <OfflineMode>false</OfflineMode>
         <ProgressReporting>true</ProgressReporting>
-        <ParameterConfigurationSensitiveValues />
+        <ParameterConfigurationSensitiveValues>
+          <ConfigurationSetting>
+            <Id>LastModifiedTime</Id>
+            <Name>LastModifiedTime</Name>
+            <Value xsi:type="xsd:dateTime">2025-12-16T16:21:59.8518512Z</Value>
+          </ConfigurationSetting>
+        </ParameterConfigurationSensitiveValues>
       </Options>
     </Configuration>
   </Configurations>
