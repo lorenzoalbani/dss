@@ -1,6 +1,6 @@
 import json
 # Carica il JSON
-with open('dati_con_iddi.json', 'r', encoding='utf-8') as f:
+with open('tracks_filled.json', 'r', encoding='utf-8') as f:
     data = json.load(f)  # data = lista di dict
 
 album_to_id = {}
