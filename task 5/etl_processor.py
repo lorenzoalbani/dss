@@ -169,7 +169,7 @@ def generate_dw_files(json_path, xml_path):
 
         alb_id = row.get('id_album')
         if alb_id and alb_id not in seen_albums:
-            writers['dim_album'].writerow([alb_id, row.get('album_name'), clean_date(row.get('album_release_date')), row.get('album_type')])
+            writers['dim_album'].writerow([alb_id, row.get('album'), clean_date(row.get('album_release_date')), row.get('album_type')])
             seen_albums.add(alb_id)
 
         # [SOUND - UGUALE A PRIMA]
