@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="task_11"
   DTS:PackageType="5"
-  DTS:VersionBuild="62"
-  DTS:VersionGUID="{8C057F4D-FD72-41FF-B79B-E9E6E7C1CB6F}">
+  DTS:VersionBuild="63"
+  DTS:VersionGUID="{5D719665-D414-4F79-B432-8AF98C3A4AA5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMQjGq9ZsVEiR12vyhqjgtwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADINaWx4Yp3LfHpgg3fdorABNALGHIOr5e/h653WLwBWwAAAAAOgAAAAAIAACAAAAAMWl/alul+h8Ui6wco4Rph1w8FXG+NvUro8HhfHmAYbyAAAAApeNHjW2HQBayk1WN6H4FdsEOFt3iRjHEfXKhftjv4aEAAAAADPzON42eGLePB6xUKhlZ+KzkuDLOywkfyxeF7OQbsa9YpbGNPOQ4fpI42BmtW5H8A+cgAKJM/olRQKDndN4Aw</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMQjGq9ZsVEiR12vyhqjgtwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACmp4sI4egWuj19gvbOOB0EU6Z4eY9xIcTwcAufRsNESgAAAAAOgAAAAAIAACAAAABJ3XGB2ucaBcEdLdVwb6jxGYnDCXeUEHYXJT6KT6m5uCAAAACO7uijmj/i/E6ewi3ZBvFbgN8RGP44vMQtFcMFvs/tDkAAAAAlBXhj4Sm+KzmGzVATHFD+tUV+Ag0szAlumla2u8wa8cfS88dLCokwKIEph3UWDxEoGlySq6goR+x4GWu5bx3o</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -4334,9 +4334,9 @@ where [refTable].[date_id] = ?</property>
                       dataType="r8"
                       name="popularity" />
                     <externalMetadataColumn
-                      refId="Package\Attività Flusso di dati\Source Fact.Outputs[Output origine OLE DB].ExternalColumns[youtube_id]"
+                      refId="Package\Attività Flusso di dati\Source Fact.Outputs[Output origine OLE DB].ExternalColumns[virality_id]"
                       dataType="i4"
-                      name="youtube_id" />
+                      name="virality_id" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -4890,34 +4890,34 @@ where [refTable].[date_id] = ?</property>
               startId="Package\Attività Flusso di dati\Firt publication.Outputs[Output aggregazione 1]" />
             <path
               refId="Package\Attività Flusso di dati.Paths[Output colonna derivata5]"
-              endId="Package\Attività Flusso di dati\Add names.Inputs[Input ricerca]"
+              endId="Package\Attività Flusso di dati\Add artists name.Inputs[Input ricerca]"
               name="Output colonna derivata"
-              startId="Package\Attività Flusso di dati\Feat Stats.Outputs[Output colonna derivata]" />
+              startId="Package\Attività Flusso di dati\Trending percentage.Outputs[Output colonna derivata]" />
             <path
               refId="Package\Attività Flusso di dati.Paths[Output colonna derivata4]"
-              endId="Package\Attività Flusso di dati\Sort Join key.Inputs[Input ordinamento]"
-              name="Output colonna derivata"
-              startId="Package\Attività Flusso di dati\Join key.Outputs[Output colonna derivata]" />
-            <path
-              refId="Package\Attività Flusso di dati.Paths[Output colonna derivata3]"
-              endId="Package\Attività Flusso di dati\Multicast 2.Inputs[Multicast Input 1]"
-              name="Output colonna derivata"
-              startId="Package\Attività Flusso di dati\IsTrending.Outputs[Output colonna derivata]" />
-            <path
-              refId="Package\Attività Flusso di dati.Paths[Output colonna derivata]"
-              endId="Package\Attività Flusso di dati\Multicast.Inputs[Multicast Input 1]"
-              name="Output colonna derivata"
-              startId="Package\Attività Flusso di dati\Join_key.Outputs[Output colonna derivata]" />
-            <path
-              refId="Package\Attività Flusso di dati.Paths[Output colonna derivata1]"
               endId="Package\Attività Flusso di dati\Sort artists id.Inputs[Input ordinamento]"
               name="Output colonna derivata"
               startId="Package\Attività Flusso di dati\Std_Dev.Outputs[Output colonna derivata]" />
             <path
-              refId="Package\Attività Flusso di dati.Paths[Output colonna derivata2]"
-              endId="Package\Attività Flusso di dati\Add artists name.Inputs[Input ricerca]"
+              refId="Package\Attività Flusso di dati.Paths[Output colonna derivata3]"
+              endId="Package\Attività Flusso di dati\Multicast.Inputs[Multicast Input 1]"
               name="Output colonna derivata"
-              startId="Package\Attività Flusso di dati\Trending percentage.Outputs[Output colonna derivata]" />
+              startId="Package\Attività Flusso di dati\Join_key.Outputs[Output colonna derivata]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output colonna derivata]"
+              endId="Package\Attività Flusso di dati\Add names.Inputs[Input ricerca]"
+              name="Output colonna derivata"
+              startId="Package\Attività Flusso di dati\Feat Stats.Outputs[Output colonna derivata]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output colonna derivata1]"
+              endId="Package\Attività Flusso di dati\Sort Join key.Inputs[Input ordinamento]"
+              name="Output colonna derivata"
+              startId="Package\Attività Flusso di dati\Join key.Outputs[Output colonna derivata]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output colonna derivata2]"
+              endId="Package\Attività Flusso di dati\Multicast 2.Inputs[Multicast Input 1]"
+              name="Output colonna derivata"
+              startId="Package\Attività Flusso di dati\IsTrending.Outputs[Output colonna derivata]" />
             <path
               refId="Package\Attività Flusso di dati.Paths[Output corrispondenza ricerca]"
               endId="Package\Attività Flusso di dati\task_11_main.Inputs[Input destinazione file flat]"
@@ -4935,24 +4935,24 @@ where [refTable].[date_id] = ?</property>
               startId="Package\Attività Flusso di dati\Lookup Date.Outputs[Output corrispondenza ricerca]" />
             <path
               refId="Package\Attività Flusso di dati.Paths[Output merge join3]"
-              endId="Package\Attività Flusso di dati\Global avg.Inputs[Input aggregazione 1]"
+              endId="Package\Attività Flusso di dati\Feat artists.Inputs[Input aggregazione 1]"
               name="Output merge join"
-              startId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join]" />
+              startId="Package\Attività Flusso di dati\Merge join 3.Outputs[Output merge join]" />
             <path
               refId="Package\Attività Flusso di dati.Paths[Output merge join2]"
-              endId="Package\Attività Flusso di dati\IsTrending.Inputs[Input colonna derivata]"
-              name="Output merge join"
-              startId="Package\Attività Flusso di dati\Merge join 2.Outputs[Output merge join]" />
-            <path
-              refId="Package\Attività Flusso di dati.Paths[Output merge join]"
               endId="Package\Attività Flusso di dati\Ordinamento 1.Inputs[Input ordinamento]"
               name="Output merge join"
               startId="Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join]" />
             <path
-              refId="Package\Attività Flusso di dati.Paths[Output merge join1]"
-              endId="Package\Attività Flusso di dati\Feat artists.Inputs[Input aggregazione 1]"
+              refId="Package\Attività Flusso di dati.Paths[Output merge join]"
+              endId="Package\Attività Flusso di dati\Global avg.Inputs[Input aggregazione 1]"
               name="Output merge join"
-              startId="Package\Attività Flusso di dati\Merge join 3.Outputs[Output merge join]" />
+              startId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output merge join1]"
+              endId="Package\Attività Flusso di dati\IsTrending.Inputs[Input colonna derivata]"
+              name="Output merge join"
+              startId="Package\Attività Flusso di dati\Merge join 2.Outputs[Output merge join]" />
             <path
               refId="Package\Attività Flusso di dati.Paths[Output multicast 1]"
               endId="Package\Attività Flusso di dati\Sort track ids.Inputs[Input ordinamento]"
@@ -5015,14 +5015,14 @@ where [refTable].[date_id] = ?</property>
               startId="Package\Attività Flusso di dati\Sort Join key.Outputs[Output ordinamento]" />
             <path
               refId="Package\Attività Flusso di dati.Paths[Output origine OLE DB1]"
-              endId="Package\Attività Flusso di dati\Lookup Date.Inputs[Input ricerca]"
-              name="Output origine OLE DB"
-              startId="Package\Attività Flusso di dati\Source Fact.Outputs[Output origine OLE DB]" />
-            <path
-              refId="Package\Attività Flusso di dati.Paths[Output origine OLE DB]"
               endId="Package\Attività Flusso di dati\Filter featured.Inputs[Input suddivisione condizionale]"
               name="Output origine OLE DB"
               startId="Package\Attività Flusso di dati\Source Bridge.Outputs[Output origine OLE DB]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output origine OLE DB]"
+              endId="Package\Attività Flusso di dati\Lookup Date.Inputs[Input ricerca]"
+              name="Output origine OLE DB"
+              startId="Package\Attività Flusso di dati\Source Fact.Outputs[Output origine OLE DB]" />
             <path
               refId="Package\Attività Flusso di dati.Paths[Valid dates]"
               endId="Package\Attività Flusso di dati\Sort_artist_dates.Inputs[Input ordinamento]"
@@ -5170,6 +5170,10 @@ where [refTable].[date_id] = ?</property>
           Id="Package\Attività Flusso di dati\Feat Stats"
           TopLeft="377.50000205636,649.499998003244" />
         <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\Attività Flusso di dati\Valid dates"
+          TopLeft="603.999990999698,65.9999990165235" />
+        <NodeLayout
           Size="128,41.6"
           Id="Package\Attività Flusso di dati\Global avg"
           TopLeft="942.499987378716,316.499996706843" />
@@ -5182,21 +5186,17 @@ where [refTable].[date_id] = ?</property>
           Id="Package\Attività Flusso di dati\Sort track id"
           TopLeft="924.999986216426,574.999991431832" />
         <NodeLayout
-          Size="176,41.6"
-          Id="Package\Attività Flusso di dati\Trending percentage"
-          TopLeft="295.500001490116,443.499999284744" />
-        <NodeLayout
           Size="132.8,41.6"
           Id="Package\Attività Flusso di dati\Main artists"
           TopLeft="375.499999850989,517.499997735023" />
         <NodeLayout
+          Size="176,41.6"
+          Id="Package\Attività Flusso di dati\Trending percentage"
+          TopLeft="295.500001490116,443.499999284744" />
+        <NodeLayout
           Size="157.6,41.6"
           Id="Package\Attività Flusso di dati\Add artists name"
           TopLeft="200.50000603497,516.500001326203" />
-        <NodeLayout
-          Size="129.6,41.6"
-          Id="Package\Attività Flusso di dati\Valid dates"
-          TopLeft="603.999990999698,65.9999990165235" />
         <EdgeLayout
           Id="Package\Attività Flusso di dati.Paths[Valid dates]"
           TopLeft="733.599990999698,85.5500013113022">
@@ -5223,28 +5223,6 @@ where [refTable].[date_id] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Attività Flusso di dati.Paths[Output origine OLE DB]"
-          TopLeft="1000.19998617172,448.599993935228">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,41.3999987632036"
-              Start="0,0"
-              End="0,33.8999987632036">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.8999987632036" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Output origine OLE DB1]"
           TopLeft="414.999993816018,28.5500005960465">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5257,6 +5235,28 @@ where [refTable].[date_id] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="-42.3999957829712,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output origine OLE DB1]"
+          TopLeft="1000.19998617172,448.599993935228">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.3999987632036"
+              Start="0,0"
+              End="0,33.8999987632036">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.8999987632036" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5615,50 +5615,6 @@ where [refTable].[date_id] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Attività Flusso di dati.Paths[Output merge join]"
-          TopLeft="335.099998614192,265.099998986721">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,26.399999433756"
-              Start="0,0"
-              End="0,18.899999433756">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.899999433756" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Output merge join1]"
-          TopLeft="777.499995201826,663.299997437">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-107.599996006489,0"
-              Start="0,0"
-              End="-100.099996006489,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-100.099996006489,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Output merge join3]"
           TopLeft="1077.9999858439,277.799996170401">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5692,7 +5648,7 @@ where [refTable].[date_id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Output merge join2]"
+          Id="Package\Attività Flusso di dati.Paths[Output merge join1]"
           TopLeft="513.499996453523,414.299998241663">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5717,6 +5673,50 @@ where [refTable].[date_id] = ?</property>
                     Point3="-18.5,55.4453781272039" />
                   <mssgle:LineSegment
                     End="10.4795924455108,55.4453781272039" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output merge join3]"
+          TopLeft="777.499995201826,663.299997437">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-107.599996006489,0"
+              Start="0,0"
+              End="-100.099996006489,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-100.099996006489,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output merge join2]"
+          TopLeft="335.099998614192,265.099998986721">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26.399999433756"
+              Start="0,0"
+              End="0,18.899999433756">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.899999433756" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5823,18 +5823,18 @@ where [refTable].[date_id] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Attività Flusso di dati.Paths[Output colonna derivata]"
-          TopLeft="356.69999833107,87.3000011026859">
+          TopLeft="377.50000205636,670.299998897314">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="65.7999976903196,0"
+              EndConnector="-40.799995648861,0"
               Start="0,0"
-              End="58.2999976903196,0">
+              End="-33.299995648861,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="58.2999976903196,0" />
+                    End="-33.299995648861,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5845,18 +5845,18 @@ where [refTable].[date_id] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Attività Flusso di dati.Paths[Output colonna derivata1]"
-          TopLeft="82.8500017806884,179.10000205636">
+          TopLeft="776.499993488192,360.099998912215">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,35.8999947398903"
+              EndConnector="0,29.399999836087"
               Start="0,0"
-              End="0,28.3999947398903">
+              End="0,21.899999836087">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.3999947398903" />
+                    End="0,21.899999836087" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5867,6 +5867,28 @@ where [refTable].[date_id] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Attività Flusso di dati.Paths[Output colonna derivata2]"
+          TopLeft="598.639790448555,490.545376368867">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29.4546158825291"
+              Start="0,0"
+              End="0,21.9546158825291">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.9546158825291" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output colonna derivata5]"
           TopLeft="355.500001490116,485.099999284744">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5900,41 +5922,19 @@ where [refTable].[date_id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Output colonna derivata5]"
-          TopLeft="377.50000205636,670.299998897314">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-40.799995648861,0"
-              Start="0,0"
-              End="-33.299995648861,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-33.299995648861,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Attività Flusso di dati.Paths[Output colonna derivata4]"
-          TopLeft="776.499993488192,360.099998912215">
+          TopLeft="82.8500017806884,179.10000205636">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,29.399999836087"
+              EndConnector="0,35.8999947398903"
               Start="0,0"
-              End="0,21.899999836087">
+              End="0,28.3999947398903">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.899999836087" />
+                    End="0,28.3999947398903" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5945,18 +5945,18 @@ where [refTable].[date_id] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Attività Flusso di dati.Paths[Output colonna derivata3]"
-          TopLeft="598.639790448555,490.545376368867">
+          TopLeft="356.69999833107,87.3000011026859">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,29.4546158825291"
+              EndConnector="65.7999976903196,0"
               Start="0,0"
-              End="0,21.9546158825291">
+              End="58.2999976903196,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.9546158825291" />
+                    End="58.2999976903196,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6282,7 +6282,7 @@ where [refTable].[date_id] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -6292,7 +6292,7 @@ where [refTable].[date_id] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
