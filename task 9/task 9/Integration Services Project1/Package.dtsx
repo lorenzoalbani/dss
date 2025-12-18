@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{177C81BD-FDDB-48DD-A9D4-BD5191E2EF7D}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{61E0BA93-CB5B-4F2A-A393-F1CA417397FA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9ACMV0ANHkmmRZ0538ebNwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB8GtpmeopFrGpUsirErCGr3UA099CqrB+rPc2NZsn4gAAAAAAOgAAAAAIAACAAAACdgTSFq8+SJtgzyEIKyHxZfkXLsMSjktaeM6rwqta6yCAAAACgljI5+12q6b1sgXmuUYTOjVrKgSfiowqV03bOBVa5j0AAAADXyu5qYmE7KvncpGxCucHylDbMR5xAUg1B77rMS+Cb0qNBmbbecVHI6kD+ob7fpTAvi7oCEeFIg5LSP9nOztdj</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9ACMV0ANHkmmRZ0538ebNwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD3ai7gDpNnbw1+MVQLAJfZ3r6QXHwsMrzb7gbV47IUVgAAAAAOgAAAAAIAACAAAACtqaTEvHPKm53r1yDurD0KafNa3lNQPUM2j8fjWx3AfSAAAAA2Lz5/OEvludS896yU9RpKpo1I2I4ku6qBeOUMKl9OwkAAAADgxxMhnjkTnsXOl7VUbF+Q+WB7LUtcqWc0MC+Sb190+r1iuTYKo98c5XhhoJfQlKtEk4z24yCW6QFYkG+ofIYE</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -710,6 +710,15 @@
                       lineageId="Package\Attività Flusso di dati\Fact_Streams.Outputs[Output origine OLE DB].Columns[streams_1month]"
                       name="streams_1month"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Fact_Streams.Outputs[Output origine OLE DB].Columns[virality_id]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversione"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\Fact_Streams.Outputs[Output origine OLE DB].ExternalColumns[virality_id]"
+                      lineageId="Package\Attività Flusso di dati\Fact_Streams.Outputs[Output origine OLE DB].Columns[virality_id]"
+                      name="virality_id"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -749,6 +758,10 @@
                       refId="Package\Attività Flusso di dati\Fact_Streams.Outputs[Output origine OLE DB].ExternalColumns[popularity]"
                       dataType="r8"
                       name="popularity" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Fact_Streams.Outputs[Output origine OLE DB].ExternalColumns[virality_id]"
+                      dataType="i4"
+                      name="virality_id" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -776,6 +789,11 @@
                       dataType="i8"
                       lineageId="Package\Attività Flusso di dati\Fact_Streams.Outputs[Output errori origine OLE DB].Columns[streams_1month]"
                       name="streams_1month" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Fact_Streams.Outputs[Output errori origine OLE DB].Columns[virality_id]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Fact_Streams.Outputs[Output errori origine OLE DB].Columns[virality_id]"
+                      name="virality_id" />
                     <outputColumn
                       refId="Package\Attività Flusso di dati\Fact_Streams.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
                       dataType="i4"
@@ -1280,7 +1298,7 @@ where [refTable].[date_id] = ?</property>
         <NodeLayout
           Size="177,42"
           Id="Package\Attività Flusso di dati"
-          TopLeft="5.5,5.5" />
+          TopLeft="7,8.5" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -1336,9 +1354,7 @@ where [refTable].[date_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-29.671328125,8.41845703125,59.34265625,11.6630859375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -1361,7 +1377,7 @@ where [refTable].[date_id] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-100.0892578125,5.91845703125,200.178515625,11.6630859375"
+              BoundingBox="-100.0892578125,5.91845703125,133.5717578125,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -1385,7 +1401,7 @@ where [refTable].[date_id] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-100.0892578125,8.91845703125,200.178515625,11.6630859375"
+              BoundingBox="-100.0892578125,8.91845703125,133.5717578125,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -1408,9 +1424,7 @@ where [refTable].[date_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-19.829609375,8.91845703125,39.65921875,11.6630859375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -1432,9 +1446,7 @@ where [refTable].[date_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-29.671328125,3.16845703125,59.34265625,11.6630859375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -1468,9 +1480,7 @@ where [refTable].[date_id] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-29.704609375,19,39.65921875,11.6630859375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
