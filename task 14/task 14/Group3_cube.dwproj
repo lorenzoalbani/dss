@@ -43,6 +43,10 @@
       <Name>Dim Youtube.dim</Name>
       <FullPath>Dim Youtube.dim</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Dim_Role.dim</Name>
+      <FullPath>Dim_Role.dim</FullPath>
+    </ProjectItem>
   </Dimensions>
   <DataSources>
     <ProjectItem>

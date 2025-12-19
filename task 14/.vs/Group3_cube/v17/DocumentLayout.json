@@ -1,21 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Admin\\OneDrive - University of Pisa\\Desktop\\uni\\magistrale\\LDS\\exam\\project backup\\task 14\\task 14\\",
+  "WorkspaceRootPath": "C:\\Users\\Tommaso\\Documents\\Universit\u00E0\\Magistrale\\Secondo anno (0 su 4)\\DSS\\Project\\DSS_project\\dss\\task 14\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{672D185C-415F-001E-AC86-914F2261A7C3}|task 14\\Group3_cube.dwproj|C:\\Users\\Admin\\OneDrive - University of Pisa\\Desktop\\uni\\magistrale\\LDS\\exam\\project backup\\task 14\\task 14\\task 14\\Dim Track 1.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
-      "RelativeMoniker": "D:0:0:{672D185C-415F-001E-AC86-914F2261A7C3}|task 14\\Group3_cube.dwproj|solutionrelative:task 14\\Dim Track 1.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{672D185C-415F-001E-AC86-914F2261A7C3}|task 14\\Group3_cube.dwproj|C:\\Users\\Admin\\OneDrive - University of Pisa\\Desktop\\uni\\magistrale\\LDS\\exam\\project backup\\task 14\\task 14\\task 14\\Dim Artist.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
-      "RelativeMoniker": "D:0:0:{672D185C-415F-001E-AC86-914F2261A7C3}|task 14\\Group3_cube.dwproj|solutionrelative:task 14\\Dim Artist.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{672D185C-415F-001E-AC86-914F2261A7C3}|task 14\\Group3_cube.dwproj|C:\\Users\\Admin\\OneDrive - University of Pisa\\Desktop\\uni\\magistrale\\LDS\\exam\\project backup\\task 14\\task 14\\task 14\\Group ID 3 DB.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
-      "RelativeMoniker": "D:0:0:{672D185C-415F-001E-AC86-914F2261A7C3}|task 14\\Group3_cube.dwproj|solutionrelative:task 14\\Group ID 3 DB.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{672D185C-415F-001E-AC86-914F2261A7C3}|task 14\\Group3_cube.dwproj|C:\\Users\\Admin\\OneDrive - University of Pisa\\Desktop\\uni\\magistrale\\LDS\\exam\\project backup\\task 14\\task 14\\task 14\\Group ID 3 DB 1.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "AbsoluteMoniker": "D:0:0:{672D185C-415F-001E-AC86-914F2261A7C3}|task 14\\Group3_cube.dwproj|C:\\Users\\Tommaso\\Documents\\Universit\u00E0\\Magistrale\\Secondo anno (0 su 4)\\DSS\\Project\\DSS_project\\dss\\task 14\\task 14\\Group ID 3 DB 1.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
       "RelativeMoniker": "D:0:0:{672D185C-415F-001E-AC86-914F2261A7C3}|task 14\\Group3_cube.dwproj|solutionrelative:task 14\\Group ID 3 DB 1.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
     }
   ],
@@ -31,54 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Dim Track 1.dim [Progettazione]",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive - University of Pisa\\Desktop\\uni\\magistrale\\LDS\\exam\\project backup\\task 14\\task 14\\task 14\\Dim Track 1.dim",
-              "RelativeDocumentMoniker": "task 14\\Dim Track 1.dim",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive - University of Pisa\\Desktop\\uni\\magistrale\\LDS\\exam\\project backup\\task 14\\task 14\\task 14\\Dim Track 1.dim [Progettazione]",
-              "RelativeToolTip": "task 14\\Dim Track 1.dim [Progettazione]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-12-17T19:24:16.918Z",
-              "EditorCaption": " [Progettazione]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Dim Artist.dim [Progettazione]",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive - University of Pisa\\Desktop\\uni\\magistrale\\LDS\\exam\\project backup\\task 14\\task 14\\task 14\\Dim Artist.dim",
-              "RelativeDocumentMoniker": "task 14\\Dim Artist.dim",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive - University of Pisa\\Desktop\\uni\\magistrale\\LDS\\exam\\project backup\\task 14\\task 14\\task 14\\Dim Artist.dim [Progettazione]",
-              "RelativeToolTip": "task 14\\Dim Artist.dim [Progettazione]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-12-17T19:16:22.192Z",
-              "EditorCaption": " [Progettazione]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Group ID 3 DB 1.cube [Progettazione]",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive - University of Pisa\\Desktop\\uni\\magistrale\\LDS\\exam\\project backup\\task 14\\task 14\\task 14\\Group ID 3 DB 1.cube",
+              "DocumentMoniker": "C:\\Users\\Tommaso\\Documents\\Universit\u00E0\\Magistrale\\Secondo anno (0 su 4)\\DSS\\Project\\DSS_project\\dss\\task 14\\task 14\\Group ID 3 DB 1.cube",
               "RelativeDocumentMoniker": "task 14\\Group ID 3 DB 1.cube",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive - University of Pisa\\Desktop\\uni\\magistrale\\LDS\\exam\\project backup\\task 14\\task 14\\task 14\\Group ID 3 DB 1.cube [Progettazione]",
+              "ToolTip": "C:\\Users\\Tommaso\\Documents\\Universit\u00E0\\Magistrale\\Secondo anno (0 su 4)\\DSS\\Project\\DSS_project\\dss\\task 14\\task 14\\Group ID 3 DB 1.cube [Progettazione]",
               "RelativeToolTip": "task 14\\Group ID 3 DB 1.cube [Progettazione]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-12-17T19:12:26.495Z",
+              "WhenOpened": "2025-12-18T16:48:29.018Z",
               "EditorCaption": " [Progettazione]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Group ID 3 DB.dsv [Progettazione]",
-              "DocumentMoniker": "C:\\Users\\Admin\\OneDrive - University of Pisa\\Desktop\\uni\\magistrale\\LDS\\exam\\project backup\\task 14\\task 14\\task 14\\Group ID 3 DB.dsv",
-              "RelativeDocumentMoniker": "task 14\\Group ID 3 DB.dsv",
-              "ToolTip": "C:\\Users\\Admin\\OneDrive - University of Pisa\\Desktop\\uni\\magistrale\\LDS\\exam\\project backup\\task 14\\task 14\\task 14\\Group ID 3 DB.dsv [Progettazione]",
-              "RelativeToolTip": "task 14\\Group ID 3 DB.dsv [Progettazione]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-12-17T19:09:59.61Z",
-              "EditorCaption": " [Progettazione]"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

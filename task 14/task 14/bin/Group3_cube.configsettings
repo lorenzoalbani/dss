@@ -29,6 +29,9 @@
       <Dimension>
         <ID>Dim Youtube</ID>
       </Dimension>
+      <Dimension>
+        <ID>Dim_Role</ID>
+      </Dimension>
     </Dimensions>
     <Cubes>
       <Cube>

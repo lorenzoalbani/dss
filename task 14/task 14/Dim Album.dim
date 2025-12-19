@@ -1,4 +1,4 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="169b52c6-5778-4fc6-ae0e-68d3a5c08c77" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="54d7321b-3e70-4b6a-be21-f0d62160ef85" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Dim Album</ID>
   <Name>Dim Album</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -6,6 +6,32 @@
   <Annotations>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1962" scrolltop="-4382" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6308" y="11070" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Dim_Album" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="2307" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000003090000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="Group_ID_3_Dim_Album" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
@@ -21,15 +47,15 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
-      <Value>0</Value>
+      <Value>-1962</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>0</Value>
+      <Value>-4382</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
-      <Value>0</Value>
+      <Value>20</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
@@ -39,45 +65,71 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
       <Value>100</Value>
     </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="134">
+            <Shape Id="Album Id" Expanded="true">
+              <Attributes>
+                <Attribute Id="Album Id" />
+                <Attribute Id="Release Date" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="Album Type" Expanded="false">
+              <Attributes>
+                <Attribute Id="Album Type" />
+              </Attributes>
+              <Position x="192" y="20" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="daece64a-4e0e-453e-9b94-0d80c330f9e1">
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="d3dd3734-6fad-497b-a475-f8497f62bab8">
     <DataSourceViewID>Group ID 3 DB</DataSourceViewID>
   </Source>
   <UnknownMember>Visible</UnknownMember>
-  <ErrorConfiguration dwd:design-time-name="858322b1-532d-4efd-bdab-29452767908a">
+  <ErrorConfiguration dwd:design-time-name="38126f1a-2366-4c9a-9db3-d8612a9d2911">
     <KeyNotFound>ReportAndStop</KeyNotFound>
     <KeyDuplicate>ReportAndStop</KeyDuplicate>
     <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
   </ErrorConfiguration>
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
-    <Attribute dwd:design-time-name="d177727c-5164-4c13-9963-ddd8498cb38e">
+    <Attribute dwd:design-time-name="f18bc7ed-c2b1-4d45-8d18-c2629cb2fa30">
       <ID>Album Id</ID>
       <Name>Album Id</Name>
       <Usage>Key</Usage>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="5cd8442e-8622-446b-90a8-ba477c882c31">
+        <KeyColumn dwd:design-time-name="bb24bcdd-cbaf-494a-8cd0-caf197a17f61">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
           <NullProcessing>UnknownMember</NullProcessing>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="adcbb256-c02f-404f-bd59-b28bc35cec95">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="31c6743d-9983-4a73-9d5b-89b0668f406e">
             <TableID>Group_ID_3_Dim_Album</TableID>
             <ColumnID>album_id</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <NameColumn dwd:design-time-name="79018117-0126-4c9e-a593-3bb400083261">
+        <DataType>WChar</DataType>
+        <DataSize>4000</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="e629b9c5-4951-415a-bbb7-50b618f08bed">
+          <TableID>Group_ID_3_Dim_Album</TableID>
+          <ColumnID>title</ColumnID>
+        </Source>
+      </NameColumn>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="d22c7d32-4521-4b73-9448-fb0c75c16f40">
-          <AttributeID>Title</AttributeID>
-          <Name>Title</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="844fd003-6b84-4dd5-a931-a5763600efc1">
+        <AttributeRelationship dwd:design-time-name="9f620ee9-7058-4dfc-9c66-f7397341f574">
           <AttributeID>Release Date</AttributeID>
           <Name>Release Date</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="eb31b55c-6770-4756-a0f2-4d3eda58e0b5">
+        <AttributeRelationship dwd:design-time-name="4f294d7f-1346-4b3d-b874-9639e01bd03f">
           <AttributeID>Album Type</AttributeID>
           <Name>Album Type</Name>
         </AttributeRelationship>
@@ -86,31 +138,14 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="1dfe73cc-b262-485c-8250-3211417b642b">
-      <ID>Title</ID>
-      <Name>Title</Name>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="99d4a3ca-5185-4877-b7c3-2771d4417c1d">
-          <DataType>WChar</DataType>
-          <DataSize>1024</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="16d2e161-61de-4300-895f-9b25964412ee">
-            <TableID>Group_ID_3_Dim_Album</TableID>
-            <ColumnID>title</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <OrderBy>Key</OrderBy>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="3768c3df-0935-413a-b476-96a39598f74a">
+    <Attribute dwd:design-time-name="8b39ee87-c819-4d33-a98f-8f054ba8c1ac">
       <ID>Release Date</ID>
       <Name>Release Date</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="58301c31-8293-43df-9530-40db917a8cf1">
+        <KeyColumn dwd:design-time-name="46e72e50-fcd1-4a92-b5b7-8653db03e1ef">
           <DataType>WChar</DataType>
           <DataSize>10</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="220b55e1-4f4e-4586-a49e-9bd9d7d31a67">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c553a303-53a1-4111-9ec7-7a87767f3d0b">
             <TableID>Group_ID_3_Dim_Album</TableID>
             <ColumnID>release_date</ColumnID>
           </Source>
@@ -120,14 +155,14 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="2cc549a7-85ec-4d52-8ece-993d69319f7b">
+    <Attribute dwd:design-time-name="4f909953-8364-4df7-809c-17df299afa96">
       <ID>Album Type</ID>
       <Name>Album Type</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="288cbf3a-32a2-44b6-a207-f04fe1473070">
+        <KeyColumn dwd:design-time-name="40f6e7e0-96b0-4b91-9ff9-099f715694b1">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="bee2f1e5-ff64-4bac-92a0-d41fd9f25458">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5bf32622-bbbf-4782-8e9c-c83a1b5a59fd">
             <TableID>Group_ID_3_Dim_Album</TableID>
             <ColumnID>album_type</ColumnID>
           </Source>
@@ -138,5 +173,23 @@
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
   </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="f193dc0c-dde6-453d-95c9-0b2560cb279c">
+      <ID>Gerarchia</ID>
+      <Name>Album_Type</Name>
+      <Levels>
+        <Level dwd:design-time-name="53aaba92-bff1-4078-9296-b087e6a6a8f5">
+          <ID>Album Type</ID>
+          <Name>Album Type</Name>
+          <SourceAttributeID>Album Type</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="6fc2115a-e711-43ac-aa6d-1e22f66bef5c">
+          <ID>Album Id</ID>
+          <Name>Album Id</Name>
+          <SourceAttributeID>Album Id</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
   <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
 </Dimension>
