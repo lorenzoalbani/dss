@@ -6,7 +6,7 @@ AL000004,,2022-06-02,single
 AL000005,OKAY OKAY 2 - EP,2025-05-16,single
 AL000006,Paranoise Mixtape,2007-03-13,album
 AL000007,One Take FM Free Mic - Season 6,2008-06-17,album
-"AL000008,""RED BULL 64 BARS, The Album"",2021-05-27,compilation"
+AL000008,"RED BULL 64 BARS, The Album",2021-05-27,compilation
 AL000009,Crisalide,2021-10-21,album
 AL000010,Joker Mixtape,2021-08-19,single
 AL000011,Non so chi ha creato il mondo ma so che era innamorato (Deluxe),2024-10-18,single
@@ -85,7 +85,7 @@ AL000083,Cani Da Sfida,2017-06-30,album
 AL000084,Festival di Sanremo 2018,2017-12-08,single
 AL000085,Michel,2017-05-24,album
 AL000086,Miguel,2020-11-06,album
-"AL000087,""Doner Bomber Compilation, Vol. 3"",2015-04-08,compilation"
+AL000087,"Doner Bomber Compilation, Vol. 3",2015-04-08,compilation
 AL000088,M,2014-03-05,single
 AL000089,Beats From The Lido,2018-08-17,compilation
 AL000090,What U Do To Me EP,2016-12-09,single
@@ -287,7 +287,7 @@ AL000285,AmarAmmore,2021-02-12,single
 AL000286,Sognando contromano,2009-06-01,album
 AL000287,Molto Calmo,2013-12-11,album
 AL000288,Canerandagio - Parte 1,2025-04-18,album
-"AL000289,""I molteplici mondi di Giovanni, Il cantante Neffa"",2003-01-01,album"
+AL000289,"I molteplici mondi di Giovanni, Il cantante Neffa",2003-01-01,album
 AL000290,Resistenza Edizione Speciale,2015-01-01,album
 AL000291,Arrivi e partenze,2001-01-01,album
 AL000292,50 eMCee’s,2013-01-01,album
@@ -301,7 +301,7 @@ AL000299,DePrimoMaggio,,
 AL000300,The World According to RZA,,
 AL000301,Rap©ital,,
 AL000302,Zora la vampira,,
-"AL000303,""Capo Verde terra d’amore Vol. 9 (Canzoni di Cesaria Evora, Teofilo Chantre e Mario Lucio in italiano)"",,"
+AL000303,"Capo Verde terra d’amore Vol. 9 (Canzoni di Cesaria Evora, Teofilo Chantre e Mario Lucio in italiano)",,
 AL000304,Mowgli,2018-03-02,album
 AL000305,Orange County Mixtape,2017-01-13,album
 AL000306,Vita vera mixtape: Aspettando la Divina Commedia,2020-06-05,album
@@ -351,8 +351,8 @@ AL000349,Furia Solista ,2012-05-22,album
 AL000350,V.E.L.M. (Vivi E Lascia Morire),2019-10-25,compilation
 AL000351,Classico,2000-01-01,album
 AL000352,The Remedy Tape Vol. 1,2019-09-27,compilation
-"AL000353,""Street Collection, Vol.1"",2019-09-27,compilation"
-"AL000354,""Street Collection, Vol.2"",2004-01-01,album"
+AL000353,"Street Collection, Vol.1",2019-09-27,compilation
+AL000354,"Street Collection, Vol.2",2004-01-01,album
 AL000355,Rocdiniak,2017-09-01,album
 AL000356,50 eMCee’s II,1998-08-01,album
 AL000357,Monkee Bizniz Vol. 1,2012-02-14,album
@@ -462,7 +462,7 @@ AL000460,Diversamente Triste,2023-07-07,album
 AL000461,Supereroe (Bat Edition),2018-10-12,album
 AL000462,Terza Stagione,2016-10-14,album
 AL000463,L’erba cattiva (Gold Edition),2012-02-07,album
-"AL000464,""Keta Music, Vol. 3"",2021-07-23,album"
+AL000464,"Keta Music, Vol. 3",2021-07-23,album
 AL000465,Keta Music - Volume 2,2015-06-18,album
 AL000466,Effetto notte (L’alba),2023-05-19,album
 AL000467,Mercurio - 5 Stars Edition,2014-06-10,album
@@ -472,7 +472,7 @@ AL000470,Keta Music,2020-06-12,single
 AL000471,Il peggiore,2011-12-19,album
 AL000472,L’erba cattiva,2012-02-07,album
 AL000473,Covid Freestyle EP,2020-06-12,single
-"AL000474,""The Flow Clocker, Vol. 1"",2014-09-23,album"
+AL000474,"The Flow Clocker, Vol. 1",2014-09-23,album
 AL000475,Mercurio,2014-10-14,album
 AL000476,Pandamonium,2020-09-25,album
 AL000477,Comunisti col Rolex Multiplatinum Edition,2017-07-11,album
@@ -491,7 +491,7 @@ AL000489,Sindrome di Tôret,2017-10-06,album
 AL000490,Educazione Sabauda,2016-01-08,album
 AL000491,Iodegradabile,2019-10-25,album
 AL000492,Sulla riva del fiume,2025-02-13,album
-"AL000493,""Non è il mio genere, il genere umano"",2014-06-24,album"
+AL000493,"Non è il mio genere, il genere umano",2014-06-24,album
 AL000494,Appersonal - EP,2025-01-05,album
 AL000495,Mai Dire Mai (La Locura) - Single,2020-11-12,single
 AL000496,Pornostalgia,2022-05-05,album
@@ -570,11 +570,11 @@ AL000568,Quello Che Vi Consiglio Vol. 4,1978-10-07,album
 AL000569,Kepler (Gold Edition),2014-05-27,album
 AL000570,Quello Che Vi Consiglio Vol. 7,2024-09-21,single
 AL000571,Quello Che Vi Consiglio Vol. 3,2023-12-14,album
-"AL000572,""QVC9: QUELLO CHE VI CONSIGLIO, VOL. 9"",2020-11-06,album"
-"AL000573,""Detto, Fatto. - EP"",2012-11-30,album"
+AL000572,"QVC9: QUELLO CHE VI CONSIGLIO, VOL. 9",2020-11-06,album
+AL000573,"Detto, Fatto. - EP",2012-11-30,album
 AL000574,Quello Che Vi Consiglio Vol. 1,2016-11-11,album
 AL000575,Quello Che Vi Consiglio Vol. 5,2016-11-11,album
-"AL000576,""QVC 10 – Quello Che Vi Consiglio, Vol. 10"",2023-12-14,album"
+AL000576,"QVC 10 – Quello Che Vi Consiglio, Vol. 10",2023-12-14,album
 AL000577,Eclissi,2022-05-12,album
 AL000578,Quello Che Vi Consiglio Vol. 6,2018-03-30,album
 AL000579,Haterproof,2014-05-27,album
@@ -659,13 +659,13 @@ AL000657,Mate y Espíritu,2011-01-01,album
 AL000658,The Second Feeling,2008-01-01,album
 AL000659,Apogeo,2016-01-12,compilation
 AL000660,Demolizione 2,2022-10-11,compilation
-"AL000661,""MM, Vol. 2"",2016-11-11,album"
+AL000661,"MM, Vol. 2",2016-11-11,album
 AL000662,Back Home,2018-02-02,album
 AL000663,Doppelganger,2015-09-11,album
-"AL000664,""MM, Vol. 4"",2021-11-12,album"
-"AL000665,""MM, Vol. 3"",2019-02-01,album"
+AL000664,"MM, Vol. 4",2021-11-12,album
+AL000665,"MM, Vol. 3",2019-02-01,album
 AL000666,Escape From Heart,2004-01-01,album
-"AL000667,""MM, Vol. 1"",2014-05-27,album"
+AL000667,"MM, Vol. 1",2014-05-27,album
 AL000668,LONEWOLF,2024-05-30,album
 AL000669,R.I.P. Street Album,2014-09-04,album
 AL000670,Riscatto Mixtape,1995-01-01,album
@@ -740,7 +740,7 @@ AL000738,Al Centro Della Scena Vol. 2 - Mixtape,2018-11-16,album
 AL000739,Odio pieno,1997-01-01,album
 AL000740,Più Forte Delle Bombe - EP,2012-02-01,album
 AL000741,Missione Impossibile,2002-01-01,compilation
-"AL000742,""Balla Coi Lupi 12"""""",2012-02-01,album"
+AL000742,"Balla Coi Lupi 12""",2012-02-01,album
 AL000743,Originali,2021-05-27,single
 AL000744,Sotto Effetto Stono,1997-03-10,album
 AL000745,Soprattutto Sotto,1994-11-13,single
@@ -762,7 +762,7 @@ AL000760,Genkidama,2017-07-25,album
 AL000761,Triste,2019-05-17,album
 AL000762,Canzoni Popolari - EP,2020-07-09,single
 AL000763,Council Estate Vol.1,2025-04-10,album
-"AL000764,""COUNCIL ESTATE, VOL. 2"",2023-05-26,single"
+AL000764,"COUNCIL ESTATE, VOL. 2",2023-05-26,single
 AL000765,IL CANTASTORIE,2023-07-07,single
 AL000766,Scusate se esistiamo,2020-04-30,album
 AL000767,Fruit Joint + Gusto,2018-07-20,album
@@ -880,7 +880,7 @@ AL000878,Tutto il Contrario Remixtape,2023-07-06,single
 AL000879,Pat-a-Cake,2015-06-18,album
 AL000880,Sig. Brainwash - L’arte di accontentare Deluxe Edition,2022-03-18,album
 AL000881,Persona,2019-10-31,album
-"AL000882,""NOI, LORO, GLI ALTRI (Deluxe)"",2021-11-19,album"
+AL000882,"NOI, LORO, GLI ALTRI (Deluxe)",2021-11-19,album
 AL000883,Santeria (Voodoo Edition),2016-06-24,album
 AL000884,Status (Vendetta Edition),2015-02-10,album
 AL000885,È FINITA LA PACE,2024-12-13,album

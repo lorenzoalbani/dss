@@ -110,7 +110,7 @@ def generate_dw_files(json_path, xml_path):
     for key, fname in file_names.items():
         f = open(os.path.join(output_dir, fname), 'w', newline='', encoding='utf-8')
         files[key] = f
-        writers[key] = csv.writer(f)
+        writers[key] = csv.writer(f, quoting=csv.QUOTE_MINIMAL)
 
     # HEADERS
     writers['dim_time'].writerow(['date_id', 'full_date', 'year', 'month', 'day', 'quarter', 'season'])

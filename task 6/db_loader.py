@@ -23,7 +23,7 @@ def load_table_bulk(conn, csv_filename, table_name):
     cursor.execute("SET DATEFORMAT ymd;") 
     
     with open(file_path, 'r', encoding='utf-8-sig') as f:
-        reader = csv.reader(f)
+        reader = csv.reader(f, quoting=csv.QUOTE_MINIMAL)
         
         try:
             header = next(reader)
