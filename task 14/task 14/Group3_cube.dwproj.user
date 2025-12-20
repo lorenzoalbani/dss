@@ -7,12 +7,14 @@
           <ConfigurationSetting>
             <Id>Group ID 3 DB</Id>
             <Name>Group ID 3 DB</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9ACMV0ANHkmmRZ0538ebNwAAAAAcAAAARwByAG8AdQBwACAASQBEACAAMwAgAEQAQgAAABBmAAAAAQAAIAAAAHC35nnzxA2kvRKWugWvozlJ/funkvYRL2Dvsyd1s30GAAAAAA6AAAAAAgAAIAAAAF7JvewmczUYjG7V75+RZd4sMxURSZOAYeXza8MEWJ9xIAAAANOcDazVaSnbI+QCVowJ23bu+zyW5MTCclziOZYUyDXYQAAAAF0/hSO5enkMSjlmccD2kZRAuzDZ3Lbmu7YjTnx084nP7tsIqzdKR0pYBimpzKxG9vYW8QnvluwG3XYp/aqTKH4=</Value>
           </ConfigurationSetting>
         </UserIDs>
         <UserPasswords>
           <ConfigurationSetting>
             <Id>Group ID 3 DB</Id>
             <Name>Group ID 3 DB</Name>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9ACMV0ANHkmmRZ0538ebNwAAAAAcAAAARwByAG8AdQBwACAASQBEACAAMwAgAEQAQgAAABBmAAAAAQAAIAAAAEgfCG7F3eTql1h8XFLOKKjCqOciilFMaeU/IFVWhBlZAAAAAA6AAAAAAgAAIAAAAMMuzsrJqmhNbdCngtQ9ZthkXbNshDE5Ore6GV+s5LWJIAAAADWMytbmevxdS2sjcf+GX2SUNMbP8a6lSFf3ubO9Fz8tQAAAAF4ruxs1heszwxT13h51rzLtSaVack4U/ZGvd5YSspcTA1nb80zFfFZ8mZmLAm/23eEGBZjw2YdfklwgaKsXQAM=</Value>
           </ConfigurationSetting>
         </UserPasswords>
         <TargetServer>http://131.114.50.57/olap/msmdpump.dll</TargetServer>

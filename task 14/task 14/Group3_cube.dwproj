@@ -68,7 +68,7 @@
           <ConfigurationSetting>
             <Id>Group ID 3 DB</Id>
             <Name>Group ID 3 DB</Name>
-            <Value xsi:type="xsd:string">Provider=SQLOLEDB.1;Data Source=131.114.50.57;Password=;User ID=;Initial Catalog=Group_ID_3_DB</Value>
+            <Value xsi:type="xsd:string">Provider=SQLOLEDB.1;Data Source=131.114.50.57;Persist Security Info=True;Password=;User ID=;Initial Catalog=Group_ID_3_DB</Value>
           </ConfigurationSetting>
         </ConnectionMappings>
         <ConnectionSecurityMappings>

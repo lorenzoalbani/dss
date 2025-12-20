@@ -1,0 +1,19 @@
+SELECT
+    [Measures].[Streams 1month] ON COLUMNS,
+    NON EMPTY
+    (
+        -- 1. ordino i mesi
+        ORDER(
+            [Dim Time].[Month].[Month].MEMBERS, 
+            [Dim Time].[Month].CurrentMember.MemberValue,
+            BASC
+        )
+        *
+        -- incrocio con la geografia
+        DESCENDANTS(
+            [Dim Artist].[Geography].[All],     
+            [Dim Artist].[Geography].[Region],  
+            SELF_AND_BEFORE                    
+        )
+    ) ON ROWS
+FROM [Group ID 3 DB]
