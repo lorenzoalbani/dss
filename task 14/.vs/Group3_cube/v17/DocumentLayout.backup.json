@@ -1,9 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Tommaso\\Documents\\Universit\u00E0\\Magistrale\\Secondo anno (0 su 4)\\DSS\\Project\\DSS_project\\dss\\task 14\\",
+  "WorkspaceRootPath": "C:\\Users\\Tommaso\\Desktop\\task 14\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{672D185C-415F-001E-AC86-914F2261A7C3}|task 14\\Group3_cube.dwproj|C:\\Users\\Tommaso\\Documents\\Universit\u00E0\\Magistrale\\Secondo anno (0 su 4)\\DSS\\Project\\DSS_project\\dss\\task 14\\task 14\\Group ID 3 DB 1.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "AbsoluteMoniker": "D:0:0:{672D185C-415F-001E-AC86-914F2261A7C3}|task 14\\Group3_cube.dwproj|C:\\Users\\Tommaso\\Desktop\\task 14\\task 14\\Dim Track 1.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{672D185C-415F-001E-AC86-914F2261A7C3}|task 14\\Group3_cube.dwproj|solutionrelative:task 14\\Dim Track 1.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{672D185C-415F-001E-AC86-914F2261A7C3}|task 14\\Group3_cube.dwproj|C:\\Users\\Tommaso\\Desktop\\task 14\\task 14\\Group ID 3 DB 1.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
       "RelativeMoniker": "D:0:0:{672D185C-415F-001E-AC86-914F2261A7C3}|task 14\\Group3_cube.dwproj|solutionrelative:task 14\\Group ID 3 DB 1.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
     }
   ],
@@ -19,14 +23,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Dim Track 1.dim [Progettazione]",
+              "DocumentMoniker": "C:\\Users\\Tommaso\\Desktop\\task 14\\task 14\\Dim Track 1.dim",
+              "RelativeDocumentMoniker": "task 14\\Dim Track 1.dim",
+              "ToolTip": "C:\\Users\\Tommaso\\Desktop\\task 14\\task 14\\Dim Track 1.dim [Progettazione]",
+              "RelativeToolTip": "task 14\\Dim Track 1.dim [Progettazione]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-20T11:43:15.102Z",
+              "EditorCaption": " [Progettazione]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Group ID 3 DB 1.cube [Progettazione]",
-              "DocumentMoniker": "C:\\Users\\Tommaso\\Documents\\Universit\u00E0\\Magistrale\\Secondo anno (0 su 4)\\DSS\\Project\\DSS_project\\dss\\task 14\\task 14\\Group ID 3 DB 1.cube",
+              "DocumentMoniker": "C:\\Users\\Tommaso\\Desktop\\task 14\\task 14\\Group ID 3 DB 1.cube",
               "RelativeDocumentMoniker": "task 14\\Group ID 3 DB 1.cube",
               "ToolTip": "C:\\Users\\Tommaso\\Documents\\Universit\u00E0\\Magistrale\\Secondo anno (0 su 4)\\DSS\\Project\\DSS_project\\dss\\task 14\\task 14\\Group ID 3 DB 1.cube [Progettazione]",
-              "RelativeToolTip": "task 14\\Group ID 3 DB 1.cube [Progettazione]",
+              "RelativeToolTip": "..\\..\\Documents\\Universit\u00E0\\Magistrale\\Secondo anno (0 su 4)\\DSS\\Project\\DSS_project\\dss\\task 14\\task 14\\Group ID 3 DB 1.cube [Progettazione]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-12-18T16:48:29.018Z",
-              "EditorCaption": " [Progettazione]"
+              "WhenOpened": "2025-12-18T16:48:29.018Z"
             }
           ]
         }

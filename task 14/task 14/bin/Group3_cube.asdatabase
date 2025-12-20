@@ -281,12 +281,8 @@
                 <Shape Id="Artist Id" Expanded="true">
                   <Attributes>
                     <Attribute Id="Artist Id" />
-                    <Attribute Id="Active End" />
-                    <Attribute Id="Active Start" />
                     <Attribute Id="Birth Date" />
                     <Attribute Id="Gender" />
-                    <Attribute Id="Latitude" />
-                    <Attribute Id="Longitude" />
                     <Attribute Id="Nationality" />
                   </Attributes>
                   <Position x="20" y="20" />
@@ -420,10 +416,42 @@
               <DataSize>100</DataSize>
               <Source xsi:type="ColumnBinding">
                 <TableID>Group_ID_3_Dim_Artist</TableID>
+                <ColumnID>country</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>100</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>Group_ID_3_Dim_Artist</TableID>
+                <ColumnID>region</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>100</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>Group_ID_3_Dim_Artist</TableID>
+                <ColumnID>province</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>100</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>Group_ID_3_Dim_Artist</TableID>
                 <ColumnID>birth_place</ColumnID>
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>100</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>Group_ID_3_Dim_Artist</TableID>
+              <ColumnID>birth_place</ColumnID>
+            </Source>
+          </NameColumn>
           <AttributeRelationships>
             <AttributeRelationship>
               <AttributeID>Province</AttributeID>
@@ -516,10 +544,34 @@
               <DataSize>100</DataSize>
               <Source xsi:type="ColumnBinding">
                 <TableID>Group_ID_3_Dim_Artist</TableID>
+                <ColumnID>country</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>100</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>Group_ID_3_Dim_Artist</TableID>
+                <ColumnID>region</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
+              <DataType>WChar</DataType>
+              <DataSize>100</DataSize>
+              <Source xsi:type="ColumnBinding">
+                <TableID>Group_ID_3_Dim_Artist</TableID>
                 <ColumnID>province</ColumnID>
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <DataSize>100</DataSize>
+            <Source xsi:type="ColumnBinding">
+              <TableID>Group_ID_3_Dim_Artist</TableID>
+              <ColumnID>province</ColumnID>
+            </Source>
+          </NameColumn>
           <AttributeRelationships>
             <AttributeRelationship>
               <AttributeID>Region</AttributeID>
@@ -919,14 +971,14 @@
               <DataType>Integer</DataType>
               <Source xsi:type="ColumnBinding">
                 <TableID>Group_ID_3_Dim_Time</TableID>
-                <ColumnID>month</ColumnID>
+                <ColumnID>year</ColumnID>
               </Source>
             </KeyColumn>
             <KeyColumn>
               <DataType>Integer</DataType>
               <Source xsi:type="ColumnBinding">
                 <TableID>Group_ID_3_Dim_Time</TableID>
-                <ColumnID>year</ColumnID>
+                <ColumnID>month</ColumnID>
               </Source>
             </KeyColumn>
           </KeyColumns>
@@ -959,10 +1011,38 @@
               <DataType>Integer</DataType>
               <Source xsi:type="ColumnBinding">
                 <TableID>Group_ID_3_Dim_Time</TableID>
+                <ColumnID>year</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>Group_ID_3_Dim_Time</TableID>
+                <ColumnID>quarter</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>Group_ID_3_Dim_Time</TableID>
+                <ColumnID>month</ColumnID>
+              </Source>
+            </KeyColumn>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>Group_ID_3_Dim_Time</TableID>
                 <ColumnID>day</ColumnID>
               </Source>
             </KeyColumn>
           </KeyColumns>
+          <NameColumn>
+            <DataType>WChar</DataType>
+            <Source xsi:type="ColumnBinding">
+              <TableID>Group_ID_3_Dim_Time</TableID>
+              <ColumnID>day</ColumnID>
+            </Source>
+          </NameColumn>
           <AttributeRelationships>
             <AttributeRelationship>
               <AttributeID>Month</AttributeID>
