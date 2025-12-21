@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\alban\\OneDrive - University of Pisa\\Desktop\\Decision Support Systems\\Decision Support Systems II\\dss\\task 14\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{672D185C-415F-001E-AC86-914F2261A7C3}|task 14\\Group3_cube.dwproj|C:\\Users\\alban\\OneDrive - University of Pisa\\Desktop\\Decision Support Systems\\Decision Support Systems II\\dss\\task 14\\task 14\\Dim_Role.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
-      "RelativeMoniker": "D:0:0:{672D185C-415F-001E-AC86-914F2261A7C3}|task 14\\Group3_cube.dwproj|solutionrelative:task 14\\Dim_Role.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+      "AbsoluteMoniker": "D:0:0:{672D185C-415F-001E-AC86-914F2261A7C3}|task 14\\Group3_cube.dwproj|C:\\Users\\alban\\OneDrive - University of Pisa\\Desktop\\Decision Support Systems\\Decision Support Systems II\\dss\\task 14\\task 14\\Dim Track 1.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{672D185C-415F-001E-AC86-914F2261A7C3}|task 14\\Group3_cube.dwproj|solutionrelative:task 14\\Dim Track 1.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{672D185C-415F-001E-AC86-914F2261A7C3}|task 14\\Group3_cube.dwproj|C:\\Users\\alban\\OneDrive - University of Pisa\\Desktop\\Decision Support Systems\\Decision Support Systems II\\dss\\task 14\\task 14\\Dim Artist.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{672D185C-415F-001E-AC86-914F2261A7C3}|task 14\\Group3_cube.dwproj|solutionrelative:task 14\\Dim Artist.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{672D185C-415F-001E-AC86-914F2261A7C3}|task 14\\Group3_cube.dwproj|C:\\Users\\alban\\OneDrive - University of Pisa\\Desktop\\Decision Support Systems\\Decision Support Systems II\\dss\\task 14\\task 14\\Group ID 3 DB.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{672D185C-415F-001E-AC86-914F2261A7C3}|task 14\\Group3_cube.dwproj|solutionrelative:task 14\\Group ID 3 DB.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
     },
     {
       "AbsoluteMoniker": "D:0:0:{672D185C-415F-001E-AC86-914F2261A7C3}|task 14\\Group3_cube.dwproj|C:\\Users\\alban\\OneDrive - University of Pisa\\Desktop\\Decision Support Systems\\Decision Support Systems II\\dss\\task 14\\task 14\\Group ID 3 DB 1.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
@@ -18,35 +26,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Dim_Role.dim [Progettazione]",
-              "DocumentMoniker": "C:\\Users\\alban\\OneDrive - University of Pisa\\Desktop\\Decision Support Systems\\Decision Support Systems II\\dss\\task 14\\task 14\\Dim_Role.dim",
-              "RelativeDocumentMoniker": "task 14\\Dim_Role.dim",
-              "ToolTip": "C:\\Users\\alban\\OneDrive - University of Pisa\\Desktop\\Decision Support Systems\\Decision Support Systems II\\dss\\task 14\\task 14\\Dim_Role.dim [Progettazione]",
-              "RelativeToolTip": "task 14\\Dim_Role.dim [Progettazione]",
+              "Title": "Dim Track 1.dim [Progettazione]",
+              "DocumentMoniker": "C:\\Users\\alban\\OneDrive - University of Pisa\\Desktop\\Decision Support Systems\\Decision Support Systems II\\dss\\task 14\\task 14\\Dim Track 1.dim",
+              "RelativeDocumentMoniker": "task 14\\Dim Track 1.dim",
+              "ToolTip": "C:\\Users\\alban\\OneDrive - University of Pisa\\Desktop\\Decision Support Systems\\Decision Support Systems II\\dss\\task 14\\task 14\\Dim Track 1.dim [Progettazione]",
+              "RelativeToolTip": "task 14\\Dim Track 1.dim [Progettazione]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-12-21T16:08:12.346Z",
+              "WhenOpened": "2025-12-18T15:54:04.589Z",
               "EditorCaption": " [Progettazione]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Dim Artist.dim [Progettazione]",
+              "DocumentMoniker": "C:\\Users\\alban\\OneDrive - University of Pisa\\Desktop\\Decision Support Systems\\Decision Support Systems II\\dss\\task 14\\task 14\\Dim Artist.dim",
+              "RelativeDocumentMoniker": "task 14\\Dim Artist.dim",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive - University of Pisa\\Desktop\\uni\\magistrale\\LDS\\exam\\project backup\\task 14\\task 14\\task 14\\Dim Artist.dim [Progettazione]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Admin\\OneDrive - University of Pisa\\Desktop\\uni\\magistrale\\LDS\\exam\\project backup\\task 14\\task 14\\task 14\\Dim Artist.dim [Progettazione]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPqSURBVDhPjZTLS\u002BxlGMff32/uF2ccr2Q6OqZgiEYOkzGjKGaXsymowL\u002BgxYnWh6AWtWrnJoI2gZvSxVmEFHSYzNrYScX7QlS8gHMmR/Ooo3O/9Hl\u002B6oHJgh54ed/f\u002B3ue7/t9rtrZ2ZnPZDI9yOfzb2qaZuf8yGw2jzscjkO\u002By\u002BofUi6XdTYTu/309FS7vlWqtrY2h35GSyaTXxwcHLyzsbHhT6fTejAYjDU3N//g8/k\u002BQSF1o28IIBo6fh7v5vNBqVRysGsQUBCZstvtX5mF2erqqp/lymazCpDn6\u002BrqXkPxMwG5FQHDGy9Gr19cXIS3trZePTo6snGv\u002Bvr6VGtr69zh4aFuRvfl3d1dtb\u002B/rwqFgvJ4PI5isdiDkfwzBCMrq9pqtb7H/hHrheXlZVs0GlUQUk6nU7W0tBi6OlRVR0eHampqUg0NDaqzs1NhaPy8FQAsl5eXtez3UqlUIJPJoGJVhEUIKFwuiZrocjaroaEhhaLCJTU8PKxcLpeCpfw3hDDkdF1/yuNneFPY3t7WFhcX1cjIiGFTU1MjCcnBsixuJcmok9iYbDabcrvdRX6mYWO8yGaGXYT9Pm6OTk5OuvlWY2Njqr\u002B/v4RuVqqCBydQz\u002BlcTLCOxVgEw6dsU16vNyNgJCoAi/d3dnZemp\u002Bfd\u002BOm1tvbm29vb09A4C9WFLDf2I/EXCf133BICJiIAHL3LceCgJGce7FY7N2lpaV2ysva1dWVHhgYeOL3\u002B38CaJY1id4f7EmIlc0EeI/YZK/hDMC8xWKJ4VZYmAnYzMzMc/F4XEUikVQ4HP61vr7\u002BMSBfwspDuE7J8uWNuZKqrxAATSTEw37/\u002BPh4lIKvE7Cenp4iK47xFEy\u002Bq66ultj/iUlF8d8BhHojBh9T6KOzs7OBtbU1izBj7cNsnBZ7RAL30ZHkSXalZJ7JHUBC4FlfX3\u002BLbProVWsoFEqLm42NjZ8D\u002BBCAEwG7Ub8jFYDSesRNJ6NSGhoZzVPoCYkZcf2dVrtCp\u002BPq6irICt0uEvfi\u002Bfm5FL72rL1EpP2knag3o84CgcB5W1vbAln/kcTZq6qqIsT3U1SD3DkBMVqPrlkmnhMMju8rADc3N1UikVCDg4NGC8KqhsS8zctv4KYUunhkZ5lhpaanpxWlJMOhF5sPGBCvVABKu8mrKysrCiBpOQGQxq5sbiSXy6m9vT3F\u002BJOHTcTYz9hzaycnJx7q6WdGT0gY/l\u002BR3p\u002BbmzM86u7ulhkQh\u002BmBhjt2fP8QHT9xudb\u002BdxFdL/swzJuwsSwsLBieMBTiTKwoQ\u002BIXY4QDZJPhKOf/Eow0Mh8gOeMAR7hySYg4S2geU79fO53Oh38D3EMjGPGhjL8AAAAASUVORK5CYII=",
+              "WhenOpened": "2025-12-18T15:54:05.234Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Group ID 3 DB 1.cube [Progettazione]",
               "DocumentMoniker": "C:\\Users\\alban\\OneDrive - University of Pisa\\Desktop\\Decision Support Systems\\Decision Support Systems II\\dss\\task 14\\task 14\\Group ID 3 DB 1.cube",
               "RelativeDocumentMoniker": "task 14\\Group ID 3 DB 1.cube",
-              "ToolTip": "C:\\Users\\alban\\OneDrive - University of Pisa\\Desktop\\Decision Support Systems\\Decision Support Systems II\\dss\\task 14\\task 14\\Group ID 3 DB 1.cube [Progettazione]",
-              "RelativeToolTip": "task 14\\Group ID 3 DB 1.cube [Progettazione]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-12-21T16:06:52.196Z",
-              "EditorCaption": " [Progettazione]"
+              "ToolTip": "C:\\Users\\Admin\\OneDrive - University of Pisa\\Desktop\\uni\\magistrale\\LDS\\exam\\project backup\\task 14\\task 14\\task 14\\Group ID 3 DB 1.cube [Progettazione]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Admin\\OneDrive - University of Pisa\\Desktop\\uni\\magistrale\\LDS\\exam\\project backup\\task 14\\task 14\\task 14\\Group ID 3 DB 1.cube [Progettazione]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQSSURBVDhPbVTLUmNVFN335gEhCXRIIAYTYsIrgTQPFWi6Wk0PqAJHTlrLgRMn\u002BgN\u002BAR/gQKssrXLmwOp24gsHtga6pDpWt0BQ01AkJJCEvMkDGsjrxnUOBBNxVd26Nyf7rLP22nsfgf4H9XpdODw8VHV2ds5JknSvWq2\u002Bg\u002BWaKIoP5HL5p7lcbs9isZwLglC/2PEvWggZEV5teOtPTk4\u002BymQyE8FgcNTr9eplMll9dnY263Q6H6vVap9Wq/0ChCnE15qJWwiPj4\u002BN2DiMzxmfz/d\u002BNBo1JZNJ3dnpGY9UqVRkt9vjvb29EZfL9TWUr4A8DMLcBQPCmCo8mtPTU3uxWHwrn8/PhUKh6Z2dHR0CBYOhhybGJwip09afW5TJpEmpVEoDAwNHQ0NDK1D6pKOj40dmQ39//5nM7XbLjUbjBFJcSCQS74XD4fH1P9Y1SoVSGBtz0czMDOn1eoKfZDFbKHt0RNlMVohEIu0ajcYKUTYoP\u002B7u7k4sLS3lBKSkwcKXgUDg9vLysjGdTiumX52mW7fmCBuora2NIJSng0zo\u002BelzKhaK9PTpE/L\u002B7q3bbLbqwsJCHIo/a29v/1iEZyK8sG1vb78Yj8cVk5OTdOfOa2QwGAgBV2QM7Fuj1lBfn4nHDA\u002BPCM\u002BebStQOAsseQGei2IjkHnJ31KdNjY3qFAoUKVS4UTNOD8/p1QqTZu\u002BTVIoFFipN7qDgxM2wE7v6uqiZCJBu7u7BJ84MQNLt1DIUygcokAwQOlUigzwllW\u002BGfLLN4fJZOLe1Wo1evjLQxAekE6nI6v1JV7lg4N9OkJR1PB2cfFNKpVL9Lfff7n7Ai0KGeApobforvsuem6Acrk8J/eseLjaqakpmsOhLKbZ3wauETIwUqYMfUZOp4N7xartcDrJjNZhtrAYoXUuOFoIq0i1XC5zvxjQsHTjho77xB52CJqa/8diSqUSSdjTjAahBAVSpVImlJ4wMVi6NvdXYH6y9GOxGB9JNjlY5htEdHgN8oNozAgCKw\u002B\u002BuU\u002BPHq1SMpkijOOVWgbWUuwwRrS6ukLfff9tHftLVqs1jJvo0Gw2S2yORfSWHT3nxpR8sL\u002B/P7i2tqYBj9yF0evp6SHflo9kaNmbN8cJA0DRWBS\u002Byqvz8/NH\u002BH8XpJ9D1M8oVJJfDjhcBdI\u002BnL6I53WM4xvr6xsGKBRYI9eqVa4QdyGvrrZTK42NjaVxJ/4Abx/jgvgVUxVD1cstZQKZASfZIf9lv9//IVIz7\u002B3t6ZkqURBpxDFCo6OjMVxfocHBwa9wwG/wLwqii\u002B4HrtXd4/HI0WtatMq9bDb7CuZ7FoQObJIcDscOrqifoPIvXBzLCC9gvaV61xsJuLRBgSvtNt5vo1jvYq2KzffxfIIUg1hnv//TCkT/AN0m6u5OasP5AAAAAElFTkSuQmCC",
+              "WhenOpened": "2025-12-18T15:54:05.239Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Group ID 3 DB.dsv [Progettazione]",
+              "DocumentMoniker": "C:\\Users\\alban\\OneDrive - University of Pisa\\Desktop\\Decision Support Systems\\Decision Support Systems II\\dss\\task 14\\task 14\\Group ID 3 DB.dsv",
+              "RelativeDocumentMoniker": "task 14\\Group ID 3 DB.dsv",
+              "ToolTip": "C:\\Users\\Admin\\OneDrive - University of Pisa\\Desktop\\uni\\magistrale\\LDS\\exam\\project backup\\task 14\\task 14\\task 14\\Group ID 3 DB.dsv [Progettazione]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Admin\\OneDrive - University of Pisa\\Desktop\\uni\\magistrale\\LDS\\exam\\project backup\\task 14\\task 14\\task 14\\Group ID 3 DB.dsv [Progettazione]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMsSURBVDhPhVRLTxphFD0DAwNKRUDEV2wUFF0ZExdS2\u002BiuJqamSduliUn9BU13Jt11bUxX/ogmXUhDNya1LlrTVVNoSgCjIqUIyKPlPUzv980o1udJLvCdO9/JuXfuRcANUBRFzOfzg4IgPKffs/Q9QbRFzfJ8nSKp0\u002BneUe6txWL5eqNgqVR6UCgUnu7v7z9JpVIdjYbcRrRezXJBQrPucrmy/b39X5wu5\u002Bez5EWEw2HJYDA8JIfPEomEp72tXWozm3UmsxnmVgjE6yvlMnN9x9HlcF7rMJvNWmVZfpU4SrwIBkOYmZmB1WrVsv9je/sjJJMEn88HncZdgs1mk6kvSkOWkclmkEr9xsnJCcgx8gU1cvkc0uk00pkMtafM74n882qUqKRatVrBzs4nxKJReMfGQI3X0kC9XsevRAKhUAi\u002Bez40m83rBcldc319XZmamuIuMuQi9CPEeO0JFUyEWsPFGcS1tbXX/NcVmJycnOvr68PS0pLGAFtbW4jH49rpMoRisahEIhE2Ihp1NWjWMDw8DDKA3d1djW1hcXERy8vLEKvVKjY2NnBwcAhXdzc6OjqgF9k0CTRnTZTLZSSTSTQaDayurqq3bwDvIeuL3W7H7OwcxsfHeeMZV6vVcJQ4QiAQoDIP\u002BYXbwMeGleNxezA0NESOSnA4HGC9Y6JGgxG\u002BaR8s7a23exG0ADwYuCC7yIbW7XZjcPDuWZIJezxu9PS4zrjzEEURvb29WFhYwMTERIyMbZ4NtqATeKmsdL1e3Uh2ttnsVAGdtWlhzkdGRk5DGR0drXm93iTx30hwuzWHisJ7JssNSJKJt0E9y\u002BxPQHsIWFlZidP5j3ZsUKTIQICq/GA0GoPcIXu\u002BRG8zGovyqa/Vqozm8xYMfkeB1owJa3hJkzGtxX3apseSJL1hYiQqa4JNPhr5XB7dNDqiqPars7OTu/0ZDqNSqXCOnP\u002BltuRPg85FEqowMZbnJbP12duLwf9\u002BE11dTnoBjBY4/6dYRIT2uFJRl/82CLlcTvH7/Tg\u002BPr60p6dgPWRvdH5\u002BHgMDA49MJtOmlroEgVZOYYt9vvHXgYlS3CAI/AN58Gb/X4rZ6QAAAABJRU5ErkJggg==",
+              "WhenOpened": "2025-12-18T15:54:05.239Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

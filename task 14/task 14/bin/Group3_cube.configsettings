@@ -15,6 +15,9 @@
         <ID>Dim Album</ID>
       </Dimension>
       <Dimension>
+        <ID>Dim Artist</ID>
+      </Dimension>
+      <Dimension>
         <ID>Dim Sound</ID>
       </Dimension>
       <Dimension>
@@ -28,9 +31,6 @@
       </Dimension>
       <Dimension>
         <ID>Dim_Role</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Dim Artist</ID>
       </Dimension>
     </Dimensions>
     <Cubes>
