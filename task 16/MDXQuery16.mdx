@@ -1,0 +1,26 @@
+WITH
+  MEMBER [Measures].[Streams_Weighted] AS
+       [Measures].[Streams 1month]
+     * [Dim_Role].[Role].CURRENTMEMBER.Properties("Weight", TYPED)
+
+  MEMBER [Measures].[Streams_Weighted_ArtistYear] AS
+     SUM(
+       [Dim_Role].[Role].Levels(1).Members,   -- Main + Featured, niente All
+       [Measures].[Streams_Weighted]
+     )
+
+  MEMBER [Measures].[Weighted_Year_Share] AS
+     DIVIDE(
+       [Measures].[Streams_Weighted_ArtistYear],
+       ([Measures].[Streams_Weighted_ArtistYear], ROOT([Dim Artist]))
+     )
+
+SELECT
+  { [Measures].[Streams_Weighted_ArtistYear],
+    [Measures].[Weighted_Year_Share] } ON COLUMNS,
+  NON EMPTY
+    CROSSJOIN(
+      [Dim Artist].[Artist Id].Members,
+      [Dim Time].[Time_hierarchy].[Year].Members
+    ) ON ROWS
+FROM [Group ID 3 DB];

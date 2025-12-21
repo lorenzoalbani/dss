@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\alban\\OneDrive - University of Pisa\\Desktop\\Decision Support Systems\\Decision Support Systems II\\dss\\task 14\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{672D185C-415F-001E-AC86-914F2261A7C3}|task 14\\Group3_cube.dwproj|C:\\Users\\alban\\OneDrive - University of Pisa\\Desktop\\Decision Support Systems\\Decision Support Systems II\\dss\\task 14\\task 14\\Dim Artist.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
-      "RelativeMoniker": "D:0:0:{672D185C-415F-001E-AC86-914F2261A7C3}|task 14\\Group3_cube.dwproj|solutionrelative:task 14\\Dim Artist.dim||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{672D185C-415F-001E-AC86-914F2261A7C3}|task 14\\Group3_cube.dwproj|C:\\Users\\alban\\OneDrive - University of Pisa\\Desktop\\Decision Support Systems\\Decision Support Systems II\\dss\\task 14\\task 14\\Group ID 3 DB 1.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
       "RelativeMoniker": "D:0:0:{672D185C-415F-001E-AC86-914F2261A7C3}|task 14\\Group3_cube.dwproj|solutionrelative:task 14\\Group ID 3 DB 1.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
     }
@@ -27,25 +23,13 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Dim Artist.dim [Progettazione]",
-              "DocumentMoniker": "C:\\Users\\alban\\OneDrive - University of Pisa\\Desktop\\Decision Support Systems\\Decision Support Systems II\\dss\\task 14\\task 14\\Dim Artist.dim",
-              "RelativeDocumentMoniker": "task 14\\Dim Artist.dim",
-              "ToolTip": "C:\\Users\\alban\\OneDrive - University of Pisa\\Desktop\\Decision Support Systems\\Decision Support Systems II\\dss\\task 14\\task 14\\Dim Artist.dim [Progettazione]",
-              "RelativeToolTip": "task 14\\Dim Artist.dim [Progettazione]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-12-21T13:33:30.919Z",
-              "EditorCaption": " [Progettazione]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Group ID 3 DB 1.cube [Progettazione]",
               "DocumentMoniker": "C:\\Users\\alban\\OneDrive - University of Pisa\\Desktop\\Decision Support Systems\\Decision Support Systems II\\dss\\task 14\\task 14\\Group ID 3 DB 1.cube",
               "RelativeDocumentMoniker": "task 14\\Group ID 3 DB 1.cube",
               "ToolTip": "C:\\Users\\alban\\OneDrive - University of Pisa\\Desktop\\Decision Support Systems\\Decision Support Systems II\\dss\\task 14\\task 14\\Group ID 3 DB 1.cube [Progettazione]",
               "RelativeToolTip": "task 14\\Group ID 3 DB 1.cube [Progettazione]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-12-20T14:08:10.959Z",
+              "WhenOpened": "2025-12-21T16:48:15.289Z",
               "EditorCaption": " [Progettazione]"
             }
           ]

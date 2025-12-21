@@ -1,4 +1,4 @@
-﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="dfec22d3-0db0-43ad-b534-0341c581f87d" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="0f844463-408c-4ff2-9549-246e7176e057" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Group ID 3 DB</ID>
   <Name>Group ID 3 DB</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="34" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4036" scrolltop="1932" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="15346" y="11070" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="34" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-4036" scrolltop="1932" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="18457" y="15579" backcolor="16119285" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
             </font>
@@ -99,7 +99,7 @@
           <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="4633" top="10758" logicalid="24" controlid="8" masterid="0" hint1="0" hint2="0" width="2299" height="5696" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobj>
-                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
               </ddsxmlobj>
             </control>
             <layoutobject>
@@ -119,7 +119,7 @@
           <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="7982" top="10758" logicalid="25" controlid="9" masterid="0" hint1="0" hint2="0" width="2850" height="5696" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobj>
-                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
               </ddsxmlobj>
             </control>
             <layoutobject>
@@ -139,7 +139,7 @@
           <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="8960" top="7720" logicalid="26" controlid="10" masterid="0" hint1="0" hint2="0" width="3033" height="919" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobj>
-                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
               </ddsxmlobj>
             </control>
             <layoutobject>
@@ -159,7 +159,7 @@
           <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="3504" top="8721" logicalid="27" controlid="11" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobj>
-                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
               </ddsxmlobj>
             </control>
             <layoutobject>
@@ -177,7 +177,7 @@
           <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="8960" top="5021" logicalid="28" controlid="12" masterid="0" hint1="0" hint2="0" width="3000" height="3299" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobj>
-                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
               </ddsxmlobj>
             </control>
             <layoutobject>
@@ -197,7 +197,7 @@
           <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="6000" top="4200" logicalid="29" controlid="13" masterid="0" hint1="0" hint2="0" width="3091" height="3282" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobj>
-                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
               </ddsxmlobj>
             </control>
             <layoutobject>
@@ -230,7 +230,7 @@
           <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="1513" top="3774" logicalid="31" controlid="15" masterid="0" hint1="0" hint2="0" width="1109" height="3346" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobj>
-                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
               </ddsxmlobj>
             </control>
             <layoutobject>
@@ -250,7 +250,7 @@
           <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="4622" top="2900" logicalid="32" controlid="16" masterid="0" hint1="0" hint2="0" width="1769" height="1124" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobj>
-                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
               </ddsxmlobj>
             </control>
             <layoutobject>
@@ -306,178 +306,181 @@
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
   <Dimensions>
-    <Dimension dwd:design-time-name="8ad654a5-9962-498e-8082-e1685d882613">
+    <Dimension dwd:design-time-name="7a878a4e-959b-4846-a329-d659f8140b9d">
       <ID>Dim Album</ID>
       <Name>Dim Album</Name>
       <DimensionID>Dim Album</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="4de95556-44c2-4f66-a9fd-d38a5e0b7de8">
+        <Attribute dwd:design-time-name="8a8bc521-4bb9-46d9-b095-42c130bcc1b4">
           <AttributeID>Album Id</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="68e288e0-66ea-4198-8489-8342591ecc20">
+        <Attribute dwd:design-time-name="22bee898-3de1-407a-9ab2-e9371c864e36">
           <AttributeID>Release Date</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="8d7a395d-4d39-4791-a93a-e43c9fd2b52f">
+        <Attribute dwd:design-time-name="92a011ca-00eb-4b90-a0cf-d899e42368bb">
           <AttributeID>Album Type</AttributeID>
         </Attribute>
       </Attributes>
       <Hierarchies>
-        <Hierarchy dwd:design-time-name="ab100a61-1962-445a-9820-c0464bc41957">
+        <Hierarchy dwd:design-time-name="7c05d530-5f18-4f33-b1be-8e326083180b">
           <HierarchyID>Gerarchia</HierarchyID>
         </Hierarchy>
       </Hierarchies>
     </Dimension>
-    <Dimension dwd:design-time-name="c039b683-0294-49a0-9e94-dab249cbb00b">
+    <Dimension dwd:design-time-name="1a328eb9-b6f1-4cb4-bc27-7614566e2354">
       <ID>Dim Time</ID>
       <Name>Dim Time</Name>
       <DimensionID>Dim Time</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="4cf09f8d-d883-4a3a-b7e9-195477aa62ff">
+        <Attribute dwd:design-time-name="3b1951cc-2fb6-43ff-bbe7-1b4b4b56f711">
           <AttributeID>Date Id</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="e3c697bd-47b9-403a-b015-2087b9c9439c">
+        <Attribute dwd:design-time-name="7e1487e8-422d-49ff-9c0d-3644f504c692">
           <AttributeID>Full Date</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="4cb88b6a-ba5d-472c-9258-87ebd380f5ac">
+        <Attribute dwd:design-time-name="c5ddc819-502c-427e-8fc3-d6fb35aa6919">
           <AttributeID>Year</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="76d132f1-e4f1-40b3-a5d1-21e0ece7d44b">
+        <Attribute dwd:design-time-name="07a2d0bf-6749-4ad8-be13-e7284078f667">
           <AttributeID>Month</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="41862d29-4a57-4f61-922f-e68721ed1b89">
+        <Attribute dwd:design-time-name="3abf5981-a65f-45bf-8550-a8e9ef7404af">
           <AttributeID>Day</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="0435db42-d1df-4009-832d-84ec48a9cf17">
+        <Attribute dwd:design-time-name="9637b0ee-65af-4e4c-aab2-1c06f0c95434">
           <AttributeID>Quarter</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="765cf801-4641-4ad8-88a7-f0bf84ec9405">
+        <Attribute dwd:design-time-name="dbff0f7e-4bac-49a6-be6f-6cfc5166a827">
           <AttributeID>Season</AttributeID>
         </Attribute>
       </Attributes>
       <Hierarchies>
-        <Hierarchy dwd:design-time-name="385fcb1b-3ced-431b-8c2c-e33fab0163ea">
+        <Hierarchy dwd:design-time-name="ac370300-c1b6-450a-b43c-46b3de187f26">
           <HierarchyID>Gerarchia</HierarchyID>
         </Hierarchy>
       </Hierarchies>
     </Dimension>
-    <Dimension dwd:design-time-name="67f6e2d5-7c3f-401e-a377-df6b4347be67">
+    <Dimension dwd:design-time-name="88161d8f-67e1-4c3a-bca9-732b9710b606">
       <ID>Dim Sound</ID>
       <Name>Dim Sound</Name>
       <DimensionID>Dim Sound</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="2bb3283c-36ab-4a0a-be96-64f2449adee5">
+        <Attribute dwd:design-time-name="3bae3517-9cbf-4c22-800c-5278434c513c">
           <AttributeID>Sound Id</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="fed2c684-d0d5-416e-816f-07b717e5c5c7">
+        <Attribute dwd:design-time-name="d28f7916-a4a7-43e0-8739-bf0e10179b1f">
           <AttributeID>Mood</AttributeID>
         </Attribute>
       </Attributes>
       <Hierarchies>
-        <Hierarchy dwd:design-time-name="0b3446ca-7baa-4d02-b493-3c5f7b72b95c">
+        <Hierarchy dwd:design-time-name="550fe2d6-b556-49a4-9684-916326acbd20">
           <HierarchyID>Gerarchia</HierarchyID>
         </Hierarchy>
       </Hierarchies>
     </Dimension>
-    <Dimension dwd:design-time-name="8d3ba1f5-69e3-449a-bdc0-4e294cb80ed0">
+    <Dimension dwd:design-time-name="ce97bec1-c0c7-40e1-80d4-644159cc2bc6">
       <ID>Dim Track</ID>
       <Name>Dim Track</Name>
       <DimensionID>Dim Track</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="03b084a9-c004-4635-9bd7-961076ba0896">
+        <Attribute dwd:design-time-name="c156c6cb-59a1-4fa4-a7d6-6755c07ffc37">
           <AttributeID>Track Id</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="78416f74-96f9-4061-a6e5-d6e49928d91c">
+        <Attribute dwd:design-time-name="fa58b6e3-b23f-4e45-aed6-162200c119aa">
           <AttributeID>Title</AttributeID>
           <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
         </Attribute>
-        <Attribute dwd:design-time-name="8f77c90d-72cb-4cf2-bce7-b295b7c91305">
+        <Attribute dwd:design-time-name="d8fe6fef-706a-4e6d-9818-5163992379d6">
           <AttributeID>Language</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="f7c0bde1-31d5-4136-a2be-c40433117f32">
+        <Attribute dwd:design-time-name="25cfe957-087c-4cfc-b704-889092705d1d">
           <AttributeID>Track Number</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="350db3c8-a461-43e2-88ff-31235dd50849">
+        <Attribute dwd:design-time-name="def7957a-c801-41fa-ae8e-45be1aa48a88">
           <AttributeID>Vulgarity IT</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="374962b8-c169-4bec-8ca7-f0bf030f85dd">
+        <Attribute dwd:design-time-name="46085815-e753-4a84-a1d4-580b6d0d3bd0">
           <AttributeID>Vulgarity EN</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="78e46a40-664c-485d-ae74-4512ccab0141">
+        <Attribute dwd:design-time-name="44ef2f5e-e6ed-43bd-b6ae-ac8c3931bae7">
           <AttributeID>Lyrical Density</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="f2de3b7e-4ace-4d68-9663-7083e6f1d799">
+        <Attribute dwd:design-time-name="652409e9-8101-4ec7-b947-6406a4ca06d7">
           <AttributeID>Vocabulary Complexity</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="cc037e50-b36d-43cf-99e1-2fdff108da29">
+        <Attribute dwd:design-time-name="16a1d71a-7788-4c97-b68a-046afb1a9d95">
           <AttributeID>Sentence Flow</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="00178101-b042-44f0-a760-7c56ece9b9d5">
+        <Attribute dwd:design-time-name="f1651a56-428b-4f36-be71-d32a5b4eaa79">
           <AttributeID>Duration Category</AttributeID>
         </Attribute>
       </Attributes>
     </Dimension>
-    <Dimension dwd:design-time-name="3d85c049-303f-4a3a-aab2-322c55b2660c">
+    <Dimension dwd:design-time-name="88a28b49-3352-4794-92d5-43e750b733dd">
       <ID>Dim Youtube</ID>
       <Name>Dim Youtube</Name>
       <DimensionID>Dim Youtube</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="30d59fc4-e32e-46d9-9a98-5982a8aa5c3c">
+        <Attribute dwd:design-time-name="e30d9f0b-88f4-4934-8a52-5c39dfb74a69">
           <AttributeID>Virality Id</AttributeID>
         </Attribute>
       </Attributes>
     </Dimension>
-    <Dimension dwd:design-time-name="043192e2-6bf0-47eb-8021-241982ea9512">
+    <Dimension dwd:design-time-name="47a0f15f-36b3-4e00-a5fa-d41dcfcadf84">
       <ID>Dim Artist</ID>
       <Name>Dim Artist</Name>
       <DimensionID>Dim Artist</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="582914bf-33fa-4c05-a2a9-6b9e919f7860">
+        <Attribute dwd:design-time-name="7aa6f384-5aa5-4c39-9517-780a7bc6b35a">
           <AttributeID>Artist Id</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="0c143ef3-ff94-465c-8f22-afafa72c51fd">
+        <Attribute dwd:design-time-name="28802c70-78ad-411d-a256-727a31b7f35f">
           <AttributeID>Gender</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="70194072-73ac-4fc1-863f-158af6a6ccf7">
+        <Attribute dwd:design-time-name="942df003-c2da-4c76-9d3b-36756659fd4f">
           <AttributeID>Birth Date</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="be5f09a6-abb0-47b5-85fc-99a801b0d376">
+        <Attribute dwd:design-time-name="1d5c68da-7853-4153-8a08-031580ee50f3">
           <AttributeID>Birth Place</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="b5fceb65-0d02-4b3a-b1e8-304d76d9bcd6">
+        <Attribute dwd:design-time-name="a1df5436-0430-4426-aedd-9da350b21f63">
           <AttributeID>Nationality</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="5c890453-cd7d-4cf7-88a0-1f71149cbac9">
+        <Attribute dwd:design-time-name="25d45077-5cce-4a75-9012-68325469afd7">
           <AttributeID>Country</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="b04ec251-550c-4b34-93e2-9b6f5515182d">
+        <Attribute dwd:design-time-name="f692ae2c-632f-481c-a8ea-62a466311db4">
           <AttributeID>Region</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="5f39a931-7575-4b1c-bf7a-385d1e827a08">
+        <Attribute dwd:design-time-name="4c00ec08-e6f0-4438-9c24-b76fbb2bb1fb">
           <AttributeID>Province</AttributeID>
         </Attribute>
       </Attributes>
       <Hierarchies>
-        <Hierarchy dwd:design-time-name="94728512-4cd3-4570-af02-89168997de2c">
+        <Hierarchy dwd:design-time-name="bab618d9-79ee-4764-b822-00ed58613124">
           <HierarchyID>Gerarchia</HierarchyID>
         </Hierarchy>
       </Hierarchies>
     </Dimension>
-    <Dimension dwd:design-time-name="f21e7124-450c-4b4e-bacc-138a18233634">
+    <Dimension dwd:design-time-name="91830908-dc3a-4a70-a806-1182a88e744f">
       <ID>Dim_Role</ID>
       <Name>Dim_Role</Name>
       <DimensionID>Dim_Role</DimensionID>
       <Attributes>
-        <Attribute dwd:design-time-name="3ee3f43e-b886-4b9b-8e83-16ae31908073">
+        <Attribute dwd:design-time-name="a38272f8-f360-4bf8-973b-adebcfe35bc4">
           <AttributeID>Bridge Key</AttributeID>
         </Attribute>
-        <Attribute dwd:design-time-name="31d9d5d4-cef5-4f97-b40a-025ad3f29c8f">
+        <Attribute dwd:design-time-name="bf1c5ed3-8bf2-4824-a76e-718a7b28c6be">
           <AttributeID>Role</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="23d4ae51-b66b-4ce3-960a-5ee5e5d49b24">
+          <AttributeID>Weight</AttributeID>
         </Attribute>
       </Attributes>
     </Dimension>
   </Dimensions>
   <MeasureGroups>
-    <MeasureGroup dwd:design-time-name="7455b7f3-d710-4916-bd8e-c9539b225130">
+    <MeasureGroup dwd:design-time-name="b1df23ff-41a6-4237-83bd-41eea0275671">
       <ID>Fact Streams</ID>
       <Name>Fact Streams</Name>
       <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -485,25 +488,25 @@
       <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
       <State>Unprocessed</State>
       <Measures>
-        <Measure dwd:design-time-name="45b8a034-e657-43a7-a047-4a960197bad5">
+        <Measure dwd:design-time-name="dad32de0-faf0-4692-9eb4-f494afdce336">
           <ID>Streams 1month</ID>
           <Name>Streams 1month</Name>
-          <Source dwd:design-time-name="ca562948-25b9-4163-86e2-1350b9147078">
+          <Source dwd:design-time-name="173d7588-d91f-47a5-9d4f-4cbbbb337559">
             <DataType>BigInt</DataType>
-            <Source xsi:type="ColumnBinding" dwd:design-time-name="fc98c081-e2ad-4f16-a19d-080789d87d72">
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="ff0e4495-fc72-4b0d-9c12-822f16dddc67">
               <TableID>Group_ID_3_Fact_Streams</TableID>
               <ColumnID>streams_1month</ColumnID>
             </Source>
           </Source>
         </Measure>
-        <Measure dwd:design-time-name="b01fad58-8a8e-4413-83a6-f2aaffd6df35">
+        <Measure dwd:design-time-name="7fb7855c-1a30-469a-beb0-6e54b5c3de73">
           <ID>Conteggio di Fact Streams</ID>
           <Name>Conteggio di Fact Streams</Name>
           <AggregateFunction>Count</AggregateFunction>
-          <Source dwd:design-time-name="9ba839d7-a822-4075-9a77-b909972aee70">
+          <Source dwd:design-time-name="3249b5e7-3347-4b48-a0ef-65d7ddca4c0e">
             <DataType>Integer</DataType>
             <DataSize>4</DataSize>
-            <Source xsi:type="RowBinding" dwd:design-time-name="ebaeec49-54ca-4dfd-95f3-66114797c663">
+            <Source xsi:type="RowBinding" dwd:design-time-name="323e94c9-ac1f-433e-ba68-f613d560da65">
               <TableID>Group_ID_3_Fact_Streams</TableID>
             </Source>
           </Source>
@@ -512,17 +515,17 @@
       <StorageMode>Molap</StorageMode>
       <ProcessingMode>Regular</ProcessingMode>
       <Dimensions>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="db3d525e-9d0d-4d95-9611-3844b4061a81">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6e974dbc-b6c7-41e7-9a88-5982a7621194">
           <CubeDimensionID>Dim Album</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="5e8fe9fd-790b-46ae-bd61-fe67cc60cc56">
+            <Attribute dwd:design-time-name="01650e3d-d721-48b2-a612-d0155a489336">
               <AttributeID>Album Id</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="03102ca6-8c0c-4f47-8da9-dd91aa969ef1">
+                <KeyColumn dwd:design-time-name="39fd8dc1-a69b-496a-9293-d62871440fc7">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
                   <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9391ecd7-9a01-4eea-a985-44b85a490d89">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0d83db11-b9c2-4c59-842b-5fe27b3cd109">
                     <TableID>Group_ID_3_Fact_Streams</TableID>
                     <ColumnID>album_id</ColumnID>
                   </Source>
@@ -532,16 +535,16 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="9e2974c8-3214-4e4d-a0d6-4855699ebce8">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="868d3a4d-f6b0-4620-8863-a35f020db0bb">
           <CubeDimensionID>Dim Time</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="1c94bf32-9339-4ec2-a047-8552520dc47c">
+            <Attribute dwd:design-time-name="b28f2bff-9589-428e-a7c1-547822ef8dd9">
               <AttributeID>Date Id</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="62e6902a-8d13-454a-9576-1876e944e8ef">
+                <KeyColumn dwd:design-time-name="4e0d0ef9-ef15-45ec-88d2-f8c0edc14e9c">
                   <DataType>Integer</DataType>
                   <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="dde3f6f5-6b66-4ce9-8357-fdab8bb507c6">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0bdc3e5a-306b-4ff2-b91d-64315126a13d">
                     <TableID>Group_ID_3_Fact_Streams</TableID>
                     <ColumnID>date_id</ColumnID>
                   </Source>
@@ -551,16 +554,16 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ca847fb3-3a64-4144-9166-9221e1a02d8b">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="49d279ad-0eb6-404f-8aec-75bd036d9d71">
           <CubeDimensionID>Dim Sound</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="2c4fabde-bd42-4cd2-8c95-6a187a99cc76">
+            <Attribute dwd:design-time-name="703d2b53-edb9-4b4f-bdeb-f4a898aa9c6d">
               <AttributeID>Sound Id</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="496ab827-ac69-4f53-9654-6b6fc3c843e4">
+                <KeyColumn dwd:design-time-name="cf6fdb56-7dec-46ea-ae9a-bc7d09196b1a">
                   <DataType>Integer</DataType>
                   <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c3e0ab96-4c67-44ec-9166-63bec0b1b41c">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="38c53e45-d83c-45d9-b6a3-6fa6fb43a085">
                     <TableID>Group_ID_3_Fact_Streams</TableID>
                     <ColumnID>sound_id</ColumnID>
                   </Source>
@@ -570,17 +573,17 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="8dbb9429-a6d4-4cb5-9cf5-385bd69847fc">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ccc80eee-ba5e-4940-843b-4df33a66d5d9">
           <CubeDimensionID>Dim Track</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="e422a87e-92ca-4185-928d-0f26ff0e82eb">
+            <Attribute dwd:design-time-name="d11571a6-3be7-403b-b15d-6b915944cec2">
               <AttributeID>Track Id</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="9a9bb479-9782-4fe2-b624-3273eb00ee89">
+                <KeyColumn dwd:design-time-name="80739256-2798-4079-a1e0-7a7cf2baf890">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
                   <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ed69d3b8-a0ca-4767-8f40-b61b7eaa34fa">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="bd0b4248-1844-47d5-9019-40842fc028b4">
                     <TableID>Group_ID_3_Fact_Streams</TableID>
                     <ColumnID>track_id</ColumnID>
                   </Source>
@@ -590,16 +593,16 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="966e3b94-b751-4306-9fe5-f812d36de091">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="dbf7aba7-fcbf-4adb-a0ba-d55fb750acbd">
           <CubeDimensionID>Dim Youtube</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="b2280b56-a4cf-4640-85b2-dd4184d481ba">
+            <Attribute dwd:design-time-name="ef57d3cd-2ef0-4d8b-a60e-e31e799f794b">
               <AttributeID>Virality Id</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="1e454bc6-3aa7-4b19-b5be-8e4dd90b0bdb">
+                <KeyColumn dwd:design-time-name="21143dc0-173e-4c45-8c64-801726bdb253">
                   <DataType>Integer</DataType>
                   <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="4b2496f4-9b95-4cae-b717-1010c4dd6aa8">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a807ad16-ab40-4c45-af71-6506dff40957">
                     <TableID>Group_ID_3_Fact_Streams</TableID>
                     <ColumnID>virality_id</ColumnID>
                   </Source>
@@ -609,16 +612,16 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="0c6de941-af07-4118-85b0-4b58e31f4255">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="f53f492d-c7a4-4bf7-ae5d-134df198b42f">
           <CubeDimensionID>Dim Artist</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="8a996c64-9670-49a5-beb6-bc8923ef63d7">
+            <Attribute dwd:design-time-name="22843d37-127e-47e9-b1b3-78859bf2df51">
               <AttributeID>Artist Id</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="670f1304-d638-4d66-8725-7761e9fdb62a">
+                <KeyColumn dwd:design-time-name="7ed23724-969e-4c10-8d27-79ecda7e5c8c">
                   <DataType>Integer</DataType>
                   <NullProcessing>UnknownMember</NullProcessing>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9f4cfa5d-af26-4aa8-8c06-73ec9ae74b3e">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e983ed58-32a1-485d-b0a6-682b74241656">
                     <TableID>Group_ID_3_Fact_Streams</TableID>
                     <ColumnID>main_artist_id</ColumnID>
                   </Source>
@@ -628,14 +631,14 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="5ca2b987-57e6-47a3-ab2f-a87bfd56af71">
+        <Dimension xsi:type="ManyToManyMeasureGroupDimension" dwd:design-time-name="c338bd18-be53-4ec3-b78f-37b83132f21e">
           <CubeDimensionID>Dim_Role</CubeDimensionID>
           <MeasureGroupID>Bridge Track Artist</MeasureGroupID>
         </Dimension>
       </Dimensions>
       <Partitions />
     </MeasureGroup>
-    <MeasureGroup dwd:design-time-name="7c48558a-6976-4876-8fa1-c41d486c3538">
+    <MeasureGroup dwd:design-time-name="62596a37-0829-454c-9263-5edad484afcb">
       <ID>Bridge Track Artist</ID>
       <Name>Bridge Track Artist</Name>
       <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -643,14 +646,14 @@
       <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
       <State>Unprocessed</State>
       <Measures>
-        <Measure dwd:design-time-name="35232063-d2f9-4040-a9f0-7ab8dd588e97">
+        <Measure dwd:design-time-name="564072fa-3bc9-4fbc-aab0-709fd0ae91a2">
           <ID>Conteggio di Bridge Track Artist</ID>
           <Name>Conteggio di Bridge Track Artist</Name>
           <AggregateFunction>Count</AggregateFunction>
-          <Source dwd:design-time-name="437a6e39-21b7-41c7-a591-97ce2c5944aa">
+          <Source dwd:design-time-name="5a788e47-fd50-43e5-ac6c-3fb75b064f85">
             <DataType>Integer</DataType>
             <DataSize>4</DataSize>
-            <Source xsi:type="RowBinding" dwd:design-time-name="aa9ffbf7-fe24-4a9f-86c7-368c73613a8c">
+            <Source xsi:type="RowBinding" dwd:design-time-name="f74fbdc0-2668-427e-b3b8-b6d163208b8e">
               <TableID>Group_ID_3_Bridge_Track_Artist</TableID>
             </Source>
           </Source>
@@ -659,16 +662,16 @@
       <StorageMode>Molap</StorageMode>
       <ProcessingMode>Regular</ProcessingMode>
       <Dimensions>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="592ffd19-32d5-448a-bf68-b52ac76dde25">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="289e9d43-ec32-419f-b5be-5d61902c0c6e">
           <CubeDimensionID>Dim Track</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="e02c189b-65ea-450c-a16f-3aedb233bd49">
+            <Attribute dwd:design-time-name="a2e0176f-8040-4ef3-be3b-ba49371dd4ae">
               <AttributeID>Track Id</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="7e9ed07f-8a8a-4a4a-ae94-83ac41c504af">
+                <KeyColumn dwd:design-time-name="498af38f-a5dc-41a5-8336-540ba07828c4">
                   <DataType>WChar</DataType>
                   <DataSize>50</DataSize>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2aea075b-8648-4da7-8658-a4852a07a3a1">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="45eca41d-0f57-4f5e-a9ab-990781b58c29">
                     <TableID>Group_ID_3_Bridge_Track_Artist</TableID>
                     <ColumnID>track_id</ColumnID>
                   </Source>
@@ -678,15 +681,15 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="697a4d51-4d7f-4ac8-b4d2-f20869a8c394">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="9058d716-b341-4a20-b3fe-536499a7d8a1">
           <CubeDimensionID>Dim Artist</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="70e764eb-be24-432f-b7ec-0202380f8f79">
+            <Attribute dwd:design-time-name="be889e83-fc31-44cc-83c7-c6ac87c81af5">
               <AttributeID>Artist Id</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="5a7959f5-0faa-4a33-a680-9ce31f549cb4">
+                <KeyColumn dwd:design-time-name="4e65552b-bbe2-4b25-8d4a-418f0c384a5a">
                   <DataType>Integer</DataType>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5f429c69-efc0-4d84-9201-ca7fef4a3294">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3f284895-7d69-4175-b77c-9d6689f1c231">
                     <TableID>Group_ID_3_Bridge_Track_Artist</TableID>
                     <ColumnID>artist_id</ColumnID>
                   </Source>
@@ -696,16 +699,16 @@
             </Attribute>
           </Attributes>
         </Dimension>
-        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="65c1c863-0489-481a-9c9a-d973055d1b7c">
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="76a1a484-f212-4441-91bf-62daa369e981">
           <CubeDimensionID>Dim_Role</CubeDimensionID>
           <Attributes>
-            <Attribute dwd:design-time-name="fbca8d78-eb1b-41a2-91c8-9de04b2a1348">
+            <Attribute dwd:design-time-name="773f95f8-98f3-4447-8f9b-c27433843ddd">
               <AttributeID>Bridge Key</AttributeID>
               <KeyColumns>
-                <KeyColumn dwd:design-time-name="18c0edb7-4909-4d1c-ac97-fea9c01a7f10">
+                <KeyColumn dwd:design-time-name="e7dc7653-2292-4666-9dc1-f2317c7d399a">
                   <DataType>WChar</DataType>
                   <DataSize>73</DataSize>
-                  <Source xsi:type="ColumnBinding" dwd:design-time-name="22732121-d25f-49d1-ac3f-5269240d0aee">
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="cfc8f12a-23e0-4950-9def-551236ef535e">
                     <TableID>Group_ID_3_Bridge_Track_Artist</TableID>
                     <ColumnID>Bridge_key</ColumnID>
                   </Source>
@@ -719,7 +722,7 @@
       <Partitions />
     </MeasureGroup>
   </MeasureGroups>
-  <Source dwd:design-time-name="2c997e77-9aca-4bab-8576-d7f0fe759b13">
+  <Source dwd:design-time-name="6e5dba7d-f8d7-4b0f-9483-c1d395d8923a">
     <DataSourceViewID>Group ID 3 DB</DataSourceViewID>
   </Source>
 </Cube>
