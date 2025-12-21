@@ -1,4 +1,4 @@
-﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="08aad057-0fc9-4111-aa7a-c346cc1d321f" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="b9c5ee68-4212-4841-950e-91fd4e85029e" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Group ID 3 DB</ID>
   <Name>Group ID 3 DB</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -27,7 +27,7 @@
             <Name>_ALL_TABLES_</Name>
             <DiagramLayout>
               <dds>
-                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="34" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2856" scrolltop="12371" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="85" x="15939" y="12361" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="34" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2856" scrolltop="9905" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="85" x="19050" y="16870" backcolor="16119285" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                   <font>
                     <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
                   </font>
@@ -129,7 +129,7 @@
                 <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="2720" top="16615" logicalid="25" controlid="9" masterid="0" hint1="0" hint2="0" width="1156" height="3121" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
-                      <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                     </ddsxmlobj>
                   </control>
                   <layoutobject>
@@ -149,7 +149,7 @@
                 <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="4776" top="19943" logicalid="26" controlid="10" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
-                      <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                     </ddsxmlobj>
                   </control>
                   <layoutobject>
@@ -167,7 +167,7 @@
                 <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="8834" top="9164" logicalid="27" controlid="11" masterid="0" hint1="0" hint2="0" width="5942" height="3372" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
-                      <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                     </ddsxmlobj>
                   </control>
                   <layoutobject>
@@ -187,7 +187,7 @@
                 <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="8185" top="2689" logicalid="28" controlid="12" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
-                      <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                     </ddsxmlobj>
                   </control>
                   <layoutobject>
@@ -205,7 +205,7 @@
                 <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="9812" top="7127" logicalid="29" controlid="13" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
-                      <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                     </ddsxmlobj>
                   </control>
                   <layoutobject>
@@ -223,7 +223,7 @@
                 <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="2720" top="9164" logicalid="30" controlid="14" masterid="0" hint1="0" hint2="0" width="5614" height="3450" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
-                      <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                     </ddsxmlobj>
                   </control>
                   <layoutobject>
@@ -243,7 +243,7 @@
                 <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="4356" top="7127" logicalid="31" controlid="15" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
-                      <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                     </ddsxmlobj>
                   </control>
                   <layoutobject>
@@ -261,7 +261,7 @@
                 <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="8284" top="9164" logicalid="32" controlid="16" masterid="0" hint1="0" hint2="0" width="1092" height="9178" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
-                      <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                     </ddsxmlobj>
                   </control>
                   <layoutobject>
@@ -283,7 +283,7 @@
             <ShowRelationshipNames>False</ShowRelationshipNames>
             <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
             <DiagramViewPortLeft>-2856</DiagramViewPortLeft>
-            <DiagramViewPortTop>12371</DiagramViewPortTop>
+            <DiagramViewPortTop>9905</DiagramViewPortTop>
             <DiagramBoundingLeft>0</DiagramBoundingLeft>
             <DiagramBoundingTop>0</DiagramBoundingTop>
             <DiagramZoom>85</DiagramZoom>
@@ -316,13 +316,14 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="Bridge_key" msdata:ReadOnly="true" msprop:Description="Surrogate key for the bridge table" msprop:design-time-name="4452b6ad-3cbc-4c50-863f-3ad921219636" msprop:IsLogical="True" msprop:DbColumnName="Bridge_key" msprop:ComputedColumnExpression="track_id + ' - ' + CAST(artist_id AS VARCHAR(20))" minOccurs="0">
+                  <xs:element name="Bridge_key" msdata:ReadOnly="true" msprop:DbColumnName="Bridge_key" msprop:IsLogical="True" msprop:design-time-name="4452b6ad-3cbc-4c50-863f-3ad921219636" msprop:Description="Surrogate key for the bridge table" msprop:ComputedColumnExpression="track_id + ' - ' + CAST(artist_id AS VARCHAR(20))" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="73" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
+                  <xs:element name="Weight" msdata:ReadOnly="true" msprop:Description="Track weight based on artist's role in the song" msprop:design-time-name="b1677293-062b-4299-914d-5ce0ed26a714" msprop:IsLogical="True" msprop:DbColumnName="Weight" msprop:ComputedColumnExpression="CASE&#xD;&#xA;    WHEN role = 'Main'     THEN 0.8&#xD;&#xA;    WHEN role = 'Featured' THEN 0.2&#xD;&#xA;    ELSE 0&#xD;&#xA;END" type="xs:decimal" minOccurs="0" />
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
@@ -627,37 +628,37 @@
           <xs:selector xpath=".//Group_ID_3_Fact_Streams" />
           <xs:field xpath="fact_id" />
         </xs:unique>
-        <xs:keyref name="FK__Fact_Stre__album__62AFA012" refer="Group_ID_3_Dim_Album_Constraint1">
+        <xs:keyref name="FK__Fact_Stre__main___658C0CBD" refer="Group_ID_3_Dim_Artist_Constraint1">
           <xs:selector xpath=".//Group_ID_3_Fact_Streams" />
-          <xs:field xpath="album_id" />
-        </xs:keyref>
-        <xs:keyref name="FK__Fact_Stre__date___63A3C44B" refer="Group_ID_3_Dim_Time_Constraint1">
-          <xs:selector xpath=".//Group_ID_3_Fact_Streams" />
-          <xs:field xpath="date_id" />
-        </xs:keyref>
-        <xs:keyref name="FK__Fact_Stre__sound__6497E884" refer="Group_ID_3_Dim_Sound_Constraint1">
-          <xs:selector xpath=".//Group_ID_3_Fact_Streams" />
-          <xs:field xpath="sound_id" />
-        </xs:keyref>
-        <xs:keyref name="FK__Fact_Stre__track__61BB7BD9" refer="Group_ID_3_Dim_Track_Constraint1">
-          <xs:selector xpath=".//Group_ID_3_Fact_Streams" />
-          <xs:field xpath="track_id" />
+          <xs:field xpath="main_artist_id" />
         </xs:keyref>
         <xs:keyref name="FK__Fact_Stre__viral__668030F6" refer="Group_ID_3_Dim_Youtube_Constraint1">
           <xs:selector xpath=".//Group_ID_3_Fact_Streams" />
           <xs:field xpath="virality_id" />
         </xs:keyref>
-        <xs:keyref name="FK__Fact_Stre__main___658C0CBD" refer="Group_ID_3_Dim_Artist_Constraint1">
+        <xs:keyref name="FK__Fact_Stre__track__61BB7BD9" refer="Group_ID_3_Dim_Track_Constraint1">
           <xs:selector xpath=".//Group_ID_3_Fact_Streams" />
-          <xs:field xpath="main_artist_id" />
-        </xs:keyref>
-        <xs:keyref name="FK__Bridge_Tr__track__5C02A283" refer="Group_ID_3_Dim_Track_Constraint1">
-          <xs:selector xpath=".//Group_ID_3_Bridge_Track_Artist" />
           <xs:field xpath="track_id" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Stre__sound__6497E884" refer="Group_ID_3_Dim_Sound_Constraint1">
+          <xs:selector xpath=".//Group_ID_3_Fact_Streams" />
+          <xs:field xpath="sound_id" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Stre__date___63A3C44B" refer="Group_ID_3_Dim_Time_Constraint1">
+          <xs:selector xpath=".//Group_ID_3_Fact_Streams" />
+          <xs:field xpath="date_id" />
+        </xs:keyref>
+        <xs:keyref name="FK__Fact_Stre__album__62AFA012" refer="Group_ID_3_Dim_Album_Constraint1">
+          <xs:selector xpath=".//Group_ID_3_Fact_Streams" />
+          <xs:field xpath="album_id" />
         </xs:keyref>
         <xs:keyref name="FK__Bridge_Tr__artis__5CF6C6BC" refer="Group_ID_3_Dim_Artist_Constraint1">
           <xs:selector xpath=".//Group_ID_3_Bridge_Track_Artist" />
           <xs:field xpath="artist_id" />
+        </xs:keyref>
+        <xs:keyref name="FK__Bridge_Tr__track__5C02A283" refer="Group_ID_3_Dim_Track_Constraint1">
+          <xs:selector xpath=".//Group_ID_3_Bridge_Track_Artist" />
+          <xs:field xpath="track_id" />
         </xs:keyref>
       </xs:element>
     </xs:schema>
