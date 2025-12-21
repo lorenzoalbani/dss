@@ -1,0 +1,45 @@
+WITH
+  /* Streams categoria×season anno corrente */
+  MEMBER [Measures].[Season Streams] AS
+    [Measures].[Streams 1month]
+
+  /* Streams stessa categoria, stessa season, anno precedente */
+  MEMBER [Measures].[Prev Year Season Streams] AS
+    (
+      [Measures].[Streams 1month],
+      [Dim Time].[Season].CURRENTMEMBER,
+      PARALLELPERIOD(
+        [Dim Time].[Time_hierarchy].[Year],
+        1,
+        [Dim Time].[Time_hierarchy].CURRENTMEMBER
+      )
+    )
+
+  /* % incremento rispetto all'anno precedente */
+  MEMBER [Measures].[% Increase vs Prev] AS
+    IIF(
+      [Measures].[Prev Year Season Streams] = 0
+        OR ISNULL([Measures].[Prev Year Season Streams]),
+      NULL,
+      ( [Measures].[Season Streams] - [Measures].[Prev Year Season Streams] )
+      / [Measures].[Prev Year Season Streams]
+    )
+
+SELECT
+  { [Measures].[Season Streams],
+    [Measures].[Prev Year Season Streams],
+    [Measures].[% Increase vs Prev] } ON COLUMNS,
+
+  NON EMPTY
+    FILTER(
+      CROSSJOIN(
+        CROSSJOIN(
+          [Dim Time].[Season].Members,
+          [Dim Time].[Time_hierarchy].[Year].Members
+        ),
+        [Dim Sound].[Gerarchia].[Mood].Members
+      ),
+      [Measures].[Season Streams] > [Measures].[Prev Year Season Streams]
+    ) ON ROWS
+
+FROM [Group ID 3 DB];

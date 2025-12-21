@@ -1,0 +1,36 @@
+WITH
+  /* Streams totali per anno (puoi usare anche Streams_Weighted) */
+  MEMBER [Measures].[Year Streams] AS
+    [Measures].[Streams 1month]
+
+  /* Streams anno precedente, stesso membro di categoria */
+  MEMBER [Measures].[Prev Year Streams] AS
+    (
+      [Measures].[Year Streams],
+      PARALLELPERIOD(
+        [Dim Time].[Time_hierarchy].[Year],
+        1,
+        [Dim Time].[Time_hierarchy].CURRENTMEMBER
+      )
+    )
+
+  /* % incremento/decremento rispetto all'anno precedente */
+  MEMBER [Measures].[YoY % Streams] AS
+    IIF(
+      [Measures].[Prev Year Streams] = 0
+        OR ISNULL([Measures].[Prev Year Streams]),
+      NULL,
+      ( [Measures].[Year Streams] - [Measures].[Prev Year Streams] )
+      /  [Measures].[Prev Year Streams]
+    )
+
+SELECT
+  { [Measures].[Year Streams],
+    [Measures].[Prev Year Streams],
+    [Measures].[YoY % Streams] } ON COLUMNS,
+  NON EMPTY
+    CROSSJOIN(
+      [Dim Sound].[Gerarchia].[Mood].Members,                -- song category
+      [Dim Time].[Time_hierarchy].[Year].Members    -- year
+    ) ON ROWS
+FROM [Group ID 3 DB];
