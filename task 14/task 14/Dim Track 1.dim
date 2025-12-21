@@ -1,4 +1,4 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="a657ab44-bb53-4796-a42c-05bd64c855d5" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="10a4ae13-8e10-4825-bb5a-9269af9538b5" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Dim Track</ID>
   <Name>Dim Track</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-576" scrolltop="-2547" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6308" y="11070" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-576" scrolltop="-1006" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6308" y="11070" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
             </font>
@@ -51,7 +51,7 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>-2547</Value>
+      <Value>-1006</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -68,67 +68,91 @@
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="fea7c7b7-5940-4c19-85b2-9f47f1fa2a87">
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="c9a4e5e6-0db5-4083-a825-f55e2cf4b58d">
     <DataSourceViewID>Group ID 3 DB</DataSourceViewID>
   </Source>
   <UnknownMember>Visible</UnknownMember>
-  <ErrorConfiguration dwd:design-time-name="9b55b5d0-9f84-4a99-9663-f592434c2ef2">
+  <ErrorConfiguration dwd:design-time-name="83e1943c-d137-4198-b7f7-be6af6a144ea">
     <KeyNotFound>ReportAndStop</KeyNotFound>
     <KeyDuplicate>ReportAndStop</KeyDuplicate>
     <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
   </ErrorConfiguration>
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
-    <Attribute dwd:design-time-name="4c003920-03a7-4103-9700-320d64b2002b">
+    <Attribute dwd:design-time-name="a7562c93-c2cf-4849-9fbc-239f3b334776">
       <ID>Track Id</ID>
       <Name>Track Id</Name>
       <Usage>Key</Usage>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="1ec57458-b7d1-4330-a019-7348bf3302ba">
+        <KeyColumn dwd:design-time-name="65cc6903-65da-4658-80bf-7d1cb0a2d793">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
           <NullProcessing>UnknownMember</NullProcessing>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="74c8ba91-f6a8-4199-a0ac-0f5f3f967881">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="454d16c4-29ee-4304-9d23-00bbf9f3633a">
             <TableID>Group_ID_3_Dim_Track</TableID>
             <ColumnID>track_id</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="e7031d90-ed6d-49ee-8832-ea9bd0ad461e">
+        <AttributeRelationship dwd:design-time-name="38250a55-be31-4870-87cd-39f53cf7d14b">
           <AttributeID>Title</AttributeID>
           <Name>Title</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="bbfaf15e-29eb-40d3-a881-d10d3a1a5971">
+        <AttributeRelationship dwd:design-time-name="b88dad7a-bb32-40db-870e-6f8933e38bdd">
           <AttributeID>Language</AttributeID>
           <Name>Language</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="b00d5f70-49bf-4afc-8514-fdabf942c568">
+        <AttributeRelationship dwd:design-time-name="23216700-796d-45fe-843b-b2ec678d3029">
           <AttributeID>Track Number</AttributeID>
           <Name>Track Number</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="a6928bdf-e8b9-4dcd-b056-b302bd09d036">
+          <AttributeID>Vulgarity IT</AttributeID>
+          <Name>Vulgarity IT</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c44f497f-cb8c-480e-b8f3-166fa7d3119e">
+          <AttributeID>Vulgarity EN</AttributeID>
+          <Name>Vulgarity EN</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="72d3ab77-409d-421a-96ff-e60b7f53235d">
+          <AttributeID>Lyrical Density</AttributeID>
+          <Name>Lyrical Density</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f2168f5c-5e65-42a1-a734-cc71101a225e">
+          <AttributeID>Vocabulary Complexity</AttributeID>
+          <Name>Vocabulary Complexity</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0b6f0d8f-1b57-4ab7-a16b-f2c12fee50ce">
+          <AttributeID>Sentence Flow</AttributeID>
+          <Name>Sentence Flow</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="37986400-87b7-4765-aa1c-4212c9de78c0">
+          <AttributeID>Duration Category</AttributeID>
+          <Name>Duration Category</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="bf01436c-6e13-48ea-9f10-17f639eeae4d">
+    <Attribute dwd:design-time-name="5bb2480f-4481-4387-81b3-254bff69f3cd">
       <ID>Title</ID>
       <Name>Title</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="c232da1d-d0c6-48a2-a310-6fd96ea36200">
+        <KeyColumn dwd:design-time-name="60c99ccc-2804-4e7e-ad09-b6652521f848">
           <DataType>WChar</DataType>
           <DataSize>50</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="eedcbba9-9374-4c42-8047-95d6d50e6f9a">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7eda73a2-1e20-4d48-a7ac-5c9163208ee7">
             <TableID>Group_ID_3_Dim_Track</TableID>
             <ColumnID>track_id</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
       <OrderBy>Key</OrderBy>
-      <ValueColumn dwd:design-time-name="dc2a24e4-3563-445c-930a-41095e98bb96">
+      <ValueColumn dwd:design-time-name="9593ec8e-009e-4bd3-b530-c3b831b1448f">
         <DataType>Binary</DataType>
-        <Source xsi:type="ColumnBinding" dwd:design-time-name="62a0d862-c003-444c-81f4-9d6adfd1a77b">
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="dac14e85-ca06-40d5-91cf-2d70f83eec47">
           <TableID>Group_ID_3_Dim_Track</TableID>
           <ColumnID>title</ColumnID>
         </Source>
@@ -137,14 +161,14 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="149bbc4e-c0a9-4652-89d6-11ab2664ffbe">
+    <Attribute dwd:design-time-name="6669dbdc-f38a-47f7-b40f-ff06b45e6971">
       <ID>Language</ID>
       <Name>Language</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="23bea502-ebe6-49bb-93b9-a33c7417cfc7">
+        <KeyColumn dwd:design-time-name="136f69bd-3e15-484b-972d-4deebbcf0470">
           <DataType>WChar</DataType>
           <DataSize>10</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="928e1a98-4c94-4987-aace-12cde8f1c752">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0754d0dc-2a1f-4bf9-94e2-6fd67e4392a3">
             <TableID>Group_ID_3_Dim_Track</TableID>
             <ColumnID>language</ColumnID>
           </Source>
@@ -154,19 +178,115 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="1b5f253a-b36b-4399-8ec8-36f09e7ee83d">
+    <Attribute dwd:design-time-name="294af4e0-4132-40eb-8902-a126c92740b5">
       <ID>Track Number</ID>
       <Name>Track Number</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="0879f009-5a72-44f7-a6f1-733c529cf9a7">
+        <KeyColumn dwd:design-time-name="c033162f-8d29-4e6a-89d3-2a7fdca38631">
           <DataType>Integer</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="65598e2c-4f41-4e69-8806-7c754b8224d6">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e2c7bd74-4878-48b7-b394-fd1b45cd2433">
             <TableID>Group_ID_3_Dim_Track</TableID>
             <ColumnID>track_number</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
       <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="6bc5304f-5f79-46a7-8a51-8e10cd108f70">
+      <ID>Vulgarity IT</ID>
+      <Name>Vulgarity IT</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="65c44761-7247-4f11-b71e-374bea8b6897">
+          <DataType>WChar</DataType>
+          <DataSize>13</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2d3b64af-09cc-4fa0-8169-56153ab94e9b">
+            <TableID>Group_ID_3_Dim_Track</TableID>
+            <ColumnID>vulgarity_IT</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="7e67f246-f373-4972-b902-49094e6f0de4">
+      <ID>Vulgarity EN</ID>
+      <Name>Vulgarity EN</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5c1a4331-b742-45ec-b366-81f1a065f1ce">
+          <DataType>WChar</DataType>
+          <DataSize>13</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0090e4cb-a5e5-4c26-b16f-b56a5531153a">
+            <TableID>Group_ID_3_Dim_Track</TableID>
+            <ColumnID>vulgarity_EN</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="10ab9017-29b8-4f77-a386-c79ce41b6041">
+      <ID>Lyrical Density</ID>
+      <Name>Lyrical Density</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8aa9b38e-8c08-499a-bc48-6180515544b1">
+          <DataType>WChar</DataType>
+          <DataSize>27</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="be77dfd3-e538-478e-9dff-75eb7b269fe3">
+            <TableID>Group_ID_3_Dim_Track</TableID>
+            <ColumnID>Lyrical_Density</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8a478f39-5334-4cda-8d35-6c758b368067">
+      <ID>Vocabulary Complexity</ID>
+      <Name>Vocabulary Complexity</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="55129c53-371e-4939-93c9-913ee22f2f52">
+          <DataType>WChar</DataType>
+          <DataSize>13</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="58a631fd-8ac7-4ef3-a690-3b3f2a11136b">
+            <TableID>Group_ID_3_Dim_Track</TableID>
+            <ColumnID>Vocabulary_Complexity</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="a0493c80-4bdd-460c-b9aa-bbddd7b2231f">
+      <ID>Sentence Flow</ID>
+      <Name>Sentence Flow</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1a1cdaf4-a82e-4e64-a0bc-5161ab46ad50">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3afc70bf-20d6-47d0-bbc9-da756c7ef4f3">
+            <TableID>Group_ID_3_Dim_Track</TableID>
+            <ColumnID>Sentence_Flow</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2d7551d3-f940-45b0-967d-b8e0049594b3">
+      <ID>Duration Category</ID>
+      <Name>Duration Category</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6908062a-d589-4307-ba5b-18bbf9053a75">
+          <DataType>WChar</DataType>
+          <DataSize>22</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="049a2b92-18a0-44cb-bcad-4fee00644910">
+            <TableID>Group_ID_3_Dim_Track</TableID>
+            <ColumnID>Duration_Category</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
