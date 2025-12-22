@@ -1,26 +1,26 @@
 def get_virality_tier(view_count):
     """
-    Riceve il numero di visualizzazioni (come stringa o numero)
-    e restituisce una categoria di business.
+    Receives the number of views (as a string or number)
+    and returns a business category.
     """
-    # Gestione valori nulli o errori
+    # Handling null values ​​or errors
     if view_count is None or view_count == "":
         return "Unknown"
     
     try:
-        # Convertiamo in float
+        # Convert to floats
         views = int(float(view_count))
     except ValueError:
         return "Unknown"
 
-    # Logica di Business
+    # Business logic
     if views >= 50_000_000:
-        return "Global Hit"       # Oltre 50M: Successo mondiale
+        return "Global Hit"       # > 50M
     elif views >= 10_000_000:
-        return "Mainstream"       # 10M - 50M: Molto famoso
+        return "Mainstream"       # 10M - 50M
     elif views >= 1_000_000:
-        return "Trending"         # 1M - 10M: Sta andando bene
+        return "Trending"         # 1M - 10M
     elif views >= 100_000:
-        return "Emerging"         # 100k - 1M: Artista emergente
+        return "Emerging"         # 100k - 1M
     else:
-        return "Niche"            # Sotto 100k: Nicchia / Underground
+        return "Niche"            # < 100k

@@ -1,5 +1,5 @@
 import json
-# Carica il JSON
+# Load the file
 with open('tracks_noduplicati_idt.json', 'r', encoding='utf-8') as f:
     data = json.load(f)  # data = lista di dict
 
@@ -13,6 +13,6 @@ for item in data:
         next_id += 1
     item['id_album'] = album_to_id[album]
 
-# Salva il JSON modificato
+# Save the new updated file
 with open('tracks_preprocessingdone.json', 'w') as f:
     json.dump(data, f, indent=2)
