@@ -1,1 +1,0 @@
-è stata fatta la join non sugli id poiche ci sono dei duplicati, ma sull'index poiche comunque i dati di youtube sono stati estratti con un api. qiomdo comujnque hanno gli stesso index e ordine
