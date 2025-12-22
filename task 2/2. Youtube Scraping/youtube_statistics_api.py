@@ -136,7 +136,7 @@ if __name__ == '__main__':
         songs, 
         video_id_key='youtube_video_id',
         batch_size=50,
-        output_file='tracks_with_youtube_stats.json'
+        output_file='tracks_with_yt.json'
     )
     
     print("\n✓ Processo completato!")
