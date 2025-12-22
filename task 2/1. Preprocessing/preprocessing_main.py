@@ -9,16 +9,16 @@ TRACKS_FILE = 'tracks_noduplicati_idt.json'
 FINAL_FILE = 'tracks_preprocessingdone.json'
 
 def main():
-    # Step 1: Rimuovi duplicati
+    # parte 1: Rimuovo i duplicati
     data = load_json(INPUT_FILE)
     data = remove_duplicates(data)
     save_json(data, DUPES_FILE)
     
-    # Step 2: Assegna ID tracce
+    # parte 2: riassegno gli ID alle tracce
     data = assign_track_ids(data)
     save_json(data, TRACKS_FILE)
     
-    # Step 3: Assegna ID album
+    # parte 3: riassegno gli ID agli album
     data = assign_album_ids(data)
     save_json(data, FINAL_FILE)
 

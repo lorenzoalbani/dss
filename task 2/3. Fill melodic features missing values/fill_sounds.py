@@ -1,46 +1,46 @@
-#This script fills the missing values for melodic features
+#questo script filla i missing values per le features melodiche
 
 import json
 
-# Definizione delle features su cui lavorare
+# definisco le features su cui lavorare
 FEATURES = ['bpm', 'rolloff', 'flux', 'rms', 'flatness', 'spectral_complexity', 'pitch', 'loudness']
 
-def load_data(filepath): #Upload the JSON file into a dictionary list.
+def load_data(filepath): #carico il JSON file
     with open(filepath, 'r', encoding='utf-8') as f:
         return json.load(f)
 
-def save_data(data, filepath): #Save the dictionary list to a JSON file.
+def save_data(data, filepath): #salvo in un json
     with open(filepath, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
-def calculate_artist_means(data, features): #Calculate the average of the features for each artist using standard dictionaries.
+def calculate_artist_means(data, features): # Calcolo la media delle feature audio per ogni artista
     
     stats = {}
 
     for track in data:
         artist = track.get('primary_artist')
         
-        #Filter tracks without artist 
+        #filtro le canzoni senza artist
         if not artist:
             continue
 
-        #If the artist doesn't exist create the key
+        #se l'artista non esiste creo la chiave
         if artist not in stats:
             stats[artist] = {}
 
         for feature in features:
             val = track.get(feature)
             
-            #Filter None values
+            #filtro i None
             if val is not None:
-                #Initialize the feature for the artist if it doesn't exist
+                #inizializzo la feature per l'artista se non esiste
                 if feature not in stats[artist]:
                     stats[artist][feature] = {'sum': 0.0, 'count': 0}
                 
                 stats[artist][feature]['sum'] += val
                 stats[artist][feature]['count'] += 1
 
-    # Compute final averages
+    # Calcolo le medie finali
     means = {}
     for artist, feats in stats.items():
         means[artist] = {}
@@ -50,13 +50,13 @@ def calculate_artist_means(data, features): #Calculate the average of the featur
     
     return means
 
-def impute_missing_values(data, artist_means, features): #Replaces None values ​​in the original dataset using the calculated means.
+def impute_missing_values(data, artist_means, features): #Rimpiazzo i valori nulli con le medie
     imputed_count = 0
     
     for track in data:
         artist = track.get('primary_artist')
         
-        #Fill just for valid artists
+        #Fillo solo se gli artisti sono validi (non None)
         if not artist or artist not in artist_means:
             continue
 
@@ -84,15 +84,15 @@ def main():
         return
 
 
-    # Compute averages
+    # Calcolo le medie
     artist_means = calculate_artist_means(data, FEATURES)
     
-    #Fill missing values
+    #riempio i missing values
     filled_values = impute_missing_values(data, artist_means, FEATURES)
 
     print(f"Finish. Total filled values: {filled_values}")
 
-    # 3. Salvataggio
+    # salvo
     save_data(data, output_file)
     print(f"Saved in: {output_file}...")
 

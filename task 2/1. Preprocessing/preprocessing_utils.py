@@ -1,17 +1,17 @@
 import json
 
 def load_json(file_path):
-    """Carica dati JSON da file."""
+    """carico dati da JSON"""
     with open(file_path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
 def save_json(data, file_path, indent=2):
-    """Salva dati JSON in file."""
+    """salvo dati JSON in file"""
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=indent)
 
 def remove_duplicates(data):
-    """Rimuove duplicati basati su title e primary_artist."""
+    """Rimuovo i duplicati basati su title e primary_artist"""
     seen = set()
     cleaned_data = []
     for item in data:
@@ -23,13 +23,13 @@ def remove_duplicates(data):
     return cleaned_data
 
 def assign_track_ids(data):
-    """Assegna ID univoci 'TRxxxxxx' alle tracce."""
+    """assegno ID univoci alle tracce."""
     for idx, item in enumerate(data, start=1):
         item['id'] = f'TR{str(idx).zfill(6)}'
     return data
 
 def assign_album_ids(data):
-    """Assegna ID univoci 'ALxxxxxx' agli album."""
+    """assegno ID univoci agli album."""
     album_to_id = {}
     next_id = 1
     for item in data:

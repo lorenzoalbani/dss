@@ -7,14 +7,14 @@ import os
 import urllib.error
 import socket
 
-# Configuration
-CONTACT_EMAIL = "t.maitino@studenti.unipi.it" 
+# Configurazione
+CONTACT_EMAIL = "t.maitino@studenti.unipi.it"
 HEADERS = {
     'User-Agent': f'ArtistXMLFixer/10.0 ({CONTACT_EMAIL})',
     'Accept': 'application/json'
 }
 
-# Reference list for Italian Regions
+# Regioni italiane
 ITALIAN_REGIONS = [
     "Abruzzo", "Basilicata", "Calabria", "Campania", "Emilia-Romagna", 
     "Friuli-Venezia Giulia", "Lazio", "Liguria", "Lombardia", "Marche", 
@@ -22,7 +22,7 @@ ITALIAN_REGIONS = [
     "Trentino-Alto Adige", "Umbria", "Valle d'Aosta", "Veneto"
 ]
 
-# Manual Data Dictionary
+# dizionario manuale
 MANUAL_DATA = {
     "beba":             ["Torino", "Torino", "Piemonte", "Italia"],
     "dargen d_amico":   ["Milano", "Milano", "Lombardia", "Italia"],
@@ -37,7 +37,7 @@ MANUAL_DATA = {
     "priestess":        ["Locorotondo", "Bari", "Puglia", "Italia"]
 }
 
-# --- HELPER FUNCTIONS ---
+# Helper functions
 
 def make_request_debug(url, retries=3):
     current_delay = 3 
@@ -54,7 +54,7 @@ def make_request_debug(url, retries=3):
             return None
         except (urllib.error.URLError, socket.timeout, ConnectionResetError):
             if attempt < retries - 1:
-                print(f" [!] Unstable connection. Waiting 30s...", end=" ", flush=True)
+                print(f" Unstable connection. Waiting 30s...", end=" ", flush=True)
                 time.sleep(30)
             else:
                 return None
@@ -71,7 +71,7 @@ def update_xml_field(element, tag_name, new_value):
         new_child.tail = "\n"
 
 def update_xml_field_manual(element, tag_name, new_value):
-    """ Helper specifically for manual fixes where None clears the field """
+    """ Helper apposta per fill manuali """
     child = element.find(tag_name)
     if child is None:
         child = ET.SubElement(element, tag_name)
@@ -81,7 +81,7 @@ def update_xml_field_manual(element, tag_name, new_value):
     else:
         child.text = str(new_value)
 
-# --- CORE LOGIC FUNCTIONS ---
+# Core functions
 
 def search_best_candidate(artist_name):
     if not artist_name: return None
@@ -100,7 +100,7 @@ def search_best_candidate(artist_name):
     best_score = -1
     found_strong_band = False
     
-    print(f" -> Analyzing {len(candidates)} candidates...", end=" ")
+    print(f" Analyzing {len(candidates)} candidates...", end=" ")
     
     for artist in candidates:
         name = artist.get('name', '')
@@ -188,10 +188,10 @@ def get_full_hierarchy(start_area_id, start_area_name):
         if not found_parent: break
     return geo_data
 
-# --- MAIN FUNCTIONS TO CALL ---
+# funzioni da chiamare
 
 def process_xml_dataset(input_file, output_file):
-    print(f"--- Starting Automatic Processing (MusicBrainz) ---")
+    print(f"Starting Automatic Processing (MusicBrainz)")
     print(f"Input: {input_file} | Output: {output_file}")
     
     if not os.path.exists(input_file):
@@ -231,11 +231,11 @@ def process_xml_dataset(input_file, output_file):
                 artist_info = get_artist_info(mbid)
                 if artist_info:
                     if artist_info['birth_date']:
-                        print(f"✅ Date: {artist_info['birth_date']} ", end="")
+                        print(f"Date: {artist_info['birth_date']} ", end="")
                         update_xml_field(artist_element, 'birth_date', artist_info['birth_date'])
                     
                     if artist_info['start_area_id']:
-                        print(f"✅ City: {artist_info['start_area_name']} -> Hierarchy...", end="")
+                        print(f"City: {artist_info['start_area_name']} -> Hierarchy...", end="")
                         full_geo = get_full_hierarchy(artist_info['start_area_id'], artist_info['start_area_name'])
                         
                         final_country = full_geo['country']
@@ -245,7 +245,7 @@ def process_xml_dataset(input_file, output_file):
                         if full_geo['province']: debug_str.append(f"Prov:{full_geo['province']}")
                         if full_geo['region']: debug_str.append(f"Reg:{full_geo['region']}")
                         if final_country: debug_str.append(f"Country:{final_country}")
-                        print(f" -> {', '.join(debug_str)}")
+                        print(f"{', '.join(debug_str)}")
                         
                         update_xml_field(artist_element, 'birth_place', full_geo['birth_place'])
                         update_xml_field(artist_element, 'province', full_geo['province'])
@@ -254,19 +254,19 @@ def process_xml_dataset(input_file, output_file):
                         if final_country == 'Italia':
                             update_xml_field(artist_element, 'nationality', 'Italia')
                     else:
-                        print(f"⚠️  Missing location.", end="")
+                        print(f" Missing location.", end="")
                     count_ok += 1
                 else:
-                    print(f"⚠️  Missing data.")
+                    print(f"Missing data.")
             else:
                 pass 
 
-    print(f"\n--- Automatic Processing Finished ---")
+    print(f"\nAutomatic Processing Finished")
     tree.write(output_file, encoding='utf-8', xml_declaration=True)
     print(f"Saved intermediate file: {output_file}")
 
 def apply_manual_fixes(target_file):
-    print(f"\n--- Starting Manual Data Injection (In-Place) ---")
+    print(f"\nStarting Manual Data Injection (In-Place)")
     print(f"Target File: {target_file}")
 
     if not os.path.exists(target_file):
@@ -288,7 +288,7 @@ def apply_manual_fixes(target_file):
         name = name_node.text.strip().lower()
 
         if name in MANUAL_DATA:
-            print(f" -> Applying manual patch for: {name}")
+            print(f" Applying manual patch for: {name}")
             data = MANUAL_DATA[name]
             
             update_xml_field_manual(artist_element, 'birth_place', data[0])
@@ -300,7 +300,7 @@ def apply_manual_fixes(target_file):
                 update_xml_field_manual(artist_element, 'nationality', 'Italia')
             count_updated += 1
 
-    print(f"--- Manual Fixes Finished ---")
+    print(f"Manual Fixes Finished")
     tree.write(target_file, encoding='utf-8', xml_declaration=True)
     print(f"File updated successfully: {target_file}")
 
@@ -309,11 +309,11 @@ def main():
     original_xml = "artists.xml"
     intermediate_xml = "artists_filled.xml"
 
-    # Automatic fill (MusicBrainz APi)
-    process_xml_dataset(original_xml, intermediate_xml) #Creates artists_filled.xml
+    # chiamata a (MusicBrainz APi)
+    process_xml_dataset(original_xml, intermediate_xml) #crea artists_filled.xml
 
-    #Manual fill
-    apply_manual_fixes(intermediate_xml) #overwrite the file artists_filled.xml
+    #fill manuale
+    apply_manual_fixes(intermediate_xml) #sovrascrive artists_filled.xml
 
 if __name__ == "__main__":
     main()

@@ -1,4 +1,4 @@
---Drop tables if they exist, reverse dependency order to avoid Foreign Key errors.
+--Droppo le tabelle se esistono, in ordine inverso di dipendenza per evitare errori con le foreign keys.
 DROP TABLE IF EXISTS Fact_Streams;
 DROP TABLE IF EXISTS Bridge_Track_Artist;
 DROP TABLE IF EXISTS Dim_Track;
@@ -8,7 +8,7 @@ DROP TABLE IF EXISTS Dim_Artist;
 DROP TABLE IF EXISTS Dim_Time;
 DROP TABLE IF EXISTS Dim_Youtube;
 
--- CREATION
+-- Creo le tabelle
 
 -- Dim. Time
 CREATE TABLE Dim_Time (

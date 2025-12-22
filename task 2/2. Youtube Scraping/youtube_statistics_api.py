@@ -3,19 +3,19 @@ import json
 from tqdm import tqdm
 import time
 
-# La tua API Key
+# La nostra API Key
 API_KEY = "AIzaSyA9BMJiGhlfOT7uTsskle7Rc_YcClbxWmM"
 
-# Crea il client YouTube
+# Chiamo il client YouTube
 youtube = build('youtube', 'v3', developerKey=API_KEY)
 
 
 def get_video_statistics_batch(video_ids):
     """
-    Recupera statistiche per fino a 50 video ID in una singola chiamata API.
-    Ritorna un dizionario con video_id come chiave.
+    Recupero statistiche per fino a 50 video ID in una ùchiamata API
+    Ritorno un dizionario con video_id come chiave
     """
-    # YouTube API accetta max 50 IDs per chiamata
+    # Youtube API accetta max 50 IDs per chiamata
     video_ids_str = ','.join(video_ids)
     
     try:
@@ -53,18 +53,18 @@ def get_video_statistics_batch(video_ids):
 def enrich_with_youtube_statistics(songs_list, video_id_key='youtube_video_id', 
                                    batch_size=50, output_file='youtube_stats_enriched.json'):
     """
-    Arricchisce la lista di canzoni con statistiche YouTube usando batch API calls.
+    Arricchisco la lista di canzoni con statistiche YouTube usando batch API calls
     
-    Args:
+    parametri passati:
         songs_list: Lista di dizionari con le canzoni
         video_id_key: Chiave per l'ID YouTube nel dizionario
         batch_size: Numero di video per batch (max 50)
         output_file: Nome del file JSON di output
     
-    Returns:
+    Ritorno:
         Lista aggiornata con le statistiche YouTube
     """
-    # Filtra solo i video ID validi (non None/null)
+    # Filtro solo i video ID validi (non None/null)
     video_ids_list = [song[video_id_key] for song in songs_list 
                       if song.get(video_id_key) is not None]
     
@@ -73,7 +73,7 @@ def enrich_with_youtube_statistics(songs_list, video_id_key='youtube_video_id',
     print(f"Chiamate API necessarie: {len(video_ids_list) // batch_size + 1}")
     print(f"Quota consumata stimata: ~{len(video_ids_list) // batch_size + 1} units\n")
     
-    # Processa in batch
+    # Processo in batch
     all_stats = {}
     
     for i in tqdm(range(0, len(video_ids_list), batch_size), 
@@ -85,20 +85,20 @@ def enrich_with_youtube_statistics(songs_list, video_id_key='youtube_video_id',
         batch_stats = get_video_statistics_batch(batch)
         all_stats.update(batch_stats)
         
-        # Piccola pausa per rispettare rate limits (opzionale ma consigliato)
+        # Piccola pausa per rispettare rate limits
         time.sleep(0.2)
     
-    print(f"\n✓ Recuperate statistiche per {len(all_stats)} video su {len(video_ids_list)}")
+    print(f"\nRecuperate statistiche per {len(all_stats)} video su {len(video_ids_list)}")
     
-    # Aggiungi le statistiche a ogni canzone nella lista
+    # Aggiungo le statistiche a ogni canzone nella lista
     for song in songs_list:
         video_id = song.get(video_id_key)
         
         if video_id and video_id in all_stats:
-            # Aggiungi tutte le statistiche al dizionario della canzone
+            # Aggiungo tutte le statistiche al dizionario della canzone
             song.update(all_stats[video_id])
         else:
-            # Aggiungi campi None se non ci sono statistiche
+            # Aggiungo campi None se non ci sono statistiche
             song['yt_view_count'] = None
             song['yt_like_count'] = None
             song['yt_comment_count'] = None
@@ -107,11 +107,11 @@ def enrich_with_youtube_statistics(songs_list, video_id_key='youtube_video_id',
             song['yt_published_at'] = None
             song['yt_category_id'] = None
     
-    # Salva il risultato
+    # Salvo il risultato
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(songs_list, f, ensure_ascii=False, indent=2)
     
-    print(f"\n✓ Dataset arricchito salvato in: {output_file}")
+    print(f"\n Dataset arricchito salvato in: {output_file}")
     
     # Statistiche finali
     view_count = sum(1 for s in songs_list if s.get('yt_view_count') is not None)
@@ -119,9 +119,9 @@ def enrich_with_youtube_statistics(songs_list, video_id_key='youtube_video_id',
     comment_count = sum(1 for s in songs_list if s.get('yt_comment_count') is not None)
     
     print(f"\nStatistiche recupero:")
-    print(f"  - View count trovati: {view_count}/{len(songs_list)}")
-    print(f"  - Like count trovati: {like_count}/{len(songs_list)}")
-    print(f"  - Comment count trovati: {comment_count}/{len(songs_list)}")
+    print(f"  View count trovati: {view_count}/{len(songs_list)}")
+    print(f"  Like count trovati: {like_count}/{len(songs_list)}")
+    print(f"  Comment count trovati: {comment_count}/{len(songs_list)}")
     
     return songs_list
 

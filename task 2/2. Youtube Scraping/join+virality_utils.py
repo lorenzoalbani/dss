@@ -1,19 +1,16 @@
 def get_virality_tier(view_count):
-    """
-    Receives the number of views (as a string or number)
-    and returns a business category.
-    """
-    # Handling null values ​​or errors
+
+    # controllo null o errori
     if view_count is None or view_count == "":
         return "Unknown"
     
     try:
-        # Convert to floats
+        # converto in float
         views = int(float(view_count))
     except ValueError:
         return "Unknown"
 
-    # Business logic
+    # discretizzazione
     if views >= 50_000_000:
         return "Global Hit"       # > 50M
     elif views >= 10_000_000:
