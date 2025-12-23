@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{A7CE7B08-5577-4322-99A4-0FE09463EC6A}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{7AD5EABA-87EB-40F6-A6DB-2A1106F4953B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMQjGq9ZsVEiR12vyhqjgtwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAaKV1zq+ga3A+ASJmDcy6kexrPjxecDLxkdi8YH6N27wAAAAAOgAAAAAIAACAAAAA3aHym/WRtg6S2kVEa5N55GrqRNgq6dttIHPmNo3zyvyAAAACGUF9ezv8FvWeKVPuLTe9jxCV5SzhMSZs9Hmg99NgKLUAAAABrBdkPhI4eSVr2HuUAyONhiwTnTPj6RxqDkHzC510bJwnQOXc3mv+WNQXYlS5Cr3lQTFaZoE+eHJgebJ9pKm5i</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9ACMV0ANHkmmRZ0538ebNwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD7pJPSj22+VSR8fJi51PimQIxK/wA4YB3/0akbtaI2zwAAAAAOgAAAAAIAACAAAACehxd/ZBGzX7WWncOInUho1hJiwzMvfW5OefBNa0eVYiAAAAAItxJPFbGI46Gm3am+cHDkhHGBijrcDWjGtrjVvXQRoUAAAACE/0WTNDwLLHmcognbjv8ma1X66TVdVLsGn1RpZQTlsGHA/3MTtkDs7Pgx3ZW5gVYeHF7uPx0yJdwZzDnA3+Hn</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -51,59 +51,60 @@
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="region"
-              DTS:DTSID="{42D1D699-870B-41D5-B659-3D0AD6DEF624}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="129"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="20"
               DTS:TextQualified="True"
               DTS:ObjectName="winter_streams"
-              DTS:DTSID="{0FF4A76E-9E86-474B-B759-C9AACDBCC7F4}"
+              DTS:DTSID="{8F99B06F-7414-4DE7-B27D-F4E1785FAE3D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="129"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="20"
               DTS:TextQualified="True"
               DTS:ObjectName="summer_streams"
-              DTS:DTSID="{990D4471-8D52-4684-B35A-DBD55817E808}"
+              DTS:DTSID="{85F4690E-EE7B-4B68-A3B0-2A6D3CFC0EED}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="129"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="20"
               DTS:TextQualified="True"
               DTS:ObjectName="winter_count"
-              DTS:DTSID="{DD4E3A51-64C6-44AE-9778-8301239E324E}"
+              DTS:DTSID="{537FE8F9-CE78-4443-B473-A27B2F33333B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="129"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="20"
               DTS:TextQualified="True"
               DTS:ObjectName="summer_count"
-              DTS:DTSID="{31C5F982-239F-49DC-A414-58738A60DBD3}"
+              DTS:DTSID="{1F8251AE-8B10-4467-BB55-878C70417895}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="129"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="region"
+              DTS:DTSID="{DE2B1FFB-39DE-4CAE-BC7B-C3797E2A9E2F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="score_count_ratio"
-              DTS:DTSID="{C561D7C6-813B-4D67-B82D-82C8398C64A0}"
+              DTS:DTSID="{B330D41B-3EC8-462A-BD2B-FD7DCFE3114F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:DataType="129"
+              DTS:DataType="5"
               DTS:TextQualified="True"
               DTS:ObjectName="score_streams_ratio"
-              DTS:DTSID="{D6490EA3-0ABC-49FE-886F-8DC59BF030E1}"
+              DTS:DTSID="{F12EAFE9-F755-4436-9FC6-AC56BDFC3BE9}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -580,45 +581,32 @@
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[region]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
+                      dataType="wstr"
+                      length="100"
                       name="region" />
                     <externalMetadataColumn
                       refId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[winter_streams]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
+                      dataType="i8"
                       name="winter_streams" />
                     <externalMetadataColumn
                       refId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[summer_streams]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
+                      dataType="i8"
                       name="summer_streams" />
                     <externalMetadataColumn
                       refId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[winter_count]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
+                      dataType="i8"
                       name="winter_count" />
                     <externalMetadataColumn
                       refId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[summer_count]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
+                      dataType="i8"
                       name="summer_count" />
                     <externalMetadataColumn
                       refId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[score_count_ratio]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
+                      dataType="r8"
                       name="score_count_ratio" />
                     <externalMetadataColumn
                       refId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[score_streams_ratio]"
-                      codePage="1252"
-                      dataType="str"
-                      length="255"
+                      dataType="r8"
                       name="score_streams_ratio" />
                   </externalMetadataColumns>
                 </input>
@@ -1307,7 +1295,7 @@ where [refTable].[date_id] = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="176.8,41.6"
+          Size="177,41.5"
           Id="Package\Attività Flusso di dati"
           TopLeft="5.5,5.5" />
       </GraphLayout>
@@ -1319,31 +1307,31 @@ where [refTable].[date_id] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="108,41.6"
+          Size="108,41.5"
           Id="Package\Attività Flusso di dati\Ratios"
           TopLeft="106.367346977875,428.592436973832" />
         <NodeLayout
-          Size="143.2,41.6"
+          Size="143,41.5"
           Id="Package\Attività Flusso di dati\Fact_Streams"
           TopLeft="93.5,60" />
         <NodeLayout
-          Size="173.6,41.6"
+          Size="173.5,41.5"
           Id="Package\Attività Flusso di dati\Destinazione file flat"
           TopLeft="78.5714287386865,513.445377701206" />
         <NodeLayout
-          Size="158.4,41.6"
+          Size="158.5,41.5"
           Id="Package\Attività Flusso di dati\Colonna derivata"
           TopLeft="85,290" />
         <NodeLayout
-          Size="111.2,41.6"
+          Size="111,41.5"
           Id="Package\Attività Flusso di dati\season"
           TopLeft="105.5,138" />
         <NodeLayout
-          Size="142.4,41.6"
+          Size="142.5,41.5"
           Id="Package\Attività Flusso di dati\Aggregazione"
           TopLeft="90.5,357.5" />
         <NodeLayout
-          Size="108.8,41.6"
+          Size="109,41.5"
           Id="Package\Attività Flusso di dati\region"
           TopLeft="113.5,217" />
         <EdgeLayout
@@ -1485,5 +1473,18 @@ where [refTable].[date_id] = ?</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Attività Flusso di dati\Fact_Streams">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
