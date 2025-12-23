@@ -3,9 +3,7 @@ import pyodbc
 from config import DB_CONFIG
 
 def get_connection():
-    """
-    Crea la connessione usando lo stile richiesto.
-    """
+
     server = DB_CONFIG['server']
     database = DB_CONFIG['database']
     username = DB_CONFIG['username']
@@ -18,9 +16,9 @@ def get_connection():
 
 def clean_row_for_sql(row):
     """
-    Pulisce i dati grezzi del CSV:
-    - Rimuove spazi extra.
-    - Converte stringhe vuote o 'None' in NULL (None in Python).
+    Pulisco i dati grezzi del CSV:
+    - Rimuovo spazi extra
+    - Converto stringhe vuote o 'None' in NULL
     """
     cleaned = []
     

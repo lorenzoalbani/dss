@@ -10,15 +10,14 @@ def load_table_bulk(conn, csv_filename, table_name):
     file_path = os.path.join(CSV_DIR, csv_filename)
     
     if not os.path.exists(file_path):
-        print(f"⚠️  File {csv_filename} non trovato in {CSV_DIR}. Salto.")
+        print(f"File {csv_filename} non trovato in {CSV_DIR}. Salto.")
         return
 
-    print(f"\n--- Inizio caricamento: {table_name} ---")
+    print(f"\n Inizio caricamento: {table_name}")
     start_time = time.time()
     
     cursor = conn.cursor()
     
-    # --- FIX SICUREZZA DATA ---
     # Forziamo SQL a leggere le date come Anno-Mese-Giorno
     cursor.execute("SET DATEFORMAT ymd;") 
     
@@ -51,7 +50,7 @@ def load_table_bulk(conn, csv_filename, table_name):
                     cursor.executemany(sql_query, batch)
                     conn.commit()
                     total_rows += len(batch)
-                    print(f"   -> Caricate {total_rows} righe...", end='\r')
+                    print(f" Caricate {total_rows} righe...", end='\r')
                     batch = [] 
             
             if batch:
@@ -59,11 +58,11 @@ def load_table_bulk(conn, csv_filename, table_name):
                 conn.commit()
                 total_rows += len(batch)
                 
-            print(f"\n✅ Completato {table_name}: {total_rows} righe in {round(time.time() - start_time, 2)}s.")
+            print(f"\nCompletato {table_name}: {total_rows} righe in {round(time.time() - start_time, 2)}s.")
             
         except pyodbc.Error as e:
             conn.rollback() 
-            print(f"\n❌ ERRORE CRITICO SQL su {table_name}:")
+            print(f"\nERRORE CRITICO SQL su {table_name}:")
             print(f"   Messaggio: {e}")
             raise 
         finally:

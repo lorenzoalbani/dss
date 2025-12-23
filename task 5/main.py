@@ -1,7 +1,6 @@
 from etl_processor import generate_dw_files
 
 # Assicurarsi che il nome del JSON sia esatto
-# Se è nella Task 5, devi mettere "../task 5/track_mood_noduplicati_refactoringids.json"
 JSON_FILE = "tracks_moods.json" 
 XML_FILE = "artists_filled.xml"
 

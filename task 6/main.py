@@ -2,7 +2,7 @@
 from db_utils import get_connection
 from db_loader import load_table_bulk
 
-BATCH_SIZE = 5000  # Metti 1 solo per debugging
+BATCH_SIZE = 5000  
 
 def main():
     print("=== DATA WAREHOUSE LOADER (Group 03) ===")
@@ -16,7 +16,7 @@ def main():
         print("Controlla user, password e firewall del server.")
         return
 
-    # --- LISTA ORDINATA TABELLE ---
+    # LISTA ORDINATA TABELLE
     tables_to_load = [
         ('dim_time.csv', 'Dim_Time'),
         ('dim_artist.csv', 'Dim_Artist'),
@@ -25,8 +25,6 @@ def main():
         ('dim_track.csv', 'Dim_Track'), 
         ('bridge_track_artist.csv', 'Bridge_Track_Artist'),
         ('dim_youtube.csv', 'Dim_Youtube'),
-        
-        # 4. Fact Table
         ('fact_streams.csv', 'Fact_Streams')
     ]
 
@@ -34,9 +32,7 @@ def main():
         for csv_file, table_name in tables_to_load:
             load_table_bulk(conn, csv_file, table_name)
         
-        print("\n===========================================")
         print(" PROCESSO COMPLETATO: DB Aggiornato!")
-        print("===========================================")
 
     except Exception as e:
         print("\n Processo interrotto.")
