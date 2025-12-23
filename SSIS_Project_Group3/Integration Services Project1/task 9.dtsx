@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{9F00584F-0CC5-482F-908E-61053954BF2E}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{DAA30E6E-CB91-4826-9DC5-46A88AA8C8AF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,19 +25,19 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=131.114.50.57;User ID=Group_ID_3;Initial Catalog=Group_ID_3_DB;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-Package-{C0DD1B43-26F9-44F9-846D-F37C05F71918}131.114.50.57.Group_ID_3_DB.Group_ID_3;Auto Translate=False;">
+          DTS:ConnectionString="Data Source=131.114.50.57;User ID=Group_ID_3;Initial Catalog=Group_ID_3_DB;Provider=SQLOLEDB.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package-{C0DD1B43-26F9-44F9-846D-F37C05F71918}131.114.50.57.Group_ID_3_DB.Group_ID_3;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9ACMV0ANHkmmRZ0538ebNwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABysJA6PhtdzbuQYtEGiqR3tgtUQP/8vcdnJiGllk97hgAAAAAOgAAAAAIAACAAAAAyHONzwTLwwDarY3jF6pXaJSO9QZt2JDXk+GjgN9gvDiAAAADNhPHImI11e0DJtHVkW+I+xfol4I/qTuW+l2F2Il0Xl0AAAAAmHvmlmU3qftQA+SzKeRuHb659ohVwy96Il9y3amTrxbVblI7gVG6Hux0MnET2hL5qZErvjskM25KQs7typI7L</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMQjGq9ZsVEiR12vyhqjgtwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAvoDmx7BJI1SG58Ub7Aev8iV3lSDsq4dmsltaAd7LZIgAAAAAOgAAAAAIAACAAAAA3GOfA3+2vW26z7MW8k2aPJFLrsoG5bWStYCRER7kt8iAAAAByiPEhBtwX6dIjuumHT7Yjm5oknKyvK55qKny6YClOHEAAAAD46090azH6q38WuAUoy/16/cbfThPo7DaL1m3EEKcFCjpREMyi2pRPtF9KKUr4tQM7nYtvY2CnhLPpusjJiGY2</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:refId="Package.ConnectionManagers[Gestione connessione file flat]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{0054F0A0-0A05-4D7A-95A7-B9A0D55B6385}"
-      DTS:ObjectName="Flat File Connection Manager">
+      DTS:DTSID="{7DA46625-BA95-4BE3-8253-815C239B9EBF}"
+      DTS:ObjectName="Gestione connessione file flat">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -51,60 +51,59 @@
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:DataType="20"
-              DTS:TextQualified="True"
-              DTS:ObjectName="winter_streams"
-              DTS:DTSID="{2DDCAFC9-AC79-4C07-B886-3A2749A219B0}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:DataType="20"
-              DTS:TextQualified="True"
-              DTS:ObjectName="summer_streams"
-              DTS:DTSID="{64B3D76B-B93F-40C6-97D1-784D5A835D08}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:DataType="20"
-              DTS:TextQualified="True"
-              DTS:ObjectName="winter_count"
-              DTS:DTSID="{8A08EC00-FECD-4AB4-924F-44F30609DF62}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:DataType="20"
-              DTS:TextQualified="True"
-              DTS:ObjectName="summer_count"
-              DTS:DTSID="{69FEF17E-1DFF-4A1F-806C-EC7B5DB119BC}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:MaximumWidth="100"
-              DTS:DataType="130"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="region"
-              DTS:DTSID="{4D09771A-D154-4669-922E-EF8AE898F72A}"
+              DTS:DTSID="{42D1D699-870B-41D5-B659-3D0AD6DEF624}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x003B_"
-              DTS:DataType="5"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="winter_streams"
+              DTS:DTSID="{0FF4A76E-9E86-474B-B759-C9AACDBCC7F4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="summer_streams"
+              DTS:DTSID="{990D4471-8D52-4684-B35A-DBD55817E808}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="winter_count"
+              DTS:DTSID="{DD4E3A51-64C6-44AE-9778-8301239E324E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="summer_count"
+              DTS:DTSID="{31C5F982-239F-49DC-A414-58738A60DBD3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="score_count_ratio"
-              DTS:DTSID="{36DD8FDD-5E6B-44CC-B199-7D31B95774C7}"
+              DTS:DTSID="{C561D7C6-813B-4D67-B82D-82C8398C64A0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:DataType="5"
+              DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="score_streams_ratio"
-              DTS:DTSID="{2F11EB57-9745-443A-A0FE-6A2B7D7D3BFF}"
+              DTS:DTSID="{D6490EA3-0ABC-49FE-886F-8DC59BF030E1}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -523,8 +522,8 @@
               <connections>
                 <connection
                   refId="Package\Attività Flusso di dati\Destinazione file flat.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerID="Package.ConnectionManagers[Gestione connessione file flat]"
+                  connectionManagerRefId="Package.ConnectionManagers[Gestione connessione file flat]"
                   name="FlatFileConnection" />
               </connections>
               <inputs>
@@ -533,6 +532,12 @@
                   hasSideEffects="true"
                   name="Input destinazione file flat">
                   <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].Columns[winter_streams]"
+                      cachedDataType="i8"
+                      cachedName="winter_streams"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[winter_streams]"
+                      lineageId="Package\Attività Flusso di dati\Aggregazione.Outputs[Output aggregazione 1].Columns[winter_streams]" />
                     <inputColumn
                       refId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].Columns[summer_streams]"
                       cachedDataType="i8"
@@ -570,44 +575,51 @@
                       cachedName="score_streams_ratio"
                       externalMetadataColumnId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[score_streams_ratio]"
                       lineageId="Package\Attività Flusso di dati\Ratios.Outputs[Output colonna derivata].Columns[score_streams_ratio]" />
-                    <inputColumn
-                      refId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].Columns[winter_streams]"
-                      cachedDataType="i8"
-                      cachedName="winter_streams"
-                      externalMetadataColumnId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[winter_streams]"
-                      lineageId="Package\Attività Flusso di dati\Aggregazione.Outputs[Output aggregazione 1].Columns[winter_streams]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[region]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="region" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[winter_streams]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="winter_streams" />
+                    <externalMetadataColumn
                       refId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[summer_streams]"
-                      dataType="i8"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
                       name="summer_streams" />
                     <externalMetadataColumn
                       refId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[winter_count]"
-                      dataType="i8"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
                       name="winter_count" />
                     <externalMetadataColumn
                       refId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[summer_count]"
-                      dataType="i8"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
                       name="summer_count" />
                     <externalMetadataColumn
-                      refId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[region]"
-                      dataType="wstr"
-                      length="100"
-                      name="region" />
-                    <externalMetadataColumn
                       refId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[score_count_ratio]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
                       name="score_count_ratio" />
                     <externalMetadataColumn
                       refId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[score_streams_ratio]"
-                      dataType="r8"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
                       name="score_streams_ratio" />
-                    <externalMetadataColumn
-                      refId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat].ExternalColumns[winter_streams]"
-                      dataType="i8"
-                      name="winter_streams" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1254,14 +1266,14 @@ where [refTable].[date_id] = ?</property>
               startId="Package\Attività Flusso di dati\Aggregazione.Outputs[Output aggregazione 1]" />
             <path
               refId="Package\Attività Flusso di dati.Paths[Output colonna derivata]"
-              endId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat]"
-              name="Output colonna derivata"
-              startId="Package\Attività Flusso di dati\Ratios.Outputs[Output colonna derivata]" />
-            <path
-              refId="Package\Attività Flusso di dati.Paths[Output colonna derivata1]"
               endId="Package\Attività Flusso di dati\Aggregazione.Inputs[Input aggregazione 1]"
               name="Output colonna derivata"
               startId="Package\Attività Flusso di dati\Colonna derivata.Outputs[Output colonna derivata]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output colonna derivata1]"
+              endId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat]"
+              name="Output colonna derivata"
+              startId="Package\Attività Flusso di dati\Ratios.Outputs[Output colonna derivata]" />
             <path
               refId="Package\Attività Flusso di dati.Paths[Output corrispondenza ricerca]"
               endId="Package\Attività Flusso di dati\Colonna derivata.Inputs[Input colonna derivata]"
@@ -1295,7 +1307,7 @@ where [refTable].[date_id] = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="177,42"
+          Size="176.8,41.6"
           Id="Package\Attività Flusso di dati"
           TopLeft="5.5,5.5" />
       </GraphLayout>
@@ -1307,31 +1319,27 @@ where [refTable].[date_id] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="108,42"
+          Size="108,41.6"
           Id="Package\Attività Flusso di dati\Ratios"
-          TopLeft="88,427.5" />
+          TopLeft="106.367346977875,428.592436973832" />
         <NodeLayout
-          Size="143,42"
+          Size="143.2,41.6"
           Id="Package\Attività Flusso di dati\Fact_Streams"
           TopLeft="93.5,60" />
         <NodeLayout
-          Size="174,42"
-          Id="Package\Attività Flusso di dati\Destinazione file flat"
-          TopLeft="60,506.5" />
-        <NodeLayout
-          Size="158,42"
+          Size="158.4,41.6"
           Id="Package\Attività Flusso di dati\Colonna derivata"
           TopLeft="85,290" />
         <NodeLayout
-          Size="111.5,42"
+          Size="111.2,41.6"
           Id="Package\Attività Flusso di dati\season"
           TopLeft="105.5,138" />
         <NodeLayout
-          Size="142.5,42"
+          Size="142.4,41.6"
           Id="Package\Attività Flusso di dati\Aggregazione"
           TopLeft="90.5,357.5" />
         <NodeLayout
-          Size="108.5,42"
+          Size="108.8,41.6"
           Id="Package\Attività Flusso di dati\region"
           TopLeft="113.5,217" />
         <EdgeLayout
@@ -1383,7 +1391,7 @@ where [refTable].[date_id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Output colonna derivata1]"
+          Id="Package\Attività Flusso di dati.Paths[Output colonna derivata]"
           TopLeft="162.875,332">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1405,53 +1413,19 @@ where [refTable].[date_id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Output colonna derivata]"
-          TopLeft="144.5,469.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,37"
-              Start="0,0"
-              End="0,29.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,29.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Attività Flusso di dati.Paths[Output aggregazione 1]"
-          TopLeft="161.75,399.5">
+          TopLeft="161.033673488937,399.1">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-19.75,28"
+              EndConnector="0,29.4924369738324"
               Start="0,0"
-              End="-19.75,20.5">
+              End="0,21.9924369738324">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,10" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,10"
-                    Point2="0,14"
-                    Point3="-4,14" />
-                  <mssgle:LineSegment
-                    End="-15.75,14" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-15.75,14"
-                    Point2="-19.75,14"
-                    Point3="-19.75,18" />
-                  <mssgle:LineSegment
-                    End="-19.75,20.5" />
+                    End="0,21.9924369738324" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1474,6 +1448,32 @@ where [refTable].[date_id] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="173.6,41.6"
+          Id="Package\Attività Flusso di dati\Destinazione file flat"
+          TopLeft="78.5714287386865,513.445377701206" />
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output colonna derivata1]"
+          TopLeft="162.869387858281,470.192436973832">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43.2529407273732"
+              Start="0,0"
+              End="0,35.7529407273732">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.7529407273732" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
