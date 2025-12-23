@@ -25,12 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=131.114.50.57;User ID=Group_ID_3;Initial Catalog=Group_ID_3_DB;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-Package-{C0DD1B43-26F9-44F9-846D-F37C05F71918}131.114.50.57.Group_ID_3_DB.Group_ID_3;Auto Translate=False;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9ACMV0ANHkmmRZ0538ebNwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACLdrrl1w+1Qb22+cFJxM6xSpZVEim8qp428C+oH+6TrgAAAAAOgAAAAAIAACAAAACpGvEcNDGr1lBFg60DLsvWoeWkkilIMljj1hbuYiCVIyAAAAB3Mz4s4uH7wdQZKVO9q67/9uCPd7bn8LoRJiJKzs9b2EAAAAB01TL8/f9bGKEA8Zrc9UltWlolkOPL0WgtroFRwN2nZ78WzOL4iRyUYKgEklB1yL5qJW6FSeB0IRaMIsgWARiD</DTS:Password>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="Data Source=131.114.50.57;User ID=Group_ID_3;Initial Catalog=Group_ID_3_DB;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-Package-{C0DD1B43-26F9-44F9-846D-F37C05F71918}131.114.50.57.Group_ID_3_DB.Group_ID_3;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager

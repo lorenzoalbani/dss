@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="12/10/2025 4:30:36 PM"
@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="task8"
   DTS:PackageType="5"
-  DTS:VersionBuild="15"
-  DTS:VersionGUID="{B4AD8E5A-493E-4FED-97CA-3138AB662A95}">
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{AD74D01B-646F-40D9-A205-5C6BA19D5C21}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMQjGq9ZsVEiR12vyhqjgtwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADpZtiZGrVzTz/waHzm/J3x2YiQVig4isjbuXVsMG/S9wAAAAAOgAAAAAIAACAAAAAgmd82Ptje6GJvoneLH5ybYDTW3RPJGBPGrJ6Ffvy4hSAAAAC3m3yeAzzCj/BMc/BdelZ6EyFZynPqbAQZKdd3xhYLjUAAAACo9wLufh4nBCg2qSbQHKhe8HVV3Y+7HNqjAdI+Lkm5gTPCxs96P5gABVkK1mVATeNRZPHPh5RHnBPY68Uv2v7V</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMQjGq9ZsVEiR12vyhqjgtwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADF4sAYX0MYJaBz8GHVLGPRk1Jo1S6vqyt4Jlz5GCwHVgAAAAAOgAAAAAIAACAAAADc1rD2PfbqITjUpAb53elbU+4jAtAqktDFjhAtpBeRKCAAAAAfrn8LJsNV6+gkuCb+4Alxp27OhLX9uGdYSv7gNUejKUAAAABvHObLGsG4w7QM1jRcWvWP7yyUUIRIXjXLZbGEe7Oh63Rs65pXX6UmGY5ZIi/3oTQTuVywKFvKtHYkq2dDiQPW</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -134,13 +134,13 @@
                       refId="Package\Attività Flusso di dati\COUNT.Inputs[Input aggregazione 1].Columns[year]"
                       cachedDataType="i4"
                       cachedName="year"
-                      lineageId="Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[year]" />
+                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[year]" />
                     <inputColumn
                       refId="Package\Attività Flusso di dati\COUNT.Inputs[Input aggregazione 1].Columns[name]"
                       cachedDataType="wstr"
                       cachedLength="255"
                       cachedName="name"
-                      lineageId="Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[name]" />
+                      lineageId="Package\Attività Flusso di dati\Lookup Artist name.Outputs[Output corrispondenza ricerca].Columns[name]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -171,7 +171,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
-                          name="AggregationColumnId">#{Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[year]}</property>
+                          name="AggregationColumnId">#{Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[year]}</property>
                         <property
                           dataType="System.Int32"
                           description="Specifica il tipo di aggregazione."
@@ -198,7 +198,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
-                          name="AggregationColumnId">#{Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[name]}</property>
+                          name="AggregationColumnId">#{Package\Attività Flusso di dati\Lookup Artist name.Outputs[Output corrispondenza ricerca].Columns[name]}</property>
                         <property
                           dataType="System.Int32"
                           description="Specifica il tipo di aggregazione."
@@ -224,7 +224,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifica l'ID della colonna di input utilizzata nell'aggregazione."
-                          name="AggregationColumnId">#{Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[name]}</property>
+                          name="AggregationColumnId">#{Package\Attività Flusso di dati\Lookup Artist name.Outputs[Output corrispondenza ricerca].Columns[name]}</property>
                         <property
                           dataType="System.Int32"
                           description="Specifica il tipo di aggregazione."
@@ -543,6 +543,165 @@
               </outputs>
             </component>
             <component
+              refId="Package\Attività Flusso di dati\Lookup Artist name"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Ricerca;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;6"
+              description="Crea un join delle colonne aggiuntive al flusso di dati cercando valori in una tabella. Ad esempio, creare un join della colonna 'employee id' alla tabella dei dipendenti per ottenere data di assunzione e nome del dipendente. Questa trasformazione è consigliata quando la memoria disponibile è sufficiente per la tabella di ricerca."
+              name="Lookup Artist name"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifica l'istruzione SQL che genera la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [Group_ID_3].[Dim_Artist]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifica un'istruzione SQL che utilizza parametri per generare la tabella di ricerca."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [Group_ID_3].[Dim_Artist]) [refTable]
+where [refTable].[artist_id] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di connessione utilizzata per accedere al set di dati di riferimento."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il tipo di cache della tabella di ricerca."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica il modo in cui la trasformazione Ricerca gestisce le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la percentuale della cache allocata per le righe senza voci corrispondenti nel set di dati di riferimento."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 32 bit."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Utilizzo massimo della memoria per la cache dei riferimenti in una piattaforma a 64 bit."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indica se fare riferimento ai metadati in un formato XML."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="artist_id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="name" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="gender" dataType="DT_STR" length="10" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="birth_date" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="birth_place" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="nationality" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="description" dataType="DT_NTEXT" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="country" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="region" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="province" dataType="DT_WSTR" length="100" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="latitude" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="longitude" dataType="DT_R8" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="active_start" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="active_end" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifica l'elenco di identificatori di derivazione corrispondenti ai parametri utilizzati dall'istruzione SQL nella proprietà SQLCommand. Le voci nell'elenco sono separate da punti e virgola."
+                  name="ParameterMap">#{Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[artist_id]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determina se le chiavi duplicate nei dati di riferimento devono essere considerate come errori in caso di utilizzo della modalità di Full cache."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Attività Flusso di dati\Lookup Artist name.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[131.114.50.57.Group_ID_3_DB.Group_ID_3]"
+                  connectionManagerRefId="Package.ConnectionManagers[131.114.50.57.Group_ID_3_DB.Group_ID_3]"
+                  description="Gestione connessione utilizzata per accedere ai dati di ricerca."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Attività Flusso di dati\Lookup Artist name.Inputs[Input ricerca]"
+                  name="Input ricerca">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Attività Flusso di dati\Lookup Artist name.Inputs[Input ricerca].Columns[artist_id]"
+                      cachedDataType="i4"
+                      cachedName="artist_id"
+                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[artist_id]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento a cui viene unita in join una colonna."
+                          name="JoinToReferenceColumn">artist_id</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Attività Flusso di dati\Lookup Artist name.Outputs[Output corrispondenza ricerca]"
+                  errorOrTruncationOperation="Ricerca"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Output corrispondenza ricerca"
+                  synchronousInputId="Package\Attività Flusso di dati\Lookup Artist name.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Lookup Artist name.Outputs[Output corrispondenza ricerca].Columns[name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copia colonna"
+                      length="255"
+                      lineageId="Package\Attività Flusso di dati\Lookup Artist name.Outputs[Output corrispondenza ricerca].Columns[name]"
+                      name="name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifica la colonna nella tabella di riferimento da cui viene copiata una colonna."
+                          name="CopyFromReferenceColumn">name</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Lookup Artist name.Outputs[Output nessuna corrispondenza ricerca]"
+                  description="Output ricerca che gestisce le righe senza voci corrispondenti nel set di dati di riferimento. Usare questo output quando la proprietà NoMatchBehavior è impostata su &quot;Invia le righe senza voci corrispondenti all'output nessuna corrispondenza&quot;."
+                  exclusionGroup="1"
+                  name="Output nessuna corrispondenza ricerca"
+                  synchronousInputId="Package\Attività Flusso di dati\Lookup Artist name.Inputs[Input ricerca]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Attività Flusso di dati\Lookup Artist name.Outputs[Output errori ricerca]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Output errori ricerca"
+                  synchronousInputId="Package\Attività Flusso di dati\Lookup Artist name.Inputs[Input ricerca]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Lookup Artist name.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Lookup Artist name.Outputs[Output errori ricerca].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Attività Flusso di dati\Lookup Artist name.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Attività Flusso di dati\Lookup Artist name.Outputs[Output errori ricerca].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Attività Flusso di dati\Merge join"
               componentClassID="Microsoft.MergeJoin"
               contactInfo="Merge join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
@@ -641,306 +800,6 @@
                           dataType="System.Int32"
                           description="Colonna di input associata a questa colonna di output"
                           name="InputColumnID">#{Package\Attività Flusso di dati\Merge join.Inputs[Input merge join destro].Columns[artist_id]}</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Attività Flusso di dati\Merge join 1"
-              componentClassID="Microsoft.MergeJoin"
-              contactInfo="Merge join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
-              description="Combina due flussi di dati ordinati in uno solo tramite join di tipo FULL, LEFT o INNER. Questa trasformazione è consigliata quando i flussi di dati possono essere ordinati alle relative origini."
-              name="Merge join 1"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="Specifica il tipo di join da eseguire."
-                  name="JoinType"
-                  typeConverter="JoinType">2</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifica il numero di colonne nella chiave di ordinamento."
-                  name="NumKeyColumns">1</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indica se i valori Null vengono considerati come valori uguali."
-                  name="TreatNullsAsEqual">true</property>
-                <property
-                  dataType="System.Int32"
-                  description="Indica il numero massimo di buffer richiesti per input prima dell'attivazione del blocco."
-                  name="MaxBuffersPerInput">5</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Attività Flusso di dati\Merge join 1.Inputs[Input merge join sinistro]"
-                  hasSideEffects="true"
-                  name="Input merge join sinistro">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Attività Flusso di dati\Merge join 1.Inputs[Input merge join sinistro].Columns[artist_id]"
-                      cachedDataType="i4"
-                      cachedName="artist_id"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\Attività Flusso di dati\Sort artist_id.Outputs[Output ordinamento].Columns[artist_id]" />
-                    <inputColumn
-                      refId="Package\Attività Flusso di dati\Merge join 1.Inputs[Input merge join sinistro].Columns[year]"
-                      cachedDataType="i4"
-                      cachedName="year"
-                      lineageId="Package\Attività Flusso di dati\Sort artist_id.Outputs[Output ordinamento].Columns[year]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-                <input
-                  refId="Package\Attività Flusso di dati\Merge join 1.Inputs[Input merge join destro]"
-                  hasSideEffects="true"
-                  name="Input merge join destro">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Attività Flusso di dati\Merge join 1.Inputs[Input merge join destro].Columns[artist_id]"
-                      cachedDataType="i4"
-                      cachedName="artist_id"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\Attività Flusso di dati\Sort artist_id1.Outputs[Output ordinamento].Columns[artist_id]" />
-                    <inputColumn
-                      refId="Package\Attività Flusso di dati\Merge join 1.Inputs[Input merge join destro].Columns[name]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="name"
-                      lineageId="Package\Attività Flusso di dati\Sort artist_id1.Outputs[Output ordinamento].Columns[name]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join]"
-                  name="Output merge join">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[year]"
-                      dataType="i4"
-                      lineageId="Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[year]"
-                      name="year">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Colonna di input associata a questa colonna di output"
-                          name="InputColumnID">#{Package\Attività Flusso di dati\Merge join 1.Inputs[Input merge join sinistro].Columns[year]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[name]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[name]"
-                      name="name">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Colonna di input associata a questa colonna di output"
-                          name="InputColumnID">#{Package\Attività Flusso di dati\Merge join 1.Inputs[Input merge join destro].Columns[name]}</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Attività Flusso di dati\Sort artist_id"
-              componentClassID="Microsoft.Sort"
-              contactInfo="Ordinamento;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
-              description="Ordina i dati di input in ordine crescente o decrescente quando non possono essere ordinati come la relativa origine. Ad esempio, ordinare i dati delle vendite per 'customer id' prima che vengano scritti in un file flat e recapitati a un altro reparto. Nota: questa trasformazione non è consigliata per i flussi di dati di grandi dimensioni."
-              name="Sort artist_id"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Indica se la trasformazione Ordinamento rimuove le righe con valori di ordinamento duplicati."
-                  name="EliminateDuplicates">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifica il numero massimo di thread da utilizzare per l'ordinamento."
-                  expressionType="Notify"
-                  name="MaximumThreads">-1</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Attività Flusso di dati\Sort artist_id.Inputs[Input ordinamento]"
-                  name="Input ordinamento">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Attività Flusso di dati\Sort artist_id.Inputs[Input ordinamento].Columns[year]"
-                      cachedDataType="i4"
-                      cachedName="year"
-                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[year]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifica il tipo di ordinamento della colonna."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Attività Flusso di dati\Sort artist_id.Inputs[Input ordinamento].Columns[artist_id]"
-                      cachedDataType="i4"
-                      cachedName="artist_id"
-                      lineageId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[artist_id]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifica il tipo di ordinamento della colonna."
-                          name="NewSortKeyPosition">1</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Attività Flusso di dati\Sort artist_id.Outputs[Output ordinamento]"
-                  isSorted="true"
-                  name="Output ordinamento">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Attività Flusso di dati\Sort artist_id.Outputs[Output ordinamento].Columns[year]"
-                      dataType="i4"
-                      lineageId="Package\Attività Flusso di dati\Sort artist_id.Outputs[Output ordinamento].Columns[year]"
-                      name="year">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
-                          name="SortColumnId">#{Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[year]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Attività Flusso di dati\Sort artist_id.Outputs[Output ordinamento].Columns[artist_id]"
-                      dataType="i4"
-                      lineageId="Package\Attività Flusso di dati\Sort artist_id.Outputs[Output ordinamento].Columns[artist_id]"
-                      name="artist_id"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
-                          name="SortColumnId">#{Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[artist_id]}</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Attività Flusso di dati\Sort artist_id1"
-              componentClassID="Microsoft.Sort"
-              contactInfo="Ordinamento;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;1"
-              description="Ordina i dati di input in ordine crescente o decrescente quando non possono essere ordinati come la relativa origine. Ad esempio, ordinare i dati delle vendite per 'customer id' prima che vengano scritti in un file flat e recapitati a un altro reparto. Nota: questa trasformazione non è consigliata per i flussi di dati di grandi dimensioni."
-              name="Sort artist_id1"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Indica se la trasformazione Ordinamento rimuove le righe con valori di ordinamento duplicati."
-                  name="EliminateDuplicates">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifica il numero massimo di thread da utilizzare per l'ordinamento."
-                  expressionType="Notify"
-                  name="MaximumThreads">-1</property>
-              </properties>
-              <inputs>
-                <input
-                  refId="Package\Attività Flusso di dati\Sort artist_id1.Inputs[Input ordinamento]"
-                  name="Input ordinamento">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Attività Flusso di dati\Sort artist_id1.Inputs[Input ordinamento].Columns[artist_id]"
-                      cachedDataType="i4"
-                      cachedName="artist_id"
-                      lineageId="Package\Attività Flusso di dati\Source Artists.Outputs[Output origine OLE DB].Columns[artist_id]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifica il tipo di ordinamento della colonna."
-                          name="NewSortKeyPosition">1</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Attività Flusso di dati\Sort artist_id1.Inputs[Input ordinamento].Columns[name]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="name"
-                      lineageId="Package\Attività Flusso di dati\Source Artists.Outputs[Output origine OLE DB].Columns[name]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifica le opzioni di confronto per i dati di tipo carattere."
-                          name="NewComparisonFlags">0</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifica il tipo di ordinamento della colonna."
-                          name="NewSortKeyPosition">0</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Attività Flusso di dati\Sort artist_id1.Outputs[Output ordinamento]"
-                  isSorted="true"
-                  name="Output ordinamento">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Attività Flusso di dati\Sort artist_id1.Outputs[Output ordinamento].Columns[artist_id]"
-                      dataType="i4"
-                      lineageId="Package\Attività Flusso di dati\Sort artist_id1.Outputs[Output ordinamento].Columns[artist_id]"
-                      name="artist_id"
-                      sortKeyPosition="1">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
-                          name="SortColumnId">#{Package\Attività Flusso di dati\Source Artists.Outputs[Output origine OLE DB].Columns[artist_id]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Attività Flusso di dati\Sort artist_id1.Outputs[Output ordinamento].Columns[name]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Attività Flusso di dati\Sort artist_id1.Outputs[Output ordinamento].Columns[name]"
-                      name="name">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifica l'identificatore di derivazione della colonna di input associata a questa colonna di output."
-                          name="SortColumnId">#{Package\Attività Flusso di dati\Source Artists.Outputs[Output origine OLE DB].Columns[name]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -1174,192 +1033,6 @@
                           name="SortColumnId">#{Package\Attività Flusso di dati\Source Bridge.Outputs[Output origine OLE DB].Columns[artist_id]}</property>
                       </properties>
                     </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Attività Flusso di dati\Source Artists"
-              componentClassID="Microsoft.OLEDBSource"
-              contactInfo="Origine OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tutti i diritti sono riservati; http://www.microsoft.com/sql/support;7"
-              description="Origine OLE DB"
-              name="Source Artists"
-              usesDispositions="true"
-              version="7">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="Numero di secondi prima del timeout di un comando. Il valore 0 indica nessun timeout."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifica il nome dell'oggetto di database utilizzato per aprire un set di righe."
-                  name="OpenRowset">[Group_ID_3].[Dim_Artist]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifica la variabile contenente il nome dell'oggetto di database utilizzato per aprire un set di righe."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="Comando SQL da eseguire."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=17.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
-                <property
-                  dataType="System.String"
-                  description="Variabile che contiene il comando SQL da eseguire."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forza l'utilizzo del valore della proprietà DefaultCodePage per la descrizione di dati di tipo carattere."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifica la modalità utilizzata per accedere al database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-                <property
-                  dataType="System.String"
-                  description="Mapping tra i parametri nel comando SQL e le variabili."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Attività Flusso di dati\Source Artists.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[131.114.50.57.Group_ID_3_DB.Group_ID_3]"
-                  connectionManagerRefId="Package.ConnectionManagers[131.114.50.57.Group_ID_3_DB.Group_ID_3]"
-                  description="Connessione di run-time OLE DB utilizzata per accedere al database."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Attività Flusso di dati\Source Artists.Outputs[Output origine OLE DB]"
-                  name="Output origine OLE DB">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Attività Flusso di dati\Source Artists.Outputs[Output origine OLE DB].Columns[artist_id]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversione"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Attività Flusso di dati\Source Artists.Outputs[Output origine OLE DB].ExternalColumns[artist_id]"
-                      lineageId="Package\Attività Flusso di dati\Source Artists.Outputs[Output origine OLE DB].Columns[artist_id]"
-                      name="artist_id"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Attività Flusso di dati\Source Artists.Outputs[Output origine OLE DB].Columns[name]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversione"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Attività Flusso di dati\Source Artists.Outputs[Output origine OLE DB].ExternalColumns[name]"
-                      length="255"
-                      lineageId="Package\Attività Flusso di dati\Source Artists.Outputs[Output origine OLE DB].Columns[name]"
-                      name="name"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Attività Flusso di dati\Source Artists.Outputs[Output origine OLE DB].ExternalColumns[artist_id]"
-                      dataType="i4"
-                      name="artist_id" />
-                    <externalMetadataColumn
-                      refId="Package\Attività Flusso di dati\Source Artists.Outputs[Output origine OLE DB].ExternalColumns[name]"
-                      dataType="wstr"
-                      length="255"
-                      name="name" />
-                    <externalMetadataColumn
-                      refId="Package\Attività Flusso di dati\Source Artists.Outputs[Output origine OLE DB].ExternalColumns[gender]"
-                      codePage="1252"
-                      dataType="str"
-                      length="10"
-                      name="gender" />
-                    <externalMetadataColumn
-                      refId="Package\Attività Flusso di dati\Source Artists.Outputs[Output origine OLE DB].ExternalColumns[birth_date]"
-                      dataType="wstr"
-                      length="10"
-                      name="birth_date" />
-                    <externalMetadataColumn
-                      refId="Package\Attività Flusso di dati\Source Artists.Outputs[Output origine OLE DB].ExternalColumns[birth_place]"
-                      dataType="wstr"
-                      length="100"
-                      name="birth_place" />
-                    <externalMetadataColumn
-                      refId="Package\Attività Flusso di dati\Source Artists.Outputs[Output origine OLE DB].ExternalColumns[nationality]"
-                      codePage="1252"
-                      dataType="str"
-                      length="100"
-                      name="nationality" />
-                    <externalMetadataColumn
-                      refId="Package\Attività Flusso di dati\Source Artists.Outputs[Output origine OLE DB].ExternalColumns[description]"
-                      dataType="nText"
-                      name="description" />
-                    <externalMetadataColumn
-                      refId="Package\Attività Flusso di dati\Source Artists.Outputs[Output origine OLE DB].ExternalColumns[country]"
-                      dataType="wstr"
-                      length="100"
-                      name="country" />
-                    <externalMetadataColumn
-                      refId="Package\Attività Flusso di dati\Source Artists.Outputs[Output origine OLE DB].ExternalColumns[region]"
-                      dataType="wstr"
-                      length="100"
-                      name="region" />
-                    <externalMetadataColumn
-                      refId="Package\Attività Flusso di dati\Source Artists.Outputs[Output origine OLE DB].ExternalColumns[province]"
-                      dataType="wstr"
-                      length="100"
-                      name="province" />
-                    <externalMetadataColumn
-                      refId="Package\Attività Flusso di dati\Source Artists.Outputs[Output origine OLE DB].ExternalColumns[latitude]"
-                      dataType="r8"
-                      name="latitude" />
-                    <externalMetadataColumn
-                      refId="Package\Attività Flusso di dati\Source Artists.Outputs[Output origine OLE DB].ExternalColumns[longitude]"
-                      dataType="r8"
-                      name="longitude" />
-                    <externalMetadataColumn
-                      refId="Package\Attività Flusso di dati\Source Artists.Outputs[Output origine OLE DB].ExternalColumns[active_start]"
-                      dataType="wstr"
-                      length="10"
-                      name="active_start" />
-                    <externalMetadataColumn
-                      refId="Package\Attività Flusso di dati\Source Artists.Outputs[Output origine OLE DB].ExternalColumns[active_end]"
-                      dataType="wstr"
-                      length="10"
-                      name="active_end" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Attività Flusso di dati\Source Artists.Outputs[Output errori origine OLE DB]"
-                  isErrorOut="true"
-                  name="Output errori origine OLE DB">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Attività Flusso di dati\Source Artists.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Attività Flusso di dati\Source Artists.Outputs[Output errori origine OLE DB].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Attività Flusso di dati\Source Artists.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Attività Flusso di dati\Source Artists.Outputs[Output errori origine OLE DB].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                    <outputColumn
-                      refId="Package\Attività Flusso di dati\Source Artists.Outputs[Output errori origine OLE DB].Columns[artist_id]"
-                      dataType="i4"
-                      lineageId="Package\Attività Flusso di dati\Source Artists.Outputs[Output errori origine OLE DB].Columns[artist_id]"
-                      name="artist_id" />
-                    <outputColumn
-                      refId="Package\Attività Flusso di dati\Source Artists.Outputs[Output errori origine OLE DB].Columns[name]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Attività Flusso di dati\Source Artists.Outputs[Output errori origine OLE DB].Columns[name]"
-                      name="name" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -1621,6 +1294,10 @@
                       refId="Package\Attività Flusso di dati\Source Facts.Outputs[Output origine OLE DB].ExternalColumns[popularity]"
                       dataType="r8"
                       name="popularity" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\Source Facts.Outputs[Output origine OLE DB].ExternalColumns[virality_id]"
+                      dataType="i4"
+                      name="virality_id" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1828,15 +1505,15 @@ where [refTable].[date_id] = ?</property>
               name="Output corrispondenza ricerca"
               startId="Package\Attività Flusso di dati\Year Lookup.Outputs[Output corrispondenza ricerca]" />
             <path
+              refId="Package\Attività Flusso di dati.Paths[Output corrispondenza ricerca1]"
+              endId="Package\Attività Flusso di dati\COUNT.Inputs[Input aggregazione 1]"
+              name="Output corrispondenza ricerca"
+              startId="Package\Attività Flusso di dati\Lookup Artist name.Outputs[Output corrispondenza ricerca]" />
+            <path
               refId="Package\Attività Flusso di dati.Paths[Output merge join]"
-              endId="Package\Attività Flusso di dati\Sort artist_id.Inputs[Input ordinamento]"
+              endId="Package\Attività Flusso di dati\Lookup Artist name.Inputs[Input ricerca]"
               name="Output merge join"
               startId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join]" />
-            <path
-              refId="Package\Attività Flusso di dati.Paths[Output merge join1]"
-              endId="Package\Attività Flusso di dati\COUNT.Inputs[Input aggregazione 1]"
-              name="Output merge join"
-              startId="Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join]" />
             <path
               refId="Package\Attività Flusso di dati.Paths[Output ordinamento]"
               endId="Package\Attività Flusso di dati\Merge join.Inputs[Input merge join sinistro]"
@@ -1849,16 +1526,6 @@ where [refTable].[date_id] = ?</property>
               startId="Package\Attività Flusso di dati\Sort track_id1.Outputs[Output ordinamento]" />
             <path
               refId="Package\Attività Flusso di dati.Paths[Output ordinamento2]"
-              endId="Package\Attività Flusso di dati\Merge join 1.Inputs[Input merge join sinistro]"
-              name="Output ordinamento"
-              startId="Package\Attività Flusso di dati\Sort artist_id.Outputs[Output ordinamento]" />
-            <path
-              refId="Package\Attività Flusso di dati.Paths[Output ordinamento3]"
-              endId="Package\Attività Flusso di dati\Merge join 1.Inputs[Input merge join destro]"
-              name="Output ordinamento"
-              startId="Package\Attività Flusso di dati\Sort artist_id1.Outputs[Output ordinamento]" />
-            <path
-              refId="Package\Attività Flusso di dati.Paths[Output ordinamento4]"
               endId="Package\Attività Flusso di dati\Destinazione file flat.Inputs[Input destinazione file flat]"
               name="Output ordinamento"
               startId="Package\Attività Flusso di dati\Final Sort.Outputs[Output ordinamento]" />
@@ -1872,11 +1539,6 @@ where [refTable].[date_id] = ?</property>
               endId="Package\Attività Flusso di dati\Sort track_id1.Inputs[Input ordinamento]"
               name="Output origine OLE DB"
               startId="Package\Attività Flusso di dati\Source Bridge.Outputs[Output origine OLE DB]" />
-            <path
-              refId="Package\Attività Flusso di dati.Paths[Output origine OLE DB2]"
-              endId="Package\Attività Flusso di dati\Sort artist_id1.Inputs[Input ordinamento]"
-              name="Output origine OLE DB"
-              startId="Package\Attività Flusso di dati\Source Artists.Outputs[Output origine OLE DB]" />
             <path
               refId="Package\Attività Flusso di dati.Paths[Valid Years]"
               endId="Package\Attività Flusso di dati\Sort track_id.Inputs[Input ordinamento]"
@@ -1912,41 +1574,21 @@ where [refTable].[date_id] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="144.8,41.6"
-          Id="Package\Attività Flusso di dati\Sort artist_id1"
-          TopLeft="870.499989792705,113.500001072884" />
-        <NodeLayout
-          Size="144,41.6"
-          Id="Package\Attività Flusso di dati\Sort track_id1"
-          TopLeft="469.499994874,117.500000119209" />
-        <NodeLayout
-          Size="173.6,41.6"
-          Id="Package\Attività Flusso di dati\Destinazione file flat"
-          TopLeft="613.999990850687,656.999990209937" />
-        <NodeLayout
-          Size="138.4,41.6"
-          Id="Package\Attività Flusso di dati\Source Facts"
-          TopLeft="56.4999992400408,24.4999997168779" />
-        <NodeLayout
           Size="128,41.6"
           Id="Package\Attività Flusso di dati\Merge join"
           TopLeft="317.724487569737,365.584031325606" />
-        <NodeLayout
-          Size="139.2,41.6"
-          Id="Package\Attività Flusso di dati\Sort artist_id"
-          TopLeft="313.724488970446,435.584031623629" />
         <NodeLayout
           Size="136.8,41.6"
           Id="Package\Attività Flusso di dati\Year Lookup"
           TopLeft="56.6071429744515,105.823528408721" />
         <NodeLayout
+          Size="173.6,41.6"
+          Id="Package\Attività Flusso di dati\Destinazione file flat"
+          TopLeft="654.476181413041,635.333323562262" />
+        <NodeLayout
           Size="138.4,41.6"
           Id="Package\Attività Flusso di dati\Sort track_id"
           TopLeft="62.7244904754635,274.584031787542" />
-        <NodeLayout
-          Size="143.2,41.6"
-          Id="Package\Attività Flusso di dati\Source Artists"
-          TopLeft="868.499987587333,26.5000001341104" />
         <NodeLayout
           Size="144,41.6"
           Id="Package\Attività Flusso di dati\Source Bridge"
@@ -1954,35 +1596,45 @@ where [refTable].[date_id] = ?</property>
         <NodeLayout
           Size="123.2,41.6"
           Id="Package\Attività Flusso di dati\Final Sort"
-          TopLeft="635.499995529652,564.499996587634" />
+          TopLeft="673.595233705985,553.029408362394" />
         <NodeLayout
-          Size="137.6,41.6"
-          Id="Package\Attività Flusso di dati\Merge join 1"
-          TopLeft="619.499994874001,382.499998405576" />
+          Size="144,41.6"
+          Id="Package\Attività Flusso di dati\Sort track_id1"
+          TopLeft="469.499994874,117.500000119209" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\Attività Flusso di dati\Filter valid years"
+          TopLeft="54.0816327681868,190.084033446829" />
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\Attività Flusso di dati\Source Facts"
+          TopLeft="56.4999992400408,24.4999997168779" />
         <NodeLayout
           Size="112.8,41.6"
           Id="Package\Attività Flusso di dati\COUNT"
-          TopLeft="637.499995052814,468.499997571111" />
+          TopLeft="675.595233229147,468.499997571111" />
         <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Output origine OLE DB2]"
-          TopLeft="941.499988690019,68.1000001341104">
+          Id="Package\Attività Flusso di dati.Paths[Valid Years]"
+          TopLeft="131.803061621825,231.684033446829">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,45.4000009387731"
+              EndConnector="0,42.8999983407122"
               Start="0,0"
-              End="0,37.9000009387731">
+              End="0,35.3999983407122">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.9000009387731" />
+                    End="0,35.3999983407122" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-25.32076171875,12.8254874516061,50.6415234375,9.7490234375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2030,87 +1682,19 @@ where [refTable].[date_id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Output ordinamento4]"
-          TopLeft="698.949993190169,606.099996587634">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,50.8999936223033"
-              Start="0,0"
-              End="0,43.3999936223033">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,43.3999936223033" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Output ordinamento3]"
-          TopLeft="942.899989792705,155.100001072884">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-254.599994918704,227.399997332692"
-              Start="0,0"
-              End="-254.599994918704,219.899997332692">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,109.699998666346" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,109.699998666346"
-                    Point2="0,113.699998666346"
-                    Point3="-4,113.699998666346" />
-                  <mssgle:LineSegment
-                    End="-250.599994918704,113.699998666346" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-250.599994918704,113.699998666346"
-                    Point2="-254.599994918704,113.699998666346"
-                    Point3="-254.599994918704,117.699998666346" />
-                  <mssgle:LineSegment
-                    End="-254.599994918704,219.899997332692" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Attività Flusso di dati.Paths[Output ordinamento2]"
-          TopLeft="452.924488970446,456.384031623629">
+          TopLeft="738.235707559513,594.629408362394">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="166.575505903555,-53.0840332180526"
+              EndConnector="0,40.7039151998678"
               Start="0,0"
-              End="159.075505903555,-53.0840332180526">
+              End="0,33.2039151998678">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="79.2877529517773,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="79.2877529517773,0"
-                    Point2="83.2877529517773,0"
-                    Point3="83.2877529517773,-4" />
-                  <mssgle:LineSegment
-                    End="83.2877529517773,-49.0840332180526" />
-                  <mssgle:CubicBezierSegment
-                    Point1="83.2877529517773,-49.0840332180526"
-                    Point2="83.2877529517773,-53.0840332180526"
-                    Point3="87.2877529517773,-53.0840332180526" />
-                  <mssgle:LineSegment
-                    End="159.075505903555,-53.0840332180526" />
+                    End="0,33.2039151998678" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2188,76 +1772,6 @@ where [refTable].[date_id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Output merge join1]"
-          TopLeft="691.099994963407,424.099998405576">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,44.3999991655349"
-              Start="0,0"
-              End="0,36.8999991655349">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.8999991655349" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Output merge join]"
-          TopLeft="382.524488270092,407.184031325606">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,28.4000002980233"
-              Start="0,0"
-              End="0,20.9000002980233">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.9000002980233" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Output aggregazione 1]"
-          TopLeft="695.499995291233,510.099997571111">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,54.3999990165234"
-              Start="0,0"
-              End="0,46.8999990165234">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,46.8999990165234" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="155.2,41.6"
-          Id="Package\Attività Flusso di dati\Filter valid years"
-          TopLeft="54.0816327681868,190.084033446829" />
-        <EdgeLayout
           Id="Package\Attività Flusso di dati.Paths[Output corrispondenza ricerca]"
           TopLeft="128.344387871319,147.423528408721">
           <EdgeLayout.Curve>
@@ -2282,45 +1796,80 @@ where [refTable].[date_id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Valid Years]"
-          TopLeft="131.803061621825,231.684033446829">
+          Id="Package\Attività Flusso di dati.Paths[Output aggregazione 1]"
+          TopLeft="733.595233467566,510.099997571111">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,42.8999983407122"
+              EndConnector="0,42.9294107912833"
               Start="0,0"
-              End="0,35.3999983407122">
+              End="0,35.4294107912833">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,35.3999983407122" />
+                    End="0,35.4294107912833" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="169.6,41.6"
+          Id="Package\Attività Flusso di dati\Lookup Artist name"
+          TopLeft="640.023810874544,372.55882320767" />
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output merge join]"
+          TopLeft="445.724487569737,389.871427266638">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="194.299323304807,0"
+              Start="0,0"
+              End="186.799323304807,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="186.799323304807,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output corrispondenza ricerca1]"
+          TopLeft="728.409522051845,414.15882320767">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54.3411743634405"
+              Start="0,0"
+              End="0,46.8411743634405">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.8411743634405" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-25.32076171875,12.8254874516061,50.6415234375,9.7490234375"
+              BoundingBox="-66.78587890625,17.6158996817203,133.5717578125,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Attività Flusso di dati\Source Facts">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Attività Flusso di dati\Year Lookup">
     <Properties>
@@ -2345,7 +1894,7 @@ where [refTable].[date_id] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Attività Flusso di dati\Source Artists">
+    design-time-name="Package\Attività Flusso di dati\Source Bridge">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2358,7 +1907,7 @@ where [refTable].[date_id] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Attività Flusso di dati\Source Bridge">
+    design-time-name="Package\Attività Flusso di dati\Source Facts">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2367,6 +1916,29 @@ where [refTable].[date_id] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Attività Flusso di dati\Lookup Artist name">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[Group_ID_3].[Dim_Artist]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
