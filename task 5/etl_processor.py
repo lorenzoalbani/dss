@@ -3,11 +3,8 @@ import csv
 import xml.etree.ElementTree as ET
 import os
 import unicodedata
-# Assicurati che utils.py sia nella stessa cartella se lo usi, 
-# altrimenti definisci qui le funzioni safe_int, safe_float ecc.
-from utils import clean_text, safe_int, safe_float, get_season, get_quarter
 
-# --- FUNZIONI DI SUPPORTO LOCALI ---
+from utils import clean_text, safe_int, safe_float, get_season, get_quarter
 
 def clean_date(date_str):
     """Pulisce le date per formato SQL YYYY-MM-DD"""
@@ -21,7 +18,7 @@ def clean_date(date_str):
 
 def normalize(name):
     """
-    Normalizzazione aggressiva per matching nomi.
+    Normalizzazione per matching nomi.
     """
     if not name: return None
     name = name.replace("’", "'").replace("‘", "'").replace("`", "'")
@@ -34,10 +31,9 @@ def get_xml_text(row_element, tag_name):
     el = row_element.find(tag_name)
     return el.text if el is not None else None
 
-# --- FUNZIONE PRINCIPALE ---
+# FUNZIONE PRINCIPALE
 
 def generate_dw_files(json_path, xml_path):
-    print("=== INIZIO GENERAZIONE DATA WAREHOUSE (MODELLO CLASSIFICAZIONE) ===")
     
     output_dir = 'csv_db'
     if not os.path.exists(output_dir): os.makedirs(output_dir)
@@ -48,19 +44,15 @@ def generate_dw_files(json_path, xml_path):
     final_artists_registry = {}
     artist_counter = 1
 
-    # --- NUOVA LOGICA YOUTUBE: DIZIONARIO PER LE CLASSI UNICHE ---
     # Mappa: "Global Hit" -> 1, "Niche" -> 2
     virality_map = {} 
     virality_counter = 1
 
-    # --- FASE 1: XML (UGUALE A PRIMA) ---
-    print("1. Indicizzazione artisti da XML...")
+    # XML
     try:
         tree = ET.parse(xml_path)
         root = tree.getroot()
         for row in root.findall('row'):
-            # ... [CODICE IDENTICO A PRIMA PER L'XML] ...
-            # (Per brevità non lo ricopio tutto, usa quello di prima, non cambia nulla qui)
             old_xml_id = get_xml_text(row, 'id_author')
             raw_name = get_xml_text(row, 'name')
             if not raw_name: continue
@@ -82,12 +74,10 @@ def generate_dw_files(json_path, xml_path):
         print(f"Errore lettura XML: {e}")
         return
 
-    # --- FASE 2: JSON ALIAS (UGUALE A PRIMA) ---
-    print("2. Scansione JSON per alias...")
+    # JSON ALIAS
     with open(json_path, 'r', encoding='utf-8') as f:
         data = json.load(f)
     
-    # ... [Loop alias uguale a prima] ...
     for row in data:
         j_id, j_name = row.get('id_artist'), row.get('primary_artist')
         if j_id and j_name and j_id in xml_id_to_dw_id:
@@ -96,7 +86,7 @@ def generate_dw_files(json_path, xml_path):
             if norm_j_name and norm_j_name not in name_to_dw_id:
                 name_to_dw_id[norm_j_name] = real_id
 
-    # --- FASE 3: PREPARAZIONE CSV ---
+    # PREPARAZIONE CSV
     files = {}
     writers = {}
     # Nota: la chiamiamo sempre dim_youtube, ma concettualmente è dim_virality
@@ -132,17 +122,13 @@ def generate_dw_files(json_path, xml_path):
     seen_time = {0}
     seen_albums = set()
     sound_counter = 1
-    
-    # NON inizializzo youtube_counter qui perché useremo la mappa dinamica
 
-    # --- FASE 4: PROCESSAMENTO ---
-    print("3. Processamento tracce...")
-    
+    # PROCESSING
     for row in data:
         track_id = row.get('id')
         if not track_id: continue
 
-        # [ARTISTI - UGUALE A PRIMA] ... (Ometto per brevità, incolla dal codice precedente)
+        # ARTISTI
         old_main_id = row.get('id_artist')
         final_main_id = xml_id_to_dw_id.get(old_main_id)
         if final_main_id: writers['bridge'].writerow([track_id, final_main_id, 'Main'])
@@ -159,12 +145,33 @@ def generate_dw_files(json_path, xml_path):
                     final_artists_registry[f_id] = {'artist_id': f_id, 'name': f_name, 'source': 'JSON_Featured'}
                 writers['bridge'].writerow([track_id, f_id, 'Featured'])
 
-        # [TIME & ALBUM - UGUALE A PRIMA]
         y, m, d = safe_int(row.get('year')), safe_int(row.get('month')), safe_int(row.get('day'))
         date_id = y * 10000 + m * 100 + d
+        
         if date_id not in seen_time and date_id != 0:
-            safe_m = m if m > 0 else 1
-            writers['dim_time'].writerow([date_id, f"{y}-{safe_m:02d}-{d if d>0 else 1:02d}", y, m, d, get_quarter(safe_m), get_season(safe_m)])
+            # Preparo i valori "safe"
+            sql_m = m if m > 0 else 1
+            sql_d = d if d > 0 else 1
+            
+            # Logica condizionale per Stagione e Quarter
+            if m > 0:
+                # Se il mese esiste, calcolo normalmente
+                calc_season = get_season(m)
+                calc_quarter = get_quarter(m)
+            else:
+                # Se il mese è 0 o mancante, forzo a Unknown
+                calc_season = 'Unknown'
+                calc_quarter = 0 
+            
+            writers['dim_time'].writerow([
+                date_id, 
+                f"{y}-{sql_m:02d}-{sql_d:02d}",
+                y, 
+                m, 
+                d, 
+                calc_quarter, 
+                calc_season 
+            ])
             seen_time.add(date_id)
 
         alb_id = row.get('id_album')
@@ -172,16 +179,15 @@ def generate_dw_files(json_path, xml_path):
             writers['dim_album'].writerow([alb_id, row.get('album'), clean_date(row.get('album_release_date')), row.get('album_type')])
             seen_albums.add(alb_id)
 
-        # [SOUND - UGUALE A PRIMA]
+        # SOUND
         curr_sound_id = sound_counter
         writers['dim_sound'].writerow([curr_sound_id, safe_float(row.get('bpm')), safe_float(row.get('rolloff')), safe_float(row.get('flux')), safe_float(row.get('rms')), safe_float(row.get('flatness')), safe_float(row.get('spectral_complexity')), safe_float(row.get('pitch')), safe_float(row.get('loudness')), row.get('mood', 'Unknown')])
         sound_counter += 1
 
-        # --- GESTIONE YOUTUBE (LOGICA NUOVA) ---
-        # 1. Prendo il valore della tier (es. "Global Hit")
+        # YOUTUBE
         tier_value = row.get('yt_virality', 'Unknown')
         
-        # 2. Controllo se l'ho già censito
+        # Controllo se l'ho già censito
         if tier_value in virality_map:
             # Se esiste, recupero l'ID
             curr_virality_id = virality_map[tier_value]
@@ -195,28 +201,27 @@ def generate_dw_files(json_path, xml_path):
             
             virality_counter += 1
 
-        # [TRACK - UGUALE A PRIMA]
+        # TRACK
         writers['dim_track'].writerow([track_id, row.get('title'), row.get('language'), 1 if row.get('explicit') else 0, safe_int(row.get('disc_number')), safe_int(row.get('track_number')), safe_float(row.get('duration_ms')), safe_int(row.get('swear_IT')), safe_int(row.get('swear_EN')), safe_float(row.get('n_sentences')), safe_float(row.get('n_tokens')), safe_float(row.get('char_per_tok')), safe_float(row.get('avg_token_per_clause')), str(row.get('swear_IT_words', [])), str(row.get('swear_EN_words', [])), clean_text(row.get('lyrics'))])
 
-        # --- FACT TABLE ---
+        # FACT TABLE
         writers['fact'].writerow([
             track_id, 
             alb_id, 
             date_id, 
             curr_sound_id, 
-            curr_virality_id,   # <--- Qui metto l'ID della classe (1, 2, 3...)
+            curr_virality_id,
             final_main_id, 
             safe_int(row.get('streams@1month')), 
             safe_float(row.get('popularity'))
         ])
 
-    # [SCRITTURA ARTISTI - UGUALE A PRIMA]
-    print(f"4. Scrittura dim_artist...")
+    # SCRITTURA ARTISTI
     for artist in sorted(final_artists_registry.values(), key=lambda x: x['artist_id']):
         writers['dim_artist'].writerow([artist['artist_id'], artist['name'], artist.get('gender'), artist.get('birth_date'), artist.get('birth_place'), artist.get('nationality'), artist.get('description'), artist.get('country'), artist.get('region'), artist.get('province'), artist.get('latitude'), artist.get('longitude'), artist.get('active_start'), artist.get('active_end')])
 
     for f in files.values(): f.close()
     
-    print("\n✅ ETL Completato!")
+    print("ETL Completato!")
     print(f"   Classi Viralità Trovate: {len(virality_map)}")
     print(f"   (Esempio mappatura: {list(virality_map.items())[:3]})")
