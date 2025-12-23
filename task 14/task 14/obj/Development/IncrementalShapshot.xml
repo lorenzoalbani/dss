@@ -19,70 +19,70 @@
     <ObjectSnapshots>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
-        <TimeStamp>bdXXzbFqBzxcXyHe3mBlZ4OUWgw=18/12/2025 13:07:2221/12/2025 17:36:17</TimeStamp>
+        <TimeStamp>bdXXzbFqBzxcXyHe3mBlZ4OUWgw=20/12/2025 16:36:1718/12/2025 09:07:35</TimeStamp>
         <ID>
           <String>Group ID 3 DB</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>cBEVKIf4LnBp7oxcidZkpiKssOU=23/12/2025 02:46:0921/12/2025 17:36:17</TimeStamp>
+        <TimeStamp>cBEVKIf4LnBp7oxcidZkpiKssOU=23/12/2025 10:13:2818/12/2025 09:07:35</TimeStamp>
         <ID>
           <String>Group ID 3 DB</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>ZkdrZikMRH/Uus+AzmX8SWpwrE4=23/12/2025 01:51:3121/12/2025 17:36:17</TimeStamp>
+        <TimeStamp>ZkdrZikMRH/Uus+AzmX8SWpwrE4=23/12/2025 10:13:2818/12/2025 09:07:35</TimeStamp>
         <ID>
           <String>Dim Album</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>2z+4qJGHZID0ffVrlhOKlIKokFs=23/12/2025 01:47:4521/12/2025 17:36:17</TimeStamp>
+        <TimeStamp>2z+4qJGHZID0ffVrlhOKlIKokFs=23/12/2025 10:13:2818/12/2025 09:07:35</TimeStamp>
         <ID>
           <String>Dim Artist</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>zQP3K6IhYOnkt6UkvZX3nUdn3A0=19/12/2025 15:47:1621/12/2025 17:36:17</TimeStamp>
+        <TimeStamp>gGqSENI15XUJAn24FTtJlKY8/HE=23/12/2025 11:51:1618/12/2025 09:07:35</TimeStamp>
         <ID>
           <String>Dim Sound</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>kFLq/5YAGAs2ErxOtUAG0E7wMPY=21/12/2025 10:15:2321/12/2025 17:36:17</TimeStamp>
+        <TimeStamp>0fTrJUD4FZ72jMgFbKFyAgQoeSo=23/12/2025 11:47:1518/12/2025 09:07:35</TimeStamp>
         <ID>
           <String>Dim Time</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>xRmNnJbxACM9f8faM0i1IPF6jII=23/12/2025 01:51:4321/12/2025 17:36:17</TimeStamp>
+        <TimeStamp>xRmNnJbxACM9f8faM0i1IPF6jII=23/12/2025 10:13:2818/12/2025 09:07:35</TimeStamp>
         <ID>
           <String>Dim Track</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>tGQfnJ7JDcuHBHLpEt7vGoOesJ4=23/12/2025 02:11:2621/12/2025 17:36:17</TimeStamp>
+        <TimeStamp>tGQfnJ7JDcuHBHLpEt7vGoOesJ4=23/12/2025 10:13:2818/12/2025 09:07:35</TimeStamp>
         <ID>
           <String>Dim Youtube</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>Jt3oExEjTF4S2THXzLNcjobgY7M=22/12/2025 10:26:1921/12/2025 17:36:17</TimeStamp>
+        <TimeStamp>Jt3oExEjTF4S2THXzLNcjobgY7M=22/12/2025 16:06:1020/12/2025 10:08:53</TimeStamp>
         <ID>
           <String>Dim_Role</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>YI9kD+uZmFUnKBhDuH70HehM4Is=22/12/2025 10:26:1921/12/2025 17:36:17oVag/985aKfUT0QugQH99JJd0LU=18/12/2025 13:07:2221/12/2025 17:36:17</TimeStamp>
+        <TimeStamp>YI9kD+uZmFUnKBhDuH70HehM4Is=22/12/2025 16:06:1018/12/2025 09:07:35oVag/985aKfUT0QugQH99JJd0LU=17/12/2025 20:13:3618/12/2025 09:07:35</TimeStamp>
         <ID>
           <String>Group ID 3 DB</String>
         </ID>
@@ -90,7 +90,7 @@
     </ObjectSnapshots>
     <DatabaseSnapshot>
       <Type>Microsoft.AnalysisServices.Database</Type>
-      <TimeStamp>OfZNLVLyMC5HFfahfseqK3GYJz0=18/12/2025 13:07:2221/12/2025 17:36:17</TimeStamp>
+      <TimeStamp>OfZNLVLyMC5HFfahfseqK3GYJz0=17/12/2025 17:47:3618/12/2025 09:07:35</TimeStamp>
       <ID>
         <String>Group_ID_3_Cube</String>
       </ID>
@@ -99,5 +99,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2025-12-23T01:53:06.916667Z</LastDeployed>
+  <LastDeployed>2025-12-23T10:58:23.98Z</LastDeployed>
 </DeploymentSnapshot>

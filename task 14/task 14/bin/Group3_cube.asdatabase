@@ -661,9 +661,9 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1621" scrolltop="-3302" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6308" y="11070" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1621" scrolltop="-3302" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="5450" y="12197" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
-                  <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+                  <ddsxmlobjectstreamwrapper binary="0100000090019e330100065461686f6d61" />
                 </font>
                 <mouseicon>
                   <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
@@ -745,7 +745,7 @@
       <Source xsi:type="DataSourceViewBinding">
         <DataSourceViewID>Group ID 3 DB</DataSourceViewID>
       </Source>
-      <UnknownMember>Visible</UnknownMember>
+      <UnknownMember>Hidden</UnknownMember>
       <ErrorConfiguration>
         <KeyNotFound>ReportAndStop</KeyNotFound>
         <KeyDuplicate>ReportAndStop</KeyDuplicate>
@@ -828,7 +828,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1079" scrolltop="-3678" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7527" y="12197" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1079" scrolltop="-3678" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="5450" y="12197" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="0100000090019e330100065461686f6d61" />
                 </font>
@@ -975,7 +975,7 @@
           <Type>Date</Type>
           <KeyColumns>
             <KeyColumn>
-              <DataType>WChar</DataType>
+              <DataType>Date</DataType>
               <DataSize>10</DataSize>
               <Source xsi:type="ColumnBinding">
                 <TableID>Group_ID_3_Dim_Time</TableID>
@@ -2589,9 +2589,9 @@
                 <Name>_ALL_TABLES_</Name>
                 <DiagramLayout>
                   <dds>
-                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="34" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2856" scrolltop="13823" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="85" x="15939" y="12361" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="34" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2856" scrolltop="13823" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="85" x="13573" y="13388" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                       <font>
-                        <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+                        <ddsxmlobjectstreamwrapper binary="0100000090019e330100065461686f6d61" />
                       </font>
                       <mouseicon>
                         <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
@@ -3288,37 +3288,37 @@
               <xs:selector xpath=".//Group_ID_3_Fact_Streams" />
               <xs:field xpath="fact_id" />
             </xs:unique>
-            <xs:keyref name="FK__Fact_Stre__album__62AFA012" refer="Group_ID_3_Dim_Album_Constraint1">
+            <xs:keyref name="FK__Fact_Stre__main___658C0CBD" refer="Group_ID_3_Dim_Artist_Constraint1">
               <xs:selector xpath=".//Group_ID_3_Fact_Streams" />
-              <xs:field xpath="album_id" />
-            </xs:keyref>
-            <xs:keyref name="FK__Fact_Stre__date___63A3C44B" refer="Group_ID_3_Dim_Time_Constraint1">
-              <xs:selector xpath=".//Group_ID_3_Fact_Streams" />
-              <xs:field xpath="date_id" />
-            </xs:keyref>
-            <xs:keyref name="FK__Fact_Stre__sound__6497E884" refer="Group_ID_3_Dim_Sound_Constraint1">
-              <xs:selector xpath=".//Group_ID_3_Fact_Streams" />
-              <xs:field xpath="sound_id" />
-            </xs:keyref>
-            <xs:keyref name="FK__Fact_Stre__track__61BB7BD9" refer="Group_ID_3_Dim_Track_Constraint1">
-              <xs:selector xpath=".//Group_ID_3_Fact_Streams" />
-              <xs:field xpath="track_id" />
+              <xs:field xpath="main_artist_id" />
             </xs:keyref>
             <xs:keyref name="FK__Fact_Stre__viral__668030F6" refer="Group_ID_3_Dim_Youtube_Constraint1">
               <xs:selector xpath=".//Group_ID_3_Fact_Streams" />
               <xs:field xpath="virality_id" />
             </xs:keyref>
-            <xs:keyref name="FK__Fact_Stre__main___658C0CBD" refer="Group_ID_3_Dim_Artist_Constraint1">
+            <xs:keyref name="FK__Fact_Stre__track__61BB7BD9" refer="Group_ID_3_Dim_Track_Constraint1">
               <xs:selector xpath=".//Group_ID_3_Fact_Streams" />
-              <xs:field xpath="main_artist_id" />
-            </xs:keyref>
-            <xs:keyref name="FK__Bridge_Tr__track__5C02A283" refer="Group_ID_3_Dim_Track_Constraint1">
-              <xs:selector xpath=".//Group_ID_3_Bridge_Track_Artist" />
               <xs:field xpath="track_id" />
+            </xs:keyref>
+            <xs:keyref name="FK__Fact_Stre__sound__6497E884" refer="Group_ID_3_Dim_Sound_Constraint1">
+              <xs:selector xpath=".//Group_ID_3_Fact_Streams" />
+              <xs:field xpath="sound_id" />
+            </xs:keyref>
+            <xs:keyref name="FK__Fact_Stre__date___63A3C44B" refer="Group_ID_3_Dim_Time_Constraint1">
+              <xs:selector xpath=".//Group_ID_3_Fact_Streams" />
+              <xs:field xpath="date_id" />
+            </xs:keyref>
+            <xs:keyref name="FK__Fact_Stre__album__62AFA012" refer="Group_ID_3_Dim_Album_Constraint1">
+              <xs:selector xpath=".//Group_ID_3_Fact_Streams" />
+              <xs:field xpath="album_id" />
             </xs:keyref>
             <xs:keyref name="FK__Bridge_Tr__artis__5CF6C6BC" refer="Group_ID_3_Dim_Artist_Constraint1">
               <xs:selector xpath=".//Group_ID_3_Bridge_Track_Artist" />
               <xs:field xpath="artist_id" />
+            </xs:keyref>
+            <xs:keyref name="FK__Bridge_Tr__track__5C02A283" refer="Group_ID_3_Dim_Track_Constraint1">
+              <xs:selector xpath=".//Group_ID_3_Bridge_Track_Artist" />
+              <xs:field xpath="track_id" />
             </xs:keyref>
           </xs:element>
         </xs:schema>
