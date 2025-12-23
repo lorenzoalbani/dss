@@ -1,17 +1,17 @@
-﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="492feffe-e55f-426d-a588-6d30b74ef67c" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="3dcc6cad-03e8-4c6f-8ba9-e3270508712a" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Group ID 3 DB 1</ID>
   <MeasureGroups>
     <MeasureGroup>
       <ID>Fact Streams</ID>
       <Partitions>
-        <Partition dwd:design-time-name="708b5b2d-c004-4289-a94c-45f908e4b531">
+        <Partition dwd:design-time-name="6072f497-8d49-4a80-bb7b-d5d4866a31ed">
           <ID>Fact Streams</ID>
           <Name>Fact Streams</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="c31d23ca-7aa6-4084-8660-26ab6e08ec51">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="9c7a001d-9034-45c6-a9bb-82576f30ab43">
             <DataSourceViewID>Group ID 3 DB</DataSourceViewID>
             <TableID>Group_ID_3_Fact_Streams</TableID>
           </Source>
@@ -24,16 +24,56 @@
     <MeasureGroup>
       <ID>Bridge Track Artist</ID>
       <Partitions>
-        <Partition dwd:design-time-name="e1b4dd5b-8fc9-4644-b1ca-b54ad875d85e">
+        <Partition dwd:design-time-name="9f12cfed-7afa-4c9f-8adc-c0b7aef84864">
           <ID>Bridge Track Artist</ID>
           <Name>Bridge Track Artist</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="424e5699-a362-4dc9-b28e-a721eb46ebb7">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="9fb8321b-a681-4e4b-8ad6-e5889976e466">
             <DataSourceViewID>Group ID 3 DB</DataSourceViewID>
             <TableID>Group_ID_3_Bridge_Track_Artist</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Dim Artist</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="e1c85604-c980-404f-8d7d-8d7c6fc4e082">
+          <ID>Dim Artist</ID>
+          <Name>Dim Artist</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="beedf1d5-246b-41ba-903c-631105f4624d">
+            <DataSourceViewID>Group ID 3 DB</DataSourceViewID>
+            <TableID>Group_ID_3_Dim_Artist</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Dim Track</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="eda93df6-1925-4204-b5ca-64fd52ec8ed1">
+          <ID>Dim Track</ID>
+          <Name>Dim Track</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="d85a5fce-f7bf-4edf-a542-f7c69de0a222">
+            <DataSourceViewID>Group ID 3 DB</DataSourceViewID>
+            <TableID>Group_ID_3_Dim_Track</TableID>
           </Source>
           <StorageMode>Molap</StorageMode>
           <CurrentStorageMode>Molap</CurrentStorageMode>

@@ -24,13 +24,13 @@
         <ID>Dim Time</ID>
       </Dimension>
       <Dimension>
-        <ID>Dim Track</ID>
-      </Dimension>
-      <Dimension>
         <ID>Dim Youtube</ID>
       </Dimension>
       <Dimension>
         <ID>Dim_Role</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Track</ID>
       </Dimension>
     </Dimensions>
     <Cubes>
@@ -50,6 +50,22 @@
             <Partitions>
               <Partition>
                 <ID>Bridge Track Artist</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+          <MeasureGroup>
+            <ID>Dim Artist</ID>
+            <Partitions>
+              <Partition>
+                <ID>Dim Artist</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+          <MeasureGroup>
+            <ID>Dim Track</ID>
+            <Partitions>
+              <Partition>
+                <ID>Dim Track</ID>
               </Partition>
             </Partitions>
           </MeasureGroup>
