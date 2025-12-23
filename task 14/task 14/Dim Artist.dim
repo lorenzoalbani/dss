@@ -1,4 +1,4 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="c828d614-d257-4e87-8842-98a0974fad91" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="6e3e4f18-aaaa-4ee3-b949-05d19babbf54" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Dim Artist</ID>
   <Name>Dim Artist</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -8,9 +8,9 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-464" scrolltop="-3335" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7527" y="12197" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-464" scrolltop="-3335" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="6308" y="11070" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
-              <ddsxmlobjectstreamwrapper binary="0100000090019e330100065461686f6d61" />
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
             </font>
             <mouseicon>
               <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
@@ -110,53 +110,53 @@
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="3d9c6bab-6120-464f-b66e-bea0741d74e9">
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="b5706244-0a2a-4dc6-9f56-e46fca41b016">
     <DataSourceViewID>Group ID 3 DB</DataSourceViewID>
   </Source>
-  <UnknownMember>Visible</UnknownMember>
-  <ErrorConfiguration dwd:design-time-name="8d5f2630-70a1-4ae6-af70-7d396c698a78">
+  <UnknownMember>Hidden</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="c0b67d65-64d7-4a83-9aa0-20a5d346af32">
     <KeyNotFound>ReportAndStop</KeyNotFound>
     <KeyDuplicate>ReportAndStop</KeyDuplicate>
     <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
   </ErrorConfiguration>
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
-    <Attribute dwd:design-time-name="60f6f278-2686-4b1b-adb0-d3c1db352c37">
+    <Attribute dwd:design-time-name="f650a56f-d352-4cab-be5b-2e48d261d119">
       <ID>Artist Id</ID>
       <Name>Artist Id</Name>
       <Usage>Key</Usage>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="e17d67c9-34ef-497a-b752-2d00674713ee">
+        <KeyColumn dwd:design-time-name="fc06cac3-ed97-4ac2-a04e-7078736eef77">
           <DataType>Integer</DataType>
           <NullProcessing>UnknownMember</NullProcessing>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="0068de91-40bd-4e5d-98bc-d50e82cebed1">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="77e132cd-c168-40ac-a505-2f90c89ad90c">
             <TableID>Group_ID_3_Dim_Artist</TableID>
             <ColumnID>artist_id</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
-      <NameColumn dwd:design-time-name="efefd639-cb89-4b45-9a5d-01fe0fb216a9">
+      <NameColumn dwd:design-time-name="adf0e784-18d0-4f4f-a24b-84cc3a0ec216">
         <DataType>WChar</DataType>
         <DataSize>255</DataSize>
-        <Source xsi:type="ColumnBinding" dwd:design-time-name="24fddc6f-8114-480d-90bc-d3cbbc731b42">
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="0bbd7000-0997-4bf1-826b-c29e9bb0e1be">
           <TableID>Group_ID_3_Dim_Artist</TableID>
           <ColumnID>name</ColumnID>
         </Source>
       </NameColumn>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="74f05de2-0a4c-409a-84c5-bde34802404f">
+        <AttributeRelationship dwd:design-time-name="dbfc54b4-92fe-4d9c-9780-3bcf1984629a">
           <AttributeID>Gender</AttributeID>
           <Name>Gender</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="0d94a098-c9d2-431c-b046-0214396995c7">
+        <AttributeRelationship dwd:design-time-name="92fb7d35-d476-4e3b-b524-7c865bf08486">
           <AttributeID>Birth Date</AttributeID>
           <Name>Birth Date</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="1dc4cd17-1847-46b1-ad67-d81b43fbf7dc">
+        <AttributeRelationship dwd:design-time-name="2e997a6e-fd7c-4606-bc05-a0f95afb38b7">
           <AttributeID>Birth Place</AttributeID>
           <Name>Birth Place</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="3e7ed04c-8fc1-4ec1-98c9-9c50de0d9e59">
+        <AttributeRelationship dwd:design-time-name="a82c3b53-987f-43fc-8d55-b09317d00439">
           <AttributeID>Nationality</AttributeID>
           <Name>Nationality</Name>
         </AttributeRelationship>
@@ -165,31 +165,39 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="45257d69-009b-4505-922a-f5659bf3da98">
+    <Attribute dwd:design-time-name="5ed0fd06-e808-4376-a948-d90fbb53cd22">
       <ID>Gender</ID>
       <Name>Gender</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="023c0b6b-a662-41ed-9f3e-58fd7a674d22">
+        <KeyColumn dwd:design-time-name="1eef56e9-ab80-4057-b6f2-0780ba57cb11">
           <DataType>WChar</DataType>
           <DataSize>10</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="ab8c7005-31c0-4f24-84cd-7e41e6b14584">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="20f26734-6221-4506-8182-6dc69b31b150">
             <TableID>Group_ID_3_Dim_Artist</TableID>
-            <ColumnID>gender</ColumnID>
+            <ColumnID>Clean_gender</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <NameColumn dwd:design-time-name="24c6c9c8-4895-4717-82a8-41792f315e08">
+        <DataType>WChar</DataType>
+        <DataSize>10</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="206cdaad-8556-48de-9c15-2bef4a1236ff">
+          <TableID>Group_ID_3_Dim_Artist</TableID>
+          <ColumnID>Clean_gender</ColumnID>
+        </Source>
+      </NameColumn>
       <OrderBy>Key</OrderBy>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="85aafdd7-12d2-41f0-9f58-36ca71cc106b">
+    <Attribute dwd:design-time-name="9fa4db43-8345-463a-8494-1551fefe0c59">
       <ID>Birth Date</ID>
       <Name>Birth Date</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="671f5a12-47c8-4e12-b719-3a67c7869716">
+        <KeyColumn dwd:design-time-name="c10d9c09-f6bc-41b8-a404-6c58edaaa2b1">
           <DataType>WChar</DataType>
           <DataSize>10</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="3c402457-8f6e-495c-95e2-c497f3c10b40">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e04a1d4a-c57c-4edb-ac31-c35d7799c580">
             <TableID>Group_ID_3_Dim_Artist</TableID>
             <ColumnID>birth_date</ColumnID>
           </Source>
@@ -199,53 +207,53 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="8616880c-9657-48f1-a5d6-2b6977d7ba31">
+    <Attribute dwd:design-time-name="15142eec-7f20-40ce-9612-1c4828b0953a">
       <ID>Birth Place</ID>
       <Name>Birth Place</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="ba42797c-0e95-4539-985a-d992b4b0e7eb">
+        <KeyColumn dwd:design-time-name="937d5585-0048-4fd6-9e81-17d12a5b9485">
           <DataType>WChar</DataType>
           <DataSize>100</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="31e7e95f-6033-4ea3-ba34-63a4a823bd1d">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="dc94c255-a067-4f50-a1e3-45f35c528f7c">
             <TableID>Group_ID_3_Dim_Artist</TableID>
-            <ColumnID>country</ColumnID>
+            <ColumnID>Clean_Country</ColumnID>
           </Source>
         </KeyColumn>
-        <KeyColumn dwd:design-time-name="c38d298e-6867-4762-9c0f-d955995564ce">
+        <KeyColumn dwd:design-time-name="d72933b0-fde6-42a4-a5d6-69c81fe4e971">
           <DataType>WChar</DataType>
           <DataSize>100</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="bcd9773a-c95a-4ff3-8714-fe423e9923ce">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="853d1409-a5cd-4564-a9db-8a39b347c0ca">
             <TableID>Group_ID_3_Dim_Artist</TableID>
-            <ColumnID>region</ColumnID>
+            <ColumnID>Clean_Region</ColumnID>
           </Source>
         </KeyColumn>
-        <KeyColumn dwd:design-time-name="a144999a-b359-4f49-b735-63e215ae4153">
+        <KeyColumn dwd:design-time-name="bf50c60d-f97e-4b29-8510-9ff36d500fda">
           <DataType>WChar</DataType>
           <DataSize>100</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="0f23eef8-c55e-4c9b-a81b-a25d08114632">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bc9a1bdb-c9e3-4818-9e24-d3ee9e3fa74c">
             <TableID>Group_ID_3_Dim_Artist</TableID>
-            <ColumnID>province</ColumnID>
+            <ColumnID>Clean_province</ColumnID>
           </Source>
         </KeyColumn>
-        <KeyColumn dwd:design-time-name="bef9354f-bdda-4c13-8ea2-167ee5e43d28">
+        <KeyColumn dwd:design-time-name="c4d57430-2151-44b4-9439-9475e216cc84">
           <DataType>WChar</DataType>
           <DataSize>100</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="f4a02206-175d-4522-864f-f3edf61a3525">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fb64dd61-6a36-4fc1-9e13-6551b0fdd2a1">
             <TableID>Group_ID_3_Dim_Artist</TableID>
-            <ColumnID>birth_place</ColumnID>
+            <ColumnID>Clean_birth_place</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
-      <NameColumn dwd:design-time-name="2f44b0ab-b614-468f-a4e2-0228bcffd218">
+      <NameColumn dwd:design-time-name="2b22af77-7b0a-4e56-90b2-ce46face4086">
         <DataType>WChar</DataType>
         <DataSize>100</DataSize>
-        <Source xsi:type="ColumnBinding" dwd:design-time-name="046f0b64-0c03-438f-acba-c44d81e8d38a">
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="37e2aff1-c98c-4824-a289-cb6a4b154116">
           <TableID>Group_ID_3_Dim_Artist</TableID>
-          <ColumnID>birth_place</ColumnID>
+          <ColumnID>Clean_birth_place</ColumnID>
         </Source>
       </NameColumn>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="72a6ec55-3bb5-430b-8117-3d30573599b6">
+        <AttributeRelationship dwd:design-time-name="5e79bbb4-1504-4ae4-97f5-6be7272d5d6d">
           <AttributeID>Province</AttributeID>
           <Name>Province</Name>
         </AttributeRelationship>
@@ -255,72 +263,88 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="8cfac691-2270-442c-a9f1-998e0d32bb3f">
+    <Attribute dwd:design-time-name="e81792cd-ae22-490d-92d8-4475a577caca">
       <ID>Nationality</ID>
       <Name>Nationality</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="8489f675-3394-4fa3-9f81-7513f2d68aee">
+        <KeyColumn dwd:design-time-name="024e0b58-1b11-4796-b012-26cfaabf7bfe">
           <DataType>WChar</DataType>
           <DataSize>100</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="73a9a9d1-f089-42c5-bd91-fcf8c68ea280">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6348b4b8-e2f8-466c-846c-c89f5f1ed7f7">
             <TableID>Group_ID_3_Dim_Artist</TableID>
-            <ColumnID>nationality</ColumnID>
+            <ColumnID>Clean_Nationality</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <NameColumn dwd:design-time-name="e457b59c-4588-48de-be40-5f38d0a35f6e">
+        <DataType>WChar</DataType>
+        <DataSize>100</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="af2237a5-0123-455d-acf0-176d0b42903a">
+          <TableID>Group_ID_3_Dim_Artist</TableID>
+          <ColumnID>Clean_Nationality</ColumnID>
+        </Source>
+      </NameColumn>
       <OrderBy>Key</OrderBy>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="5fcecdc8-0171-4435-b397-c4ae1bddd811">
+    <Attribute dwd:design-time-name="deed2919-9b19-4f0e-8c6e-69fffae3446b">
       <ID>Country</ID>
       <Name>Country</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="c96c9e67-30ed-429e-901e-f67703ee2f06">
+        <KeyColumn dwd:design-time-name="1acc5df5-b867-4606-8edd-cf4a8ec00a41">
           <DataType>WChar</DataType>
           <DataSize>100</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="a00a5628-8c77-4579-bdd3-c052838be2dd">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="31dedd1f-1795-4581-a01d-17660939e9ab">
             <TableID>Group_ID_3_Dim_Artist</TableID>
-            <ColumnID>country</ColumnID>
+            <ColumnID>Clean_Country</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
+      <NameColumn dwd:design-time-name="377a0038-380c-4a63-9075-5ae74b8b5889">
+        <DataType>WChar</DataType>
+        <DataSize>100</DataSize>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="df52610b-3753-4697-922a-30b38c51c1ff">
+          <TableID>Group_ID_3_Dim_Artist</TableID>
+          <ColumnID>Clean_Country</ColumnID>
+        </Source>
+      </NameColumn>
       <OrderBy>Key</OrderBy>
       <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="c3d58917-4afd-4916-af6e-c7d5061ed9ab">
+    <Attribute dwd:design-time-name="6eb6da44-a634-44fe-b400-ef2db1232bfd">
       <ID>Region</ID>
       <Name>Region</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="100fe7a9-f670-4b32-9861-c533b6db0565">
+        <KeyColumn dwd:design-time-name="e755622d-3e76-4f9a-881f-9abb0145df44">
           <DataType>WChar</DataType>
           <DataSize>100</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="107b92cc-6097-4b2f-a9ae-f922435f6b82">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="afd012c3-b46a-4449-8aa8-4d6b00d790bc">
             <TableID>Group_ID_3_Dim_Artist</TableID>
-            <ColumnID>country</ColumnID>
+            <ColumnID>Clean_Country</ColumnID>
           </Source>
         </KeyColumn>
-        <KeyColumn dwd:design-time-name="960506cd-c2ea-4abe-8544-936d9bff121d">
+        <KeyColumn dwd:design-time-name="a8980c1e-2aab-401b-bbb7-f2454120beca">
           <DataType>WChar</DataType>
           <DataSize>100</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="71f0d6f4-d63a-4757-ba3d-a6746ef7b2b0">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f1af0512-f0b3-4aed-9c40-23ea77bbd3fe">
             <TableID>Group_ID_3_Dim_Artist</TableID>
-            <ColumnID>region</ColumnID>
+            <ColumnID>Clean_Region</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
-      <NameColumn dwd:design-time-name="bcf01da6-73b1-469e-aeb9-7801a0a0e5ba">
+      <NameColumn dwd:design-time-name="26a1a21d-7947-4b9a-bd29-e18fd588aaf9">
         <DataType>WChar</DataType>
         <DataSize>100</DataSize>
-        <Source xsi:type="ColumnBinding" dwd:design-time-name="a00038ee-2bc9-4fc7-85f6-45cf31256b81">
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="56901ff7-4d81-4bf4-b93b-00d63a03355a">
           <TableID>Group_ID_3_Dim_Artist</TableID>
-          <ColumnID>region</ColumnID>
+          <ColumnID>Clean_Region</ColumnID>
         </Source>
       </NameColumn>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="bd1564b5-cf14-48f1-a3dc-d3c5c6d9bb52">
+        <AttributeRelationship dwd:design-time-name="69ddb49b-1d46-4068-a497-24ddbb1f4850">
           <AttributeID>Country</AttributeID>
           <Name>Country</Name>
         </AttributeRelationship>
@@ -330,45 +354,45 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="fc6f4be4-c0a3-4fde-b42a-3a13edb16a9a">
+    <Attribute dwd:design-time-name="db849fc1-b85d-4f11-9759-932f3c5337dc">
       <ID>Province</ID>
       <Name>Province</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="a6d3c83c-7fc7-4b95-bd19-905945f28eda">
+        <KeyColumn dwd:design-time-name="68c12299-4123-4ee6-82a4-e92195d08674">
           <DataType>WChar</DataType>
           <DataSize>100</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="72515ceb-cf9f-4185-a0d6-b6c5ad2d46e1">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="00345235-ed9d-4cdc-8e8c-45e8f4cd6032">
             <TableID>Group_ID_3_Dim_Artist</TableID>
-            <ColumnID>country</ColumnID>
+            <ColumnID>Clean_Country</ColumnID>
           </Source>
         </KeyColumn>
-        <KeyColumn dwd:design-time-name="d4292e40-ebda-4a4f-a397-cfc4c0c8a6c6">
+        <KeyColumn dwd:design-time-name="0d697a47-8843-47d0-a0a1-4e40698f7cf1">
           <DataType>WChar</DataType>
           <DataSize>100</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="dbefde88-71ee-4e35-9761-c5b86adcce74">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b75fb61b-bcb5-489e-a2c4-034af7693b88">
             <TableID>Group_ID_3_Dim_Artist</TableID>
-            <ColumnID>region</ColumnID>
+            <ColumnID>Clean_Region</ColumnID>
           </Source>
         </KeyColumn>
-        <KeyColumn dwd:design-time-name="effce83d-0f5e-40fc-85d8-b2fcc7d87b92">
+        <KeyColumn dwd:design-time-name="108c3173-17c0-488e-9e9e-22f484f8cac8">
           <DataType>WChar</DataType>
           <DataSize>100</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="7f9d95c3-0360-462d-ab86-1cee674d3010">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e3ace3e3-3510-4610-b04e-4ac825f5c4bb">
             <TableID>Group_ID_3_Dim_Artist</TableID>
-            <ColumnID>province</ColumnID>
+            <ColumnID>Clean_province</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
-      <NameColumn dwd:design-time-name="e72af9b1-f097-4875-a311-de72a76bcef6">
+      <NameColumn dwd:design-time-name="918e5019-9ad2-4e06-bf2c-65e2c3d7ece0">
         <DataType>WChar</DataType>
         <DataSize>100</DataSize>
-        <Source xsi:type="ColumnBinding" dwd:design-time-name="728064e1-3e75-469f-b6c4-ee1a93cc38ed">
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="bd8d5920-e772-425b-854a-c28aecdd778f">
           <TableID>Group_ID_3_Dim_Artist</TableID>
-          <ColumnID>province</ColumnID>
+          <ColumnID>Clean_province</ColumnID>
         </Source>
       </NameColumn>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="fc60e8c6-db81-4e6e-9d83-83de7b65da2c">
+        <AttributeRelationship dwd:design-time-name="b81e9976-555e-4a35-83e9-9843907492d9">
           <AttributeID>Region</AttributeID>
           <Name>Region</Name>
         </AttributeRelationship>
@@ -380,26 +404,26 @@
     </Attribute>
   </Attributes>
   <Hierarchies>
-    <Hierarchy dwd:design-time-name="67336f91-352f-4f46-966f-9d85da691ca5">
+    <Hierarchy dwd:design-time-name="545363e5-96d0-44b9-a214-14496734df4a">
       <ID>Gerarchia</ID>
       <Name>Geography</Name>
       <Levels>
-        <Level dwd:design-time-name="3963afe6-e36d-4ccd-9a80-c27ba49f5cdb">
+        <Level dwd:design-time-name="9f12ef86-29c9-4ffe-a5f6-02baec509c49">
           <ID>Country</ID>
           <Name>Country</Name>
           <SourceAttributeID>Country</SourceAttributeID>
         </Level>
-        <Level dwd:design-time-name="5b2cdbc9-f6fb-4940-9f8c-6f2c449a65c5">
+        <Level dwd:design-time-name="091c737b-15b5-40dc-b1ba-44647f9e5287">
           <ID>Region</ID>
           <Name>Region</Name>
           <SourceAttributeID>Region</SourceAttributeID>
         </Level>
-        <Level dwd:design-time-name="d41f1e34-f941-40ef-ab90-4552d7035799">
+        <Level dwd:design-time-name="fd7616f0-0152-4ea3-bbb2-2ba35f9e3b6b">
           <ID>Province</ID>
           <Name>Province</Name>
           <SourceAttributeID>Province</SourceAttributeID>
         </Level>
-        <Level dwd:design-time-name="d85dea6d-d7d8-4c05-97da-8e26c10888b6">
+        <Level dwd:design-time-name="655b9691-5bd1-450b-88a5-89909be79435">
           <ID>Birth Place</ID>
           <Name>Birth Place</Name>
           <SourceAttributeID>Birth Place</SourceAttributeID>

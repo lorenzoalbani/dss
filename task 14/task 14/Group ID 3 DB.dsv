@@ -1,4 +1,4 @@
-﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="615b47b5-160b-408a-9b9e-174a349be932" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="9d47384b-4cbc-4778-8b97-1d6942a7d1f0" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Group ID 3 DB</ID>
   <Name>Group ID 3 DB</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -27,7 +27,7 @@
             <Name>_ALL_TABLES_</Name>
             <DiagramLayout>
               <dds>
-                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="34" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2856" scrolltop="7439" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="85" x="19050" y="16870" backcolor="16119285" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="34" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2856" scrolltop="13823" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="85" x="15939" y="12361" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                   <font>
                     <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
                   </font>
@@ -129,7 +129,7 @@
                 <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="2720" top="16615" logicalid="25" controlid="9" masterid="0" hint1="0" hint2="0" width="1156" height="3121" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
-                      <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                     </ddsxmlobj>
                   </control>
                   <layoutobject>
@@ -149,7 +149,7 @@
                 <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="4776" top="19943" logicalid="26" controlid="10" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
-                      <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                     </ddsxmlobj>
                   </control>
                   <layoutobject>
@@ -167,7 +167,7 @@
                 <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="8834" top="9164" logicalid="27" controlid="11" masterid="0" hint1="0" hint2="0" width="5942" height="3372" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
-                      <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                     </ddsxmlobj>
                   </control>
                   <layoutobject>
@@ -187,7 +187,7 @@
                 <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="8185" top="2689" logicalid="28" controlid="12" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
-                      <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                     </ddsxmlobj>
                   </control>
                   <layoutobject>
@@ -205,7 +205,7 @@
                 <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="9812" top="7127" logicalid="29" controlid="13" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
-                      <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                     </ddsxmlobj>
                   </control>
                   <layoutobject>
@@ -223,7 +223,7 @@
                 <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="2720" top="9164" logicalid="30" controlid="14" masterid="0" hint1="0" hint2="0" width="5614" height="3450" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
-                      <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                     </ddsxmlobj>
                   </control>
                   <layoutobject>
@@ -243,7 +243,7 @@
                 <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="4356" top="7127" logicalid="31" controlid="15" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
-                      <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                     </ddsxmlobj>
                   </control>
                   <layoutobject>
@@ -261,7 +261,7 @@
                 <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="8284" top="9164" logicalid="32" controlid="16" masterid="0" hint1="0" hint2="0" width="1092" height="9178" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                   <control>
                     <ddsxmlobj>
-                      <polyline endtypedst="6" endtypesrc="3" usercolor="1973790" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+                      <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
                     </ddsxmlobj>
                   </control>
                   <layoutobject>
@@ -283,7 +283,7 @@
             <ShowRelationshipNames>False</ShowRelationshipNames>
             <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
             <DiagramViewPortLeft>-2856</DiagramViewPortLeft>
-            <DiagramViewPortTop>7439</DiagramViewPortTop>
+            <DiagramViewPortTop>13823</DiagramViewPortTop>
             <DiagramBoundingLeft>0</DiagramBoundingLeft>
             <DiagramBoundingTop>0</DiagramBoundingTop>
             <DiagramZoom>85</DiagramZoom>
@@ -323,7 +323,7 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="Weight" msdata:ReadOnly="true" msprop:Description="Track's weight based on artist's role in the song" msprop:design-time-name="f02e5ba3-aeff-428c-b184-2e329ba21801" msprop:IsLogical="True" msprop:DbColumnName="Weight" msprop:ComputedColumnExpression="CASE&#xD;&#xA;    WHEN role = 'Main'     THEN 0.8&#xD;&#xA;    WHEN role = 'Featured' THEN 0.2&#xD;&#xA;    ELSE 0&#xD;&#xA;END" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Weight" msdata:ReadOnly="true" msprop:DbColumnName="Weight" msprop:IsLogical="True" msprop:design-time-name="f02e5ba3-aeff-428c-b184-2e329ba21801" msprop:Description="Track's weight based on artist's role in the song" msprop:ComputedColumnExpression="CASE&#xD;&#xA;    WHEN role = 'Main'     THEN 0.8&#xD;&#xA;    WHEN role = 'Featured' THEN 0.2&#xD;&#xA;    ELSE 0&#xD;&#xA;END" type="xs:decimal" minOccurs="0" />
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
@@ -352,6 +352,13 @@
                     </xs:simpleType>
                   </xs:element>
                   <xs:element name="album_type" msprop:FriendlyName="album_type" msprop:DbColumnName="album_type" msprop:design-time-name="8988fc25-4a5e-4a66-98c0-29c198f81012" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="50" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Clean_album_type" msdata:ReadOnly="true" msprop:DbColumnName="Clean_album_type" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE&#xD;&#xA;    WHEN album_type IS NULL THEN 'Unknown'&#xD;&#xA;    WHEN LEN(album_type) = 0 THEN 'Unknown'&#xD;&#xA;    WHEN LTRIM(RTRIM(album_type)) = '' THEN 'Unknown'&#xD;&#xA;    ELSE album_type&#xD;&#xA;END" msprop:design-time-name="b132dac7-fe34-4869-afad-15a6e137b44b" msprop:Description="Cleaned album type" minOccurs="0">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="50" />
@@ -441,6 +448,48 @@
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Clean_Country" msdata:ReadOnly="true" msprop:DbColumnName="Clean_Country" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE&#xD;&#xA;    WHEN Country IS NULL THEN 'Unknown'&#xD;&#xA;    WHEN LEN(Country) = 0 THEN 'Unknown'&#xD;&#xA;    WHEN LTRIM(RTRIM(Country)) = '' THEN 'Unknown'&#xD;&#xA;    ELSE Country&#xD;&#xA;END" msprop:design-time-name="07f8a8ad-fca4-49cd-8c0d-814d19c79c8f" msprop:Description="Clean data Country" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Clean_Region" msdata:ReadOnly="true" msprop:DbColumnName="Clean_Region" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE&#xD;&#xA;    WHEN region IS NOT NULL AND region &lt;&gt; '' THEN region&#xD;&#xA;    WHEN country = 'Italy' THEN 'Unknown (Italy)'&#xD;&#xA;    WHEN country IS NOT NULL AND country &lt;&gt; '' THEN country&#xD;&#xA;    ELSE 'Unknown'&#xD;&#xA;END" msprop:design-time-name="4ea95934-29fb-49b1-bb16-cb2078b583e6" msprop:Description="Cleaned region missing values" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Clean_province" msdata:ReadOnly="true" msprop:DbColumnName="Clean_province" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE&#xD;&#xA;    WHEN province IS NOT NULL AND province &lt;&gt; '' THEN province&#xD;&#xA;    WHEN region IS NOT NULL AND region &lt;&gt; '' THEN 'Unknown (' + region + ')'&#xD;&#xA;    WHEN country = 'Italy' THEN 'Unknown (Italy)'&#xD;&#xA;    WHEN country IS NOT NULL AND country &lt;&gt; '' THEN country&#xD;&#xA;    ELSE 'Unknown'&#xD;&#xA;END" msprop:design-time-name="61400e84-043c-4616-ae52-3ab1d5d9327f" msprop:Description="Clean province missing values" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="110" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Clean_birth_place" msdata:ReadOnly="true" msprop:DbColumnName="Clean_birth_place" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE&#xD;&#xA;    WHEN birth_place IS NOT NULL AND birth_place &lt;&gt; '' THEN birth_place&#xD;&#xA;    WHEN province IS NOT NULL AND province &lt;&gt; '' THEN 'Unknown (' + province + ')'&#xD;&#xA;    WHEN region IS NOT NULL AND region &lt;&gt; '' THEN 'Unknown (' + region + ')'&#xD;&#xA;    WHEN country = 'Italy' THEN 'Unknown (Italy)'&#xD;&#xA;    WHEN country IS NOT NULL AND country &lt;&gt; '' THEN country&#xD;&#xA;    ELSE 'Unknown'&#xD;&#xA;END" msprop:design-time-name="94ce8eef-bc9e-4299-977b-6536bbb70a19" msprop:Description="Cleaned birth_place missing values" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="110" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Clean_gender" msdata:ReadOnly="true" msprop:DbColumnName="Clean_gender" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE&#xD;&#xA;    WHEN gender IS NULL THEN 'Unknown'&#xD;&#xA;    WHEN LEN(gender) = 0 THEN 'Unknown'&#xD;&#xA;    WHEN LTRIM(RTRIM(gender)) = '' THEN 'Unknown'&#xD;&#xA;    ELSE gender&#xD;&#xA;END" msprop:design-time-name="08c25622-ee43-4c83-85a4-0e3c5b4c3c6c" msprop:Description="Cleaned gender missing values" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Clean_Nationality" msdata:ReadOnly="true" msprop:DbColumnName="Clean_Nationality" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE&#xD;&#xA;    WHEN nationality IS NULL THEN 'Unknown'&#xD;&#xA;    WHEN LEN(nationality) = 0 THEN 'Unknown'&#xD;&#xA;    WHEN LTRIM(RTRIM(nationality)) = '' THEN 'Unknown'&#xD;&#xA;    ELSE nationality&#xD;&#xA;END" msprop:design-time-name="53e10283-38cd-4434-92b8-be2d0f752cbf" msprop:Description="Cleaned nationality missing values" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
@@ -549,14 +598,14 @@
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="vulgarity_IT" msdata:ReadOnly="true" msprop:DbColumnName="vulgarity_IT" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE&#xD;&#xA;    WHEN swear_it = 0 THEN 'Clean (0)'&#xD;&#xA;    WHEN swear_it &gt; 0 AND swear_IT &lt;= 5 THEN 'Low (1-5)'&#xD;&#xA;    WHEN swear_it &gt; 5 AND swear_IT &lt;= 20 THEN 'High (6-20)'&#xD;&#xA;    WHEN swear_it &gt; 20 THEN 'Extreme (&gt;20)'&#xD;&#xA;    ELSE 'Unknown'&#xD;&#xA;END" msprop:design-time-name="7907200f-0923-4333-8750-9cee0e2c5796" msprop:Description="Vulgarity level of the lyrics" msprop:FriendlyName="vulgarity_IT">
+                  <xs:element name="vulgarity_IT" msdata:ReadOnly="true" msprop:DbColumnName="vulgarity_IT" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE&#xD;&#xA;    WHEN swear_it = 0 THEN 'Clean (0)'&#xD;&#xA;    WHEN swear_it &gt; 0 AND swear_IT &lt;= 3 THEN 'Low (1-5)'&#xD;&#xA;    WHEN swear_it &gt; 3 AND swear_IT &lt;= 15 THEN 'High (4-15)'&#xD;&#xA;    WHEN swear_it &gt; 15 THEN 'Extreme (&gt;15)'&#xD;&#xA;    ELSE 'Unknown'&#xD;&#xA;END" msprop:design-time-name="7907200f-0923-4333-8750-9cee0e2c5796" msprop:Description="Vulgarity level of the lyrics" msprop:FriendlyName="vulgarity_IT">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="13" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
-                  <xs:element name="vulgarity_EN" msdata:ReadOnly="true" msprop:DbColumnName="vulgarity_EN" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE&#xD;&#xA;    WHEN swear_en = 0 THEN 'Clean (0)'&#xD;&#xA;    WHEN swear_en &gt; 0 AND swear_IT &lt;= 5 THEN 'Low (1-5)'&#xD;&#xA;    WHEN swear_en &gt; 5 AND swear_IT &lt;= 15 THEN 'High (6-15)'&#xD;&#xA;    WHEN swear_en &gt; 20 THEN 'Extreme (&gt;20)'&#xD;&#xA;    ELSE 'Unknown'&#xD;&#xA;END" msprop:design-time-name="3e24b80b-5d2e-4f16-9539-9740e330faa8" msprop:Description="vulgarity level for english words">
+                  <xs:element name="vulgarity_EN" msdata:ReadOnly="true" msprop:DbColumnName="vulgarity_EN" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE&#xD;&#xA;    WHEN swear_en = 0 THEN 'Clean (0)'&#xD;&#xA;    WHEN swear_en &gt; 0 AND swear_IT &lt;= 3 THEN 'Low (1-3)'&#xD;&#xA;    WHEN swear_en &gt; 3 AND swear_IT &lt;= 15 THEN 'High (4-15)'&#xD;&#xA;    WHEN swear_en &gt; 15 THEN 'Extreme (&gt;15)'&#xD;&#xA;    ELSE 'Unknown'&#xD;&#xA;END" msprop:design-time-name="3e24b80b-5d2e-4f16-9539-9740e330faa8" msprop:Description="vulgarity level for english words">
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="13" />
@@ -588,6 +637,13 @@
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:maxLength value="22" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Clean_language" msdata:ReadOnly="true" msprop:DbColumnName="Clean_language" msprop:IsLogical="True" msprop:ComputedColumnExpression="CASE&#xD;&#xA;    WHEN language IS NULL THEN 'Unknown'&#xD;&#xA;    WHEN LEN(language) = 0 THEN 'Unknown'&#xD;&#xA;    WHEN LTRIM(RTRIM(language)) = '' THEN 'Unknown'&#xD;&#xA;    ELSE language&#xD;&#xA;END" msprop:design-time-name="379581f6-17e4-4909-b473-5830f9f3899b" msprop:Description="Cleaned language missing values" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
                       </xs:restriction>
                     </xs:simpleType>
                   </xs:element>
