@@ -3,7 +3,7 @@
     <DataSources>
       <DataSource>
         <ID>Group ID 3 DB</ID>
-        <ConnectionString>Provider=SQLOLEDB.1;Data Source=131.114.50.57;Password=;User ID=;Initial Catalog=Group_ID_3_DB</ConnectionString>
+        <ConnectionString>Provider=SQLOLEDB.1;Data Source=131.114.50.57;Persist Security Info=True;Password=;User ID=;Initial Catalog=Group_ID_3_DB</ConnectionString>
         <ImpersonationInfo>
           <ImpersonationMode xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Default</ImpersonationMode>
           <ImpersonationInfoSecurity xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">Unchanged</ImpersonationInfoSecurity>
@@ -24,13 +24,13 @@
         <ID>Dim Time</ID>
       </Dimension>
       <Dimension>
+        <ID>Dim Track</ID>
+      </Dimension>
+      <Dimension>
         <ID>Dim Youtube</ID>
       </Dimension>
       <Dimension>
         <ID>Dim_Role</ID>
-      </Dimension>
-      <Dimension>
-        <ID>Dim Track</ID>
       </Dimension>
     </Dimensions>
     <Cubes>
