@@ -1,9 +1,9 @@
 WITH
-  /* Streams totali per anno (puoi usare anche Streams_Weighted) */
+  /* Streams totali per anno */
   MEMBER [Measures].[Year Streams] AS
     [Measures].[Streams 1month]
 
-  /* Streams anno precedente, stesso membro di categoria */
+  /* Streams anno precedente con stesso membro di categoria */
   MEMBER [Measures].[Prev Year Streams] AS
     (
       [Measures].[Year Streams],
@@ -14,7 +14,7 @@ WITH
       )
     )
 
-  /* % incremento/decremento rispetto all'anno precedente */
+  /* incremento/decremento rispetto all'anno precedente */
   MEMBER [Measures].[YoY % Streams] AS
     IIF(
       [Measures].[Prev Year Streams] = 0

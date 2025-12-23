@@ -3,7 +3,7 @@ WITH
   MEMBER [Measures].[Season Streams] AS
     [Measures].[Streams 1month]
 
-  /* Streams stessa categoria, stessa season, anno precedente */
+  /* Streams stessa categoria con stessa season e anno precedente */
   MEMBER [Measures].[Prev Year Season Streams] AS
     (
       [Measures].[Streams 1month],
@@ -15,7 +15,7 @@ WITH
       )
     )
 
-  /* % incremento rispetto all'anno precedente */
+  /* incremento rispetto all'anno precedente */
   MEMBER [Measures].[% Increase vs Prev] AS
     IIF(
       [Measures].[Prev Year Season Streams] = 0

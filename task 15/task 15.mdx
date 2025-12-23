@@ -2,7 +2,7 @@ SELECT
     [Measures].[Streams 1month] ON COLUMNS,
     NON EMPTY
     (
-        -- 1. ordino i mesi
+        -- ordino i mesi
         ORDER(
             [Dim Time].[Month].[Month].MEMBERS, 
             [Dim Time].[Month].CurrentMember.MemberValue,
