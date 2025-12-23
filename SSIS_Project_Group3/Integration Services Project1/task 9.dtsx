@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{DAA30E6E-CB91-4826-9DC5-46A88AA8C8AF}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{A7CE7B08-5577-4322-99A4-0FE09463EC6A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMQjGq9ZsVEiR12vyhqjgtwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAvoDmx7BJI1SG58Ub7Aev8iV3lSDsq4dmsltaAd7LZIgAAAAAOgAAAAAIAACAAAAA3GOfA3+2vW26z7MW8k2aPJFLrsoG5bWStYCRER7kt8iAAAAByiPEhBtwX6dIjuumHT7Yjm5oknKyvK55qKny6YClOHEAAAAD46090azH6q38WuAUoy/16/cbfThPo7DaL1m3EEKcFCjpREMyi2pRPtF9KKUr4tQM7nYtvY2CnhLPpusjJiGY2</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMQjGq9ZsVEiR12vyhqjgtwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAaKV1zq+ga3A+ASJmDcy6kexrPjxecDLxkdi8YH6N27wAAAAAOgAAAAAIAACAAAAA3aHym/WRtg6S2kVEa5N55GrqRNgq6dttIHPmNo3zyvyAAAACGUF9ezv8FvWeKVPuLTe9jxCV5SzhMSZs9Hmg99NgKLUAAAABrBdkPhI4eSVr2HuUAyONhiwTnTPj6RxqDkHzC510bJwnQOXc3mv+WNQXYlS5Cr3lQTFaZoE+eHJgebJ9pKm5i</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1327,6 +1327,10 @@ where [refTable].[date_id] = ?</property>
           Id="Package\Attività Flusso di dati\Fact_Streams"
           TopLeft="93.5,60" />
         <NodeLayout
+          Size="173.6,41.6"
+          Id="Package\Attività Flusso di dati\Destinazione file flat"
+          TopLeft="78.5714287386865,513.445377701206" />
+        <NodeLayout
           Size="158.4,41.6"
           Id="Package\Attività Flusso di dati\Colonna derivata"
           TopLeft="85,290" />
@@ -1391,6 +1395,28 @@ where [refTable].[date_id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output colonna derivata1]"
+          TopLeft="162.869387858281,470.192436973832">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43.2529407273732"
+              Start="0,0"
+              End="0,35.7529407273732">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.7529407273732" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Attività Flusso di dati.Paths[Output colonna derivata]"
           TopLeft="162.875,332">
           <EdgeLayout.Curve>
@@ -1448,32 +1474,6 @@ where [refTable].[date_id] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,28.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="173.6,41.6"
-          Id="Package\Attività Flusso di dati\Destinazione file flat"
-          TopLeft="78.5714287386865,513.445377701206" />
-        <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Output colonna derivata1]"
-          TopLeft="162.869387858281,470.192436973832">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,43.2529407273732"
-              Start="0,0"
-              End="0,35.7529407273732">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,35.7529407273732" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
