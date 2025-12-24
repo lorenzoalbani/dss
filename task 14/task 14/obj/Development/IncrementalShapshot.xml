@@ -82,7 +82,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>J+EPq3bkwfhF04qnoRzIufWs4oY=23/12/2025 19:24:5718/12/2025 09:07:35TvqAJMoW8Sr8XJ+X42LGoiD52L8=23/12/2025 18:26:2518/12/2025 09:07:35</TimeStamp>
+        <TimeStamp>aImIwe2N3kpSr02VWQveuNDGNhE=24/12/2025 16:20:0218/12/2025 09:07:35TvqAJMoW8Sr8XJ+X42LGoiD52L8=23/12/2025 18:26:2518/12/2025 09:07:35</TimeStamp>
         <ID>
           <String>Group ID 3 DB</String>
         </ID>
@@ -99,5 +99,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2025-12-23T18:31:59.313333Z</LastDeployed>
+  <LastDeployed>2025-12-24T15:27:05.426667Z</LastDeployed>
 </DeploymentSnapshot>
