@@ -1,0 +1,61 @@
+WITH
+  /* Categoria viralità Spotify da popularity */
+  MEMBER [Measures].[Spotify_Virality_Category] AS
+    CASE
+      WHEN [Measures].[Popularity] >= 80 THEN "Global Hit"
+      WHEN [Measures].[Popularity] >= 60 THEN "Mainstream"
+      WHEN [Measures].[Popularity] >= 40 THEN "Trending"
+      WHEN [Measures].[Popularity] >= 20 THEN "Emerging"
+      ELSE "Niche"
+    END
+
+  /* Streams delle tracce Global Hit su entrambi i canali */
+  MEMBER [Measures].[Streams Both Global Hit] AS
+    (
+      [Measures].[Streams 1month],
+      [Dim Youtube].[Virality Id].[Global Hit]
+    )
+    *
+    IIF(
+      [Measures].[Spotify_Virality_Category] = "Global Hit",
+      1,
+      0
+    )
+
+  /* Streams totali Global Hit filtrate - aggregato per anno */
+  MEMBER [Measures].[Total Streams Both Global Hit] AS
+    SUM(
+      [Dim Track].[Track Id].Members,
+      [Measures].[Streams Both Global Hit]
+    )
+
+  /* Quota streams Global Hit su entrambi rispetto al totale anno */
+  MEMBER [Measures].[% Streams Both Global Hit] AS
+    DIVIDE(
+      [Measures].[Total Streams Both Global Hit],
+      [Measures].[Streams 1month]
+    )
+
+
+  MEMBER [Measures].[YoY Change % Both Global Hit] AS
+  [Measures].[% Streams Both Global Hit] - 
+  ([Measures].[% Streams Both Global Hit], 
+   PARALLELPERIOD([Dim Time].[Time_hierarchy].[Year], 1))
+
+
+
+  
+
+SELECT
+  { [Measures].[Streams 1month],
+    [Measures].[Total Streams Both Global Hit],
+    [Measures].[% Streams Both Global Hit],
+    [Measures].[YoY Change % Both Global Hit] } ON COLUMNS,
+
+  NON EMPTY
+    EXCEPT(
+      [Dim Time].[Time_hierarchy].[Year].Members,
+      {[Dim Time].[Time_hierarchy].[Year].[0]}
+    ) ON ROWS
+
+FROM [Group ID 3 DB];

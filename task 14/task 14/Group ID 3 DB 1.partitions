@@ -1,17 +1,17 @@
-﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="3dcc6cad-03e8-4c6f-8ba9-e3270508712a" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="bea17d76-85ab-4c20-8553-06c2ab196f37" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Group ID 3 DB 1</ID>
   <MeasureGroups>
     <MeasureGroup>
       <ID>Fact Streams</ID>
       <Partitions>
-        <Partition dwd:design-time-name="6072f497-8d49-4a80-bb7b-d5d4866a31ed">
+        <Partition dwd:design-time-name="7e3e1570-8f50-43ac-9e15-2a5a5432038d">
           <ID>Fact Streams</ID>
           <Name>Fact Streams</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="9c7a001d-9034-45c6-a9bb-82576f30ab43">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="1676a27f-efa4-4e71-9a75-a2252d8c795d">
             <DataSourceViewID>Group ID 3 DB</DataSourceViewID>
             <TableID>Group_ID_3_Fact_Streams</TableID>
           </Source>
@@ -24,14 +24,14 @@
     <MeasureGroup>
       <ID>Bridge Track Artist</ID>
       <Partitions>
-        <Partition dwd:design-time-name="9f12cfed-7afa-4c9f-8adc-c0b7aef84864">
+        <Partition dwd:design-time-name="dbb9f7e8-3291-4a74-9e46-bde6dbb714e1">
           <ID>Bridge Track Artist</ID>
           <Name>Bridge Track Artist</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="9fb8321b-a681-4e4b-8ad6-e5889976e466">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="b494da7d-fd28-40cd-8d74-0628279650d5">
             <DataSourceViewID>Group ID 3 DB</DataSourceViewID>
             <TableID>Group_ID_3_Bridge_Track_Artist</TableID>
           </Source>
@@ -44,14 +44,14 @@
     <MeasureGroup>
       <ID>Dim Artist</ID>
       <Partitions>
-        <Partition dwd:design-time-name="e1c85604-c980-404f-8d7d-8d7c6fc4e082">
+        <Partition dwd:design-time-name="7aa83906-6f35-4dff-8c37-f20c00462d4c">
           <ID>Dim Artist</ID>
           <Name>Dim Artist</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="beedf1d5-246b-41ba-903c-631105f4624d">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="64852e3c-fdba-4c70-8ef1-33ac1bbdba07">
             <DataSourceViewID>Group ID 3 DB</DataSourceViewID>
             <TableID>Group_ID_3_Dim_Artist</TableID>
           </Source>
@@ -64,14 +64,14 @@
     <MeasureGroup>
       <ID>Dim Track</ID>
       <Partitions>
-        <Partition dwd:design-time-name="eda93df6-1925-4204-b5ca-64fd52ec8ed1">
+        <Partition dwd:design-time-name="04ff88b0-79e6-41e8-83e0-9ccbf0d63786">
           <ID>Dim Track</ID>
           <Name>Dim Track</Name>
           <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
           <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
           <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
           <State>Unprocessed</State>
-          <Source xsi:type="DsvTableBinding" dwd:design-time-name="d85a5fce-f7bf-4edf-a542-f7c69de0a222">
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="07948496-48e5-4f45-b78c-80bea56f962c">
             <DataSourceViewID>Group ID 3 DB</DataSourceViewID>
             <TableID>Group_ID_3_Dim_Track</TableID>
           </Source>
