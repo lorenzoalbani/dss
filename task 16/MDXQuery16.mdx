@@ -1,7 +1,7 @@
 WITH
   MEMBER [Measures].[Streams_Weighted] AS
-       [Measures].[Streams 1month]
-     * [Dim_Role].[Role].CURRENTMEMBER.Properties("Weight", TYPED)
+  [Measures].[Streams 1month] * 
+  VAL([Dim_Role].[Weight].CURRENTMEMBER.Name)
 
   MEMBER [Measures].[Streams_Weighted_ArtistYear] AS
      SUM(
