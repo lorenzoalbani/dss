@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMQjGq9ZsVEiR12vyhqjgtwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACBYVVnouP67ulbqUIN/ec/1uNP4NzmevrhKF1Jm0zSpAAAAAAOgAAAAAIAACAAAAARmiPRc4oOAGOPj6Rm4whQavCHqq60/k/kw60YfxUuzyAAAACxXCel7acFIH7wfkk0NK4pjzza3fVqozCU9x6Sbgc8G0AAAADYfw4d0wAmV8fafJVGETd2wYT3/TVuuTWKmH5mCIeDGgOu2zzwvF8xBKDgmF/bXWUzXdJadClbhBcpRD/WeTVm</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMQjGq9ZsVEiR12vyhqjgtwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADQu1x/VCV2C0r7c/XdwZ/N/Dj2v633hmGyF2d56ZrCxgAAAAAOgAAAAAIAACAAAACUYIUjCiS76r/EXF39nse00743Py+cXqY7xJrtOFMAtCAAAAAwc4EHr73s9QY4/9563F43uRZQz6pkmw0XlxRNou1NdUAAAADQJWGJMrKLPkiJtXqse658JHDxrT6boqfwxRzJcFVz4Aus/b/H/qMYayQ0fgl07zFyLbukfwBTohwbb65pfX74</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -1360,7 +1360,7 @@ where [refTable].[sound_id] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifica l'elenco di identificatori di derivazione corrispondenti ai parametri utilizzati dall'istruzione SQL nella proprietà SQLCommand. Le voci nell'elenco sono separate da punti e virgola."
-                  name="ParameterMap">#{Package\Attività Flusso di dati\630:invalid};</property>
+                  name="ParameterMap">#{Package\Attività Flusso di dati\779:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."

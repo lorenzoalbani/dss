@@ -1,19 +1,17 @@
-SELECT
-    [Measures].[Streams 1month] ON COLUMNS,
-    NON EMPTY
+SELECT 
+    {[Measures].[Streams 1month]} ON 0,
+
+    NON EMPTY 
     (
-        -- ordino i mesi
-        ORDER(
-            [Dim Time].[Month].[Month].MEMBERS, 
-            [Dim Time].[Month].CurrentMember.MemberValue,
-            BASC
+        [Dim Time].[Month_flat].[Month_flat].Members
+        * FILTER(
+            DESCENDANTS(
+                [Dim Artist].[Geography].[Country], 
+                [Dim Artist].[Geography].[Region], 
+                SELF_AND_BEFORE
+            ),
+            [Dim Artist].[Geography].CurrentMember.Name <> "Unknown" 
         )
-        *
-        -- incrocio con la geografia
-        DESCENDANTS(
-            [Dim Artist].[Geography].[All],     
-            [Dim Artist].[Geography].[Region],  
-            SELF_AND_BEFORE                    
-        )
-    ) ON ROWS
+    ) ON 1
+
 FROM [Group ID 3 DB]

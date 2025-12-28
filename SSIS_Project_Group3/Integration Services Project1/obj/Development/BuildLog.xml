@@ -2,38 +2,38 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>Integration Services Project1</Name>
-    <LastWriteTime>2025-12-22T18:16:08.5788879Z</LastWriteTime>
+    <LastWriteTime>2025-12-23T19:27:08.5173393Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>task_11.dtsx</Name>
-      <LastWriteTime>2025-12-22T18:05:32.2022312Z</LastWriteTime>
+      <LastWriteTime>2025-12-23T14:48:26.2729588Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>task_8.dtsx</Name>
-      <LastWriteTime>2025-12-16T10:51:23.697816Z</LastWriteTime>
+      <LastWriteTime>2025-12-23T16:34:05.5726517Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>task_13.dtsx</Name>
-      <LastWriteTime>2025-12-18T19:27:13.8167477Z</LastWriteTime>
+      <LastWriteTime>2025-12-23T09:24:48.9371934Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>task 9.dtsx</Name>
-      <LastWriteTime>2025-12-22T18:16:08.5533771Z</LastWriteTime>
+      <LastWriteTime>2025-12-23T19:27:05.6727425Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>task 10.dtsx</Name>
-      <LastWriteTime>2025-12-22T18:15:52.1597434Z</LastWriteTime>
+      <LastWriteTime>2025-12-23T19:25:56.0757448Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>task 12.dtsx</Name>
-      <LastWriteTime>2025-12-22T18:15:51.1392593Z</LastWriteTime>
+      <LastWriteTime>2025-12-23T19:25:36.2129929Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
