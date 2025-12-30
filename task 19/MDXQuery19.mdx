@@ -53,9 +53,7 @@ SELECT
     [Measures].[YoY Change % Both Global Hit] } ON COLUMNS,
 
   NON EMPTY
-    EXCEPT(
-      [Dim Time].[Time_hierarchy].[Year].Members,
-      {[Dim Time].[Time_hierarchy].[Year].[0]}
-    ) ON ROWS
+    {[Dim Time].[Time_hierarchy].[Year].[2005] : 
+     [Dim Time].[Time_hierarchy].[Year].[2025]} ON ROWS
 
 FROM [Group ID 3 DB];
