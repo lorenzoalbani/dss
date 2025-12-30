@@ -30,7 +30,10 @@ SELECT
     [Measures].[YoY % Streams] } ON COLUMNS,
   NON EMPTY
     CROSSJOIN(
-      [Dim Sound].[Gerarchia].[Mood].Members,                -- song category
-      [Dim Time].[Time_hierarchy].[Year].Members    -- year
+      [Dim Sound].[Gerarchia].[Mood].Members,
+      EXCEPT(                                   
+      [Dim Time].[Time_hierarchy].[Year].Members,
+      {[Dim Time].[Time_hierarchy].[Year].[0], [Dim Time].[Time_hierarchy].[Year].[Unknown]}
+      )
     ) ON ROWS
 FROM [Group ID 3 DB];

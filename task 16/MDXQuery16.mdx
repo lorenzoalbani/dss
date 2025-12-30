@@ -21,6 +21,9 @@ SELECT
   NON EMPTY
     CROSSJOIN(
       [Dim Artist].[Artist Id].Members,
-      [Dim Time].[Time_hierarchy].[Year].Members
+      EXCEPT(
+      [Dim Time].[Time_hierarchy].[Year].Members,
+      {[Dim Time].[Time_hierarchy].[Year].[0]}
+      )
     ) ON ROWS
 FROM [Group ID 3 DB];
