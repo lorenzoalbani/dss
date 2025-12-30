@@ -21,9 +21,6 @@
         <ID>Dim Sound</ID>
       </Dimension>
       <Dimension>
-        <ID>Dim Time</ID>
-      </Dimension>
-      <Dimension>
         <ID>Dim Track</ID>
       </Dimension>
       <Dimension>
@@ -31,6 +28,9 @@
       </Dimension>
       <Dimension>
         <ID>Dim_Role</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Dim Time</ID>
       </Dimension>
     </Dimensions>
     <Cubes>

@@ -7,14 +7,14 @@
           <ConfigurationSetting>
             <Id>Group ID 3 DB</Id>
             <Name>Group ID 3 DB</Name>
-            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMXqqqlxJH0KLF/OAfUztQQAAAAAcAAAARwByAG8AdQBwACAASQBEACAAMwAgAEQAQgAAABBmAAAAAQAAIAAAAL4zBIeQ8SjoEtSOZcHBwiBIOWegZwAgi6k8NbDIKiuEAAAAAA6AAAAAAgAAIAAAADbU1zKXn5cRVBXP7vZ0U9fP6gO/nLkwSUhdEQn1gVv2IAAAANuhO7Hjmt8PaU5IjHZJ+r40l4QZRoUyijXGwaTeiqqfQAAAAIBqDEjVCN/J/aJ+wwDN+DfYZp/UrgT7i7zYmkHbh8/nV6eDFQ42UbKDKUGU5jYmfZVWvJcZ6gVq37JCB7wZ3kE=</Value>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMQjGq9ZsVEiR12vyhqjgtwAAAAAcAAAARwByAG8AdQBwACAASQBEACAAMwAgAEQAQgAAABBmAAAAAQAAIAAAAK9b+ew4Og5YaU2e8j9QOkXoHenGzMq6KnYJ19SLsblkAAAAAA6AAAAAAgAAIAAAALj2IQke5gv7MCk80kll2FlpgMem5orpFCSoVU7aQs/nIAAAACeieLEqaC4QKX3eC6IyMaHOiQkFyNepSYib0qvsaFyaQAAAAHDBDUE5npn/ZAfyFBHE7zZ/zYvhDMmrnKKNEVwKK6N6NSLF1Sc7GWv/GZQMJdPWPLJW46dFyHeGF/pbTSFByaU=</Value>
           </ConfigurationSetting>
         </UserIDs>
         <UserPasswords>
           <ConfigurationSetting>
             <Id>Group ID 3 DB</Id>
             <Name>Group ID 3 DB</Name>
-            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMXqqqlxJH0KLF/OAfUztQQAAAAAcAAAARwByAG8AdQBwACAASQBEACAAMwAgAEQAQgAAABBmAAAAAQAAIAAAAJTnGmM7Jlfsxgi+Y7ZM3VqqGlMvy0AT9C/MeB2HkIulAAAAAA6AAAAAAgAAIAAAAHobAmVMGBeUur2u56cM9BZmAmxHzfdFaJCsVe2reosJIAAAADXrnl36MiVq+h/OKOtVazdeuWyKp5vZMa29nABQW7R/QAAAACoWZVRfjR7SgAnyOpRQDmIHuSak6ahZGOLbRcX9O21QvZa80f9heRK7XHs9HOnPTgwBSFBFUyXG7y/jtjcMlkw=</Value>
+            <Value xsi:type="xsd:string">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMQjGq9ZsVEiR12vyhqjgtwAAAAAcAAAARwByAG8AdQBwACAASQBEACAAMwAgAEQAQgAAABBmAAAAAQAAIAAAABN0x2PIyROu0W68KTQ7kQlx6mBzo054r3J5fb57Y64RAAAAAA6AAAAAAgAAIAAAADERQc1zeSz04Me9U5cAClmL57qWGiaurcGFde/HuxrjIAAAAIrf/Imtn5Cz0SV2Cxaweku5yyhaK1R2qDpvYUHmnkBDQAAAALENN72u91eWFC2uIJM7azDjJneK1rdp8ILeBIW9OE3mZAfumKOb9SpQgUuaLjynHDYPJFAOngR0I8ePltrE5CU=</Value>
           </ConfigurationSetting>
         </UserPasswords>
         <TargetServer>http://131.114.50.57/olap/msmdpump.dll</TargetServer>

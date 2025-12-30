@@ -11,8 +11,8 @@
   DTS:LocaleID="1040"
   DTS:ObjectName="task_13"
   DTS:PackageType="5"
-  DTS:VersionBuild="95"
-  DTS:VersionGUID="{00046A25-D204-49B0-AFD0-70E155BB38F6}">
+  DTS:VersionBuild="103"
+  DTS:VersionGUID="{2F893300-3452-42EB-A659-FF1FE7764AFF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,11 +25,11 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=131.114.50.57;User ID=Group_ID_3;Initial Catalog=Group_ID_3_DB;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-task_13-{426EC976-08DA-4332-9142-9A541AABA732}131.114.50.57.Group_ID_3_DB.Group_ID_3;Auto Translate=False;">
+          DTS:ConnectionString="Data Source=131.114.50.57;User ID=Group_ID_3;Initial Catalog=Group_ID_3_DB;Provider=SQLOLEDB.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-task_13-{426EC976-08DA-4332-9142-9A541AABA732}131.114.50.57.Group_ID_3_DB.Group_ID_3;">
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMQjGq9ZsVEiR12vyhqjgtwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADQu1x/VCV2C0r7c/XdwZ/N/Dj2v633hmGyF2d56ZrCxgAAAAAOgAAAAAIAACAAAACUYIUjCiS76r/EXF39nse00743Py+cXqY7xJrtOFMAtCAAAAAwc4EHr73s9QY4/9563F43uRZQz6pkmw0XlxRNou1NdUAAAADQJWGJMrKLPkiJtXqse658JHDxrT6boqfwxRzJcFVz4Aus/b/H/qMYayQ0fgl07zFyLbukfwBTohwbb65pfX74</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAMQjGq9ZsVEiR12vyhqjgtwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB3iGAidG8/BAgBxUiSYIezp3NgrEGCKzgsIyuU/eFkwgAAAAAOgAAAAAIAACAAAACmn0j4/K+aIDv1OnClysfcdcQ0ph1tKgq5SJVDKu362yAAAADMmj+WWLOc0tD45Y5G4SX2cyFMAeqGpMcFBhK0bog2ckAAAACKTrqUdxJYhxo5muDzNQ7lSKNkoQOJA3hn3GyevAb1YRqUkzXHVlaeHV/uDLsWIQZpltlCNmE6vmOPn85iJUwB</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -42,22 +42,37 @@
         <DTS:ConnectionManager
           DTS:Format="Delimited"
           DTS:LocaleID="1040"
-          DTS:Unicode="True"
           DTS:HeaderRowDelimiter="_x000D__x000A_"
           DTS:ColumnNamesInFirstDataRow="True"
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x0022_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Tommaso\Documents\Università\Magistrale\Secondo anno (0 su 4)\DSS\Project\DSS_project\dss\task 13\task_13.csv">
+          DTS:ConnectionString="C:\Users\Tommaso\Documents\Università\Magistrale\Secondo anno (0 su 4)\DSS\Project\DSS_project\dss\task 13\task_13_corr.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="130"
+              DTS:DataType="3"
               DTS:TextQualified="True"
-              DTS:ObjectName="&quot;mood&quot;"
-              DTS:DTSID="{43B6630D-21D0-4892-9B1A-8C3762C21EFD}"
+              DTS:ObjectName="Avg_Solo"
+              DTS:DTSID="{4571F7DC-1EDC-46B3-A4CF-F2027B314703}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Avg_Feat"
+              DTS:DTSID="{769C3EA4-87E3-43B8-A272-63A15CA430DC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="mood"
+              DTS:DTSID="{52A125CF-BF5B-44D6-A01A-8092BF36D387}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -65,32 +80,16 @@
               DTS:MaximumWidth="6"
               DTS:DataType="130"
               DTS:TextQualified="True"
-              DTS:ObjectName="&quot;Artist_Status&quot;"
-              DTS:DTSID="{C5206DC0-12DC-48BB-AF0E-6B6E99FF99D8}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;Avg_Solo&quot;"
-              DTS:DTSID="{9731F6BD-2116-468C-82F6-170C566AEEDB}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="&quot;Avg_Feat&quot;"
-              DTS:DTSID="{D41E6829-022E-4291-B048-C205F0C5A81B}"
+              DTS:ObjectName="Artist_Status"
+              DTS:DTSID="{F4D50B49-B6E3-46A0-90E7-0B37FE951A45}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000D__x000A_"
               DTS:DataType="3"
               DTS:TextQualified="True"
-              DTS:ObjectName="&quot;Collaboration_Lift (%)&quot;"
-              DTS:DTSID="{45F7BC81-E36B-4983-BB7C-4153C84ABAC1}"
+              DTS:ObjectName="Collaboration Lift"
+              DTS:DTSID="{AE06D2FD-A598-4865-9E32-EC4921B964DC}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -259,7 +258,7 @@
                       lineageId="Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[Global_Avg]" />
                     <inputColumn
                       refId="Package\Attività Flusso di dati\Artist Status.Inputs[Input colonna derivata].Columns[Artist_Avg]"
-                      cachedDataType="i8"
+                      cachedDataType="r8"
                       cachedName="Artist_Avg"
                       lineageId="Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[Artist_Avg]" />
                   </inputColumns>
@@ -454,7 +453,7 @@
                     </outputColumn>
                     <outputColumn
                       refId="Package\Attività Flusso di dati\Artists Stats.Outputs[Output aggregazione 1].Columns[Artist_Avg]"
-                      dataType="i8"
+                      dataType="r8"
                       lineageId="Package\Attività Flusso di dati\Artists Stats.Outputs[Output aggregazione 1].Columns[Artist_Avg]"
                       name="Artist_Avg">
                       <properties>
@@ -467,7 +466,7 @@
                           dataType="System.Int32"
                           description="Specifica il tipo di aggregazione."
                           name="AggregationType"
-                          typeConverter="AggregationType">4</property>
+                          typeConverter="AggregationType">5</property>
                         <property
                           dataType="System.Int32"
                           description="Indica se la colonna richieste interventi di gestione speciali perché contiene dati di dimensioni eccessive o richiede una precisione maggiore rispetto al tipo di dati float."
@@ -1360,7 +1359,7 @@ where [refTable].[sound_id] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifica l'elenco di identificatori di derivazione corrispondenti ai parametri utilizzati dall'istruzione SQL nella proprietà SQLCommand. Le voci nell'elenco sono separate da punti e virgola."
-                  name="ParameterMap">#{Package\Attività Flusso di dati\779:invalid};</property>
+                  name="ParameterMap">#{Package\Attività Flusso di dati\Merge join.Outputs[Output merge join].Columns[sound_id]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifica la tabella codici della colonna da utilizzare quando l'origine dati non rende disponibili informazioni sulla tabella codici."
@@ -1673,7 +1672,7 @@ where [refTable].[sound_id] = ?</property>
                       lineageId="Package\Attività Flusso di dati\Sort mood artist.Outputs[Output ordinamento].Columns[main_artist_id]" />
                     <inputColumn
                       refId="Package\Attività Flusso di dati\Merge join 1.Inputs[Input merge join destro].Columns[Artist_Avg]"
-                      cachedDataType="i8"
+                      cachedDataType="r8"
                       cachedName="Artist_Avg"
                       lineageId="Package\Attività Flusso di dati\Sort mood artist.Outputs[Output ordinamento].Columns[Artist_Avg]" />
                   </inputColumns>
@@ -1730,7 +1729,7 @@ where [refTable].[sound_id] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[Artist_Avg]"
-                      dataType="i8"
+                      dataType="r8"
                       lineageId="Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[Artist_Avg]"
                       name="Artist_Avg">
                       <properties>
@@ -2590,7 +2589,7 @@ where [refTable].[sound_id] = ?</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Attività Flusso di dati\Sort mood artist.Inputs[Input ordinamento].Columns[Artist_Avg]"
-                      cachedDataType="i8"
+                      cachedDataType="r8"
                       cachedName="Artist_Avg"
                       lineageId="Package\Attività Flusso di dati\Artists Stats.Outputs[Output aggregazione 1].Columns[Artist_Avg]">
                       <properties>
@@ -2645,7 +2644,7 @@ where [refTable].[sound_id] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Attività Flusso di dati\Sort mood artist.Outputs[Output ordinamento].Columns[Artist_Avg]"
-                      dataType="i8"
+                      dataType="r8"
                       lineageId="Package\Attività Flusso di dati\Sort mood artist.Outputs[Output ordinamento].Columns[Artist_Avg]"
                       name="Artist_Avg">
                       <properties>
@@ -3222,7 +3221,7 @@ where [refTable].[sound_id] = ?</property>
                     </inputColumn>
                     <inputColumn
                       refId="Package\Attività Flusso di dati\Sort_mood_artist.Inputs[Input ordinamento].Columns[Artist_Avg]"
-                      cachedDataType="i8"
+                      cachedDataType="r8"
                       cachedName="Artist_Avg"
                       lineageId="Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join].Columns[Artist_Avg]">
                       <properties>
@@ -3308,7 +3307,7 @@ where [refTable].[sound_id] = ?</property>
                     </outputColumn>
                     <outputColumn
                       refId="Package\Attività Flusso di dati\Sort_mood_artist.Outputs[Output ordinamento].Columns[Artist_Avg]"
-                      dataType="i8"
+                      dataType="r8"
                       lineageId="Package\Attività Flusso di dati\Sort_mood_artist.Outputs[Output ordinamento].Columns[Artist_Avg]"
                       name="Artist_Avg">
                       <properties>
@@ -3858,19 +3857,17 @@ where [refTable].[sound_id] = ?</property>
                   name="Input destinazione file flat">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Attività Flusso di dati\task_13_csv.Inputs[Input destinazione file flat].Columns[Collaboration Lift]"
+                      refId="Package\Attività Flusso di dati\task_13_csv.Inputs[Input destinazione file flat].Columns[Avg_Solo]"
                       cachedDataType="i4"
-                      cachedName="Collaboration Lift"
-                      externalMetadataColumnId="Package\Attività Flusso di dati\task_13_csv.Inputs[Input destinazione file flat].ExternalColumns[&quot;Collaboration_Lift (%)&quot;]"
-                      lineageId="Package\Attività Flusso di dati\Collaboration Lift.Outputs[Output colonna derivata].Columns[Collaboration Lift]" />
+                      cachedName="Avg_Solo"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\task_13_csv.Inputs[Input destinazione file flat].ExternalColumns[Avg_Solo]"
+                      lineageId="Package\Attività Flusso di dati\Merge join 3.Outputs[Output merge join].Columns[Avg_Solo]" />
                     <inputColumn
-                      refId="Package\Attività Flusso di dati\task_13_csv.Inputs[Input destinazione file flat].Columns[Artist_Status]"
-                      cachedDataType="wstr"
-                      cachedLength="6"
-                      cachedName="Artist_Status"
-                      cachedSortKeyPosition="2"
-                      externalMetadataColumnId="Package\Attività Flusso di dati\task_13_csv.Inputs[Input destinazione file flat].ExternalColumns[&quot;Artist_Status&quot;]"
-                      lineageId="Package\Attività Flusso di dati\Merge join 3.Outputs[Output merge join].Columns[Artist_Status]" />
+                      refId="Package\Attività Flusso di dati\task_13_csv.Inputs[Input destinazione file flat].Columns[Avg_Feat]"
+                      cachedDataType="i4"
+                      cachedName="Avg_Feat"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\task_13_csv.Inputs[Input destinazione file flat].ExternalColumns[Avg_Feat]"
+                      lineageId="Package\Attività Flusso di dati\Merge join 3.Outputs[Output merge join].Columns[Avg_Feat]" />
                     <inputColumn
                       refId="Package\Attività Flusso di dati\task_13_csv.Inputs[Input destinazione file flat].Columns[mood]"
                       cachedCodepage="1252"
@@ -3878,45 +3875,48 @@ where [refTable].[sound_id] = ?</property>
                       cachedLength="50"
                       cachedName="mood"
                       cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\Attività Flusso di dati\task_13_csv.Inputs[Input destinazione file flat].ExternalColumns[&quot;mood&quot;]"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\task_13_csv.Inputs[Input destinazione file flat].ExternalColumns[mood]"
                       lineageId="Package\Attività Flusso di dati\Merge join 3.Outputs[Output merge join].Columns[mood]" />
                     <inputColumn
-                      refId="Package\Attività Flusso di dati\task_13_csv.Inputs[Input destinazione file flat].Columns[Avg_Feat]"
-                      cachedDataType="i4"
-                      cachedName="Avg_Feat"
-                      externalMetadataColumnId="Package\Attività Flusso di dati\task_13_csv.Inputs[Input destinazione file flat].ExternalColumns[&quot;Avg_Feat&quot;]"
-                      lineageId="Package\Attività Flusso di dati\Merge join 3.Outputs[Output merge join].Columns[Avg_Feat]" />
+                      refId="Package\Attività Flusso di dati\task_13_csv.Inputs[Input destinazione file flat].Columns[Artist_Status]"
+                      cachedDataType="wstr"
+                      cachedLength="6"
+                      cachedName="Artist_Status"
+                      cachedSortKeyPosition="2"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\task_13_csv.Inputs[Input destinazione file flat].ExternalColumns[Artist_Status]"
+                      lineageId="Package\Attività Flusso di dati\Merge join 3.Outputs[Output merge join].Columns[Artist_Status]" />
                     <inputColumn
-                      refId="Package\Attività Flusso di dati\task_13_csv.Inputs[Input destinazione file flat].Columns[Avg_Solo]"
+                      refId="Package\Attività Flusso di dati\task_13_csv.Inputs[Input destinazione file flat].Columns[Collaboration Lift]"
                       cachedDataType="i4"
-                      cachedName="Avg_Solo"
-                      externalMetadataColumnId="Package\Attività Flusso di dati\task_13_csv.Inputs[Input destinazione file flat].ExternalColumns[&quot;Avg_Solo&quot;]"
-                      lineageId="Package\Attività Flusso di dati\Merge join 3.Outputs[Output merge join].Columns[Avg_Solo]" />
+                      cachedName="Collaboration Lift"
+                      externalMetadataColumnId="Package\Attività Flusso di dati\task_13_csv.Inputs[Input destinazione file flat].ExternalColumns[Collaboration Lift]"
+                      lineageId="Package\Attività Flusso di dati\Collaboration Lift.Outputs[Output colonna derivata].Columns[Collaboration Lift]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Attività Flusso di dati\task_13_csv.Inputs[Input destinazione file flat].ExternalColumns[&quot;mood&quot;]"
-                      dataType="wstr"
-                      length="50"
-                      name="&quot;mood&quot;" />
+                      refId="Package\Attività Flusso di dati\task_13_csv.Inputs[Input destinazione file flat].ExternalColumns[Avg_Solo]"
+                      dataType="i4"
+                      name="Avg_Solo" />
                     <externalMetadataColumn
-                      refId="Package\Attività Flusso di dati\task_13_csv.Inputs[Input destinazione file flat].ExternalColumns[&quot;Artist_Status&quot;]"
+                      refId="Package\Attività Flusso di dati\task_13_csv.Inputs[Input destinazione file flat].ExternalColumns[Avg_Feat]"
+                      dataType="i4"
+                      name="Avg_Feat" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\task_13_csv.Inputs[Input destinazione file flat].ExternalColumns[mood]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="mood" />
+                    <externalMetadataColumn
+                      refId="Package\Attività Flusso di dati\task_13_csv.Inputs[Input destinazione file flat].ExternalColumns[Artist_Status]"
                       dataType="wstr"
                       length="6"
-                      name="&quot;Artist_Status&quot;" />
+                      name="Artist_Status" />
                     <externalMetadataColumn
-                      refId="Package\Attività Flusso di dati\task_13_csv.Inputs[Input destinazione file flat].ExternalColumns[&quot;Avg_Solo&quot;]"
+                      refId="Package\Attività Flusso di dati\task_13_csv.Inputs[Input destinazione file flat].ExternalColumns[Collaboration Lift]"
                       dataType="i4"
-                      name="&quot;Avg_Solo&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Attività Flusso di dati\task_13_csv.Inputs[Input destinazione file flat].ExternalColumns[&quot;Avg_Feat&quot;]"
-                      dataType="i4"
-                      name="&quot;Avg_Feat&quot;" />
-                    <externalMetadataColumn
-                      refId="Package\Attività Flusso di dati\task_13_csv.Inputs[Input destinazione file flat].ExternalColumns[&quot;Collaboration_Lift (%)&quot;]"
-                      dataType="i4"
-                      name="&quot;Collaboration_Lift (%)&quot;" />
+                      name="Collaboration Lift" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -3985,24 +3985,24 @@ where [refTable].[sound_id] = ?</property>
               startId="Package\Attività Flusso di dati\Lookup Mood.Outputs[Output corrispondenza ricerca]" />
             <path
               refId="Package\Attività Flusso di dati.Paths[Output merge join3]"
-              endId="Package\Attività Flusso di dati\Is Feat.Inputs[Input colonna derivata]"
+              endId="Package\Attività Flusso di dati\Collaboration Lift.Inputs[Input colonna derivata]"
               name="Output merge join"
-              startId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join]" />
+              startId="Package\Attività Flusso di dati\Merge join 3.Outputs[Output merge join]" />
             <path
               refId="Package\Attività Flusso di dati.Paths[Output merge join2]"
-              endId="Package\Attività Flusso di dati\Artist Status.Inputs[Input colonna derivata]"
-              name="Output merge join"
-              startId="Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join]" />
-            <path
-              refId="Package\Attività Flusso di dati.Paths[Output merge join]"
               endId="Package\Attività Flusso di dati\Group mood artists track_type.Inputs[Input aggregazione 1]"
               name="Output merge join"
               startId="Package\Attività Flusso di dati\Merge join 2.Outputs[Output merge join]" />
             <path
-              refId="Package\Attività Flusso di dati.Paths[Output merge join1]"
-              endId="Package\Attività Flusso di dati\Collaboration Lift.Inputs[Input colonna derivata]"
+              refId="Package\Attività Flusso di dati.Paths[Output merge join]"
+              endId="Package\Attività Flusso di dati\Is Feat.Inputs[Input colonna derivata]"
               name="Output merge join"
-              startId="Package\Attività Flusso di dati\Merge join 3.Outputs[Output merge join]" />
+              startId="Package\Attività Flusso di dati\Merge join.Outputs[Output merge join]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output merge join1]"
+              endId="Package\Attività Flusso di dati\Artist Status.Inputs[Input colonna derivata]"
+              name="Output merge join"
+              startId="Package\Attività Flusso di dati\Merge join 1.Outputs[Output merge join]" />
             <path
               refId="Package\Attività Flusso di dati.Paths[Output multicast 1]"
               endId="Package\Attività Flusso di dati\Artists Stats.Inputs[Input aggregazione 1]"
@@ -4055,14 +4055,14 @@ where [refTable].[sound_id] = ?</property>
               startId="Package\Attività Flusso di dati\Sort_track_id.Outputs[Output ordinamento]" />
             <path
               refId="Package\Attività Flusso di dati.Paths[Output origine OLE DB1]"
-              endId="Package\Attività Flusso di dati\Sort_track_id.Inputs[Input ordinamento]"
-              name="Output origine OLE DB"
-              startId="Package\Attività Flusso di dati\Source Fact.Outputs[Output origine OLE DB]" />
-            <path
-              refId="Package\Attività Flusso di dati.Paths[Output origine OLE DB]"
               endId="Package\Attività Flusso di dati\Artist count.Inputs[Input aggregazione 1]"
               name="Output origine OLE DB"
               startId="Package\Attività Flusso di dati\Source Bridge Track Artist.Outputs[Output origine OLE DB]" />
+            <path
+              refId="Package\Attività Flusso di dati.Paths[Output origine OLE DB]"
+              endId="Package\Attività Flusso di dati\Sort_track_id.Inputs[Input ordinamento]"
+              name="Output origine OLE DB"
+              startId="Package\Attività Flusso di dati\Source Fact.Outputs[Output origine OLE DB]" />
             <path
               refId="Package\Attività Flusso di dati.Paths[Solo_Stream]"
               endId="Package\Attività Flusso di dati\Sort solo.Inputs[Input ordinamento]"
@@ -4099,24 +4099,40 @@ where [refTable].[sound_id] = ?</property>
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="137.6,41.6"
+          Id="Package\Attività Flusso di dati\Merge join 2"
+          TopLeft="641.499998569488,262.500004217029" />
+        <NodeLayout
+          Size="134.4,41.6"
+          Id="Package\Attività Flusso di dati\Global Stats"
+          TopLeft="139.500001579523,286.499999389052" />
+        <NodeLayout
+          Size="127.2,41.6"
+          Id="Package\Attività Flusso di dati\Sort mood"
+          TopLeft="144.500001952052,428.499997720122" />
+        <NodeLayout
+          Size="127.2,41.6"
+          Id="Package\Attività Flusso di dati\Final Stats"
+          TopLeft="939.499995023012,328.500004127622" />
+        <NodeLayout
+          Size="136,41.6"
+          Id="Package\Attività Flusso di dati\Artist Status"
+          TopLeft="252.500003471971,594.499998375773" />
+        <NodeLayout
+          Size="133.6,41.6"
+          Id="Package\Attività Flusso di dati\Source Fact"
+          TopLeft="20.2619020685449,19.2254899736782" />
+        <NodeLayout
+          Size="137.6,41.6"
           Id="Package\Attività Flusso di dati\Merge join 1"
           TopLeft="256.500002518296,524.499998524785" />
         <NodeLayout
-          Size="120,41.6"
-          Id="Package\Attività Flusso di dati\Sort solo"
-          TopLeft="757.499989688396,457.499994158745" />
+          Size="157.6,41.6"
+          Id="Package\Attività Flusso di dati\Collaboration Lift"
+          TopLeft="864.599989248812,614.499992713332" />
         <NodeLayout
-          Size="119.2,41.6"
-          Id="Package\Attività Flusso di dati\Sort feat"
-          TopLeft="987.499986708164,472.499994382262" />
-        <NodeLayout
-          Size="200.8,41.6"
-          Id="Package\Attività Flusso di dati\Source Bridge Track Artist"
-          TopLeft="903.499987065792,21.5000002086162" />
-        <NodeLayout
-          Size="136,41.6"
-          Id="Package\Attività Flusso di dati\task_13_csv"
-          TopLeft="874.285701647097,699.71427492309" />
+          Size="140.8,41.6"
+          Id="Package\Attività Flusso di dati\Sort_track_id"
+          TopLeft="184.07142895156,19.5196078308485" />
         <NodeLayout
           Size="221.6,41.6"
           Id="Package\Attività Flusso di dati\Group mood artists track_type"
@@ -4126,9 +4142,9 @@ where [refTable].[sound_id] = ?</property>
           Id="Package\Attività Flusso di dati\Solo_feat"
           TopLeft="938.499986544252,398.499994590879" />
         <NodeLayout
-          Size="157.6,41.6"
-          Id="Package\Attività Flusso di dati\Collaboration Lift"
-          TopLeft="864.599989248812,614.499992713332" />
+          Size="136,41.6"
+          Id="Package\Attività Flusso di dati\task_13_csv"
+          TopLeft="874.285701647097,699.71427492309" />
         <NodeLayout
           Size="120,41.6"
           Id="Package\Attività Flusso di dati\Multicast"
@@ -4138,6 +4154,22 @@ where [refTable].[sound_id] = ?</property>
           Id="Package\Attività Flusso di dati\Sort mood_artist"
           TopLeft="824.499993607401,167.500003397465" />
         <NodeLayout
+          Size="128,41.6"
+          Id="Package\Attività Flusso di dati\Merge join"
+          TopLeft="383.119048359037,64.8137254645015" />
+        <NodeLayout
+          Size="119.2,41.6"
+          Id="Package\Attività Flusso di dati\Sort feat"
+          TopLeft="987.499986708164,472.499994382262" />
+        <NodeLayout
+          Size="134.4,41.6"
+          Id="Package\Attività Flusso di dati\Artists Stats"
+          TopLeft="366.499999091029,331.49999961257" />
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\Attività Flusso di dati\Sort solo"
+          TopLeft="757.499989688396,457.499994158745" />
+        <NodeLayout
           Size="159.2,41.6"
           Id="Package\Attività Flusso di dati\Sort_mood_artist"
           TopLeft="433.500001221895,597.499998778105" />
@@ -4146,183 +4178,33 @@ where [refTable].[sound_id] = ?</property>
           Id="Package\Attività Flusso di dati\Sort mood artist"
           TopLeft="356.499999687076,404.49999897182" />
         <NodeLayout
-          Size="137.6,41.6"
-          Id="Package\Attività Flusso di dati\Merge join 3"
-          TopLeft="874.999986961484,535.999992012978" />
-        <NodeLayout
-          Size="134.4,41.6"
-          Id="Package\Attività Flusso di dati\Artists Stats"
-          TopLeft="366.499999091029,331.49999961257" />
-        <NodeLayout
-          Size="145.6,41.6"
-          Id="Package\Attività Flusso di dati\Granular Stats"
-          TopLeft="609.499996364116,117.500003695488" />
-        <NodeLayout
-          Size="136,41.6"
-          Id="Package\Attività Flusso di dati\Artist Status"
-          TopLeft="252.500003471971,594.499998375773" />
-        <NodeLayout
-          Size="128.8,41.6"
-          Id="Package\Attività Flusso di dati\Sort tracks"
-          TopLeft="571.499992907047,24.5000010579824" />
-        <NodeLayout
-          Size="127.2,41.6"
-          Id="Package\Attività Flusso di dati\Sort mood"
-          TopLeft="144.500001952052,428.499997720122" />
-        <NodeLayout
-          Size="111.2,41.6"
-          Id="Package\Attività Flusso di dati\Is Feat"
-          TopLeft="279.499998152256,137.500000268221" />
-        <NodeLayout
-          Size="137.6,41.6"
-          Id="Package\Attività Flusso di dati\Merge join 2"
-          TopLeft="641.499998569488,262.500004217029" />
-        <NodeLayout
-          Size="134.4,41.6"
-          Id="Package\Attività Flusso di dati\Global Stats"
-          TopLeft="139.500001579523,286.499999389052" />
-        <NodeLayout
-          Size="133.6,41.6"
-          Id="Package\Attività Flusso di dati\Source Fact"
-          TopLeft="20.2619020685449,19.2254899736782" />
+          Size="200.8,41.6"
+          Id="Package\Attività Flusso di dati\Source Bridge Track Artist"
+          TopLeft="903.499987065792,21.5000002086162" />
         <NodeLayout
           Size="141.6,41.6"
           Id="Package\Attività Flusso di dati\Lookup Mood"
           TopLeft="258.499998912215,194.499999865889" />
         <NodeLayout
+          Size="128.8,41.6"
+          Id="Package\Attività Flusso di dati\Sort tracks"
+          TopLeft="571.499992907047,24.5000010579824" />
+        <NodeLayout
+          Size="137.6,41.6"
+          Id="Package\Attività Flusso di dati\Merge join 3"
+          TopLeft="874.999986961484,535.999992012978" />
+        <NodeLayout
+          Size="111.2,41.6"
+          Id="Package\Attività Flusso di dati\Is Feat"
+          TopLeft="279.499998152256,137.500000268221" />
+        <NodeLayout
           Size="132.8,41.6"
           Id="Package\Attività Flusso di dati\Artist count"
           TopLeft="724.499990180135,23.5000006258487" />
         <NodeLayout
-          Size="127.2,41.6"
-          Id="Package\Attività Flusso di dati\Final Stats"
-          TopLeft="939.499995023012,328.500004127622" />
-        <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Solo_Stream]"
-          TopLeft="938.499986544252,419.299994590879">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-60.9999968558553,58.9999995678663"
-              Start="0,0"
-              End="-53.4999968558553,58.9999995678663">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-26.4999984279277,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-26.4999984279277,0"
-                    Point2="-30.4999984279277,0"
-                    Point3="-30.4999984279277,4" />
-                  <mssgle:LineSegment
-                    End="-30.4999984279277,54.9999995678663" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-30.4999984279277,54.9999995678663"
-                    Point2="-30.4999984279277,58.9999995678663"
-                    Point3="-34.4999984279277,58.9999995678663" />
-                  <mssgle:LineSegment
-                    End="-53.4999968558553,58.9999995678663" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-58.7987288966777,-17.0625,56.5974609375,11.0625"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Output origine OLE DB]"
-          TopLeft="903.499987065792,43.3000004172325">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-46.1999968856572,0"
-              Start="0,0"
-              End="-38.6999968856572,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-38.6999968856572,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Output ordinamento6]"
-          TopLeft="902.899993607401,209.100003397465">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-192.599995037913,53.4000008195639"
-              Start="0,0"
-              End="-192.599995037913,45.9000008195639">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22.7000004097819" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22.7000004097819"
-                    Point2="0,26.7000004097819"
-                    Point3="-4,26.7000004097819" />
-                  <mssgle:LineSegment
-                    End="-188.599995037913,26.7000004097819" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-188.599995037913,26.7000004097819"
-                    Point2="-192.599995037913,26.7000004097819"
-                    Point3="-192.599995037913,30.7000004097819" />
-                  <mssgle:LineSegment
-                    End="-192.599995037913,45.9000008195639" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Output ordinamento5]"
-          TopLeft="433.699999687076,446.09999897182">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-86.7999971687794,78.3999995529651"
-              Start="0,0"
-              End="-86.7999971687794,70.8999995529651">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,42.4993100796896" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,42.4993100796896"
-                    Point2="0,46.4993100796896"
-                    Point3="-4,46.4993100796896" />
-                  <mssgle:LineSegment
-                    End="-82.7999971687794,46.4993100796896" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-82.7999971687794,46.4993100796896"
-                    Point2="-86.7999971687794,46.4993100796896"
-                    Point3="-86.7999971687794,50.4993100796896" />
-                  <mssgle:LineSegment
-                    End="-86.7999971687794,70.8999995529651" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="145.6,41.6"
+          Id="Package\Attività Flusso di dati\Granular Stats"
+          TopLeft="609.499996364116,117.500003695488" />
         <EdgeLayout
           Id="Package\Attività Flusso di dati.Paths[Output ordinamento4]"
           TopLeft="513.100001221895,597.499998778105">
@@ -4454,6 +4336,40 @@ where [refTable].[sound_id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output ordinamento]"
+          TopLeft="571.499992907047,45.3000010579824">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-60.3809445480097,40.3137244065191"
+              Start="0,0"
+              End="-52.8809445480097,40.3137244065191">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-26.1904722740049,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-26.1904722740049,0"
+                    Point2="-30.1904722740049,0"
+                    Point3="-30.1904722740049,4" />
+                  <mssgle:LineSegment
+                    End="-30.1904722740049,36.3137244065191" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-30.1904722740049,36.3137244065191"
+                    Point2="-30.1904722740049,40.3137244065191"
+                    Point3="-34.1904722740049,40.3137244065191" />
+                  <mssgle:LineSegment
+                    End="-52.8809445480097,40.3137244065191" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Attività Flusso di dati.Paths[Output multicast 2]"
           TopLeft="456.166664252678,271.499999165535">
           <EdgeLayout.Curve>
@@ -4522,7 +4438,63 @@ where [refTable].[sound_id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output merge join]"
+          TopLeft="447.119048359037,106.413725464501">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-112.019050206781,31.0862748037195"
+              Start="0,0"
+              End="-112.019050206781,23.5862748037195">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.5431374018598" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.5431374018598"
+                    Point2="0,15.5431374018598"
+                    Point3="-4,15.5431374018598" />
+                  <mssgle:LineSegment
+                    End="-108.019050206781,15.5431374018598" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-108.019050206781,15.5431374018598"
+                    Point2="-112.019050206781,15.5431374018598"
+                    Point3="-112.019050206781,19.5431374018598" />
+                  <mssgle:LineSegment
+                    End="-112.019050206781,23.5862748037195" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\Attività Flusso di dati.Paths[Output merge join1]"
+          TopLeft="322.900002995133,566.099998524785">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28.3999998509884"
+              Start="0,0"
+              End="0,20.8999998509884">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.8999998509884" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output merge join3]"
           TopLeft="943.599988105148,577.599992012978">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4544,7 +4516,7 @@ where [refTable].[sound_id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Output merge join]"
+          Id="Package\Attività Flusso di dati.Paths[Output merge join2]"
           TopLeft="779.099998569488,282.800004447997">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4557,28 +4529,6 @@ where [refTable].[sound_id] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="109.899996647239,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Output merge join2]"
-          TopLeft="322.900002995133,566.099998524785">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,28.3999998509884"
-              Start="0,0"
-              End="0,20.8999998509884">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.8999998509884" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4915,12 +4865,44 @@ where [refTable].[sound_id] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="140.8,41.6"
-          Id="Package\Attività Flusso di dati\Sort_track_id"
-          TopLeft="184.07142895156,19.5196078308485" />
         <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Output origine OLE DB1]"
+          Id="Package\Attività Flusso di dati.Paths[Solo_Stream]"
+          TopLeft="938.499986544252,419.299994590879">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-60.9999968558553,58.9999995678663"
+              Start="0,0"
+              End="-53.4999968558553,58.9999995678663">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-26.4999984279277,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-26.4999984279277,0"
+                    Point2="-30.4999984279277,0"
+                    Point3="-30.4999984279277,4" />
+                  <mssgle:LineSegment
+                    End="-30.4999984279277,54.9999995678663" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-30.4999984279277,54.9999995678663"
+                    Point2="-30.4999984279277,58.9999995678663"
+                    Point3="-34.4999984279277,58.9999995678663" />
+                  <mssgle:LineSegment
+                    End="-53.4999968558553,58.9999995678663" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-58.7987288966777,-17.0625,56.5974609375,11.0625"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output origine OLE DB]"
           TopLeft="153.861902068545,40.1725489022634">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -4941,10 +4923,28 @@ where [refTable].[sound_id] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="128,41.6"
-          Id="Package\Attività Flusso di dati\Merge join"
-          TopLeft="383.119048359037,64.8137254645015" />
+        <EdgeLayout
+          Id="Package\Attività Flusso di dati.Paths[Output origine OLE DB1]"
+          TopLeft="903.499987065792,43.3000004172325">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-46.1999968856572,0"
+              Start="0,0"
+              End="-38.6999968856572,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-38.6999968856572,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Attività Flusso di dati.Paths[Output ordinamento7]"
           TopLeft="324.87142895156,40.3196078308485">
@@ -4980,31 +4980,31 @@ where [refTable].[sound_id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Output ordinamento]"
-          TopLeft="571.499992907047,45.3000010579824">
+          Id="Package\Attività Flusso di dati.Paths[Output ordinamento6]"
+          TopLeft="902.899993607401,209.100003397465">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-60.3809445480097,40.3137244065191"
+              EndConnector="-192.599995037913,53.4000008195639"
               Start="0,0"
-              End="-52.8809445480097,40.3137244065191">
+              End="-192.599995037913,45.9000008195639">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-26.1904722740049,0" />
+                    End="0,22.7000004097819" />
                   <mssgle:CubicBezierSegment
-                    Point1="-26.1904722740049,0"
-                    Point2="-30.1904722740049,0"
-                    Point3="-30.1904722740049,4" />
+                    Point1="0,22.7000004097819"
+                    Point2="0,26.7000004097819"
+                    Point3="-4,26.7000004097819" />
                   <mssgle:LineSegment
-                    End="-30.1904722740049,36.3137244065191" />
+                    End="-188.599995037913,26.7000004097819" />
                   <mssgle:CubicBezierSegment
-                    Point1="-30.1904722740049,36.3137244065191"
-                    Point2="-30.1904722740049,40.3137244065191"
-                    Point3="-34.1904722740049,40.3137244065191" />
+                    Point1="-188.599995037913,26.7000004097819"
+                    Point2="-192.599995037913,26.7000004097819"
+                    Point3="-192.599995037913,30.7000004097819" />
                   <mssgle:LineSegment
-                    End="-52.8809445480097,40.3137244065191" />
+                    End="-192.599995037913,45.9000008195639" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5014,31 +5014,31 @@ where [refTable].[sound_id] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Attività Flusso di dati.Paths[Output merge join3]"
-          TopLeft="447.119048359037,106.413725464501">
+          Id="Package\Attività Flusso di dati.Paths[Output ordinamento5]"
+          TopLeft="433.699999687076,446.09999897182">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-112.019050206781,31.0862748037195"
+              EndConnector="-86.7999971687794,78.3999995529651"
               Start="0,0"
-              End="-112.019050206781,23.5862748037195">
+              End="-86.7999971687794,70.8999995529651">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,11.5431374018598" />
+                    End="0,42.4993100796896" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,11.5431374018598"
-                    Point2="0,15.5431374018598"
-                    Point3="-4,15.5431374018598" />
+                    Point1="0,42.4993100796896"
+                    Point2="0,46.4993100796896"
+                    Point3="-4,46.4993100796896" />
                   <mssgle:LineSegment
-                    End="-108.019050206781,15.5431374018598" />
+                    End="-82.7999971687794,46.4993100796896" />
                   <mssgle:CubicBezierSegment
-                    Point1="-108.019050206781,15.5431374018598"
-                    Point2="-112.019050206781,15.5431374018598"
-                    Point3="-112.019050206781,19.5431374018598" />
+                    Point1="-82.7999971687794,46.4993100796896"
+                    Point2="-86.7999971687794,46.4993100796896"
+                    Point3="-86.7999971687794,50.4993100796896" />
                   <mssgle:LineSegment
-                    End="-112.019050206781,23.5862748037195" />
+                    End="-86.7999971687794,70.8999995529651" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5050,29 +5050,6 @@ where [refTable].[sound_id] = ?</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Attività Flusso di dati\Lookup Mood">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[Group_ID_3].[Dim_Sound]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Attività Flusso di dati\Source Fact">
     <Properties>
@@ -5096,6 +5073,29 @@ where [refTable].[sound_id] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Attività Flusso di dati\Lookup Mood">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[Group_ID_3].[Dim_Sound]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
