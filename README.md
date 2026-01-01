@@ -1,4 +1,4 @@
-# Music Data Warehouse & Analytics Platform
+# Enterprise Data Warehouse & BI Platform for Music Analytics
 
 This project, developed for the Decision Support Systems university exam, implements an **end-to-end data warehousing and business intelligence solution** for music streaming analytics. Starting from raw JSON and XML data sources, the pipeline encompasses data enrichment through web scraping, advanced ETL processes, OLAP cube design, and interactive Power BI dashboards.
 
