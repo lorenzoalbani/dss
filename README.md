@@ -1,10 +1,6 @@
-# 🎵 Music Data Warehouse & Analytics Platform
+# Music Data Warehouse & Analytics Platform
 
-> A comprehensive Decision Support System project implementing a complete data pipeline from raw music data to interactive business intelligence dashboards.
-
-## 📋 Project Overview
-
-This project implements an **end-to-end data warehousing and business intelligence solution** for music streaming analytics. Starting from raw JSON and XML data sources, the pipeline encompasses data enrichment through web scraping, advanced ETL processes, OLAP cube design, and interactive Power BI dashboards.
+This project, developed for the Decision Support Systems university exam, implements an **end-to-end data warehousing and business intelligence solution** for music streaming analytics. Starting from raw JSON and XML data sources, the pipeline encompasses data enrichment through web scraping, advanced ETL processes, OLAP cube design, and interactive Power BI dashboards.
 
 The system analyzes music streaming patterns, artist metadata, audio features, and lyrics characteristics to provide actionable insights for decision-making in the music industry.
 
@@ -13,7 +9,7 @@ The system analyzes music streaming patterns, artist metadata, audio features, a
 ### Advanced Data Enrichment
 - **YouTube Integration**: Web scraping to enrich tracks with virality metrics and social engagement data
 - **Mood Analysis**: Automated classification of tracks based on audio features (BPM, spectral complexity, pitch, loudness)
-- **Lyrics Intelligence**: Text analysis including profanity detection, token counting, and sentence structure metrics
+- **Lyrics Intelligence**: Text analysis including explicit language detection, token counting, and sentence structure metrics
 - **Geographic Data**: Artist location mapping with latitude/longitude coordinates and regional information
 
 ### Intelligent Data Architecture
@@ -41,24 +37,12 @@ The system analyzes music streaming patterns, artist metadata, audio features, a
 | **Database** | Microsoft SQL Server |
 | **ETL** | SQL Server Integration Services (SSIS), Custom Python ETL processors |
 | **OLAP** | SQL Server Analysis Services (SSAS) |
-| **Query Language** | T-SQL, MDX (Multidimensional Expressions) |
-| **Visualization** | Power BI Desktop |
+| **Query Language** | MDX (Multidimensional Expressions) |
+| **Visualization** | Power BI |
 
 ## 📊 Data Schema
 
-### Fact Table
-- **Fact_Streams**: Central fact table containing streaming metrics
-  - Measures: `streams_1month`, `popularity`
-  - Foreign keys to all dimension tables
-
-### Dimension Tables
-1. **Dim_Time**: Temporal dimension with date hierarchies
-2. **Dim_Artist**: Artist metadata including birth info, nationality, geographic coordinates, and career timeline
-3. **Dim_Album**: Album details with release dates and types
-4. **Dim_Track**: Track information including duration, explicit flag, and complete lyrics
-5. **Dim_Sound**: Audio features and melodic characteristics
-6. **Dim_Youtube**: Virality classification tiers
-7. **Bridge_Track_Artist**: Many-to-many relationship handling for collaborations
+<img width="1182" height="821" alt="db_diagram" src="https://github.com/user-attachments/assets/2d608d11-707b-4a39-a5e1-96dd5ab4726f" />
 
 ## 🚀 Project Workflow
 
@@ -131,26 +115,6 @@ The Power BI implementation includes **three interactive dashboards** providing:
 2. **Audio Analytics**: Mood distribution, sound feature analysis, and correlation matrices
 3. **Geographic Insights**: Artist distribution by country/region with map visualizations
 
-## 🔍 Interesting Technical Implementations
-
-### Machine Learning Integration
-- **K-means clustering** applied to audio features for automatic genre/mood segmentation
-- Used cluster results to impute missing melodic features with statistically similar tracks
-
-### Semantic Lyrics Analysis
-- Profanity detection in multiple languages (Italian & English)
-- Token-level analysis: `char_per_tok`, `avg_token_per_clause`
-- Sentence structure metrics for complexity assessment
-
-### Virality Scoring
-- Custom tiering system based on YouTube engagement metrics
-- Integrated as a dimension for streaming performance correlation
-
-### Temporal Intelligence
-- Season-aware analysis (Spring, Summer, Fall, Winter)
-- Quarter-based business reporting
-- Flexible date hierarchies for drill-down operations
-
 ## 📈 Use Cases
 
 This data warehouse supports various analytical scenarios:
@@ -163,14 +127,14 @@ This data warehouse supports various analytical scenarios:
 
 ## 👥 Project Info
 
-**Course**: Decision Support Systems / Large Data Storage (LDS)  
+**Course**: Decision Support Systems  
 **Academic Year**: 2025-2026  
-**Group**: Group 3
+**Group**: Lorenzo Albani (ciao mamma), Luigi Ascione, Tommaso Maitino
 
 ## 📄 License
 
-This project is part of academic coursework at Sapienza University of Rome.
+This project is part of academic coursework at University of Pisa.
 
 ---
 
-*Built with ❤️ using the Microsoft Data Platform stack*
+*Built with ❤️ and tears*
